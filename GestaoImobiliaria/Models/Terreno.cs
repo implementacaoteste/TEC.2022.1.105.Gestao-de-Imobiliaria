@@ -8,6 +8,6 @@ namespace Models
 {
     public class Terreno
     {
-
+        public int Id { get; set; }
     }
 }
