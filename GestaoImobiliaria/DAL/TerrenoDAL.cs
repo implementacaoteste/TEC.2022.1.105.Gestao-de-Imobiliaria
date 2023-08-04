@@ -21,11 +21,11 @@ namespace DAL
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Nome", _terreno.Nome);
-                cmd.Parameters.AddWithValue("@CPF", _terreno.CPF);
-                cmd.Parameters.AddWithValue("@RG", _terreno.RG);
-                cmd.Parameters.AddWithValue("@Email", _terreno.Email);
-                cmd.Parameters.AddWithValue("@Fone", _terreno.Fone);
+                //cmd.Parameters.AddWithValue("@Nome", _terreno.Nome);
+                //cmd.Parameters.AddWithValue("@CPF", _terreno.CPF);
+                //cmd.Parameters.AddWithValue("@RG", _terreno.RG);
+                //cmd.Parameters.AddWithValue("@Email", _terreno.Email);
+                //cmd.Parameters.AddWithValue("@Fone", _terreno.Fone);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -42,16 +42,16 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Fornecedor> BuscarTodos()
+        public List<Terreno> BuscarTodos()
         {
-            List<Fornecedor> FornecedorList = new List<Fornecedor>();
-            Fornecedor fornecedor = new Fornecedor();
+            List<Terreno> terrenoList = new List<Terreno>();
+            Terreno terreno = new Terreno();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Fornecedor";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Terreno";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -59,13 +59,9 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        terreno = new Fornecedor();
+                        terreno = new Terreno();
                         terreno.Id = (int)rd["Id"];
-                        terreno.Nome = rd["Nome"].ToString();
-                        terreno.CPF = rd["CPF"].ToString();
-                        terreno.RG = rd["RG"].ToString();
-                        terreno.Email = rd["email"].ToString();
-                        terreno.Fone = rd["Fone"].ToString();
+                       
 
                         terrenoList.Add(terreno);
                     }
@@ -75,22 +71,22 @@ namespace DAL
             catch (Exception ex)
             {
                 //adicionar um id de erro que nao esta sendo utilizado
-                //throw new Exception("Ocorreu um erro ao tentar buscar terrenos no banco de dados", ex) { Data = { { "Id", 16 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar terrenos no banco de dados", ex) { Data = { { "Id", 16 } } };
             }
             finally
             {
                 cn.Close();
             }
         }
-        public Fornecedor BuscarPorId(int _id)
+        public Terreno BuscarPorId(int _id)
         {
-            Fornecedor fornecedor = new Fornecedor();
+            Terreno terreno = new Terreno();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Fornecedor WHERE Id = @Id";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Terreno WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -99,34 +95,30 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        fornecedor.Id = (int)rd["Id"];
-                        fornecedor.Nome = rd["Nome"].ToString();
-                        fornecedor.CPF = rd["CPF"].ToString();
-                        fornecedor.RG = rd["RG"].ToString();
-                        fornecedor.Email = rd["email"].ToString();
-                        fornecedor.Fone = rd["Fone"].ToString();
+                        terreno.Id = (int)rd["Id"];
+                       
                     }
                 }
-                return fornecedor;
+                return terreno;
             }
             catch (Exception ex)
             {
                 //adicionar um id de erro que nao esta sendo utilizado
-                //throw new Exception("Ocorreu um erro ao tentar buscar fornecedor por id no banco de dados", ex) { Data = { { "Id", 18 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar fornecedor por id no banco de dados", ex) { Data = { { "Id", 18 } } };
             }
             finally
             {
                 cn.Close();
             }
         }
-        public void Alterar(Fornecedor _fornecedor)
+        public void Alterar(Terreno _terreno)
         {
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Fornecedor SET 
+                cmd.CommandText = @"UPDATE Terreno SET 
                                         Nome = @Nome, 
                                         CPF = @CPF, 
                                         RG = @RG, 
@@ -135,12 +127,8 @@ namespace DAL
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _fornecedor.Id);
-                cmd.Parameters.AddWithValue("@Nome", _fornecedor.Nome);
-                cmd.Parameters.AddWithValue("@CPF", _fornecedor.CPF);
-                cmd.Parameters.AddWithValue("@RG", _fornecedor.RG);
-                cmd.Parameters.AddWithValue("@Email", _fornecedor.Email);
-                cmd.Parameters.AddWithValue("@Fone", _fornecedor.Fone);
+                cmd.Parameters.AddWithValue("@Id", _terreno.Id);
+               
 
                 cmd.Connection = cn;
                 cn.Open();
