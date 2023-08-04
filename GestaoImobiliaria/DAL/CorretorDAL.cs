@@ -222,44 +222,52 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao tentar alterar corretor no banco de dados", ex) { Data = { { "Id", 53 } } };
+                throw new Exception("Erro ao tentar alterar corretor no banco de dados", ex) { Data = { { "Id", 54 } } };
             }
             finally
             {
                 cn.Close();
             }
         }
-        public Corretor BuscarPorCPF(string _cPF)
+
+        public Corretor BuscarPorCPF(string _CPF)
         {
-            Corretor corretor = new Corretor();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Corretor corretor = new Corretor();
+
             try
             {
+
                 SqlCommand cmd = new SqlCommand();
+
+
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT  IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretor WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretor WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@CPF", _cPF);
+                cmd.Parameters.AddWithValue("@CPF", _CPF);
+
+
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     if (rd.Read())
                     {
+                        corretor = new Corretor();
                         corretor.IdCorretor = (int)rd["Id"];
                         corretor.Nome = rd["Nome"].ToString();
                         corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
-
                     }
                 }
                 return corretor;
+
+
             }
             catch (Exception ex)
             {
-                //adicionar um id de error que nao esta sendo utilizado
-                //throw new Exception("ocorreu um erro ao tentar buscar id do usuário do banco de dados", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar por um CPF no banco de dados", ex) { Data = { { "Id", 52 } } };
             }
             finally
             {
@@ -267,4 +275,5 @@ namespace DAL
             }
         }
     }
+    
 }
