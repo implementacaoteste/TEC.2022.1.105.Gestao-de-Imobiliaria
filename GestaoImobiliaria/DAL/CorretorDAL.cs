@@ -17,7 +17,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Corretor(Nome, Endereco, RG, CPF, CRECI) VALUES(@Nome, @Endereco, @RG, @CPF, @CRECI, @Fone)";
+                cmd.CommandText = @"INSERT INTO Corretor(Nome, Endereco, RG, CPF, CRECI, Fone) VALUES(@Nome, @Endereco, @RG, @CPF, @CRECI, @Fone)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Nome", _corretor.Nome);
@@ -58,7 +58,7 @@ namespace DAL
 
                 List<Corretor> corretorList = new List<Corretor>();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, RG, CPF, CRECI, Fone FROM Corretor";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, RG, CPF, CRECI, Fone FROM Corretor";
                 cmd.CommandType = System.Data.CommandType.Text;
 
 
@@ -68,7 +68,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         corretor = new Corretor();
-                        corretor.Id = (int)rd["Id"];
+                        corretor.IdCorretor = (int)rd["Id"];
                         corretor.Nome = rd["Nome"].ToString();
                         corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
@@ -108,7 +108,7 @@ namespace DAL
 
 
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, Endereco, RG, CPF, CRECI, FROM Corretor WHERE Id = @Id";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretor WHERE IDCorretor = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -119,7 +119,7 @@ namespace DAL
                     if (rd.Read())
                     {
                         corretor = new Corretor();
-                        corretor.Id = (int)rd["Id"];
+                        corretor.IdCorretor = (int)rd["Id"];
                         corretor.Nome = rd["Nome"].ToString();
                         corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
@@ -154,7 +154,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, Endereco, RG, CPF, CRECI, FROM Corretor WHERE Nome LIKE @Nome";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretor WHERE Nome LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
@@ -164,7 +164,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         corretor = new Corretor();
-                        corretor.Id = (int)rd["Id"];
+                        corretor.IdCorretor = (int)rd["Id"];
                         corretor.Nome = rd["Nome"].ToString();
                         corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
@@ -203,10 +203,10 @@ namespace DAL
                                         CPF = @CPF, 
                                         CRECI = @CRECI,
                                         Fone = @Fone 
-                                    WHERE Id = @Id";
+                                    WHERE Id = @IDCorretor";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _corretor.Id);
+                cmd.Parameters.AddWithValue("@IDCorretor", _corretor.IdCorretor);
                 cmd.Parameters.AddWithValue("@Nome", _corretor.Nome);
                 cmd.Parameters.AddWithValue("@Endereco", _corretor.Endereco);
                 cmd.Parameters.AddWithValue("@RG", _corretor.RG);
@@ -221,45 +221,78 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao tentar alterar corretor no banco de dados", ex) { Data = { { "Id", 53 } } };
+                throw new Exception("Erro ao tentar alterar corretor no banco de dados", ex) { Data = { { "Id", 54 } } };
             }
             finally
             {
                 cn.Close();
             }
         }
-        public Corretor BuscarPorCPF(string _cPF)
+
+        public Corretor BuscarPorCPF(string _CPF)
         {
-            Corretor corretor = new Corretor();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Corretor corretor = new Corretor();
+
             try
             {
+
                 SqlCommand cmd = new SqlCommand();
+
+
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, Nome, NomeCorretor, Email, CPF, Ativo, Senha FROM Corretor WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretor WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@CPF", _cPF);
+                cmd.Parameters.AddWithValue("@CPF", _CPF);
+
+
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     if (rd.Read())
                     {
-                        corretor.Id = Convert.ToInt32(rd["Id"]);
+                        corretor = new Corretor();
+                        corretor.IdCorretor = (int)rd["Id"];
                         corretor.Nome = rd["Nome"].ToString();
-                        corretor.NomeCorretor = rd["NomeCorretor"].ToString();
-                        corretor.Email = rd["Email"].ToString();
+                        corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
-                        corretor.Ativo = Convert.ToBoolean(rd["Ativo"].ToString());
-                        corretor.Senha = rd["Senha"].ToString();
-                        corretor.GrupoCorretors = new GrupoCorretorDAL().BuscarPorIdCorretor(corretor.Id);
+                        corretor.CRECI = rd["CRECI"].ToString();
+                        corretor.Fone = rd["Fone"].ToString();
                     }
                 }
                 return corretor;
+
+
             }
             catch (Exception ex)
             {
-                //adicionar um id de error que nao esta sendo utilizado
-                //throw new Exception("ocorreu um erro ao tentar buscar id do usuário do banco de dados", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar por um CPF no banco de dados", ex) { Data = { { "Id", 52 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public void Excluir(int _id)
+        {
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM Corretores WHERE IDCorretor = @id";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@Id", _id);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar excluir Corretor no banco de dados.", ex) { Data = { { "Id", 53 } } };
             }
             finally
             {
@@ -267,3 +300,5 @@ namespace DAL
             }
         }
     }
+    
+}
