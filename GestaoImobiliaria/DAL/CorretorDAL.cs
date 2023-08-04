@@ -17,7 +17,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Corretor(Nome, Endereco, RG, CPF, CRECI, Fone) VALUES(@Nome, @Endereco, @RG, @CPF, @CRECI, @Fone)";
+                cmd.CommandText = @"INSERT INTO Corretores(Nome, Endereco, RG, CPF, CRECI, Fone) VALUES(@Nome, @Endereco, @RG, @CPF, @CRECI, @Fone)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Nome", _corretor.Nome);
@@ -59,7 +59,7 @@ namespace DAL
 
                 List<Corretor> corretorList = new List<Corretor>();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, RG, CPF, CRECI, Fone FROM Corretor";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, RG, CPF, CRECI, Fone FROM Corretores";
                 cmd.CommandType = System.Data.CommandType.Text;
 
 
@@ -109,7 +109,7 @@ namespace DAL
 
 
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretor WHERE IDCorretor = @Id";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretores WHERE IDCorretor = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -155,7 +155,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretor WHERE Nome LIKE @Nome";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretores WHERE Nome LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
@@ -197,7 +197,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Corretor SET 
+                cmd.CommandText = @"UPDATE Corretores SET 
                                         Nome = @Nome,
                                         Endereco = @Endereco,
                                         RG = @RG, 
@@ -242,7 +242,7 @@ namespace DAL
 
 
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretor WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretores WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _CPF);
 
