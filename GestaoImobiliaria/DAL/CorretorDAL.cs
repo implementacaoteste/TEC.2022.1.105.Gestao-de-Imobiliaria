@@ -212,7 +212,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Endereco", _corretor.Endereco);
                 cmd.Parameters.AddWithValue("@RG", _corretor.RG);
                 cmd.Parameters.AddWithValue("@CPF", _corretor.CPF);
-                cmd.Parameters.AddWithValue("@CRECI", _corretor.CRECI)
+                cmd.Parameters.AddWithValue("@CRECI", _corretor.CRECI);
                 cmd.Parameters.AddWithValue("@Fone", _corretor.Fone);
 
                 cmd.Connection = cn;
