@@ -127,7 +127,7 @@ namespace DAL
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _terreno.Id);
+                cmd.Parameters.AddWithValue("@Id", _terreno.IdTerreno);
                
 
                 cmd.Connection = cn;
