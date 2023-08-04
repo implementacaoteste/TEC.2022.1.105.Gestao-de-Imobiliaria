@@ -8,6 +8,17 @@ namespace Models
 {
     public class Terreno
     {
-
+        public int IdTerreno { get; set; }
+        public int IdEmpreendimnto { get; set; }
+        public float PrecoAVista { get; set; }
+        public float PrecoParcelado { get; set; }
+        public bool RedeAguaEnergia { get; set; }
+        public float MetragemFrente { get; set; }
+        public float MetragemFundo { get; set; }
+        public float MetragemLaterais { get; set; }
+        public float TamanhoTotal { get; set; }
+        public float ComfrontacoesTerreno { get; set; }
+        public string Endereco { get; set; }
+        public int Matricula { get; set; }
     }
 }
