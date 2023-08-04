@@ -46,7 +46,6 @@ namespace DAL
 
 
         public List<Corretor> BuscarTodos()
-
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             Corretor corretor = new Corretor();

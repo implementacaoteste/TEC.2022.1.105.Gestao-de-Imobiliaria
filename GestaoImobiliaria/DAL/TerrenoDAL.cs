@@ -34,8 +34,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //adicionar um id de error que nao esta sendo utilizado
-                //throw new Exception("Ocorreu um erro ao tentar inserir um terreno no banco de dados.", ex) { Data = { { "Id", 15 } } };
+                throw new Exception("Ocorreu um erro ao tentar inserir um terreno no banco de dados.", ex) { Data = { { "Id", 22 } } };
             }
             finally
             {
@@ -60,7 +59,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         terreno = new Terreno();
-                        terreno.Id = (int)rd["Id"];
+                        terreno.IdTerreno = (int)rd["Id"];
                        
 
                         terrenoList.Add(terreno);
@@ -70,8 +69,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //adicionar um id de erro que nao esta sendo utilizado
-                throw new Exception("Ocorreu um erro ao tentar buscar terrenos no banco de dados", ex) { Data = { { "Id", 16 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar terrenos no banco de dados", ex) { Data = { { "Id", 23 } } };
             }
             finally
             {
@@ -95,7 +93,7 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        terreno.Id = (int)rd["Id"];
+                        terreno.IdTerreno = (int)rd["Id"];
                        
                     }
                 }
@@ -103,8 +101,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //adicionar um id de erro que nao esta sendo utilizado
-                throw new Exception("Ocorreu um erro ao tentar buscar fornecedor por id no banco de dados", ex) { Data = { { "Id", 18 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar fornecedor por id no banco de dados", ex) { Data = { { "Id", 24 } } };
             }
             finally
             {
@@ -127,7 +124,7 @@ namespace DAL
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _terreno.Id);
+                cmd.Parameters.AddWithValue("@Id", _terreno.IdTerreno);
                
 
                 cmd.Connection = cn;
@@ -137,8 +134,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //adicionar um id de erro que nao esta sendo utilizado
-                //throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 20 } } };
+                throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 25 } } };
             }
             finally
             {
@@ -164,8 +160,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //adicionar um id de erro que nao esta sendo utilizado
-                //throw new Exception("Ocorreu um erro ao tentar excluir fornecdor no banco de dados.", ex) { Data = { { "Id", 21 } } };
+                throw new Exception("Ocorreu um erro ao tentar excluir fornecdor no banco de dados.", ex) { Data = { { "Id", 26 } } };
             }
             finally
             {

@@ -10,15 +10,16 @@ namespace DAL
         {
             get
             {
-                if (String.IsNullOrEmpty(Constantes.StringDeConexao))
+                return @"User ID=SA;Initial Catalog=Configuracao;Data Source=.\SQLEXPRESS2019A;Password=Senailab02";
+            }
+        }
+    }
+}
+/*                if (String.IsNullOrEmpty(Constantes.StringDeConexao))
                 {
                     if (File.Exists(Constantes.DiretorioStringConexao + Constantes.NomeArquivoConexao))
                         Constantes.StringDeConexao = File.ReadAllText(Constantes.DiretorioStringConexao + Constantes.NomeArquivoConexao);
                     else
                         throw new Exception("É preciso criar a string de conexão") { Data = { { "Id", 1 } } };
                 }
-                return Constantes.StringDeConexao;
-            }
-        }
-    }
-}
+                return Constantes.StringDeConexao;*/
