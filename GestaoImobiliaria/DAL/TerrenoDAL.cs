@@ -60,7 +60,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         terreno = new Terreno();
-                        terreno.Id = (int)rd["Id"];
+                        terreno.IdTerreno = (int)rd["Id"];
                        
 
                         terrenoList.Add(terreno);
@@ -95,7 +95,7 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        terreno.Id = (int)rd["Id"];
+                        terreno.IdTerreno = (int)rd["Id"];
                        
                     }
                 }
