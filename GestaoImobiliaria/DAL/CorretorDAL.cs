@@ -165,7 +165,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         corretor = new Corretor();
-                        corretor.Id = (int)rd["Id"];
+                        corretor.IdCorretor = (int)rd["Id"];
                         corretor.Nome = rd["Nome"].ToString();
                         corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
