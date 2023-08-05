@@ -18,13 +18,16 @@ namespace DAL
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"INSERT INTO Terreno(Nome, CPF, RG, Email, Fone) 
                                     VALUES(@Nome, @CPF, @RG, @Email, @Fone)";
-
+                PrecoAVista PrecoParcelado RedeAguaEnergia MetragemFrente MetragemFundo MetragemLaterais
+                    TamanhoTotalTerreno ConfrontacoesTerreno Endereco NumeroMatricula
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 //cmd.Parameters.AddWithValue("@Nome", _terreno.Nome);
                 //cmd.Parameters.AddWithValue("@CPF", _terreno.CPF);
                 //cmd.Parameters.AddWithValue("@RG", _terreno.RG);
                 //cmd.Parameters.AddWithValue("@Email", _terreno.Email);
+                //cmd.Parameters.AddWithValue("@Fone", _terreno.Fone);
+                //cmd.Parameters.AddWithValue("@Fone", _terreno.Fone);
                 //cmd.Parameters.AddWithValue("@Fone", _terreno.Fone);
 
                 cmd.Connection = cn;
