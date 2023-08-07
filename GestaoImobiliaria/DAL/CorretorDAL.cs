@@ -206,7 +206,8 @@ namespace DAL
                                         RG = @RG, 
                                         CPF = @CPF, 
                                         CRECI = @CRECI,
-                                        Fone = @Fone 
+                                        Fone = @Fone,
+                                        Email = @Email
                                     WHERE Id = @IDCorretor";
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -217,6 +218,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@CPF", _corretor.CPF);
                 cmd.Parameters.AddWithValue("@CRECI", _corretor.CRECI);
                 cmd.Parameters.AddWithValue("@Fone", _corretor.Fone);
+                cmd.Parameters.AddWithValue("@Email", _corretor.Email);
 
                 cmd.Connection = cn;
                 cn.Open();
