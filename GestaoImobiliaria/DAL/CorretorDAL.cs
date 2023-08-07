@@ -17,7 +17,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Corretores(Nome, Endereco, RG, CPF, CRECI, Fone) VALUES(@Nome, @Endereco, @RG, @CPF, @CRECI, @Fone)";
+                cmd.CommandText = @"INSERT INTO Corretores(Nome, Endereco, RG, CPF, CRECI, Fone, Email) VALUES(@Nome, @Endereco, @RG, @CPF, @CRECI, @Fone, @Email)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Nome", _corretor.Nome);
@@ -26,6 +26,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@CPF", _corretor.CPF);
                 cmd.Parameters.AddWithValue("@CRECI", _corretor.CRECI);
                 cmd.Parameters.AddWithValue("@Fone", _corretor.Fone);
+                cmd.Parameters.AddWithValue("@Email", _corretor.Email);
 
                 cmd.Connection = cn;
                 cn.Open();
