@@ -59,7 +59,7 @@ namespace DAL
 
                 List<Corretor> corretorList = new List<Corretor>();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, RG, CPF, CRECI, Fone FROM Corretores";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, RG, CPF, CRECI, Fone, Email FROM Corretores";
                 cmd.CommandType = System.Data.CommandType.Text;
 
 
@@ -75,6 +75,7 @@ namespace DAL
                         corretor.CPF = rd["CPF"].ToString();
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
+                        corretor.Email = rd["Email"].ToString();
 
 
                         corretorList.Add(corretor);
