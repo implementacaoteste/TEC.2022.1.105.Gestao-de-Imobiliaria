@@ -247,7 +247,7 @@ namespace DAL
 
 
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretores WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone, Email FROM Corretores WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _CPF);
 
@@ -264,6 +264,7 @@ namespace DAL
                         corretor.CPF = rd["CPF"].ToString();
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
+                        corretor.Email = rd["Email"].ToString();
                     }
                 }
                 return corretor;
