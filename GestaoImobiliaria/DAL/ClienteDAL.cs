@@ -141,7 +141,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Cliente WHERE Id = @Id";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge FROM Cliente WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -156,6 +156,12 @@ namespace DAL
                         cliente.RG = rd["RG"].ToString();
                         cliente.Email = rd["email"].ToString();
                         cliente.Fone = rd["Fone"].ToString();
+                        cliente.Endereco = rd["Endereco"].ToString();
+                        cliente.EstadoCivil = rd["EstadoCivil"].ToString();
+                        cliente.Renda = rd["Renda"].ToString();
+                        cliente.CPFConjuge = rd["CPFConjuge"].ToString();
+                        cliente.RGConjuge = rd["RGConjuge"].ToString();
+
                     }
                 }
                 return cliente;
