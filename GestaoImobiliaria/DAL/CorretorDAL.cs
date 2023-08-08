@@ -17,7 +17,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Corretores(Nome, Endereco, RG, CPF, CRECI, Fone) VALUES(@Nome, @Endereco, @RG, @CPF, @CRECI, @Fone)";
+                cmd.CommandText = @"INSERT INTO Corretores(Nome, Endereco, RG, CPF, CRECI, Fone, Email) VALUES(@Nome, @Endereco, @RG, @CPF, @CRECI, @Fone, @Email)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Nome", _corretor.Nome);
@@ -26,6 +26,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@CPF", _corretor.CPF);
                 cmd.Parameters.AddWithValue("@CRECI", _corretor.CRECI);
                 cmd.Parameters.AddWithValue("@Fone", _corretor.Fone);
+                cmd.Parameters.AddWithValue("@Email", _corretor.Email);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -58,7 +59,7 @@ namespace DAL
 
                 List<Corretor> corretorList = new List<Corretor>();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, RG, CPF, CRECI, Fone FROM Corretores";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, RG, CPF, CRECI, Fone, Email, Endereco FROM Corretores";
                 cmd.CommandType = System.Data.CommandType.Text;
 
 
@@ -74,6 +75,8 @@ namespace DAL
                         corretor.CPF = rd["CPF"].ToString();
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
+                        corretor.Email = rd["Email"].ToString();
+                        corretor.Endereco = rd["Endereco"].ToString();
 
 
                         corretorList.Add(corretor);
@@ -108,7 +111,7 @@ namespace DAL
 
 
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretores WHERE IDCorretor = @Id";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone, Email FROM Corretores WHERE IDCorretor = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -125,6 +128,8 @@ namespace DAL
                         corretor.CPF = rd["CPF"].ToString();
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
+                        corretor.Endereco = rd["Endereco"].ToString();
+                        corretor.Email = rd["Email"].ToString();
                     }
                 }
                 return corretor;
@@ -154,7 +159,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretores WHERE Nome LIKE @Nome";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone, Email FROM Corretores WHERE Nome LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
@@ -170,6 +175,8 @@ namespace DAL
                         corretor.CPF = rd["CPF"].ToString();
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
+                        corretor.Email = rd["Email"].ToString();
+                        corretor.Endereco = rd["Endereco"].ToString();
 
                         corretorList.Add(corretor);
                     }
@@ -202,7 +209,8 @@ namespace DAL
                                         RG = @RG, 
                                         CPF = @CPF, 
                                         CRECI = @CRECI,
-                                        Fone = @Fone 
+                                        Fone = @Fone,
+                                        Email = @Email
                                     WHERE Id = @IDCorretor";
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -213,6 +221,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@CPF", _corretor.CPF);
                 cmd.Parameters.AddWithValue("@CRECI", _corretor.CRECI);
                 cmd.Parameters.AddWithValue("@Fone", _corretor.Fone);
+                cmd.Parameters.AddWithValue("@Email", _corretor.Email);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -241,7 +250,7 @@ namespace DAL
 
 
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone FROM Corretores WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, Endereco, RG, CPF, CRECI, Fone, Email FROM Corretores WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _CPF);
 
@@ -258,6 +267,8 @@ namespace DAL
                         corretor.CPF = rd["CPF"].ToString();
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
+                        corretor.Email = rd["Email"].ToString();
+                        corretor.Endereco = rd["Endereco"].ToString();
                     }
                 }
                 return corretor;

@@ -14,8 +14,8 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Cliente(Nome, CPF, RG, Email, Fone) 
-                                    VALUES(@Nome, @CPF, @RG, @Email, @Fone)";
+                cmd.CommandText = @"INSERT INTO Cliente(Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge) 
+                                    VALUES(@Nome, @CPF, @RG, @Email, @Fone, @Endereco, @EstadoCivil, @Renda, @CPFConjuge, @RGConjuge)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -24,6 +24,11 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@RG", _cliente.RG);
                 cmd.Parameters.AddWithValue("@Email", _cliente.Email);
                 cmd.Parameters.AddWithValue("@Fone", _cliente.Fone);
+                cmd.Parameters.AddWithValue("@Endereco", _cliente.Endereco);
+                cmd.Parameters.AddWithValue("@EstadoCivil", _cliente.EstadoCivil);
+                cmd.Parameters.AddWithValue("@Renda", _cliente.Renda);
+                cmd.Parameters.AddWithValue("@CPFConjuge", _cliente.CPFConjuge);
+                cmd.Parameters.AddWithValue("@RGConjuge", _cliente.RGConjuge);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -202,7 +207,12 @@ namespace DAL
                                         CPF = @CPF, 
                                         RG = @RG, 
                                         Email = @Email, 
-                                        Fone = @Fone 
+                                        Fone = @Fone,
+                                        Endereco = @Endereco,
+                                        EstadoCivil = @EstadoCivil,
+                                        Renda = @Renda,
+                                        CPFConjuge = @CPFConjuge,
+                                        RGConjuge = @RGConjuge
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -212,6 +222,11 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@RG", _cliente.RG);
                 cmd.Parameters.AddWithValue("@Email", _cliente.Email);
                 cmd.Parameters.AddWithValue("@Fone", _cliente.Fone);
+                cmd.Parameters.AddWithValue("@Endereco", _cliente.Endereco);
+                cmd.Parameters.AddWithValue("@EstadoCivil", _cliente.EstadoCivil);
+                cmd.Parameters.AddWithValue("@Renda", _cliente.Renda);
+                cmd.Parameters.AddWithValue("@CPFConjuge", _cliente.CPFConjuge);
+                cmd.Parameters.AddWithValue("@RGConjuge", _cliente.RGConjuge);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -220,7 +235,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 20 } } };
+                throw new Exception("Ocorreu um erro ao tentar alterar um cliente no banco de dados", ex) { Data = { { "Id", 20 } } };
             }
             finally
             {
