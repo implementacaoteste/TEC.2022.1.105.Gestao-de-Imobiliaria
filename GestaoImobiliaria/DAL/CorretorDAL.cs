@@ -59,7 +59,7 @@ namespace DAL
 
                 List<Corretor> corretorList = new List<Corretor>();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDCorretor, Nome, RG, CPF, CRECI, Fone, Email FROM Corretores";
+                cmd.CommandText = @"SELECT IDCorretor, Nome, RG, CPF, CRECI, Fone, Email, Endereco FROM Corretores";
                 cmd.CommandType = System.Data.CommandType.Text;
 
 
@@ -76,6 +76,7 @@ namespace DAL
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
                         corretor.Email = rd["Email"].ToString();
+                        corretor.Endereco = rd["Endereco"].ToString();
 
 
                         corretorList.Add(corretor);
@@ -127,6 +128,7 @@ namespace DAL
                         corretor.CPF = rd["CPF"].ToString();
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
+                        corretor.Endereco = rd["Endereco"].ToString();
                         corretor.Email = rd["Email"].ToString();
                     }
                 }
@@ -174,6 +176,7 @@ namespace DAL
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
                         corretor.Email = rd["Email"].ToString();
+                        corretor.Endereco = rd["Endereco"].ToString();
 
                         corretorList.Add(corretor);
                     }
@@ -265,6 +268,7 @@ namespace DAL
                         corretor.CRECI = rd["CRECI"].ToString();
                         corretor.Fone = rd["Fone"].ToString();
                         corretor.Email = rd["Email"].ToString();
+                        corretor.Endereco = rd["Endereco"].ToString();
                     }
                 }
                 return corretor;
