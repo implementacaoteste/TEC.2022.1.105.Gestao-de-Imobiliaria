@@ -16,19 +16,22 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Terreno(Nome, CPF, RG, Email, Fone) 
-                                    VALUES(@Nome, @CPF, @RG, @Email, @Fone)";
-                PrecoAVista PrecoParcelado RedeAguaEnergia MetragemFrente MetragemFundo MetragemLaterais
-                    TamanhoTotalTerreno ConfrontacoesTerreno Endereco NumeroMatricula
+                cmd.CommandText = @"INSERT INTO Terreno(PrecoAVista, PrecoParcelado, RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
+                    TamanhoTotalTerreno, ConfrontacoesTerreno, Endereco, NumeroMatricula) 
+                                    VALUES (@PrecoAVista, @PrecoParcelado, @RedeAguaEnergia, @MetragemFrente, @MetragemFundo, @MetragemLaterais,
+                    @TamanhoTotalTerreno, @ConfrontacoesTerreno, @Endereco, @NumeroMatricula";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                //cmd.Parameters.AddWithValue("@Nome", _terreno.Nome);
-                //cmd.Parameters.AddWithValue("@CPF", _terreno.CPF);
-                //cmd.Parameters.AddWithValue("@RG", _terreno.RG);
-                //cmd.Parameters.AddWithValue("@Email", _terreno.Email);
-                //cmd.Parameters.AddWithValue("@Fone", _terreno.Fone);
-                //cmd.Parameters.AddWithValue("@Fone", _terreno.Fone);
-                //cmd.Parameters.AddWithValue("@Fone", _terreno.Fone);
+                cmd.Parameters.AddWithValue("@PrecoAVista", _terreno.PrecoAVista);
+                cmd.Parameters.AddWithValue("@PrecoParcelado", _terreno.PrecoParcelado);
+                cmd.Parameters.AddWithValue("@RedeAguaEnergia", _terreno.RedeAguaEnergia);
+                cmd.Parameters.AddWithValue("@MetragemFrente", _terreno.MetragemFrente);
+                cmd.Parameters.AddWithValue("@MetragemFundo", _terreno.MetragemFundo);
+                cmd.Parameters.AddWithValue("@MetragemLaterais", _terreno.MetragemLaterais);
+                cmd.Parameters.AddWithValue("@TamanhoTotalTerreno", _terreno.TamanhoTotal);
+                cmd.Parameters.AddWithValue("@ConfrontacoesTerreno", _terreno.ComfrontacoesTerreno);
+                cmd.Parameters.AddWithValue("@Endereco", _terreno.Endereco);
+                cmd.Parameters.AddWithValue("@NumeroMatricula", _terreno.Matricula);
 
                 cmd.Connection = cn;
                 cn.Open();
