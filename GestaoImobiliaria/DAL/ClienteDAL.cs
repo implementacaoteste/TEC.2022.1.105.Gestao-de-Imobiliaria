@@ -53,7 +53,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Cliente";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge FROM Cliente";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -68,6 +68,11 @@ namespace DAL
                         cliente.RG = rd["RG"].ToString();
                         cliente.Email = rd["email"].ToString();
                         cliente.Fone = rd["Fone"].ToString();
+                        cliente.Endereco = rd["Endereco"].ToString();
+                        cliente.EstadoCivil = rd["EstadoCivil"].ToString();
+                        cliente.Renda = rd["Renda"].ToString();
+                        cliente.CPFConjuge = rd["CPFConjuge"].ToString();
+                        cliente.RGConjuge = rd["RGConjuge"].ToString();
 
                         clienteList.Add(cliente);
                     }
@@ -76,7 +81,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar clientes no banco de dados", ex) { Data = { { "Id", 16 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar por clientes no banco de dados", ex) { Data = { { "Id", 16 } } };
             }
             finally
             {
