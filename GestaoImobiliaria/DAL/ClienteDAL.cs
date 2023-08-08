@@ -97,7 +97,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Cliente WHERE Nome LIKE @Nome";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge FROM Cliente WHERE Nome LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
@@ -113,6 +113,11 @@ namespace DAL
                         cliente.RG = rd["RG"].ToString();
                         cliente.Email = rd["email"].ToString();
                         cliente.Fone = rd["Fone"].ToString();
+                        cliente.Endereco = rd["Endereco"].ToString();
+                        cliente.EstadoCivil = rd["EstadoCIvil"].ToString();
+                        cliente.Renda = rd["Renda"].ToString();
+                        cliente.CPFConjuge = rd["CPFConjuge"].ToString();
+                        cliente.RGConjuge = rd["RGConjuge"].ToString();
 
                         clienteList.Add(cliente);
                     }
