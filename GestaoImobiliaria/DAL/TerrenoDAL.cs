@@ -16,16 +16,22 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Terreno(Nome, CPF, RG, Email, Fone) 
-                                    VALUES(@Nome, @CPF, @RG, @Email, @Fone)";
-
+                cmd.CommandText = @"INSERT INTO Terreno(PrecoAVista, PrecoParcelado, RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
+                    TamanhoTotalTerreno, ConfrontacoesTerreno, Endereco, NumeroMatricula) 
+                                    VALUES (@PrecoAVista, @PrecoParcelado, @RedeAguaEnergia, @MetragemFrente, @MetragemFundo, @MetragemLaterais,
+                    @TamanhoTotalTerreno, @ConfrontacoesTerreno, @Endereco, @NumeroMatricula";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                //cmd.Parameters.AddWithValue("@Nome", _terreno.Nome);
-                //cmd.Parameters.AddWithValue("@CPF", _terreno.CPF);
-                //cmd.Parameters.AddWithValue("@RG", _terreno.RG);
-                //cmd.Parameters.AddWithValue("@Email", _terreno.Email);
-                //cmd.Parameters.AddWithValue("@Fone", _terreno.Fone);
+                cmd.Parameters.AddWithValue("@PrecoAVista", _terreno.PrecoAVista);
+                cmd.Parameters.AddWithValue("@PrecoParcelado", _terreno.PrecoParcelado);
+                cmd.Parameters.AddWithValue("@RedeAguaEnergia", _terreno.RedeAguaEnergia);
+                cmd.Parameters.AddWithValue("@MetragemFrente", _terreno.MetragemFrente);
+                cmd.Parameters.AddWithValue("@MetragemFundo", _terreno.MetragemFundo);
+                cmd.Parameters.AddWithValue("@MetragemLaterais", _terreno.MetragemLaterais);
+                cmd.Parameters.AddWithValue("@TamanhoTotalTerreno", _terreno.TamanhoTotal);
+                cmd.Parameters.AddWithValue("@ConfrontacoesTerreno", _terreno.ComfrontacoesTerreno);
+                cmd.Parameters.AddWithValue("@Endereco", _terreno.Endereco);
+                cmd.Parameters.AddWithValue("@NumeroMatricula", _terreno.Matricula);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -34,8 +40,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //adicionar um id de error que nao esta sendo utilizado
-                //throw new Exception("Ocorreu um erro ao tentar inserir um terreno no banco de dados.", ex) { Data = { { "Id", 15 } } };
+                throw new Exception("Ocorreu um erro ao tentar inserir um terreno no banco de dados.", ex) { Data = { { "Id", 22 } } };
             }
             finally
             {
@@ -60,8 +65,8 @@ namespace DAL
                     while (rd.Read())
                     {
                         terreno = new Terreno();
-                        terreno.Id = (int)rd["Id"];
-                       
+                        terreno.IdTerreno = (int)rd["Id"];
+
 
                         terrenoList.Add(terreno);
                     }
@@ -70,8 +75,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //adicionar um id de erro que nao esta sendo utilizado
-                throw new Exception("Ocorreu um erro ao tentar buscar terrenos no banco de dados", ex) { Data = { { "Id", 16 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar terrenos no banco de dados", ex) { Data = { { "Id", 23 } } };
             }
             finally
             {
@@ -86,7 +90,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Terreno WHERE Id = @Id";
+                cmd.CommandText = @"SELECT IdTerreno, PrecoAVista, PrecoParcelado, RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
+                    TamanhoTotalTerreno, ConfrontacoesTerreno, Endereco, NumeroMatricula FROM Terreno WHERE IdTerreno = @Id";
+
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -95,16 +101,24 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        terreno.Id = (int)rd["Id"];
-                       
+                        terreno.IdTerreno = (int)rd["Id"];
+                        terreno.PrecoAVista = (float)rd["PrecoAVista"];
+                        terreno.PrecoParcelado = (float)rd["PrecoParcelado"];
+                        terreno.RedeAguaEnergia = (bool)rd["RedeAguaEnergia"];
+                        terreno.MetragemFrente = (float)rd["MetragemFrente"];
+                        terreno.MetragemFundo = (float)rd["MetragemFundo"];
+                        terreno.MetragemLaterais = (float)rd["MetragemLaterais"];
+                        terreno.TamanhoTotal = (float)rd["TamanhoTotal"];
+                        terreno.ComfrontacoesTerreno = (float)rd["ComfrontacoesTerreno"];
+                        terreno.Endereco = (string)rd["Endereco"].ToString();
+                        terreno.Matricula = (int)rd["Matricula"];
                     }
                 }
                 return terreno;
             }
             catch (Exception ex)
             {
-                //adicionar um id de erro que nao esta sendo utilizado
-                throw new Exception("Ocorreu um erro ao tentar buscar fornecedor por id no banco de dados", ex) { Data = { { "Id", 18 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar fornecedor por id no banco de dados", ex) { Data = { { "Id", 24 } } };
             }
             finally
             {
@@ -119,16 +133,22 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE Terreno SET 
-                                        Nome = @Nome, 
-                                        CPF = @CPF, 
-                                        RG = @RG, 
-                                        Email = @Email, 
-                                        Fone = @Fone 
-                                    WHERE Id = @Id";
+                                        PrecoAVista = @PrecoAVista,
+                                        PrecoParcelado = @PrecoParcelado,
+                                        RedeAguaEnergia = @RedeAguaEnergia,
+                                        MetragemFrente = @MetragemFrente,
+                                        MetragemFundo = @MetragemFundo,
+                                        MetragemLaterais = @MetragemLaterais,
+                                        TamanhoTotalTerreno = @TamanhoTotalTerreno,
+                                        ConfrontacoesTerreno = @ConfrontacoesTerreno,
+                                        Endereco = @Endereco,
+                                        NumeroMatricula = @NumeroMatricula
+                                    WHERE IdTerreno = @IdTerreno";
+
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _terreno.Id);
-               
+                cmd.Parameters.AddWithValue("@Id", _terreno.IdTerreno);
+
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -137,8 +157,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //adicionar um id de erro que nao esta sendo utilizado
-                //throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 20 } } };
+                throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 25 } } };
             }
             finally
             {
@@ -152,10 +171,10 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM Fornecedor WHERE id = @id";
+                cmd.CommandText = @"DELETE FROM Fornecedor WHERE IdTerreno = @IdTerreno";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _id);
+                cmd.Parameters.AddWithValue("@IdTerreno", _id);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -164,8 +183,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //adicionar um id de erro que nao esta sendo utilizado
-                //throw new Exception("Ocorreu um erro ao tentar excluir fornecdor no banco de dados.", ex) { Data = { { "Id", 21 } } };
+                throw new Exception("Ocorreu um erro ao tentar excluir fornecdor no banco de dados.", ex) { Data = { { "Id", 26 } } };
             }
             finally
             {

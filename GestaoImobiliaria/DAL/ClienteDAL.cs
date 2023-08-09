@@ -14,8 +14,8 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Cliente(Nome, CPF, RG, Email, Fone) 
-                                    VALUES(@Nome, @CPF, @RG, @Email, @Fone)";
+                cmd.CommandText = @"INSERT INTO Cliente(Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge) 
+                                    VALUES(@Nome, @CPF, @RG, @Email, @Fone, @Endereco, @EstadoCivil, @Renda, @CPFConjuge, @RGConjuge)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -24,6 +24,11 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@RG", _cliente.RG);
                 cmd.Parameters.AddWithValue("@Email", _cliente.Email);
                 cmd.Parameters.AddWithValue("@Fone", _cliente.Fone);
+                cmd.Parameters.AddWithValue("@Endereco", _cliente.Endereco);
+                cmd.Parameters.AddWithValue("@EstadoCivil", _cliente.EstadoCivil);
+                cmd.Parameters.AddWithValue("@Renda", _cliente.Renda);
+                cmd.Parameters.AddWithValue("@CPFConjuge", _cliente.CPFConjuge);
+                cmd.Parameters.AddWithValue("@RGConjuge", _cliente.RGConjuge);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -48,7 +53,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Cliente";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge FROM Cliente";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -63,6 +68,11 @@ namespace DAL
                         cliente.RG = rd["RG"].ToString();
                         cliente.Email = rd["email"].ToString();
                         cliente.Fone = rd["Fone"].ToString();
+                        cliente.Endereco = rd["Endereco"].ToString();
+                        cliente.EstadoCivil = rd["EstadoCivil"].ToString();
+                        cliente.Renda = rd["Renda"].ToString();
+                        cliente.CPFConjuge = rd["CPFConjuge"].ToString();
+                        cliente.RGConjuge = rd["RGConjuge"].ToString();
 
                         clienteList.Add(cliente);
                     }
@@ -71,7 +81,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar clientes no banco de dados", ex) { Data = { { "Id", 16 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar por clientes no banco de dados", ex) { Data = { { "Id", 16 } } };
             }
             finally
             {
@@ -87,7 +97,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Cliente WHERE Nome LIKE @Nome";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge FROM Cliente WHERE Nome LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
@@ -103,6 +113,11 @@ namespace DAL
                         cliente.RG = rd["RG"].ToString();
                         cliente.Email = rd["email"].ToString();
                         cliente.Fone = rd["Fone"].ToString();
+                        cliente.Endereco = rd["Endereco"].ToString();
+                        cliente.EstadoCivil = rd["EstadoCIvil"].ToString();
+                        cliente.Renda = rd["Renda"].ToString();
+                        cliente.CPFConjuge = rd["CPFConjuge"].ToString();
+                        cliente.RGConjuge = rd["RGConjuge"].ToString();
 
                         clienteList.Add(cliente);
                     }
@@ -126,7 +141,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Cliente WHERE Id = @Id";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge FROM Cliente WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -141,6 +156,12 @@ namespace DAL
                         cliente.RG = rd["RG"].ToString();
                         cliente.Email = rd["email"].ToString();
                         cliente.Fone = rd["Fone"].ToString();
+                        cliente.Endereco = rd["Endereco"].ToString();
+                        cliente.EstadoCivil = rd["EstadoCivil"].ToString();
+                        cliente.Renda = rd["Renda"].ToString();
+                        cliente.CPFConjuge = rd["CPFConjuge"].ToString();
+                        cliente.RGConjuge = rd["RGConjuge"].ToString();
+
                     }
                 }
                 return cliente;
@@ -162,7 +183,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Cliente WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge FROM Cliente WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _CPF);
 
@@ -177,6 +198,12 @@ namespace DAL
                         cliente.RG = rd["RG"].ToString();
                         cliente.Email = rd["email"].ToString();
                         cliente.Fone = rd["Fone"].ToString();
+                        cliente.Endereco = rd["Endereco"].ToString();
+                        cliente.EstadoCivil = rd["EstadoCivil"].ToString();
+                        cliente.Renda = rd["Renda"].ToString();
+                        cliente.CPFConjuge = rd["CPFConjuge"].ToString();
+                        cliente.RGConjuge = rd["RGConjuge"].ToString();
+
                     }
                 }
                 return cliente;
@@ -202,7 +229,12 @@ namespace DAL
                                         CPF = @CPF, 
                                         RG = @RG, 
                                         Email = @Email, 
-                                        Fone = @Fone 
+                                        Fone = @Fone,
+                                        Endereco = @Endereco,
+                                        EstadoCivil = @EstadoCivil,
+                                        Renda = @Renda,
+                                        CPFConjuge = @CPFConjuge,
+                                        RGConjuge = @RGConjuge
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -212,6 +244,11 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@RG", _cliente.RG);
                 cmd.Parameters.AddWithValue("@Email", _cliente.Email);
                 cmd.Parameters.AddWithValue("@Fone", _cliente.Fone);
+                cmd.Parameters.AddWithValue("@Endereco", _cliente.Endereco);
+                cmd.Parameters.AddWithValue("@EstadoCivil", _cliente.EstadoCivil);
+                cmd.Parameters.AddWithValue("@Renda", _cliente.Renda);
+                cmd.Parameters.AddWithValue("@CPFConjuge", _cliente.CPFConjuge);
+                cmd.Parameters.AddWithValue("@RGConjuge", _cliente.RGConjuge);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -220,7 +257,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 20 } } };
+                throw new Exception("Ocorreu um erro ao tentar alterar um cliente no banco de dados", ex) { Data = { { "Id", 20 } } };
             }
             finally
             {
