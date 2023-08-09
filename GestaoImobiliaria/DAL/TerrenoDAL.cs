@@ -16,12 +16,12 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Terreno(PrecoAVista, PrecoParcelado, RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
+                cmd.CommandText = @"INSERT INTO Terrenos(PrecoAVista, PrecoParcelado, RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
                     TamanhoTotalTerreno, ConfrontacoesTerreno, Endereco, NumeroMatricula) 
                                     VALUES (@PrecoAVista, @PrecoParcelado, @RedeAguaEnergia, @MetragemFrente, @MetragemFundo, @MetragemLaterais,
-                    @TamanhoTotalTerreno, @ConfrontacoesTerreno, @Endereco, @NumeroMatricula";
+                    @TamanhoTotalTerreno, @ConfrontacoesTerreno, @Endereco, @NumeroMatricula)";
                 cmd.CommandType = System.Data.CommandType.Text;
-
+                //OBS: Só consegui inserir um terreno, quando existe um "Empreendimento" cadastrado
                 cmd.Parameters.AddWithValue("@PrecoAVista", _terreno.PrecoAVista);
                 cmd.Parameters.AddWithValue("@PrecoParcelado", _terreno.PrecoParcelado);
                 cmd.Parameters.AddWithValue("@RedeAguaEnergia", _terreno.RedeAguaEnergia);
