@@ -66,7 +66,7 @@ namespace DAL
                     {
                         terreno = new Terreno();
                         terreno.IdTerreno = (int)rd["Id"];
-                       
+
 
                         terrenoList.Add(terreno);
                     }
@@ -90,7 +90,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Terreno WHERE Id = @Id";
+                cmd.CommandText = @"SELECT IdTerreno, PrecoAVista, PrecoParcelado, RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
+                    TamanhoTotalTerreno, ConfrontacoesTerreno, Endereco, NumeroMatricula FROM Terreno WHERE IdTerreno = @Id";
+
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -100,7 +102,16 @@ namespace DAL
                     while (rd.Read())
                     {
                         terreno.IdTerreno = (int)rd["Id"];
-                       
+                        terreno.PrecoAVista = (float)rd["PrecoAVista"];
+                        terreno.PrecoParcelado = (float)rd["PrecoParcelado"];
+                        terreno.RedeAguaEnergia = (bool)rd["RedeAguaEnergia"];
+                        terreno.MetragemFrente = (float)rd["MetragemFrente"];
+                        terreno.MetragemFundo = (float)rd["MetragemFundo"];
+                        terreno.MetragemLaterais = (float)rd["MetragemLaterais"];
+                        terreno.TamanhoTotal = (float)rd["TamanhoTotal"];
+                        terreno.ComfrontacoesTerreno = (float)rd["ComfrontacoesTerreno"];
+                        terreno.Endereco = (string)rd["Endereco"].ToString();
+                        terreno.Matricula = (int)rd["Matricula"];
                     }
                 }
                 return terreno;
@@ -122,16 +133,22 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE Terreno SET 
-                                        Nome = @Nome, 
-                                        CPF = @CPF, 
-                                        RG = @RG, 
-                                        Email = @Email, 
-                                        Fone = @Fone 
-                                    WHERE Id = @Id";
+                                        PrecoAVista = @PrecoAVista,
+                                        PrecoParcelado = @PrecoParcelado,
+                                        RedeAguaEnergia = @RedeAguaEnergia,
+                                        MetragemFrente = @MetragemFrente,
+                                        MetragemFundo = @MetragemFundo,
+                                        MetragemLaterais = @MetragemLaterais,
+                                        TamanhoTotalTerreno = @TamanhoTotalTerreno,
+                                        ConfrontacoesTerreno = @ConfrontacoesTerreno,
+                                        Endereco = @Endereco,
+                                        NumeroMatricula = @NumeroMatricula
+                                    WHERE IdTerreno = @IdTerreno";
+
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _terreno.IdTerreno);
-               
+
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -154,10 +171,10 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM Fornecedor WHERE id = @id";
+                cmd.CommandText = @"DELETE FROM Fornecedor WHERE IdTerreno = @IdTerreno";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _id);
+                cmd.Parameters.AddWithValue("@IdTerreno", _id);
 
                 cmd.Connection = cn;
                 cn.Open();
