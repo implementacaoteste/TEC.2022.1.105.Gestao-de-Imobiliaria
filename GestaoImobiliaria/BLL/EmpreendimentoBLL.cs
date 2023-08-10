@@ -15,9 +15,17 @@ namespace BLL
             new EmpreendimentoDAL().Inserir(_empreendimentos);
         }
 
+
+
         public Empreendimentos BuscarPorId(int _id)
         {
             return new EmpreendimentoDAL().BuscarPorId(_id);
+        }
+
+
+        public Empreendimentos BuscaPorCNPJ(string _CNPJEmpresaResponsavel)
+        {
+            return new EmpreendimentoDAL().BuscarPorCNPJ(_CNPJEmpresaResponsavel);
         }
     }
 }

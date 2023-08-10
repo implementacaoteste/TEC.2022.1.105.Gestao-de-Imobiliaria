@@ -11,6 +11,48 @@ namespace DAL
 {
     public class EmpreendimentoDAL
     {
+        public Empreendimentos BuscarPorCNPJ(string _CNPJEmpresaResponsavel)
+        {
+            Empreendimentos empreendimento = new Empreendimentos();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT IDEmpreendimeto, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea FROM Empreendimentos WHERE CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id", _CNPJEmpresaResponsavel);
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        empreendimento.IDEmpreendimento = (int)rd["IDEmpreendimento"];
+                        empreendimento.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimento.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
+                        empreendimento.TamanhoArea = rd["TamanhoArea"].ToString();
+
+
+                    }
+                }
+                return empreendimento;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar clientes por id no banco de dados", ex) { Data = { { "Id", 18 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+
+
+
+
+
         public Empreendimentos BuscarPorId(int _id)
         {
 
@@ -49,6 +91,10 @@ namespace DAL
             }
         }
 
+
+
+
+
         public void Inserir(Empreendimentos _empreendimentos)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -77,6 +123,11 @@ namespace DAL
                 cn.Close();
             }
         }
+
+
+
+
+        
     }
 
 }
