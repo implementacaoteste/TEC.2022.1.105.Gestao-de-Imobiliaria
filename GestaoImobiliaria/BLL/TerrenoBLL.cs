@@ -22,6 +22,10 @@ namespace BLL
         {
             return new TerrenoDAL().BuscarPorId(_id);
         }
+        public Terreno BuscarPorMatricula(string _matricula)
+        {
+            return new TerrenoDAL().BuscarPorMatricula(_matricula);
+        }
         public void Alterar(Terreno _corretor)
         {
             new TerrenoDAL().Alterar(_corretor);

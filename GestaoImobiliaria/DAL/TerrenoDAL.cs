@@ -29,7 +29,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@MetragemFundo", _terreno.MetragemFundo);
                 cmd.Parameters.AddWithValue("@MetragemLaterais", _terreno.MetragemLaterais);
                 cmd.Parameters.AddWithValue("@TamanhoTotalTerreno", _terreno.TamanhoTotal);
-                cmd.Parameters.AddWithValue("@ConfrontacoesTerreno", _terreno.ComfrontacoesTerreno);
+                cmd.Parameters.AddWithValue("@ConfrontacoesTerreno", _terreno.ConfrontacoesTerreno);
                 cmd.Parameters.AddWithValue("@Endereco", _terreno.Endereco);
                 cmd.Parameters.AddWithValue("@NumeroMatricula", _terreno.Matricula);
 
@@ -101,7 +101,7 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        terreno.IdTerreno = (int)rd["Id"];
+                        terreno.IdTerreno = (int)rd["IdTerreno"];
                         terreno.PrecoAVista = (float)rd["PrecoAVista"];
                         terreno.PrecoParcelado = (float)rd["PrecoParcelado"];
                         terreno.RedeAguaEnergia = (bool)rd["RedeAguaEnergia"];
@@ -109,9 +109,9 @@ namespace DAL
                         terreno.MetragemFundo = (float)rd["MetragemFundo"];
                         terreno.MetragemLaterais = (float)rd["MetragemLaterais"];
                         terreno.TamanhoTotal = (float)rd["TamanhoTotal"];
-                        terreno.ComfrontacoesTerreno = (float)rd["ComfrontacoesTerreno"];
+                        terreno.ConfrontacoesTerreno = (float)rd["ConfrontacoesTerreno"];
                         terreno.Endereco = (string)rd["Endereco"].ToString();
-                        terreno.Matricula = (int)rd["Matricula"];
+                        terreno.Matricula = (string)rd["NumeroMatricula"];
                     }
                 }
                 return terreno;
@@ -119,6 +119,56 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar fornecedor por id no banco de dados", ex) { Data = { { "Id", 24 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public Terreno BuscarPorMatricula(string _matricula)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+              Terreno terreno = new Terreno();
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT IdTerreno, PrecoAVista, PrecoParcelado, RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
+                  TamanhoTotalTerreno, ConfrontacoesTerreno, Endereco, NumeroMatricula FROM Terreno WHERE NumeroMatricula = @Matricula";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Matricula", _matricula);
+
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        terreno.IdTerreno = (int)rd["IdTerreno"];
+                        terreno.PrecoAVista = (float)rd["PrecoAVista"];
+                        terreno.PrecoParcelado = (float)rd["PrecoParcelado"];
+                        terreno.RedeAguaEnergia = (bool)rd["RedeAguaEnergia"];
+                        terreno.MetragemFrente = (float)rd["MetragemFrente"];
+                        terreno.MetragemFundo = (float)rd["MetragemFundo"];
+                        terreno.MetragemLaterais = (float)rd["MetragemLaterais"];
+                        terreno.TamanhoTotal = (float)rd["TamanhoTotalTerreno"];
+                        terreno.ConfrontacoesTerreno = (float)rd["ConfrontacoesTerreno"];
+                        terreno.Endereco = (string)rd["Endereco"].ToString();
+                        terreno.Matricula = (string)rd["NumeroMatricula"];
+                    }
+                }
+                return terreno;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar por Numero de matricula no banco de dados", ex) { Data = { { "Id", 25 } } };
             }
             finally
             {
@@ -157,7 +207,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 25 } } };
+                throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 26 } } };
             }
             finally
             {
@@ -183,7 +233,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar excluir fornecdor no banco de dados.", ex) { Data = { { "Id", 26 } } };
+                throw new Exception("Ocorreu um erro ao tentar excluir fornecdor no banco de dados.", ex) { Data = { { "Id", 27 } } };
             }
             finally
             {

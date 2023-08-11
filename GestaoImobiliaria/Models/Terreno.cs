@@ -17,8 +17,8 @@ namespace Models
         public float MetragemFundo { get; set; }
         public float MetragemLaterais { get; set; }
         public float TamanhoTotal { get; set; }
-        public float ComfrontacoesTerreno { get; set; }
+        public float ConfrontacoesTerreno { get; set; }
         public string Endereco { get; set; }
-        public int Matricula { get; set; }
+        public string Matricula { get; set; }
     }
 }
