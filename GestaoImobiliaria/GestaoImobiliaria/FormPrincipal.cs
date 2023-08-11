@@ -61,7 +61,15 @@ namespace LocacaoLaboratorio
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormConsultaCliente frm  = new FormConsultaCliente())
+            using (FormConsultaCliente frm = new FormConsultaCliente())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void terrenosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormConsultarTerreno frm = new FormConsultarTerreno())
             {
                 frm.ShowDialog();
             }
