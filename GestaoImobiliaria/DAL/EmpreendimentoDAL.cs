@@ -52,7 +52,7 @@ namespace DAL
 
 
 
-        
+
         public Empreendimentos BuscarPorId(int _id)
         {
 
@@ -146,7 +146,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar excluir Empreendimento no banco de dados", ex) { Data = { { "Id", 302} }};
+                throw new Exception("Ocorreu um erro ao tentar excluir Empreendimento no banco de dados", ex) { Data = { { "Id", 302 } } };
             }
             finally
             {
@@ -154,7 +154,37 @@ namespace DAL
             }
         }
 
-        
-    }
 
+
+
+
+        public void Alterar(Empreendimentos _empreendimentos)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"UPDATE Empreendimentos SET
+                                    TotalTerrenos = @TotalTerrenos,
+                                    CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel,
+                                    TamanhoArea = @TamanhoArea
+                                    WHERE Id = @IDEmpreendimento";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
+                cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _empreendimentos.CNPJEmpresaResponsavel);
+                cmd.Parameters.AddWithValue("@TamanhoArea", _empreendimentos.TamanhoArea);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao tentar alterar empreendimento no banco de dados", ex) { Data = { { "Id", 250 } } };
+            }
+        }
+
+    }
 }

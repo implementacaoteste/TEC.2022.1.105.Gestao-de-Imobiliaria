@@ -35,5 +35,11 @@ namespace BLL
         {
             new EmpreendimentoDAL().Excluir(_id);
         }
+
+
+        public void Alterar(Empreendimentos _empreendimentos)
+        {
+            new EmpreendimentoDAL().Alterar(_empreendimentos);
+        }
     }
 }

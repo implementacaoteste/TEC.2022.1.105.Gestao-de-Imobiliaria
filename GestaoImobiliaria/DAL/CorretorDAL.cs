@@ -286,6 +286,9 @@ namespace DAL
                 cn.Close();
             }
         }
+
+
+
         public void Excluir(int _id)
         {
 
