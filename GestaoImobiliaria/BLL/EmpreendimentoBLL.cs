@@ -23,9 +23,17 @@ namespace BLL
         }
 
 
+
         public Empreendimentos BuscaPorCNPJ(string _CNPJEmpresaResponsavel)
         {
             return new EmpreendimentoDAL().BuscarPorCNPJ(_CNPJEmpresaResponsavel);
+        }
+
+
+
+        public void Excluir(int _id)
+        {
+            new EmpreendimentoDAL().Excluir(_id);
         }
     }
 }

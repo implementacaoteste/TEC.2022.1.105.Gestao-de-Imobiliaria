@@ -40,7 +40,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar clientes por id no banco de dados", ex) { Data = { { "Id", 18 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar empreendimento no banco de dados", ex) { Data = { { "Id", 300 } } };
             }
             finally
             {
@@ -52,7 +52,7 @@ namespace DAL
 
 
 
-
+        
         public Empreendimentos BuscarPorId(int _id)
         {
 
@@ -83,7 +83,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar clientes por id no banco de dados", ex) { Data = { { "Id", 18 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar empreendimento por id no banco de dados", ex) { Data = { { "Id", 301 } } };
             }
             finally
             {
@@ -126,6 +126,33 @@ namespace DAL
 
 
 
+
+
+        public void Excluir(int _id)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM Empreendimentos WHERE IDEmpreendimento = @IDEmpreendimento";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@Id", _id);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar excluir Empreendimento no banco de dados", ex) { Data = { { "Id", 302} }};
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
 
         
     }
