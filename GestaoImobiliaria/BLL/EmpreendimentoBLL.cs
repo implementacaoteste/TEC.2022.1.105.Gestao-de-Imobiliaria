@@ -15,11 +15,25 @@ namespace BLL
             new EmpreendimentoDAL().Inserir(_empreendimentos);
         }
 
-        public Empreendimentos BuscarPorID (int _id)
+
+
+        public Empreendimentos BuscarPorId(int _id)
         {
-           return new EmpreendimentoDAL().BuscarPorID(_id); //nao consegui resolver o erro, farei o commit com erro
-                                                           //pois só eu estou trabalhando com Empreendimentos
-                                                           //Na DAL, BLL e MODELS
+            return new EmpreendimentoDAL().BuscarPorId(_id);
+        }
+
+
+
+        public Empreendimentos BuscaPorCNPJ(string _CNPJEmpresaResponsavel)
+        {
+            return new EmpreendimentoDAL().BuscarPorCNPJ(_CNPJEmpresaResponsavel);
+        }
+
+
+
+        public void Excluir(int _id)
+        {
+            new EmpreendimentoDAL().Excluir(_id);
         }
     }
 }

@@ -238,6 +238,8 @@ namespace DAL
             }
         }
 
+
+
         public Corretor BuscarPorCPF(string _CPF)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
