@@ -20,7 +20,6 @@ namespace LocacaoLaboratorio
             InitializeComponent();
             Logou = false;
         }
-
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
             try
@@ -34,7 +33,6 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void FormLogin_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -51,6 +49,15 @@ namespace LocacaoLaboratorio
         {
             if (e.KeyCode == Keys.Enter)
                 buttonEntrar_Click(null, null);
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+#if DEBUG
+            textBoxUsuario.Text = "Erisvaldo";
+            textBoxSenha.Text = "123";
+            buttonEntrar_Click(null, null);
+#endif
         }
     }
 }

@@ -1,30 +1,38 @@
 ﻿using BLL;
 using Models;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LocacaoLaboratorio
 {
-    public partial class FormCadastroCliente : Form
+    public partial class FormCadastroTerreno : Form
     {
         int id;
-        public FormCadastroCliente(int _id = 0)
+        public FormCadastroTerreno(int _id = 0)
         {
             InitializeComponent();
             id = _id;
         }
+
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-                try
+            try
             {
-                Cliente cliente = (Cliente)clienteBindingSource.Current;
+                Terreno terreno = (Terreno)terrenoBindingSource.Current;
 
-                clienteBindingSource.EndEdit();
+                terrenoBindingSource.EndEdit();
 
                 if (id == 0)
-                    new ClienteBLL().Inserir(cliente);
+                    new TerrenoBLL().inserir(terreno);
                 else
-                    new ClienteBLL().Alterar(cliente);
+                    new TerrenoBLL().Alterar(terreno);
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 this.Close();
@@ -34,21 +42,20 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-        private void FormCadastroCliente_Load(object sender, EventArgs e)
+
+        private void FormCadastroTerreno_Load(object sender, EventArgs e)
         {
             try
             {
                 if (id == 0)
-                    clienteBindingSource.AddNew();
+                    terrenoBindingSource.AddNew();
                 else
-                    clienteBindingSource.DataSource = new ClienteBLL().BuscarPorId(id);
+                    terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(id);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-
     }
 }

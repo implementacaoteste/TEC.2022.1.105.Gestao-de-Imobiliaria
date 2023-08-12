@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,18 +32,58 @@ namespace LocacaoLaboratorio
                         terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
-                        terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorMatricula(Convert.ToInt32(textBoxBuscar.Text));
-                        break ;
-                        case 2:
-                        terrenoBindingSource.DataSource = new TerrenoBLL().BuscarTodos();
+                        //esperando implementacao do metodo BuscarPorMatricula
+                        //terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorMatricula(Convert.ToInt32(textBoxBuscar.Text));
+                        break;
+                    case 2:
+                        //erro
+                        //terrenoBindingSource.DataSource = new TerrenoBLL().BuscarTodos();
                     default:
                         break;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-                throw;
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (terrenoBindingSource.Count == 0)
+                {
+                    MessageBox.Show("Não existe terreno para ser alterado!");
+                    return;
+                }
+
+                int id = ((Terreno)terrenoBindingSource.Current).IdTerreno;
+
+                using (FormCadastroTerreno frm = new FormCadastroTerreno())
+                {
+                    frm.ShowDialog();
+                }
+                buttonBuscar_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonInserir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormCadastroTerreno frm = new FormCadastroTerreno())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -35,6 +35,7 @@ namespace DAL
 
                 cmd.ExecuteNonQuery();
             }
+            
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar inserir um cliente no banco de dados.", ex) { Data = { { "Id", 15 } } };

@@ -70,6 +70,12 @@
     <Compile Include="FormCadastroGrupoUsuario.Designer.cs">
       <DependentUpon>FormCadastroGrupoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroTerreno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroTerreno.Designer.cs">
+      <DependentUpon>FormCadastroTerreno.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroGrupoUsuario.resx">
       <DependentUpon>FormCadastroGrupoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroTerreno.resx">
+      <DependentUpon>FormCadastroTerreno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroUsuario.resx">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
