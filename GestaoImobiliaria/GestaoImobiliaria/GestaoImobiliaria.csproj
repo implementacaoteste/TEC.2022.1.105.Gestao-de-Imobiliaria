@@ -106,6 +106,12 @@
     <Compile Include="FormConsultarTerreno.Designer.cs">
       <DependentUpon>FormConsultarTerreno.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroEmpreendimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroEmpreendimentos.Designer.cs">
+      <DependentUpon>FormCadastroEmpreendimentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <EmbeddedResource Include="FormConsultarTerreno.resx">
       <DependentUpon>FormConsultarTerreno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroEmpreendimentos.resx">
+      <DependentUpon>FormCadastroEmpreendimentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +178,7 @@
     </Compile>
     <None Include="Properties\DataSources\Models.Cliente.datasource" />
     <None Include="Properties\DataSources\Models.Corretor.datasource" />
+    <None Include="Properties\DataSources\Models.Empreendimentos.datasource" />
     <None Include="Properties\DataSources\Models.GrupoUsuario.datasource" />
     <None Include="Properties\DataSources\Models.Permissao.datasource" />
     <None Include="Properties\DataSources\Models.Terreno.datasource" />

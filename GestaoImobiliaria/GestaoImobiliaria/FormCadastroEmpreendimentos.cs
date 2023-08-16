@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LocacaoLaboratorio
 {
-    public partial class FormEmpreendimentos : Form
+    public partial class FormCadastroEmpreendimentos : Form
     {
-        public FormEmpreendimentos()
+        public FormCadastroEmpreendimentos()
         {
             InitializeComponent();
         }
