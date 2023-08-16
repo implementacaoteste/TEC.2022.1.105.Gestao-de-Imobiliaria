@@ -34,6 +34,9 @@
             System.Windows.Forms.Label rGLabel;
             System.Windows.Forms.Label foneLabel;
             System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label enderecoLabel;
+            System.Windows.Forms.Label rendaLabel;
+            System.Windows.Forms.Label estadoCivilLabel;
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cPFTextBox = new System.Windows.Forms.TextBox();
@@ -43,11 +46,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.enderecoTextBox = new System.Windows.Forms.TextBox();
+            this.rendaTextBox = new System.Windows.Forms.TextBox();
+            this.cPFConjugeTextBox = new System.Windows.Forms.TextBox();
+            this.rGConjugeTextBox = new System.Windows.Forms.TextBox();
+            this.estadoCivilComboBox = new System.Windows.Forms.ComboBox();
+            this.cPFConjugeLabel = new System.Windows.Forms.Label();
+            this.rGConjugeLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
             rGLabel = new System.Windows.Forms.Label();
             foneLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
+            enderecoLabel = new System.Windows.Forms.Label();
+            rendaLabel = new System.Windows.Forms.Label();
+            estadoCivilLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,16 +159,16 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(670, 49);
+            this.label1.Size = new System.Drawing.Size(671, 49);
             this.label1.TabIndex = 11;
             this.label1.Text = "Cadastro de cliente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(481, 230);
+            this.buttonSalvar.Location = new System.Drawing.Point(467, 236);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvar.Size = new System.Drawing.Size(87, 29);
             this.buttonSalvar.TabIndex = 12;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
@@ -164,18 +177,125 @@
             // buttonCancelar
             // 
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(575, 230);
+            this.buttonCancelar.Location = new System.Drawing.Point(560, 236);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.Size = new System.Drawing.Size(82, 29);
             this.buttonCancelar.TabIndex = 12;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            // 
+            // enderecoLabel
+            // 
+            enderecoLabel.AutoSize = true;
+            enderecoLabel.Location = new System.Drawing.Point(17, 140);
+            enderecoLabel.Name = "enderecoLabel";
+            enderecoLabel.Size = new System.Drawing.Size(66, 16);
+            enderecoLabel.TabIndex = 13;
+            enderecoLabel.Text = "Endereço";
+            // 
+            // enderecoTextBox
+            // 
+            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
+            this.enderecoTextBox.Location = new System.Drawing.Point(16, 159);
+            this.enderecoTextBox.Name = "enderecoTextBox";
+            this.enderecoTextBox.Size = new System.Drawing.Size(406, 22);
+            this.enderecoTextBox.TabIndex = 14;
+            // 
+            // rendaLabel
+            // 
+            rendaLabel.AutoSize = true;
+            rendaLabel.Location = new System.Drawing.Point(429, 94);
+            rendaLabel.Name = "rendaLabel";
+            rendaLabel.Size = new System.Drawing.Size(51, 16);
+            rendaLabel.TabIndex = 15;
+            rendaLabel.Text = "Renda:";
+            // 
+            // rendaTextBox
+            // 
+            this.rendaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Renda", true));
+            this.rendaTextBox.Location = new System.Drawing.Point(432, 113);
+            this.rendaTextBox.Name = "rendaTextBox";
+            this.rendaTextBox.Size = new System.Drawing.Size(112, 22);
+            this.rendaTextBox.TabIndex = 16;
+            // 
+            // estadoCivilLabel
+            // 
+            estadoCivilLabel.AutoSize = true;
+            estadoCivilLabel.Location = new System.Drawing.Point(550, 94);
+            estadoCivilLabel.Name = "estadoCivilLabel";
+            estadoCivilLabel.Size = new System.Drawing.Size(81, 16);
+            estadoCivilLabel.TabIndex = 17;
+            estadoCivilLabel.Text = "Estado Civil:";
+            // 
+            // cPFConjugeTextBox
+            // 
+            this.cPFConjugeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPFConjuge", true));
+            this.cPFConjugeTextBox.Location = new System.Drawing.Point(430, 159);
+            this.cPFConjugeTextBox.Name = "cPFConjugeTextBox";
+            this.cPFConjugeTextBox.Size = new System.Drawing.Size(100, 22);
+            this.cPFConjugeTextBox.TabIndex = 20;
+            this.cPFConjugeTextBox.Visible = false;
+            // 
+            // rGConjugeTextBox
+            // 
+            this.rGConjugeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "RGConjuge", true));
+            this.rGConjugeTextBox.Location = new System.Drawing.Point(551, 157);
+            this.rGConjugeTextBox.Name = "rGConjugeTextBox";
+            this.rGConjugeTextBox.Size = new System.Drawing.Size(100, 22);
+            this.rGConjugeTextBox.TabIndex = 22;
+            this.rGConjugeTextBox.Visible = false;
+            // 
+            // estadoCivilComboBox
+            // 
+            this.estadoCivilComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "EstadoCivil", true));
+            this.estadoCivilComboBox.FormattingEnabled = true;
+            this.estadoCivilComboBox.Items.AddRange(new object[] {
+            "Solteiro",
+            "Casado",
+            "Separado",
+            "Divorciado",
+            "Viúvo"});
+            this.estadoCivilComboBox.Location = new System.Drawing.Point(550, 110);
+            this.estadoCivilComboBox.Name = "estadoCivilComboBox";
+            this.estadoCivilComboBox.Size = new System.Drawing.Size(100, 24);
+            this.estadoCivilComboBox.TabIndex = 24;
+            this.estadoCivilComboBox.SelectedIndexChanged += new System.EventHandler(this.estadoCivilComboBox_SelectedIndexChanged);
+            // 
+            // cPFConjugeLabel
+            // 
+            this.cPFConjugeLabel.AutoSize = true;
+            this.cPFConjugeLabel.Location = new System.Drawing.Point(429, 138);
+            this.cPFConjugeLabel.Name = "cPFConjugeLabel";
+            this.cPFConjugeLabel.Size = new System.Drawing.Size(86, 16);
+            this.cPFConjugeLabel.TabIndex = 25;
+            this.cPFConjugeLabel.Text = "CPF Conjuge";
+            this.cPFConjugeLabel.Visible = false;
+            // 
+            // rGConjugeLabel
+            // 
+            this.rGConjugeLabel.AutoSize = true;
+            this.rGConjugeLabel.Location = new System.Drawing.Point(550, 138);
+            this.rGConjugeLabel.Name = "rGConjugeLabel";
+            this.rGConjugeLabel.Size = new System.Drawing.Size(80, 16);
+            this.rGConjugeLabel.TabIndex = 25;
+            this.rGConjugeLabel.Text = "RG Conjuge";
+            this.rGConjugeLabel.Visible = false;
             // 
             // FormCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 278);
+            this.ClientSize = new System.Drawing.Size(671, 285);
+            this.Controls.Add(this.rGConjugeLabel);
+            this.Controls.Add(this.cPFConjugeLabel);
+            this.Controls.Add(this.estadoCivilComboBox);
+            this.Controls.Add(this.rGConjugeTextBox);
+            this.Controls.Add(this.cPFConjugeTextBox);
+            this.Controls.Add(estadoCivilLabel);
+            this.Controls.Add(rendaLabel);
+            this.Controls.Add(this.rendaTextBox);
+            this.Controls.Add(enderecoLabel);
+            this.Controls.Add(this.enderecoTextBox);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label1);
@@ -209,5 +329,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.TextBox enderecoTextBox;
+        private System.Windows.Forms.TextBox rendaTextBox;
+        private System.Windows.Forms.TextBox cPFConjugeTextBox;
+        private System.Windows.Forms.TextBox rGConjugeTextBox;
+        private System.Windows.Forms.ComboBox estadoCivilComboBox;
+        private System.Windows.Forms.Label cPFConjugeLabel;
+        private System.Windows.Forms.Label rGConjugeLabel;
     }
 }

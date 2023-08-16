@@ -15,7 +15,7 @@ namespace LocacaoLaboratorio
         }
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-                try
+            try
             {
                 Cliente cliente = (Cliente)clienteBindingSource.Current;
 
@@ -49,6 +49,12 @@ namespace LocacaoLaboratorio
             }
         }
 
-
+        private void estadoCivilComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            rGConjugeTextBox.Visible =
+            cPFConjugeLabel.Visible =
+            rGConjugeLabel.Visible =
+            cPFConjugeTextBox.Visible = estadoCivilComboBox.Text == "Casado";
+        }
     }
 }
