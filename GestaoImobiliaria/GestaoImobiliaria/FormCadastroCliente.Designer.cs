@@ -109,6 +109,33 @@
             emailLabel.TabIndex = 9;
             emailLabel.Text = "E-mail";
             // 
+            // enderecoLabel
+            // 
+            enderecoLabel.AutoSize = true;
+            enderecoLabel.Location = new System.Drawing.Point(17, 140);
+            enderecoLabel.Name = "enderecoLabel";
+            enderecoLabel.Size = new System.Drawing.Size(66, 16);
+            enderecoLabel.TabIndex = 13;
+            enderecoLabel.Text = "Endereço";
+            // 
+            // rendaLabel
+            // 
+            rendaLabel.AutoSize = true;
+            rendaLabel.Location = new System.Drawing.Point(429, 94);
+            rendaLabel.Name = "rendaLabel";
+            rendaLabel.Size = new System.Drawing.Size(51, 16);
+            rendaLabel.TabIndex = 15;
+            rendaLabel.Text = "Renda:";
+            // 
+            // estadoCivilLabel
+            // 
+            estadoCivilLabel.AutoSize = true;
+            estadoCivilLabel.Location = new System.Drawing.Point(550, 94);
+            estadoCivilLabel.Name = "estadoCivilLabel";
+            estadoCivilLabel.Size = new System.Drawing.Size(81, 16);
+            estadoCivilLabel.TabIndex = 17;
+            estadoCivilLabel.Text = "Estado Civil:";
+            // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
@@ -184,15 +211,6 @@
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
-            // enderecoLabel
-            // 
-            enderecoLabel.AutoSize = true;
-            enderecoLabel.Location = new System.Drawing.Point(17, 140);
-            enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(66, 16);
-            enderecoLabel.TabIndex = 13;
-            enderecoLabel.Text = "Endereço";
-            // 
             // enderecoTextBox
             // 
             this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
@@ -201,15 +219,6 @@
             this.enderecoTextBox.Size = new System.Drawing.Size(406, 22);
             this.enderecoTextBox.TabIndex = 14;
             // 
-            // rendaLabel
-            // 
-            rendaLabel.AutoSize = true;
-            rendaLabel.Location = new System.Drawing.Point(429, 94);
-            rendaLabel.Name = "rendaLabel";
-            rendaLabel.Size = new System.Drawing.Size(51, 16);
-            rendaLabel.TabIndex = 15;
-            rendaLabel.Text = "Renda:";
-            // 
             // rendaTextBox
             // 
             this.rendaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Renda", true));
@@ -217,15 +226,6 @@
             this.rendaTextBox.Name = "rendaTextBox";
             this.rendaTextBox.Size = new System.Drawing.Size(112, 22);
             this.rendaTextBox.TabIndex = 16;
-            // 
-            // estadoCivilLabel
-            // 
-            estadoCivilLabel.AutoSize = true;
-            estadoCivilLabel.Location = new System.Drawing.Point(550, 94);
-            estadoCivilLabel.Name = "estadoCivilLabel";
-            estadoCivilLabel.Size = new System.Drawing.Size(81, 16);
-            estadoCivilLabel.TabIndex = 17;
-            estadoCivilLabel.Text = "Estado Civil:";
             // 
             // cPFConjugeTextBox
             // 
@@ -250,11 +250,11 @@
             this.estadoCivilComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "EstadoCivil", true));
             this.estadoCivilComboBox.FormattingEnabled = true;
             this.estadoCivilComboBox.Items.AddRange(new object[] {
-            "Solteiro",
-            "Casado",
-            "Separado",
-            "Divorciado",
-            "Viúvo"});
+            "Solteiro(a)",
+            "Casado(a)",
+            "Separado(a)",
+            "Divorciado(a)",
+            "Viúvo(a)"});
             this.estadoCivilComboBox.Location = new System.Drawing.Point(550, 110);
             this.estadoCivilComboBox.Name = "estadoCivilComboBox";
             this.estadoCivilComboBox.Size = new System.Drawing.Size(100, 24);

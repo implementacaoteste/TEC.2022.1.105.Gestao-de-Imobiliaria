@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelConsultaCliente = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
@@ -41,17 +40,18 @@
             this.buttonInserir = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoCivilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rGConjugeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPFConjugeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -61,32 +61,31 @@
             this.clienteDataGridView.AllowUserToAddRows = false;
             this.clienteDataGridView.AllowUserToDeleteRows = false;
             this.clienteDataGridView.AllowUserToOrderColumns = true;
+            this.clienteDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.clienteDataGridView.AutoGenerateColumns = false;
             this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
+            this.enderecoDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.foneDataGridViewTextBoxColumn,
             this.cPFDataGridViewTextBoxColumn,
             this.rGDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.enderecoDataGridViewTextBoxColumn,
             this.rendaDataGridViewTextBoxColumn,
             this.estadoCivilDataGridViewTextBoxColumn,
             this.rGConjugeDataGridViewTextBoxColumn,
-            this.cPFConjugeDataGridViewTextBoxColumn,
-            this.foneDataGridViewTextBoxColumn});
+            this.cPFConjugeDataGridViewTextBoxColumn});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
             this.clienteDataGridView.Location = new System.Drawing.Point(8, 100);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.ReadOnly = true;
             this.clienteDataGridView.RowHeadersWidth = 51;
             this.clienteDataGridView.RowTemplate.Height = 24;
-            this.clienteDataGridView.Size = new System.Drawing.Size(1365, 351);
+            this.clienteDataGridView.Size = new System.Drawing.Size(1365, 352);
             this.clienteDataGridView.TabIndex = 1;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
             // 
             // labelConsultaCliente
             // 
@@ -127,6 +126,7 @@
             // 
             // buttonSelecionar
             // 
+            this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionar.Location = new System.Drawing.Point(1152, 472);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(93, 33);
@@ -137,6 +137,7 @@
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Location = new System.Drawing.Point(1251, 472);
             this.buttonCancelar.Name = "buttonCancelar";
@@ -190,6 +191,10 @@
             this.comboBoxBuscarPor.TabIndex = 6;
             this.comboBoxBuscarPor.SelectedIndexChanged += new System.EventHandler(this.comboBoxBuscarPor_SelectedIndexChanged);
             // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -208,6 +213,33 @@
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
             this.nomeDataGridViewTextBoxColumn.Width = 125;
             // 
+            // enderecoDataGridViewTextBoxColumn
+            // 
+            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.enderecoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // foneDataGridViewTextBoxColumn
+            // 
+            this.foneDataGridViewTextBoxColumn.DataPropertyName = "Fone";
+            this.foneDataGridViewTextBoxColumn.HeaderText = "Fone";
+            this.foneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.foneDataGridViewTextBoxColumn.Name = "foneDataGridViewTextBoxColumn";
+            this.foneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.foneDataGridViewTextBoxColumn.Width = 125;
+            // 
             // cPFDataGridViewTextBoxColumn
             // 
             this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
@@ -225,24 +257,6 @@
             this.rGDataGridViewTextBoxColumn.Name = "rGDataGridViewTextBoxColumn";
             this.rGDataGridViewTextBoxColumn.ReadOnly = true;
             this.rGDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.enderecoDataGridViewTextBoxColumn.Width = 125;
             // 
             // rendaDataGridViewTextBoxColumn
             // 
@@ -279,15 +293,6 @@
             this.cPFConjugeDataGridViewTextBoxColumn.Name = "cPFConjugeDataGridViewTextBoxColumn";
             this.cPFConjugeDataGridViewTextBoxColumn.ReadOnly = true;
             this.cPFConjugeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // foneDataGridViewTextBoxColumn
-            // 
-            this.foneDataGridViewTextBoxColumn.DataPropertyName = "Fone";
-            this.foneDataGridViewTextBoxColumn.HeaderText = "Fone";
-            this.foneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.foneDataGridViewTextBoxColumn.Name = "foneDataGridViewTextBoxColumn";
-            this.foneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.foneDataGridViewTextBoxColumn.Width = 125;
             // 
             // FormConsultaCliente
             // 
@@ -331,14 +336,14 @@
         private System.Windows.Forms.ComboBox comboBoxBuscarPor;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn foneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPFDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoCivilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rGConjugeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPFConjugeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn foneDataGridViewTextBoxColumn;
     }
 }
