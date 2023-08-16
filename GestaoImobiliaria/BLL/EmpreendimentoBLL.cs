@@ -37,9 +37,25 @@ namespace BLL
         }
 
 
+
         public void Alterar(Empreendimentos _empreendimentos)
         {
             new EmpreendimentoDAL().Alterar(_empreendimentos);
         }
+
+
+
+        public List<Empreendimentos> BuscarTodos()
+        {
+            return new EmpreendimentoDAL().BuscarTodos();
+        }
+
+
+
+        public List<Empreendimentos> BuscarPorNome(string _nome)
+        {
+            return new EmpreendimentoDAL().BuscarPorNome(_nome);
+        }
+
     }
 }

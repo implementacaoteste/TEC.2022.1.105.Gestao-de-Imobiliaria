@@ -13,7 +13,7 @@ namespace DAL
     {
         public Empreendimentos BuscarPorCNPJ(string _CNPJEmpresaResponsavel)
         {
-            Empreendimentos empreendimento = new Empreendimentos();
+            Empreendimentos empreendimentos = new Empreendimentos();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -28,15 +28,16 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        empreendimento.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimento.TotalTerrenos = rd["TotalTerrenos"].ToString();
-                        empreendimento.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
-                        empreendimento.TamanhoArea = rd["TamanhoArea"].ToString();
+                        empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
+                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
+                        empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
+                        empreendimentos.Nome = rd["Nome"].ToString();
 
 
                     }
                 }
-                return empreendimento;
+                return empreendimentos;
             }
             catch (Exception ex)
             {
@@ -56,7 +57,7 @@ namespace DAL
         public Empreendimentos BuscarPorId(int _id)
         {
 
-            Empreendimentos empreendimento = new Empreendimentos();
+            Empreendimentos empreendimentos = new Empreendimentos();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -71,15 +72,16 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        empreendimento.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimento.TotalTerrenos = rd["TotalTerrenos"].ToString();
-                        empreendimento.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
-                        empreendimento.TamanhoArea = rd["TamanhoArea"].ToString();
+                        empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
+                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
+                        empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
+                        empreendimentos.Nome = rd["Nome"].ToString();
 
 
                     }
                 }
-                return empreendimento;
+                return empreendimentos;
             }
             catch (Exception ex)
             {
@@ -107,6 +109,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
                 cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _empreendimentos.CNPJEmpresaResponsavel);
                 cmd.Parameters.AddWithValue("@TamanhoArea", _empreendimentos.TamanhoArea);
+                cmd.Parameters.AddWithValue("@Nome", _empreendimentos.Nome);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -167,13 +170,15 @@ namespace DAL
                 cmd.CommandText = @"UPDATE Empreendimentos SET
                                     TotalTerrenos = @TotalTerrenos,
                                     CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel,
-                                    TamanhoArea = @TamanhoArea
+                                    TamanhoArea = @TamanhoArea,
+                                    Nome = @Nome
                                     WHERE Id = @IDEmpreendimento";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
                 cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _empreendimentos.CNPJEmpresaResponsavel);
                 cmd.Parameters.AddWithValue("@TamanhoArea", _empreendimentos.TamanhoArea);
+                cmd.Parameters.AddWithValue("@Nome", _empreendimentos.Nome);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -186,5 +191,98 @@ namespace DAL
             }
         }
 
+
+
+
+
+
+        public List<Empreendimentos> BuscarTodos()
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Empreendimentos empreendimentos = new Empreendimentos();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+
+                List<Empreendimentos> empreendimentosList = new List<Empreendimentos>();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos,CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        empreendimentos = new Empreendimentos();
+                        empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
+                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
+                        empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
+                        empreendimentos.Nome = rd["Nome"].ToString();
+
+                        empreendimentosList.Add(empreendimentos);
+                    }
+                }
+                return empreendimentosList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao buscar todos os empreendimentos no banco de dados", ex) { Data = { { "Id", 444 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
+
+
+
+        public List<Empreendimentos> BuscarPorNome(string _nome)
+        {
+            List<Empreendimentos> empreendimentosList = new List<Empreendimentos>();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Empreendimentos empreendimentos = new Empreendimentos();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos,CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos WHERE Nome LIKE @Nome";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        empreendimentos = new Empreendimentos();
+                        empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
+                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
+                        empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
+                        empreendimentos.Nome = rd["Nome"].ToString();
+
+                        empreendimentosList.Add(empreendimentos);
+                    }
+                }
+                return empreendimentosList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ocorreu um erro ao buscar por nome de empreendimentos no banco de dados", ex) { Data = { { "Id", 445 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+            
+        }
     }
 }

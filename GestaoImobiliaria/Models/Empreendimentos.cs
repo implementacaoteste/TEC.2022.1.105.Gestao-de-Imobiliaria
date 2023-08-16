@@ -20,5 +20,8 @@ namespace Models
         public string TamanhoArea { get; set; }
 
 
+        public string Nome { get; set; }
+
+
     }
 }
