@@ -115,5 +115,14 @@ namespace LocacaoLaboratorio
 
         }
 
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxBuscarPor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

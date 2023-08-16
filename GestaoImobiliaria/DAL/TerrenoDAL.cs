@@ -16,22 +16,30 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Terrenos(PrecoAVista, PrecoParcelado, RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
-                    TamanhoTotalTerreno, ConfrontacoesTerreno, Endereco, NumeroMatricula) 
-                                    VALUES (@PrecoAVista, @PrecoParcelado, @RedeAguaEnergia, @MetragemFrente, @MetragemFundo, @MetragemLaterais,
-                    @TamanhoTotalTerreno, @ConfrontacoesTerreno, @Endereco, @NumeroMatricula)";
+                cmd.CommandText = @"INSERT INTO Terrenos (PrecoAVista, PrecoParcelado,
+                                    MetragemFrente, MetragemFundo, TamanhoTotalTerreno, ConfrontacoesTerreno,
+                                    Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
+                                    RedeEnergia) VALUES (@PrecoAVista, @PrecoParcelado,
+                                    @MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno,
+                                    @ConfrontacoesTerreno, @Endereco, @NumeroMatricula, @MetragemEsquerda,
+                                    @MetragemDireita, @RedeAgua, @RedeEnergia)";
+
                 cmd.CommandType = System.Data.CommandType.Text;
                 //OBS: Só consegui inserir um terreno, quando existe um "Empreendimento" cadastrado
+
                 cmd.Parameters.AddWithValue("@PrecoAVista", _terreno.PrecoAVista);
                 cmd.Parameters.AddWithValue("@PrecoParcelado", _terreno.PrecoParcelado);
-                cmd.Parameters.AddWithValue("@RedeAguaEnergia", _terreno.RedeAguaEnergia);
                 cmd.Parameters.AddWithValue("@MetragemFrente", _terreno.MetragemFrente);
                 cmd.Parameters.AddWithValue("@MetragemFundo", _terreno.MetragemFundo);
-                cmd.Parameters.AddWithValue("@MetragemLaterais", _terreno.MetragemLaterais);
-                cmd.Parameters.AddWithValue("@TamanhoTotalTerreno", _terreno.TamanhoTotal);
+                cmd.Parameters.AddWithValue("@TamanhoTotalTerreno", _terreno.TamanhoTotalTerreno);
                 cmd.Parameters.AddWithValue("@ConfrontacoesTerreno", _terreno.ConfrontacoesTerreno);
                 cmd.Parameters.AddWithValue("@Endereco", _terreno.Endereco);
                 cmd.Parameters.AddWithValue("@NumeroMatricula", _terreno.Matricula);
+                cmd.Parameters.AddWithValue("@MetragemEsquerda", _terreno.MetragemEsquerda);
+                cmd.Parameters.AddWithValue("@MetragemDireita", _terreno.MetragemDireita);
+                cmd.Parameters.AddWithValue("@RedeAgua", _terreno.RedeAgua);
+                cmd.Parameters.AddWithValue("@RedeEnergia", _terreno.RedeEnergia);
+
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -56,7 +64,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Terreno";
+                //cmd.CommandText = @"SELECT Id, Nome, CPF, RG, Email, Fone FROM Terreno";
+                cmd.CommandText = @"SELECT PrecoAVista, PrecoParcelado,
+                                    RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
+                                    TamanhoTotal, Endereco, Matricula FROM Terreno";
+
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -66,7 +78,15 @@ namespace DAL
                     {
                         terreno = new Terreno();
                         terreno.IdTerreno = (int)rd["Id"];
-
+                        terreno.PrecoAVista = (float)rd["PrecoAVista"];
+                        terreno.PrecoParcelado = (float)rd["PrecoParcelado"];
+                        terreno.RedeAgua = (bool)rd["RedeAguaEnergia"];
+                        terreno.MetragemFrente = (float)rd["MetragemFrente"];
+                        terreno.MetragemFundo = (float)rd["MetragemFundo"];
+                        terreno.MetragemDireita = (float)rd["MetragemDireita"];
+                        terreno.TamanhoTotalTerreno = (float)rd["TamanhoTotalTerreno"];
+                        terreno.Endereco = (string)rd["Endereco"];
+                        terreno.Matricula = (string)rd["Matricula"];
 
                         terrenoList.Add(terreno);
                     }
@@ -90,8 +110,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IdTerreno, PrecoAVista, PrecoParcelado, RedeAguaEnergia, MetragemFrente, MetragemFundo, MetragemLaterais,
-                    TamanhoTotalTerreno, ConfrontacoesTerreno, Endereco, NumeroMatricula FROM Terreno WHERE IdTerreno = @Id";
+                cmd.CommandText = @"SELECT IdTerreno, IdEmpreendimento, PrecoAVista, PrecoParcelado,
+                                    MetragemFrente, MetragemFundo, TamanhoTotalTerreno, ConfrontacoesTerreno,
+                                    Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
+                                    RedeEnergia FROM Terreno WHERE IdTerreno = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -101,17 +123,21 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
+
                         terreno.IdTerreno = (int)rd["IdTerreno"];
+                        terreno.IdEmpreendimento = (int)rd["IdEmpreendimento"];
                         terreno.PrecoAVista = (float)rd["PrecoAVista"];
                         terreno.PrecoParcelado = (float)rd["PrecoParcelado"];
-                        terreno.RedeAguaEnergia = (bool)rd["RedeAguaEnergia"];
+                        terreno.RedeAgua = (bool)rd["RedeAgua"];
+                        terreno.RedeEnergia = (bool)rd["RedeEnergia"];
                         terreno.MetragemFrente = (float)rd["MetragemFrente"];
                         terreno.MetragemFundo = (float)rd["MetragemFundo"];
-                        terreno.MetragemLaterais = (float)rd["MetragemLaterais"];
-                        terreno.TamanhoTotal = (float)rd["TamanhoTotal"];
-                        terreno.ConfrontacoesTerreno = (float)rd["ConfrontacoesTerreno"];
+                        terreno.TamanhoTotalTerreno = (float)rd["TamanhoTotalTerreno"];
+                        terreno.ConfrontacoesTerreno = (string)rd["ConfrontacoesTerreno"];
                         terreno.Endereco = (string)rd["Endereco"].ToString();
                         terreno.Matricula = (string)rd["NumeroMatricula"];
+                        terreno.MetragemEsquerda = (float)rd["MetragemEsquerda"];
+                        terreno.MetragemDireita = (float)rd["MetragemDireita"];
                     }
                 }
                 return terreno;
@@ -128,7 +154,7 @@ namespace DAL
         public Terreno BuscarPorMatricula(string _matricula)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-              Terreno terreno = new Terreno();
+            Terreno terreno = new Terreno();
 
             try
             {
@@ -152,14 +178,16 @@ namespace DAL
                         terreno.IdTerreno = (int)rd["IdTerreno"];
                         terreno.PrecoAVista = (float)rd["PrecoAVista"];
                         terreno.PrecoParcelado = (float)rd["PrecoParcelado"];
-                        terreno.RedeAguaEnergia = (bool)rd["RedeAguaEnergia"];
                         terreno.MetragemFrente = (float)rd["MetragemFrente"];
                         terreno.MetragemFundo = (float)rd["MetragemFundo"];
-                        terreno.MetragemLaterais = (float)rd["MetragemLaterais"];
-                        terreno.TamanhoTotal = (float)rd["TamanhoTotalTerreno"];
-                        terreno.ConfrontacoesTerreno = (float)rd["ConfrontacoesTerreno"];
+                        terreno.MetragemEsquerda = (float)rd["MetragemLaterais"];
+                        terreno.MetragemDireita = (float)rd["MetragemLaterais"];
+                        terreno.TamanhoTotalTerreno = (float)rd["TamanhoTotalTerreno"];
+                        terreno.ConfrontacoesTerreno = (string)rd["ConfrontacoesTerreno"];
                         terreno.Endereco = (string)rd["Endereco"].ToString();
                         terreno.Matricula = (string)rd["NumeroMatricula"];
+                        terreno.RedeAgua = (bool)rd["RedeAguaEnergia"];
+                        terreno.RedeEnergia = (bool)rd["RedeAguaEnergia"];
                     }
                 }
                 return terreno;
