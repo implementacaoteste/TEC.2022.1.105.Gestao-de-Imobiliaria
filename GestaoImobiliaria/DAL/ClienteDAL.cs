@@ -27,15 +27,23 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Endereco", _cliente.Endereco);
                 cmd.Parameters.AddWithValue("@EstadoCivil", _cliente.EstadoCivil);
                 cmd.Parameters.AddWithValue("@Renda", _cliente.Renda);
-                cmd.Parameters.AddWithValue("@CPFConjuge", _cliente.CPFConjuge);
-                cmd.Parameters.AddWithValue("@RGConjuge", _cliente.RGConjuge);
+
+                if (_cliente.CPFConjuge != null)
+                    cmd.Parameters.AddWithValue("@CPFConjuge", _cliente.CPFConjuge);
+                else
+                    cmd.Parameters.AddWithValue("@CPFConjuge", DBNull.Value);
+
+                if (_cliente.RGConjuge != null)
+                    cmd.Parameters.AddWithValue("@RGConjuge", _cliente.RGConjuge);
+                else
+                    cmd.Parameters.AddWithValue("@RGConjuge", DBNull.Value);
 
                 cmd.Connection = cn;
                 cn.Open();
 
                 cmd.ExecuteNonQuery();
             }
-            
+
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar inserir um cliente no banco de dados.", ex) { Data = { { "Id", 15 } } };
