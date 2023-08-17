@@ -147,8 +147,8 @@ CREATE TABLE [dbo].[Terrenos](
 	[NumeroMatricula] [varchar](100) NOT NULL,
 	[MetragemEsquerda] [varchar](100) NULL,
 	[MetragemDireita] [varchar](100) NULL,
-	[RedeAgua] [varchar](100) NULL,
-	[RedeEnergia] [varchar](100) NULL,
+	[RedeAgua] [bit] NULL,
+	[RedeEnergia] [bit] NULL,
 	[Esquina] [varchar](10) NULL,
 PRIMARY KEY CLUSTERED 
 (
