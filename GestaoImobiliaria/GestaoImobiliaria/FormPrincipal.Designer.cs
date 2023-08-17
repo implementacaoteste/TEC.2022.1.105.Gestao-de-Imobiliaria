@@ -34,6 +34,7 @@
             this.gruposDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terrenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empreedimentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.usuáriosToolStripMenuItem,
             this.gruposDeUsuáriosToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.terrenosToolStripMenuItem});
+            this.terrenosToolStripMenuItem,
+            this.empreedimentosToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
@@ -92,6 +94,13 @@
             this.terrenosToolStripMenuItem.Text = "Terrenos";
             this.terrenosToolStripMenuItem.Click += new System.EventHandler(this.terrenosToolStripMenuItem_Click);
             // 
+            // empreedimentosToolStripMenuItem
+            // 
+            this.empreedimentosToolStripMenuItem.Name = "empreedimentosToolStripMenuItem";
+            this.empreedimentosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.empreedimentosToolStripMenuItem.Text = "Empreedimentos";
+            this.empreedimentosToolStripMenuItem.Click += new System.EventHandler(this.empreedimentosToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -120,6 +129,7 @@
         private System.Windows.Forms.ToolStripMenuItem gruposDeUsuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terrenosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empreedimentosToolStripMenuItem;
     }
 }
 
