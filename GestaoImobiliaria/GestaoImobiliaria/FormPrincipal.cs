@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace LocacaoLaboratorio
@@ -73,6 +74,15 @@ namespace LocacaoLaboratorio
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void empreedimentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormConsultaEmpreendimentos frm = new FormConsultaEmpreendimentos()) 
+            {
+                frm.ShowDialog();
+            }
+                   
         }
     }
 }
