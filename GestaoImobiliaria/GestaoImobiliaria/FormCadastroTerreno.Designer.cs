@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label confrontacoesTerrenoLabel;
             System.Windows.Forms.Label enderecoLabel;
+            System.Windows.Forms.Label idEmpreendimentoLabel;
             System.Windows.Forms.Label matriculaLabel;
             System.Windows.Forms.Label metragemDireitaLabel;
             System.Windows.Forms.Label metragemEsquerdaLabel;
@@ -42,12 +43,12 @@
             System.Windows.Forms.Label redeEnergiaLabel;
             System.Windows.Forms.Label tamanhoTotalTerrenoLabel;
             this.labelCadastoTerreno = new System.Windows.Forms.Label();
-            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.terrenoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.confrontacoesTerrenoTextBox = new System.Windows.Forms.TextBox();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
+            this.idEmpreendimentoTextBox = new System.Windows.Forms.TextBox();
             this.matriculaTextBox = new System.Windows.Forms.TextBox();
             this.metragemDireitaTextBox = new System.Windows.Forms.TextBox();
             this.metragemEsquerdaTextBox = new System.Windows.Forms.TextBox();
@@ -58,10 +59,9 @@
             this.redeAguaCheckBox = new System.Windows.Forms.CheckBox();
             this.redeEnergiaCheckBox = new System.Windows.Forms.CheckBox();
             this.tamanhoTotalTerrenoTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             confrontacoesTerrenoLabel = new System.Windows.Forms.Label();
             enderecoLabel = new System.Windows.Forms.Label();
+            idEmpreendimentoLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
             metragemDireitaLabel = new System.Windows.Forms.Label();
             metragemEsquerdaLabel = new System.Windows.Forms.Label();
@@ -73,127 +73,123 @@
             redeEnergiaLabel = new System.Windows.Forms.Label();
             tamanhoTotalTerrenoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // confrontacoesTerrenoLabel
             // 
             confrontacoesTerrenoLabel.AutoSize = true;
-            confrontacoesTerrenoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            confrontacoesTerrenoLabel.Location = new System.Drawing.Point(12, 84);
+            confrontacoesTerrenoLabel.Location = new System.Drawing.Point(28, 75);
             confrontacoesTerrenoLabel.Name = "confrontacoesTerrenoLabel";
-            confrontacoesTerrenoLabel.Size = new System.Drawing.Size(210, 24);
+            confrontacoesTerrenoLabel.Size = new System.Drawing.Size(148, 16);
             confrontacoesTerrenoLabel.TabIndex = 24;
             confrontacoesTerrenoLabel.Text = "Confrontacoes Terreno:";
             // 
             // enderecoLabel
             // 
             enderecoLabel.AutoSize = true;
-            enderecoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            enderecoLabel.Location = new System.Drawing.Point(417, 88);
+            enderecoLabel.Location = new System.Drawing.Point(30, 109);
             enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(99, 24);
+            enderecoLabel.Size = new System.Drawing.Size(69, 16);
             enderecoLabel.TabIndex = 25;
             enderecoLabel.Text = "Endereco:";
+            // 
+            // idEmpreendimentoLabel
+            // 
+            idEmpreendimentoLabel.AutoSize = true;
+            idEmpreendimentoLabel.Location = new System.Drawing.Point(33, 146);
+            idEmpreendimentoLabel.Name = "idEmpreendimentoLabel";
+            idEmpreendimentoLabel.Size = new System.Drawing.Size(127, 16);
+            idEmpreendimentoLabel.TabIndex = 26;
+            idEmpreendimentoLabel.Text = "Id Empreendimento:";
             // 
             // matriculaLabel
             // 
             matriculaLabel.AutoSize = true;
-            matriculaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            matriculaLabel.Location = new System.Drawing.Point(773, 92);
+            matriculaLabel.Location = new System.Drawing.Point(37, 230);
             matriculaLabel.Name = "matriculaLabel";
-            matriculaLabel.Size = new System.Drawing.Size(90, 24);
-            matriculaLabel.TabIndex = 27;
+            matriculaLabel.Size = new System.Drawing.Size(64, 16);
+            matriculaLabel.TabIndex = 28;
             matriculaLabel.Text = "Matricula:";
             // 
             // metragemDireitaLabel
             // 
             metragemDireitaLabel.AutoSize = true;
-            metragemDireitaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            metragemDireitaLabel.Location = new System.Drawing.Point(361, 181);
+            metragemDireitaLabel.Location = new System.Drawing.Point(32, 278);
             metragemDireitaLabel.Name = "metragemDireitaLabel";
-            metragemDireitaLabel.Size = new System.Drawing.Size(157, 24);
-            metragemDireitaLabel.TabIndex = 28;
+            metragemDireitaLabel.Size = new System.Drawing.Size(113, 16);
+            metragemDireitaLabel.TabIndex = 29;
             metragemDireitaLabel.Text = "Metragem Direita:";
             // 
             // metragemEsquerdaLabel
             // 
             metragemEsquerdaLabel.AutoSize = true;
-            metragemEsquerdaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            metragemEsquerdaLabel.Location = new System.Drawing.Point(676, 185);
+            metragemEsquerdaLabel.Location = new System.Drawing.Point(343, 84);
             metragemEsquerdaLabel.Name = "metragemEsquerdaLabel";
-            metragemEsquerdaLabel.Size = new System.Drawing.Size(187, 24);
-            metragemEsquerdaLabel.TabIndex = 29;
+            metragemEsquerdaLabel.Size = new System.Drawing.Size(133, 16);
+            metragemEsquerdaLabel.TabIndex = 30;
             metragemEsquerdaLabel.Text = "Metragem Esquerda:";
             // 
             // metragemFrenteLabel
             // 
             metragemFrenteLabel.AutoSize = true;
-            metragemFrenteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            metragemFrenteLabel.Location = new System.Drawing.Point(703, 135);
+            metragemFrenteLabel.Location = new System.Drawing.Point(342, 129);
             metragemFrenteLabel.Name = "metragemFrenteLabel";
-            metragemFrenteLabel.Size = new System.Drawing.Size(160, 24);
-            metragemFrenteLabel.TabIndex = 30;
+            metragemFrenteLabel.Size = new System.Drawing.Size(112, 16);
+            metragemFrenteLabel.TabIndex = 31;
             metragemFrenteLabel.Text = "Metragem Frente:";
             // 
             // metragemFundoLabel
             // 
             metragemFundoLabel.AutoSize = true;
-            metragemFundoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            metragemFundoLabel.Location = new System.Drawing.Point(61, 181);
+            metragemFundoLabel.Location = new System.Drawing.Point(339, 175);
             metragemFundoLabel.Name = "metragemFundoLabel";
-            metragemFundoLabel.Size = new System.Drawing.Size(161, 24);
-            metragemFundoLabel.TabIndex = 31;
+            metragemFundoLabel.Size = new System.Drawing.Size(112, 16);
+            metragemFundoLabel.TabIndex = 32;
             metragemFundoLabel.Text = "Metragem Fundo:";
             // 
             // precoAVistaLabel
             // 
             precoAVistaLabel.AutoSize = true;
-            precoAVistaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precoAVistaLabel.Location = new System.Drawing.Point(99, 133);
+            precoAVistaLabel.Location = new System.Drawing.Point(335, 227);
             precoAVistaLabel.Name = "precoAVistaLabel";
-            precoAVistaLabel.Size = new System.Drawing.Size(123, 24);
-            precoAVistaLabel.TabIndex = 32;
+            precoAVistaLabel.Size = new System.Drawing.Size(88, 16);
+            precoAVistaLabel.TabIndex = 33;
             precoAVistaLabel.Text = "Preco AVista:";
             // 
             // precoParceladoLabel
             // 
             precoParceladoLabel.AutoSize = true;
-            precoParceladoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precoParceladoLabel.Location = new System.Drawing.Point(361, 133);
+            precoParceladoLabel.Location = new System.Drawing.Point(342, 272);
             precoParceladoLabel.Name = "precoParceladoLabel";
-            precoParceladoLabel.Size = new System.Drawing.Size(155, 24);
-            precoParceladoLabel.TabIndex = 33;
+            precoParceladoLabel.Size = new System.Drawing.Size(112, 16);
+            precoParceladoLabel.TabIndex = 34;
             precoParceladoLabel.Text = "Preco Parcelado:";
             // 
             // redeAguaLabel
             // 
             redeAguaLabel.AutoSize = true;
-            redeAguaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            redeAguaLabel.Location = new System.Drawing.Point(423, 226);
+            redeAguaLabel.Location = new System.Drawing.Point(631, 89);
             redeAguaLabel.Name = "redeAguaLabel";
-            redeAguaLabel.Size = new System.Drawing.Size(111, 24);
-            redeAguaLabel.TabIndex = 34;
+            redeAguaLabel.Size = new System.Drawing.Size(79, 16);
+            redeAguaLabel.TabIndex = 35;
             redeAguaLabel.Text = "Rede Agua:";
             // 
             // redeEnergiaLabel
             // 
             redeEnergiaLabel.AutoSize = true;
-            redeEnergiaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            redeEnergiaLabel.Location = new System.Drawing.Point(774, 226);
+            redeEnergiaLabel.Location = new System.Drawing.Point(637, 135);
             redeEnergiaLabel.Name = "redeEnergiaLabel";
-            redeEnergiaLabel.Size = new System.Drawing.Size(132, 24);
-            redeEnergiaLabel.TabIndex = 35;
+            redeEnergiaLabel.Size = new System.Drawing.Size(94, 16);
+            redeEnergiaLabel.TabIndex = 36;
             redeEnergiaLabel.Text = "Rede Energia:";
             // 
             // tamanhoTotalTerrenoLabel
             // 
             tamanhoTotalTerrenoLabel.AutoSize = true;
-            tamanhoTotalTerrenoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tamanhoTotalTerrenoLabel.Location = new System.Drawing.Point(12, 226);
+            tamanhoTotalTerrenoLabel.Location = new System.Drawing.Point(646, 174);
             tamanhoTotalTerrenoLabel.Name = "tamanhoTotalTerrenoLabel";
-            tamanhoTotalTerrenoLabel.Size = new System.Drawing.Size(215, 24);
-            tamanhoTotalTerrenoLabel.TabIndex = 36;
+            tamanhoTotalTerrenoLabel.Size = new System.Drawing.Size(153, 16);
+            tamanhoTotalTerrenoLabel.TabIndex = 37;
             tamanhoTotalTerrenoLabel.Text = "Tamanho Total Terreno:";
             // 
             // labelCadastoTerreno
@@ -209,7 +205,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(571, 384);
+            this.buttonSalvar.Location = new System.Drawing.Point(813, 295);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
@@ -220,7 +216,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(652, 384);
+            this.buttonCancelar.Location = new System.Drawing.Point(894, 295);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
@@ -228,136 +224,123 @@
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
-            // terrenoBindingSource1
+            // terrenoBindingSource
             // 
-            this.terrenoBindingSource1.DataSource = typeof(Models.Terreno);
+            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
             // confrontacoesTerrenoTextBox
             // 
-            this.confrontacoesTerrenoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "ConfrontacoesTerreno", true));
-            this.confrontacoesTerrenoTextBox.Location = new System.Drawing.Point(228, 86);
+            this.confrontacoesTerrenoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "ConfrontacoesTerreno", true));
+            this.confrontacoesTerrenoTextBox.Location = new System.Drawing.Point(182, 72);
             this.confrontacoesTerrenoTextBox.Name = "confrontacoesTerrenoTextBox";
             this.confrontacoesTerrenoTextBox.Size = new System.Drawing.Size(100, 22);
             this.confrontacoesTerrenoTextBox.TabIndex = 25;
             // 
             // enderecoTextBox
             // 
-            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "Endereco", true));
-            this.enderecoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enderecoTextBox.Location = new System.Drawing.Point(522, 88);
+            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Endereco", true));
+            this.enderecoTextBox.Location = new System.Drawing.Point(105, 106);
             this.enderecoTextBox.Name = "enderecoTextBox";
             this.enderecoTextBox.Size = new System.Drawing.Size(100, 22);
             this.enderecoTextBox.TabIndex = 26;
             // 
+            // idEmpreendimentoTextBox
+            // 
+            this.idEmpreendimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "IdEmpreendimento", true));
+            this.idEmpreendimentoTextBox.Location = new System.Drawing.Point(166, 143);
+            this.idEmpreendimentoTextBox.Name = "idEmpreendimentoTextBox";
+            this.idEmpreendimentoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.idEmpreendimentoTextBox.TabIndex = 27;
+            // 
             // matriculaTextBox
             // 
-            this.matriculaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "Matricula", true));
-            this.matriculaTextBox.Location = new System.Drawing.Point(869, 90);
+            this.matriculaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Matricula", true));
+            this.matriculaTextBox.Location = new System.Drawing.Point(107, 227);
             this.matriculaTextBox.Name = "matriculaTextBox";
             this.matriculaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.matriculaTextBox.TabIndex = 28;
+            this.matriculaTextBox.TabIndex = 29;
             // 
             // metragemDireitaTextBox
             // 
-            this.metragemDireitaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "MetragemDireita", true));
-            this.metragemDireitaTextBox.Location = new System.Drawing.Point(522, 181);
+            this.metragemDireitaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "MetragemDireita", true));
+            this.metragemDireitaTextBox.Location = new System.Drawing.Point(151, 275);
             this.metragemDireitaTextBox.Name = "metragemDireitaTextBox";
             this.metragemDireitaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.metragemDireitaTextBox.TabIndex = 29;
+            this.metragemDireitaTextBox.TabIndex = 30;
             // 
             // metragemEsquerdaTextBox
             // 
-            this.metragemEsquerdaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "MetragemEsquerda", true));
-            this.metragemEsquerdaTextBox.Location = new System.Drawing.Point(869, 185);
+            this.metragemEsquerdaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "MetragemEsquerda", true));
+            this.metragemEsquerdaTextBox.Location = new System.Drawing.Point(482, 81);
             this.metragemEsquerdaTextBox.Name = "metragemEsquerdaTextBox";
             this.metragemEsquerdaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.metragemEsquerdaTextBox.TabIndex = 30;
+            this.metragemEsquerdaTextBox.TabIndex = 31;
             // 
             // metragemFrenteTextBox
             // 
-            this.metragemFrenteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "MetragemFrente", true));
-            this.metragemFrenteTextBox.Location = new System.Drawing.Point(869, 135);
+            this.metragemFrenteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "MetragemFrente", true));
+            this.metragemFrenteTextBox.Location = new System.Drawing.Point(460, 126);
             this.metragemFrenteTextBox.Name = "metragemFrenteTextBox";
             this.metragemFrenteTextBox.Size = new System.Drawing.Size(100, 22);
-            this.metragemFrenteTextBox.TabIndex = 31;
+            this.metragemFrenteTextBox.TabIndex = 32;
             // 
             // metragemFundoTextBox
             // 
-            this.metragemFundoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "MetragemFundo", true));
-            this.metragemFundoTextBox.Location = new System.Drawing.Point(225, 181);
+            this.metragemFundoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "MetragemFundo", true));
+            this.metragemFundoTextBox.Location = new System.Drawing.Point(457, 172);
             this.metragemFundoTextBox.Name = "metragemFundoTextBox";
             this.metragemFundoTextBox.Size = new System.Drawing.Size(100, 22);
-            this.metragemFundoTextBox.TabIndex = 32;
+            this.metragemFundoTextBox.TabIndex = 33;
             // 
             // precoAVistaTextBox
             // 
-            this.precoAVistaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "PrecoAVista", true));
-            this.precoAVistaTextBox.Location = new System.Drawing.Point(225, 133);
+            this.precoAVistaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "PrecoAVista", true));
+            this.precoAVistaTextBox.Location = new System.Drawing.Point(429, 224);
             this.precoAVistaTextBox.Name = "precoAVistaTextBox";
             this.precoAVistaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.precoAVistaTextBox.TabIndex = 33;
+            this.precoAVistaTextBox.TabIndex = 34;
             // 
             // precoParceladoTextBox
             // 
-            this.precoParceladoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "PrecoParcelado", true));
-            this.precoParceladoTextBox.Location = new System.Drawing.Point(522, 133);
+            this.precoParceladoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "PrecoParcelado", true));
+            this.precoParceladoTextBox.Location = new System.Drawing.Point(460, 269);
             this.precoParceladoTextBox.Name = "precoParceladoTextBox";
             this.precoParceladoTextBox.Size = new System.Drawing.Size(100, 22);
-            this.precoParceladoTextBox.TabIndex = 34;
+            this.precoParceladoTextBox.TabIndex = 35;
             // 
             // redeAguaCheckBox
             // 
-            this.redeAguaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource1, "RedeAgua", true));
-            this.redeAguaCheckBox.Location = new System.Drawing.Point(546, 226);
+            this.redeAguaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource, "RedeAgua", true));
+            this.redeAguaCheckBox.Location = new System.Drawing.Point(716, 84);
             this.redeAguaCheckBox.Name = "redeAguaCheckBox";
-            this.redeAguaCheckBox.Size = new System.Drawing.Size(18, 24);
-            this.redeAguaCheckBox.TabIndex = 35;
+            this.redeAguaCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.redeAguaCheckBox.TabIndex = 36;
             this.redeAguaCheckBox.Text = "checkBox1";
             this.redeAguaCheckBox.UseVisualStyleBackColor = true;
             // 
             // redeEnergiaCheckBox
             // 
-            this.redeEnergiaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource1, "RedeEnergia", true));
-            this.redeEnergiaCheckBox.Location = new System.Drawing.Point(912, 226);
+            this.redeEnergiaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource, "RedeEnergia", true));
+            this.redeEnergiaCheckBox.Location = new System.Drawing.Point(737, 130);
             this.redeEnergiaCheckBox.Name = "redeEnergiaCheckBox";
-            this.redeEnergiaCheckBox.Size = new System.Drawing.Size(18, 24);
-            this.redeEnergiaCheckBox.TabIndex = 36;
+            this.redeEnergiaCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.redeEnergiaCheckBox.TabIndex = 37;
             this.redeEnergiaCheckBox.Text = "checkBox1";
             this.redeEnergiaCheckBox.UseVisualStyleBackColor = true;
             // 
             // tamanhoTotalTerrenoTextBox
             // 
-            this.tamanhoTotalTerrenoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource1, "TamanhoTotalTerreno", true));
-            this.tamanhoTotalTerrenoTextBox.Location = new System.Drawing.Point(227, 226);
+            this.tamanhoTotalTerrenoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "TamanhoTotalTerreno", true));
+            this.tamanhoTotalTerrenoTextBox.Location = new System.Drawing.Point(805, 171);
             this.tamanhoTotalTerrenoTextBox.Name = "tamanhoTotalTerrenoTextBox";
             this.tamanhoTotalTerrenoTextBox.Size = new System.Drawing.Size(100, 22);
-            this.tamanhoTotalTerrenoTextBox.TabIndex = 37;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(815, 295);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(912, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tamanhoTotalTerrenoTextBox.TabIndex = 38;
             // 
             // FormCadastroTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1046, 345);
             this.Controls.Add(tamanhoTotalTerrenoLabel);
             this.Controls.Add(this.tamanhoTotalTerrenoTextBox);
             this.Controls.Add(redeEnergiaLabel);
@@ -378,6 +361,8 @@
             this.Controls.Add(this.metragemDireitaTextBox);
             this.Controls.Add(matriculaLabel);
             this.Controls.Add(this.matriculaTextBox);
+            this.Controls.Add(idEmpreendimentoLabel);
+            this.Controls.Add(this.idEmpreendimentoTextBox);
             this.Controls.Add(enderecoLabel);
             this.Controls.Add(this.enderecoTextBox);
             this.Controls.Add(confrontacoesTerrenoLabel);
@@ -388,8 +373,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCadastroTerreno";
             this.Text = "Cadastro de Terreno";
+            this.Load += new System.EventHandler(this.FormCadastroTerreno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,12 +383,12 @@
         #endregion
 
         private System.Windows.Forms.Label labelCadastoTerreno;
-        private System.Windows.Forms.BindingSource terrenoBindingSource;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.BindingSource terrenoBindingSource1;
+        private System.Windows.Forms.BindingSource terrenoBindingSource;
         private System.Windows.Forms.TextBox confrontacoesTerrenoTextBox;
         private System.Windows.Forms.TextBox enderecoTextBox;
+        private System.Windows.Forms.TextBox idEmpreendimentoTextBox;
         private System.Windows.Forms.TextBox matriculaTextBox;
         private System.Windows.Forms.TextBox metragemDireitaTextBox;
         private System.Windows.Forms.TextBox metragemEsquerdaTextBox;
@@ -414,7 +399,5 @@
         private System.Windows.Forms.CheckBox redeAguaCheckBox;
         private System.Windows.Forms.CheckBox redeEnergiaCheckBox;
         private System.Windows.Forms.TextBox tamanhoTotalTerrenoTextBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

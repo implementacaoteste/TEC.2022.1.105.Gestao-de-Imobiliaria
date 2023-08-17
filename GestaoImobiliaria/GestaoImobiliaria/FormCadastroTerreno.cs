@@ -25,9 +25,9 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                terrenoBindingSource.EndEdit();
                 Terreno terreno = (Terreno)terrenoBindingSource.Current;
 
-                terrenoBindingSource.EndEdit();
 
                 if (id == 0)
                     new TerrenoBLL().inserir(terreno);
@@ -48,7 +48,17 @@ namespace LocacaoLaboratorio
             try
             {
                 if (id == 0)
+                {
                     terrenoBindingSource.AddNew();
+                    metragemDireitaTextBox.Text = 
+                    metragemFrenteTextBox.Text =
+                    idEmpreendimentoTextBox.Text =
+                    metragemFundoTextBox.Text =
+                    tamanhoTotalTerrenoTextBox.Text =
+                    precoAVistaTextBox.Text =
+                    precoParceladoTextBox .Text =
+                    metragemEsquerdaTextBox.Text = "";
+                }
                 else
                     terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(id);
             }
