@@ -66,10 +66,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDEmpreendimento,PrecoAVista, PrecoParcelado,
+                cmd.CommandText = @"SELECT IDTerreno, IDEmpreendimento,PrecoAVista, PrecoParcelado,
 						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, ConfrontacoesTerreno,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
-						RedeEnergia FROM Terreno";
+						RedeEnergia FROM Terrenos";
                 
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -79,18 +79,18 @@ namespace DAL
                     while (rd.Read())
                     {
                         terreno = new Terreno();
-                        terreno.IdTerreno = (int)rd["Id"];
+                        terreno.IdTerreno = (int)rd["IDTerreno"];
                         terreno.IdEmpreendimento = (int)rd["IdEmpreendimento"];
-                        terreno.PrecoAVista = (float)rd["PrecoAVista"];
-                        terreno.PrecoParcelado = (float)rd["PrecoParcelado"];
-                        terreno.MetragemFrente = (float)rd["MetragemFrente"];
-                        terreno.MetragemFundo = (float)rd["MetragemFundo"];
-                        terreno.TamanhoTotalTerreno = (float)rd["TamanhoTotalTerreno"];
+                        terreno.PrecoAVista = (double)rd["PrecoAVista"];
+                        terreno.PrecoParcelado = (double)rd["PrecoParcelado"];
+                        terreno.MetragemFrente = (double)rd["MetragemFrente"];
+                        terreno.MetragemFundo = (double)rd["MetragemFundo"];
+                        terreno.TamanhoTotalTerreno = (double)rd["TamanhoTotalTerreno"];
                         terreno.ConfrontacoesTerreno = (string)rd["ConfrontacoesTerreno"];
                         terreno.Endereco = (string)rd["Endereco"];
                         terreno.Matricula = (string)rd["NumeroMatricula"];
-                        terreno.MetragemEsquerda = (float)rd["MetragemEsquerda"];
-                        terreno.MetragemDireita = (float)rd["MetragemDireita"];
+                        terreno.MetragemEsquerda = (double)rd["MetragemEsquerda"];
+                        terreno.MetragemDireita = (double)rd["MetragemDireita"];
                         terreno.RedeAgua = (bool)rd["RedeAgua"];
                         terreno.RedeEnergia = (bool)rd["RedeEnergia"];
 
@@ -119,7 +119,7 @@ namespace DAL
                 cmd.CommandText = @"SELECT IdTerreno, IdEmpreendimento, PrecoAVista, PrecoParcelado,
                                     MetragemFrente, MetragemFundo, TamanhoTotalTerreno, ConfrontacoesTerreno,
                                     Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
-                                    RedeEnergia FROM Terreno WHERE IdTerreno = @Id";
+                                    RedeEnergia FROM Terrenos WHERE IdTerreno = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -129,7 +129,7 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-
+                        
                         terreno.IdTerreno = (int)rd["IdTerreno"];
                         terreno.IdEmpreendimento = (int)rd["IdEmpreendimento"];
                         terreno.PrecoAVista = (float)rd["PrecoAVista"];
@@ -150,7 +150,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar fornecedor por id no banco de dados", ex) { Data = { { "Id", 24 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar o Id de um Terreno no banco de dados", ex) { Data = { { "Id", 24 } } };
             }
             finally
             {

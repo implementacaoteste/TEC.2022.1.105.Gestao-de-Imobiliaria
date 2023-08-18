@@ -26,9 +26,10 @@ namespace LocacaoLaboratorio
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0:
-                        if (String.IsNullOrEmpty(comboBoxBuscarPor.Text))
+                        if (String.IsNullOrEmpty(textBoxBuscar.Text))
                             throw new Exception("Informe um Id para fazer a Busca") { Data = { { "Id", 101 } } };
 
+                        //terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
@@ -89,6 +90,9 @@ namespace LocacaoLaboratorio
             }
         }
 
-
+        private void FormConsultarTerreno_Load(object sender, EventArgs e)
+        {
+            comboBoxBuscarPor.SelectedIndex = 2;
+        }
     }
 }
