@@ -29,7 +29,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.TotalTerrenos = (int)rd["TotalTerrenos"];
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
                         empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
@@ -73,7 +73,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.TotalTerrenos = (int)rd["TotalTerrenos"];
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
                         empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
@@ -103,7 +103,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Empreendimentos(TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea) VALUES(@TotalTerrenos, @CNPJEmpresaResponsavel, @TamanhoArea)";
+                cmd.CommandText = @"INSERT INTO Empreendimentos(TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome) VALUES(@TotalTerrenos, @CNPJEmpresaResponsavel, @TamanhoArea, @Nome)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
@@ -218,7 +218,7 @@ namespace DAL
                     {
                         empreendimentos = new Empreendimentos();
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.TotalTerrenos = (int)rd["TotalTerrenos"];
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
                         empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
@@ -263,7 +263,7 @@ namespace DAL
                     {
                         empreendimentos = new Empreendimentos();
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.TotalTerrenos = (int)rd["TotalTerrenos"];
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
                         empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
