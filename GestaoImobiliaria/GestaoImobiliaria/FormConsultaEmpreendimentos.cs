@@ -61,6 +61,9 @@ namespace LocacaoLaboratorio
 
 
 
+
+
+
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -73,7 +76,7 @@ namespace LocacaoLaboratorio
 
                 int id = ((Empreendimentos)empreendimentosBindingSource.Current).IDEmpreendimento;
 
-                using (FormCadastroCliente frm = new FormCadastroCliente(id))
+                using (FormCadastroEmpreendimento frm = new FormCadastroEmpreendimento(id))
                 {
                     frm.ShowDialog();
                 }
@@ -84,6 +87,9 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+
 
 
 
@@ -102,6 +108,9 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+
 
 
 
@@ -132,11 +141,17 @@ namespace LocacaoLaboratorio
 
 
 
+
+
+
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

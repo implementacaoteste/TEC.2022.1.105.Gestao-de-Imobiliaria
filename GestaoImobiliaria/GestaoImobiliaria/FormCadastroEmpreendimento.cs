@@ -25,9 +25,9 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                Empreendimentos empreendimentos = (Empreendimentos)empreendimentosBindingSource.Current;
 
                 empreendimentosBindingSource.EndEdit();
+                Empreendimentos empreendimentos = (Empreendimentos)empreendimentosBindingSource.Current;
 
                 if (id == 0)
                     new EmpreendimentoBLL().Inserir(empreendimentos);
@@ -36,6 +36,21 @@ namespace LocacaoLaboratorio
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FormCadastroEmpreendimento_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (id == 0)
+                    empreendimentosBindingSource.AddNew();
+                else
+                    empreendimentosBindingSource.DataSource = new EmpreendimentoBLL().BuscarPorId(id);
             }
             catch (Exception ex)
             {
