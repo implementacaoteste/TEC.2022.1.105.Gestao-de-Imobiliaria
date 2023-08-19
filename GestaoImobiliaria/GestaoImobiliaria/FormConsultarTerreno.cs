@@ -89,10 +89,24 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = ((Terreno)terrenoBindingSource.Current).IdTerreno;
+                new TerrenoBLL().Excluir(id);
+                terrenoBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void FormConsultarTerreno_Load(object sender, EventArgs e)
         {
             comboBoxBuscarPor.SelectedIndex = 2;
         }
+
+
     }
 }

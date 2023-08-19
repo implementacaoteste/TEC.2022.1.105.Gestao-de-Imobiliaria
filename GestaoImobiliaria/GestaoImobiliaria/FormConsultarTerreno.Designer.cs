@@ -47,7 +47,7 @@ namespace LocacaoLaboratorio
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonInserir = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonExcluir = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
@@ -204,18 +204,19 @@ namespace LocacaoLaboratorio
             this.buttonInserir.UseVisualStyleBackColor = true;
             this.buttonInserir.Click += new System.EventHandler(this.buttonInserir_Click);
             // 
-            // button4
+            // buttonExcluir
             // 
-            this.button4.Location = new System.Drawing.Point(891, 64);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "&Excluir";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Location = new System.Drawing.Point(891, 64);
+            this.buttonExcluir.Name = "buttonExcluir";
+            this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
+            this.buttonExcluir.TabIndex = 9;
+            this.buttonExcluir.Text = "&Excluir";
+            this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1006, 403);
+            this.button5.Location = new System.Drawing.Point(1018, 64);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(91, 23);
             this.button5.TabIndex = 10;
@@ -224,7 +225,7 @@ namespace LocacaoLaboratorio
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1103, 403);
+            this.button6.Location = new System.Drawing.Point(1115, 64);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(91, 23);
             this.button6.TabIndex = 11;
@@ -238,7 +239,7 @@ namespace LocacaoLaboratorio
             this.ClientSize = new System.Drawing.Size(1218, 450);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonInserir);
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.buttonBuscar);
@@ -268,7 +269,7 @@ namespace LocacaoLaboratorio
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Button buttonAlterar;
         private System.Windows.Forms.Button buttonInserir;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonExcluir;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
