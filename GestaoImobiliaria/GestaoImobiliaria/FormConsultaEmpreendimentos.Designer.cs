@@ -116,11 +116,6 @@
             // comboBoxBuscarPor
             // 
             this.comboBoxBuscarPor.FormattingEnabled = true;
-            this.comboBoxBuscarPor.Items.AddRange(new object[] {
-            "Id",
-            "Nome",
-            "CNPJ",
-            "Todos"});
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 59);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(141, 24);
@@ -183,7 +178,6 @@
             this.buttonCancelar.TabIndex = 8;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // label1
             // 
@@ -204,10 +198,9 @@
             // labelConsultaEmpreendimentos
             // 
             this.labelConsultaEmpreendimentos.AutoSize = true;
-            this.labelConsultaEmpreendimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConsultaEmpreendimentos.Location = new System.Drawing.Point(527, 9);
+            this.labelConsultaEmpreendimentos.Location = new System.Drawing.Point(582, 9);
             this.labelConsultaEmpreendimentos.Name = "labelConsultaEmpreendimentos";
-            this.labelConsultaEmpreendimentos.Size = new System.Drawing.Size(343, 25);
+            this.labelConsultaEmpreendimentos.Size = new System.Drawing.Size(231, 16);
             this.labelConsultaEmpreendimentos.TabIndex = 70;
             this.labelConsultaEmpreendimentos.Text = "CONSULTAR EMPREENDIMENTOS";
             this.labelConsultaEmpreendimentos.Click += new System.EventHandler(this.label2_Click);

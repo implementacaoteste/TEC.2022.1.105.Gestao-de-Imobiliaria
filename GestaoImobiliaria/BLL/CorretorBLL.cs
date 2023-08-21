@@ -10,7 +10,7 @@ namespace BLL
 {
     public class CorretorBLL
     {
-        public void Inserir(Corretor _corretor)
+        public void inserir(Corretor _corretor)
         {
            new CorretorDAL().Inserir(_corretor);
         }   

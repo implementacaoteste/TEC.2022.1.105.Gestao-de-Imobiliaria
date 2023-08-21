@@ -84,13 +84,5 @@ namespace LocacaoLaboratorio
             }
                    
         }
-
-        private void corretoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (FormConsultarCorretor frm = new FormConsultarCorretor())
-            {
-                frm.ShowDialog();
-            }
-        }
     }
 }
