@@ -12,27 +12,42 @@ using System.Windows.Forms;
 
 namespace LocacaoLaboratorio
 {
-    public partial class FormCadastroEmpreendimento : Form
+    public partial class FormCadastroCorretor : Form
     {
         int id;
-        public FormCadastroEmpreendimento(int _id = 0)
+        public FormCadastroCorretor(int _id = 0)
         {
             InitializeComponent();
             id = _id;
         }
 
-        private void buttonSalvar_Click(object sender, EventArgs e)
+        private void rGTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rGLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void foneLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                corretorBindingSource.EndEdit();
+                Corretor corretor = (Corretor)corretorBindingSource.Current;
 
-                empreendimentosBindingSource.EndEdit();
-                Empreendimentos empreendimentos = (Empreendimentos)empreendimentosBindingSource.Current;
 
                 if (id == 0)
-                    new EmpreendimentoBLL().Inserir(empreendimentos);
+                    new CorretorBLL().Inserir(corretor);
                 else
-                    new EmpreendimentoBLL().Alterar(empreendimentos);
+                    new CorretorBLL().Alterar(corretor);
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 this.Close();
@@ -43,24 +58,19 @@ namespace LocacaoLaboratorio
             }
         }
 
-        private void FormCadastroEmpreendimento_Load(object sender, EventArgs e)
+        private void FormCadastroCorretor_Load(object sender, EventArgs e)
         {
             try
             {
                 if (id == 0)
-                    empreendimentosBindingSource.AddNew();
+                    corretorBindingSource.AddNew();
                 else
-                    empreendimentosBindingSource.DataSource = new EmpreendimentoBLL().BuscarPorId(id);
+                    corretorBindingSource.DataSource = new CorretorBLL().BuscarPorId(id);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

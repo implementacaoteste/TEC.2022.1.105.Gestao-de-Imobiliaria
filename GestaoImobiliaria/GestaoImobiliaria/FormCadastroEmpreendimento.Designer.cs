@@ -35,18 +35,54 @@
             System.Windows.Forms.Label tamanhoAreaLabel;
             this.labelCadastroEmpreendimentos = new System.Windows.Forms.Label();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.empreendimentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cNPJEmpresaResponsavelTextBox = new System.Windows.Forms.TextBox();
             this.totalTerrenosTextBox = new System.Windows.Forms.TextBox();
             this.tamanhoAreaTextBox = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.empreendimentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nomeLabel = new System.Windows.Forms.Label();
             cNPJEmpresaResponsavelLabel = new System.Windows.Forms.Label();
             totalTerrenosLabel = new System.Windows.Forms.Label();
             tamanhoAreaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(34, 44);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(47, 16);
+            nomeLabel.TabIndex = 2;
+            nomeLabel.Text = "Nome:";
+            // 
+            // cNPJEmpresaResponsavelLabel
+            // 
+            cNPJEmpresaResponsavelLabel.AutoSize = true;
+            cNPJEmpresaResponsavelLabel.Location = new System.Drawing.Point(34, 98);
+            cNPJEmpresaResponsavelLabel.Name = "cNPJEmpresaResponsavelLabel";
+            cNPJEmpresaResponsavelLabel.Size = new System.Drawing.Size(184, 16);
+            cNPJEmpresaResponsavelLabel.TabIndex = 3;
+            cNPJEmpresaResponsavelLabel.Text = "CNPJEmpresa Responsavel:";
+            // 
+            // totalTerrenosLabel
+            // 
+            totalTerrenosLabel.AutoSize = true;
+            totalTerrenosLabel.Location = new System.Drawing.Point(445, 165);
+            totalTerrenosLabel.Name = "totalTerrenosLabel";
+            totalTerrenosLabel.Size = new System.Drawing.Size(99, 16);
+            totalTerrenosLabel.TabIndex = 5;
+            totalTerrenosLabel.Text = "Total Terrenos:";
+            // 
+            // tamanhoAreaLabel
+            // 
+            tamanhoAreaLabel.AutoSize = true;
+            tamanhoAreaLabel.Location = new System.Drawing.Point(34, 165);
+            tamanhoAreaLabel.Name = "tamanhoAreaLabel";
+            tamanhoAreaLabel.Size = new System.Drawing.Size(100, 16);
+            tamanhoAreaLabel.TabIndex = 7;
+            tamanhoAreaLabel.Text = "Tamanho Area:";
             // 
             // labelCadastroEmpreendimentos
             // 
@@ -58,15 +94,6 @@
             this.labelCadastroEmpreendimentos.TabIndex = 0;
             this.labelCadastroEmpreendimentos.Text = "CADASTRO DE EMPREENDIMENTOS";
             // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(34, 44);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(47, 16);
-            nomeLabel.TabIndex = 2;
-            nomeLabel.Text = "Nome:";
-            // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empreendimentosBindingSource, "Nome", true));
@@ -75,14 +102,9 @@
             this.nomeTextBox.Size = new System.Drawing.Size(550, 22);
             this.nomeTextBox.TabIndex = 3;
             // 
-            // cNPJEmpresaResponsavelLabel
+            // empreendimentosBindingSource
             // 
-            cNPJEmpresaResponsavelLabel.AutoSize = true;
-            cNPJEmpresaResponsavelLabel.Location = new System.Drawing.Point(34, 98);
-            cNPJEmpresaResponsavelLabel.Name = "cNPJEmpresaResponsavelLabel";
-            cNPJEmpresaResponsavelLabel.Size = new System.Drawing.Size(184, 16);
-            cNPJEmpresaResponsavelLabel.TabIndex = 3;
-            cNPJEmpresaResponsavelLabel.Text = "CNPJEmpresa Responsavel:";
+            this.empreendimentosBindingSource.DataSource = typeof(Models.Empreendimentos);
             // 
             // cNPJEmpresaResponsavelTextBox
             // 
@@ -92,15 +114,6 @@
             this.cNPJEmpresaResponsavelTextBox.Size = new System.Drawing.Size(550, 22);
             this.cNPJEmpresaResponsavelTextBox.TabIndex = 4;
             // 
-            // totalTerrenosLabel
-            // 
-            totalTerrenosLabel.AutoSize = true;
-            totalTerrenosLabel.Location = new System.Drawing.Point(445, 165);
-            totalTerrenosLabel.Name = "totalTerrenosLabel";
-            totalTerrenosLabel.Size = new System.Drawing.Size(99, 16);
-            totalTerrenosLabel.TabIndex = 5;
-            totalTerrenosLabel.Text = "Total Terrenos:";
-            // 
             // totalTerrenosTextBox
             // 
             this.totalTerrenosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empreendimentosBindingSource, "TotalTerrenos", true));
@@ -108,15 +121,6 @@
             this.totalTerrenosTextBox.Name = "totalTerrenosTextBox";
             this.totalTerrenosTextBox.Size = new System.Drawing.Size(138, 22);
             this.totalTerrenosTextBox.TabIndex = 6;
-            // 
-            // tamanhoAreaLabel
-            // 
-            tamanhoAreaLabel.AutoSize = true;
-            tamanhoAreaLabel.Location = new System.Drawing.Point(34, 165);
-            tamanhoAreaLabel.Name = "tamanhoAreaLabel";
-            tamanhoAreaLabel.Size = new System.Drawing.Size(100, 16);
-            tamanhoAreaLabel.TabIndex = 7;
-            tamanhoAreaLabel.Text = "Tamanho Area:";
             // 
             // tamanhoAreaTextBox
             // 
@@ -138,16 +142,14 @@
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Location = new System.Drawing.Point(511, 250);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
-            // 
-            // empreendimentosBindingSource
-            // 
-            this.empreendimentosBindingSource.DataSource = typeof(Models.Empreendimentos);
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // FormCadastroEmpreendimento
             // 
@@ -167,6 +169,7 @@
             this.Controls.Add(this.labelCadastroEmpreendimentos);
             this.Name = "FormCadastroEmpreendimento";
             this.Text = "FormCadastroEmpreendimento";
+            this.Load += new System.EventHandler(this.FormCadastroEmpreendimento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

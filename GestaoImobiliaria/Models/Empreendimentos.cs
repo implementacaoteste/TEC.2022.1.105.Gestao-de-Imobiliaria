@@ -11,7 +11,7 @@ namespace Models
         public int IDEmpreendimento { get; set; }
 
 
-        public string TotalTerrenos { get; set; }
+        public int TotalTerrenos { get; set; }
 
 
         public string CNPJEmpresaResponsavel { get; set; }

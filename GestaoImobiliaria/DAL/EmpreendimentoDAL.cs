@@ -19,9 +19,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDEmpreendimeto, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea FROM Empreendimentos WHERE CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel";
+                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos WHERE CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Id", _CNPJEmpresaResponsavel);
+                cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _CNPJEmpresaResponsavel);
 
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -29,7 +29,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.TotalTerrenos = (int)rd["TotalTerrenos"];
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
                         empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
@@ -63,7 +63,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDEmpreendimeto, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea FROM Empreendimentos WHERE IDEmpreendimeto = @Id";
+                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos WHERE IDEmpreendimento = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -73,7 +73,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.TotalTerrenos = (int)rd["TotalTerrenos"];
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
                         empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
@@ -103,7 +103,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Empreendimentos(TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea) VALUES(@TotalTerrenos, @CNPJEmpresaResponsavel, @TamanhoArea)";
+                cmd.CommandText = @"INSERT INTO Empreendimentos(TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome) VALUES(@TotalTerrenos, @CNPJEmpresaResponsavel, @TamanhoArea, @Nome)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
@@ -140,7 +140,7 @@ namespace DAL
                 cmd.CommandText = @"DELETE FROM Empreendimentos WHERE IDEmpreendimento = @IDEmpreendimento";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _id);
+                cmd.Parameters.AddWithValue("@IDEmpreendimento", _id);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -172,9 +172,10 @@ namespace DAL
                                     CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel,
                                     TamanhoArea = @TamanhoArea,
                                     Nome = @Nome
-                                    WHERE Id = @IDEmpreendimento";
+                                    WHERE IDEmpreendimento = @IDEmpreendimento";
                 cmd.CommandType = System.Data.CommandType.Text;
 
+                cmd.Parameters.AddWithValue("@IDEmpreendimento", _empreendimentos.IDEmpreendimento);
                 cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
                 cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _empreendimentos.CNPJEmpresaResponsavel);
                 cmd.Parameters.AddWithValue("@TamanhoArea", _empreendimentos.TamanhoArea);
@@ -218,7 +219,7 @@ namespace DAL
                     {
                         empreendimentos = new Empreendimentos();
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.TotalTerrenos = (int)rd["TotalTerrenos"];
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
                         empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
@@ -263,7 +264,7 @@ namespace DAL
                     {
                         empreendimentos = new Empreendimentos();
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
-                        empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
+                        empreendimentos.TotalTerrenos = (int)rd["TotalTerrenos"];
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
                         empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();

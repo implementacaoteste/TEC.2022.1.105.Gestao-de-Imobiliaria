@@ -12,22 +12,14 @@ using System.Windows.Forms;
 
 namespace LocacaoLaboratorio
 {
-    public partial class FormConsultaEmpreendimentos : Form
+    public partial class FormConsultarCorretor : Form
     {
-        public FormConsultaEmpreendimentos()
+        public FormConsultarCorretor()
         {
             InitializeComponent();
         }
 
-        private void empreendimentosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-
-
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonBuscar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -35,18 +27,18 @@ namespace LocacaoLaboratorio
                 {
                     case 0:
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
-                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 6930 } } };
+                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 31 } } };
 
-                        empreendimentosBindingSource.DataSource = new EmpreendimentoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
+                        corretorBindingSource.DataSource = new CorretorBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
-                        empreendimentosBindingSource.DataSource = new EmpreendimentoBLL().BuscarPorNome(textBoxBuscar.Text);
+                        corretorBindingSource.DataSource = new CorretorBLL().BuscarPorNome(textBoxBuscar.Text);
                         break;
                     case 2:
-                        empreendimentosBindingSource.DataSource = new EmpreendimentoBLL().BuscaPorCNPJ(textBoxBuscar.Text);
+                        corretorBindingSource.DataSource = new CorretorBLL().BuscarPorCPF(textBoxBuscar.Text);
                         break;
                     case 3:
-                        empreendimentosBindingSource.DataSource = new EmpreendimentoBLL().BuscarTodos();
+                        corretorBindingSource.DataSource = new CorretorBLL().BuscarTodos();
                         break;
                     default:
                         break;
@@ -58,47 +50,35 @@ namespace LocacaoLaboratorio
             }
         }
 
-
-
-
-
-
-
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (empreendimentosBindingSource.Count == 0)
+                if (corretorBindingSource.Count == 0)
                 {
-                    MessageBox.Show("Não existe empreendimento para ser alterado.");
+                    MessageBox.Show("Não existe corretor para ser alterado.");
                     return;
                 }
 
-                int id = ((Empreendimentos)empreendimentosBindingSource.Current).IDEmpreendimento;
+                int id = ((Corretor)corretorBindingSource.Current).IdCorretor;
 
-                using (FormCadastroEmpreendimento frm = new FormCadastroEmpreendimento(id))
+                using (FormCadastroCorretor frm = new FormCadastroCorretor(id))
                 {
                     frm.ShowDialog();
                 }
-                button1_Click(null, null);
+                buttonBuscar_Click(null, null);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-
-
-
-
-
 
         private void buttonInserir_Click(object sender, EventArgs e)
         {
             try
             {
-                using (FormCadastroEmpreendimento frm = new FormCadastroEmpreendimento())
+                using (FormCadastroCorretor frm = new FormCadastroCorretor())
                 {
                     frm.ShowDialog();
                 }
@@ -109,17 +89,11 @@ namespace LocacaoLaboratorio
             }
         }
 
-
-
-
-
-
-
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
             try
             {
-                if (empreendimentosBindingSource.Count <= 0)
+                if (corretorBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não existe registro para ser excluído");
                     return;
@@ -128,30 +102,14 @@ namespace LocacaoLaboratorio
                 if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                     return;
 
-                int id = ((Empreendimentos)empreendimentosBindingSource.Current).IDEmpreendimento;
-                new EmpreendimentoBLL().Excluir(id);
-                empreendimentosBindingSource.RemoveCurrent();
+                int id = ((Corretor)corretorBindingSource.Current).IdCorretor;
+                new CorretorBLL().Excluir(id);
+                corretorBindingSource.RemoveCurrent();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-
-
-
-
-
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
