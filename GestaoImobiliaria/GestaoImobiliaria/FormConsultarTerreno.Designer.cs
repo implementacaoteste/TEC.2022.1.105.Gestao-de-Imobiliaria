@@ -49,7 +49,7 @@ namespace LocacaoLaboratorio
             this.buttonInserir = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +71,7 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.Name = "terrenoDataGridView";
             this.terrenoDataGridView.RowHeadersWidth = 51;
             this.terrenoDataGridView.RowTemplate.Height = 24;
-            this.terrenoDataGridView.Size = new System.Drawing.Size(1194, 225);
+            this.terrenoDataGridView.Size = new System.Drawing.Size(954, 225);
             this.terrenoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -141,7 +141,7 @@ namespace LocacaoLaboratorio
             this.labelConsultarTerreno.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConsultarTerreno.Location = new System.Drawing.Point(0, 0);
             this.labelConsultarTerreno.Name = "labelConsultarTerreno";
-            this.labelConsultarTerreno.Size = new System.Drawing.Size(1218, 46);
+            this.labelConsultarTerreno.Size = new System.Drawing.Size(982, 46);
             this.labelConsultarTerreno.TabIndex = 2;
             this.labelConsultarTerreno.Text = "Consultar Terreno";
             this.labelConsultarTerreno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,28 +216,29 @@ namespace LocacaoLaboratorio
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1018, 64);
+            this.button5.Location = new System.Drawing.Point(769, 348);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(91, 23);
             this.button5.TabIndex = 10;
             this.button5.Text = "&Selecionar";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonCancelar
             // 
-            this.button6.Location = new System.Drawing.Point(1115, 64);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(91, 23);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "&Excluir";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancelar.Location = new System.Drawing.Point(866, 348);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(91, 23);
+            this.buttonCancelar.TabIndex = 11;
+            this.buttonCancelar.Text = "&Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // FormConsultarTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 450);
-            this.Controls.Add(this.button6);
+            this.ClientSize = new System.Drawing.Size(982, 394);
+            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonInserir);
@@ -271,7 +272,7 @@ namespace LocacaoLaboratorio
         private System.Windows.Forms.Button buttonInserir;
         private System.Windows.Forms.Button buttonExcluir;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
