@@ -143,13 +143,13 @@ CREATE TABLE [dbo].[Terrenos](
 	[MetragemFrente] [float] NOT NULL,
 	[MetragemFundo] [float] NOT NULL,
 	[TamanhoTotalTerreno] [float] NOT NULL,
-	[ConfrontacoesTerreno] [varchar](100) NOT NULL,
 	[Endereco] [varchar](100) NOT NULL,
 	[NumeroMatricula] [varchar](100) NOT NULL,
 	[MetragemEsquerda] [varchar](100) NULL,
 	[MetragemDireita] [varchar](100) NULL,
-	[RedeAgua] [varchar](100) NULL,
-	[RedeEnergia] [varchar](100) NULL,
+	[RedeAgua] [bit] NULL,
+	[RedeEnergia] [bit] NULL,
+	[Esquina] [varchar](15) NULL
 PRIMARY KEY CLUSTERED 
 (
 	[IDTerreno] ASC
