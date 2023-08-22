@@ -260,7 +260,7 @@ REFERENCES [dbo].[Terrenos] ([IDTerreno])
 GO
 ALTER TABLE [dbo].[Vendas] CHECK CONSTRAINT [FK_Vendas_Terrenos]
 GO
-USE [master]
+USE [Imobiliaria]
 GO
 ALTER DATABASE [Imobiliaria] SET  READ_WRITE 
 GO
