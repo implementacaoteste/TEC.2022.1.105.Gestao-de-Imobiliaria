@@ -16,13 +16,14 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Terrenos (IDEmpreendimento,PrecoAVista, PrecoParcelado,
-						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, ConfrontacoesTerreno,
+                cmd.CommandText = @"INSERT INTO Terrenos (IDTerreno ,IDEmpreendimento,PrecoAVista, PrecoParcelado,
+						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
-						RedeEnergia) VALUES (@IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
-                                    @MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno,
-                                    @ConfrontacoesTerreno, @Endereco, @NumeroMatricula, @MetragemEsquerda,
-                                    @MetragemDireita, @RedeAgua, @RedeEnergia)";
+						RedeEnergia) 
+						SELECT ISNULL(MAX(IDTerreno), 0) + 1  ,@IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
+						@MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno, @Esquina,
+						@Endereco, @NumeroMatricula, @MetragemEsquerda, @MetragemDireita, @RedeAgua,
+						@RedeEnergia FROM Terrenos";
 
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -35,7 +36,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@MetragemFrente", _terreno.MetragemFrente);
                 cmd.Parameters.AddWithValue("@MetragemFundo", _terreno.MetragemFundo);
                 cmd.Parameters.AddWithValue("@TamanhoTotalTerreno", _terreno.TamanhoTotalTerreno);
-                cmd.Parameters.AddWithValue("@ConfrontacoesTerreno", _terreno.ConfrontacoesTerreno);
+                cmd.Parameters.AddWithValue("@Esquina", _terreno.Esquina);
                 cmd.Parameters.AddWithValue("@Endereco", _terreno.Endereco);
                 cmd.Parameters.AddWithValue("@NumeroMatricula", _terreno.Matricula);
                 cmd.Parameters.AddWithValue("@MetragemEsquerda", _terreno.MetragemEsquerda);
@@ -66,8 +67,13 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDTerreno, IDEmpreendimento,PrecoAVista, PrecoParcelado,
-						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, ConfrontacoesTerreno,
+                /*cmd.CommandText = @"SELECT IDTerreno, IDEmpreendimento, PrecoAVista, PrecoParcelado,
+						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
+						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
+						RedeEnergia FROM Terrenos";*/
+
+                cmd.CommandText = @"SELECT IDEmpreendimento, PrecoAVista, PrecoParcelado,
+						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
 						RedeEnergia FROM Terrenos";
 
@@ -79,14 +85,14 @@ namespace DAL
                     while (rd.Read())
                     {
                         terreno = new Terreno();
-                        terreno.IdTerreno = (int)rd["IDTerreno"];
+                        //terreno.IdTerreno = (int)rd["IDTerreno"];
                         terreno.IdEmpreendimento = (int)rd["IdEmpreendimento"];
                         terreno.PrecoAVista = (double)rd["PrecoAVista"];
                         terreno.PrecoParcelado = (double)rd["PrecoParcelado"];
                         terreno.MetragemFrente = (double)rd["MetragemFrente"];
                         terreno.MetragemFundo = (double)rd["MetragemFundo"];
                         terreno.TamanhoTotalTerreno = (double)rd["TamanhoTotalTerreno"];
-                        terreno.ConfrontacoesTerreno = (string)rd["ConfrontacoesTerreno"];
+                        terreno.Esquina = (string)rd["Esquina"];
                         terreno.Endereco = (string)rd["Endereco"];
                         terreno.Matricula = (string)rd["NumeroMatricula"];
                         terreno.MetragemEsquerda = (double)rd["MetragemEsquerda"];
@@ -117,7 +123,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT IdTerreno, IdEmpreendimento, PrecoAVista, PrecoParcelado,
-                                    MetragemFrente, MetragemFundo, TamanhoTotalTerreno, ConfrontacoesTerreno,
+                                    MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
                                     Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
                                     RedeEnergia FROM Terrenos WHERE IdTerreno = @Id";
 
@@ -139,7 +145,7 @@ namespace DAL
                         terreno.MetragemFrente = (double)rd["MetragemFrente"];
                         terreno.MetragemFundo = (double)rd["MetragemFundo"];
                         terreno.TamanhoTotalTerreno = (double)rd["TamanhoTotalTerreno"];
-                        terreno.ConfrontacoesTerreno = (string)rd["ConfrontacoesTerreno"];
+                        terreno.Esquina = (string)rd["Esquina"];
                         terreno.Endereco = (string)rd["Endereco"].ToString();
                         terreno.Matricula = (string)rd["NumeroMatricula"];
                         terreno.MetragemEsquerda = (double)rd["MetragemEsquerda"];
@@ -168,7 +174,7 @@ namespace DAL
                 cmd.Connection = cn;
 
                 cmd.CommandText = @"SELECT IdTerreno, IdEmpreendimento, PrecoAVista, PrecoParcelado,
-                MetragemFrente, MetragemFundo, TamanhoTotalTerreno, ConfrontacoesTerreno,
+                MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
                 Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
                 RedeEnergia FROM Terrenos WHERE NumeroMatricula = @Matricula";
 
@@ -190,7 +196,7 @@ namespace DAL
                         terreno.MetragemFrente = (double)rd["MetragemFrente"];
                         terreno.MetragemFundo = (double)rd["MetragemFundo"];
                         terreno.TamanhoTotalTerreno = (double)rd["TamanhoTotalTerreno"];
-                        terreno.ConfrontacoesTerreno = (string)rd["ConfrontacoesTerreno"];
+                        terreno.Esquina = (string)rd["Esquina"];
                         terreno.Endereco = (string)rd["Endereco"].ToString();
                         terreno.Matricula = (string)rd["NumeroMatricula"];
                         terreno.MetragemEsquerda = (double)rd["MetragemEsquerda"];
@@ -221,7 +227,7 @@ namespace DAL
                                         MetragemFrente = @MetragemFrente,
                                         MetragemFundo = @MetragemFundo,
                                         TamanhoTotalTerreno = @TamanhoTotalTerreno,
-                                        ConfrontacoesTerreno = @ConfrontacoesTerreno,
+                                        Esquina = @Esquina,
                                         Endereco = @Endereco,
                                         NumeroMatricula = @NumeroMatricula
                                         MetragemEsquerda = @MetragemLaterais,

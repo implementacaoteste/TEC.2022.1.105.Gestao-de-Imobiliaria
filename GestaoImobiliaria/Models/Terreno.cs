@@ -15,7 +15,7 @@ namespace Models
         public double MetragemFrente { get; set; }
         public double MetragemFundo { get; set; }
         public double TamanhoTotalTerreno { get; set; }
-        public string ConfrontacoesTerreno { get; set; }
+        public string Esquina { get; set; }
         public string Endereco { get; set; }
         public string Matricula { get; set; }
         public double MetragemEsquerda { get; set; }

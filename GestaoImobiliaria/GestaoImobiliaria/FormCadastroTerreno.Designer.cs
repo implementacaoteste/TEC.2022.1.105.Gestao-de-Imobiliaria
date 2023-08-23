@@ -230,7 +230,7 @@
             // 
             // confrontacoesTerrenoTextBox
             // 
-            this.confrontacoesTerrenoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "ConfrontacoesTerreno", true));
+            this.confrontacoesTerrenoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Esquina", true));
             this.confrontacoesTerrenoTextBox.Location = new System.Drawing.Point(182, 72);
             this.confrontacoesTerrenoTextBox.Name = "confrontacoesTerrenoTextBox";
             this.confrontacoesTerrenoTextBox.Size = new System.Drawing.Size(100, 22);
