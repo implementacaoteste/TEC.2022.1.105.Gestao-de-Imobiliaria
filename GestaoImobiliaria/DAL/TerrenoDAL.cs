@@ -67,12 +67,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                /*cmd.CommandText = @"SELECT IDTerreno, IDEmpreendimento, PrecoAVista, PrecoParcelado,
-						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
-						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
-						RedeEnergia FROM Terrenos";*/
-
-                cmd.CommandText = @"SELECT IDEmpreendimento, PrecoAVista, PrecoParcelado,
+                cmd.CommandText = @"SELECT IDTerreno, IDEmpreendimento, PrecoAVista, PrecoParcelado,
 						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
 						RedeEnergia FROM Terrenos";
@@ -85,7 +80,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         terreno = new Terreno();
-                        //terreno.IdTerreno = (int)rd["IDTerreno"];
+                        terreno.IdTerreno = (int)rd["IDTerreno"];
                         terreno.IdEmpreendimento = (int)rd["IdEmpreendimento"];
                         terreno.PrecoAVista = (double)rd["PrecoAVista"];
                         terreno.PrecoParcelado = (double)rd["PrecoParcelado"];
@@ -95,8 +90,8 @@ namespace DAL
                         terreno.Esquina = (string)rd["Esquina"];
                         terreno.Endereco = (string)rd["Endereco"];
                         terreno.Matricula = (string)rd["NumeroMatricula"];
-                        terreno.MetragemEsquerda = (double)rd["MetragemEsquerda"];
-                        terreno.MetragemDireita = (double)rd["MetragemDireita"];
+                        terreno.MetragemEsquerda = (string)rd["MetragemEsquerda"];
+                        terreno.MetragemDireita = (string)rd["MetragemDireita"];
                         terreno.RedeAgua = (bool)rd["RedeAgua"];
                         terreno.RedeEnergia = (bool)rd["RedeEnergia"];
 
@@ -148,8 +143,8 @@ namespace DAL
                         terreno.Esquina = (string)rd["Esquina"];
                         terreno.Endereco = (string)rd["Endereco"].ToString();
                         terreno.Matricula = (string)rd["NumeroMatricula"];
-                        terreno.MetragemEsquerda = (double)rd["MetragemEsquerda"];
-                        terreno.MetragemDireita = (double)rd["MetragemDireita"];
+                        terreno.MetragemEsquerda = (string)rd["MetragemEsquerda"];
+                        terreno.MetragemDireita = (string)rd["MetragemDireita"];
                     }
                 }
                 return terreno;
@@ -199,8 +194,8 @@ namespace DAL
                         terreno.Esquina = (string)rd["Esquina"];
                         terreno.Endereco = (string)rd["Endereco"].ToString();
                         terreno.Matricula = (string)rd["NumeroMatricula"];
-                        terreno.MetragemEsquerda = (double)rd["MetragemEsquerda"];
-                        terreno.MetragemDireita = (double)rd["MetragemDireita"];
+                        terreno.MetragemEsquerda = (string)rd["MetragemEsquerda"];
+                        terreno.MetragemDireita = (string)rd["MetragemDireita"];
                     }
                 }
                 return terreno;

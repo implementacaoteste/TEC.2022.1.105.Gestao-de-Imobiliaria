@@ -63,7 +63,7 @@ namespace LocacaoLaboratorio
 
                 int id = ((Terreno)terrenoBindingSource.Current).IdTerreno;
 
-                using (FormCadastroTerreno frm = new FormCadastroTerreno())
+                using (FormCadastroTerreno frm = new FormCadastroTerreno(id))
                 {
                     frm.ShowDialog();
                 }

@@ -18,8 +18,8 @@ namespace Models
         public string Esquina { get; set; }
         public string Endereco { get; set; }
         public string Matricula { get; set; }
-        public double MetragemEsquerda { get; set; }
-        public double MetragemDireita { get; set; }
+        public string MetragemEsquerda { get; set; }
+        public string MetragemDireita { get; set; }
         public bool RedeAgua { get; set; }
         public bool RedeEnergia { get; set; }
     }
