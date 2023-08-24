@@ -59,6 +59,7 @@ namespace LocacaoLaboratorio
             this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // labelConsultarTerreno
@@ -151,6 +152,7 @@ namespace LocacaoLaboratorio
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Location = new System.Drawing.Point(972, 66);
             this.buttonCancelar.Name = "buttonCancelar";
@@ -324,8 +326,8 @@ namespace LocacaoLaboratorio
             this.Name = "FormConsultarTerreno";
             this.Text = "Consultar Terreno";
             this.Load += new System.EventHandler(this.FormConsultarTerreno_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
