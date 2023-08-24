@@ -42,24 +42,23 @@ namespace LocacaoLaboratorio
             this.button5 = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.terrenoDataGridView = new System.Windows.Forms.DataGridView();
+            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Esquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // labelConsultarTerreno
@@ -163,6 +162,9 @@ namespace LocacaoLaboratorio
             // 
             // terrenoDataGridView
             // 
+            this.terrenoDataGridView.AllowUserToAddRows = false;
+            this.terrenoDataGridView.AllowUserToDeleteRows = false;
+            this.terrenoDataGridView.AllowUserToOrderColumns = true;
             this.terrenoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -170,13 +172,13 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.terrenoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.Esquina,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
@@ -186,10 +188,15 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.DataSource = this.terrenoBindingSource;
             this.terrenoDataGridView.Location = new System.Drawing.Point(8, 93);
             this.terrenoDataGridView.Name = "terrenoDataGridView";
+            this.terrenoDataGridView.ReadOnly = true;
             this.terrenoDataGridView.RowHeadersWidth = 51;
             this.terrenoDataGridView.RowTemplate.Height = 24;
             this.terrenoDataGridView.Size = new System.Drawing.Size(1055, 297);
             this.terrenoDataGridView.TabIndex = 11;
+            // 
+            // terrenoBindingSource
+            // 
+            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -197,7 +204,17 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn1.HeaderText = "IdTerreno";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // Esquina
+            // 
+            this.Esquina.DataPropertyName = "Esquina";
+            this.Esquina.HeaderText = "Esquina";
+            this.Esquina.MinimumWidth = 6;
+            this.Esquina.Name = "Esquina";
+            this.Esquina.ReadOnly = true;
+            this.Esquina.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -205,6 +222,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn2.HeaderText = "IdEmpreendimento";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
@@ -213,6 +231,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn3.HeaderText = "PrecoAVista";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
@@ -221,6 +240,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn4.HeaderText = "PrecoParcelado";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
@@ -229,6 +249,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn5.HeaderText = "MetragemFrente";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
@@ -237,6 +258,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn6.HeaderText = "MetragemFundo";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // dataGridViewTextBoxColumn7
@@ -245,15 +267,8 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn7.HeaderText = "TamanhoTotalTerreno";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Esquina";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Esquina";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -261,6 +276,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn9.HeaderText = "Endereco";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Width = 125;
             // 
             // dataGridViewTextBoxColumn10
@@ -269,6 +285,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn10.HeaderText = "Matricula";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 125;
             // 
             // dataGridViewTextBoxColumn11
@@ -277,6 +294,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn11.HeaderText = "MetragemEsquerda";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Width = 125;
             // 
             // dataGridViewTextBoxColumn12
@@ -285,6 +303,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn12.HeaderText = "MetragemDireita";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Width = 125;
             // 
             // dataGridViewCheckBoxColumn1
@@ -293,6 +312,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewCheckBoxColumn1.HeaderText = "RedeAgua";
             this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
             // dataGridViewCheckBoxColumn2
@@ -301,11 +321,8 @@ namespace LocacaoLaboratorio
             this.dataGridViewCheckBoxColumn2.HeaderText = "RedeEnergia";
             this.dataGridViewCheckBoxColumn2.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.ReadOnly = true;
             this.dataGridViewCheckBoxColumn2.Width = 125;
-            // 
-            // terrenoBindingSource
-            // 
-            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
             // FormConsultarTerreno
             // 
@@ -326,8 +343,8 @@ namespace LocacaoLaboratorio
             this.Name = "FormConsultarTerreno";
             this.Text = "Consultar Terreno";
             this.Load += new System.EventHandler(this.FormConsultarTerreno_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,13 +365,13 @@ namespace LocacaoLaboratorio
         private System.Windows.Forms.Button buttonCancelar;
         private DataGridView terrenoDataGridView;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn Esquina;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;

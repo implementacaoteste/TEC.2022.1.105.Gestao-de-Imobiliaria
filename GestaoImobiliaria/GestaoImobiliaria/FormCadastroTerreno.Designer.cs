@@ -41,7 +41,7 @@
             System.Windows.Forms.Label redeAguaLabel;
             System.Windows.Forms.Label redeEnergiaLabel;
             System.Windows.Forms.Label tamanhoTotalTerrenoLabel;
-            System.Windows.Forms.Label esquinaLabel;
+            System.Windows.Forms.Label confrontacoesLabel;
             this.labelCadastoTerreno = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             this.redeAguaCheckBox = new System.Windows.Forms.CheckBox();
             this.redeEnergiaCheckBox = new System.Windows.Forms.CheckBox();
             this.tamanhoTotalTerrenoTextBox = new System.Windows.Forms.TextBox();
-            this.esquinaTextBox = new System.Windows.Forms.TextBox();
+            this.confrontacoesTextBox = new System.Windows.Forms.TextBox();
             enderecoLabel = new System.Windows.Forms.Label();
             idEmpreendimentoLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             redeAguaLabel = new System.Windows.Forms.Label();
             redeEnergiaLabel = new System.Windows.Forms.Label();
             tamanhoTotalTerrenoLabel = new System.Windows.Forms.Label();
-            esquinaLabel = new System.Windows.Forms.Label();
+            confrontacoesLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,14 +220,6 @@
             // 
             this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
-            // confrontacoesTerrenoTextBox
-            // 
-            this.confrontacoesTerrenoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Esquina", true));
-            this.confrontacoesTerrenoTextBox.Location = new System.Drawing.Point(182, 72);
-            this.confrontacoesTerrenoTextBox.Name = "confrontacoesTerrenoTextBox";
-            this.confrontacoesTerrenoTextBox.Size = new System.Drawing.Size(100, 22);
-            this.confrontacoesTerrenoTextBox.TabIndex = 25;
-            // 
             // enderecoTextBox
             // 
             this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Endereco", true));
@@ -328,30 +320,30 @@
             this.tamanhoTotalTerrenoTextBox.Size = new System.Drawing.Size(100, 22);
             this.tamanhoTotalTerrenoTextBox.TabIndex = 38;
             // 
-            // esquinaLabel
+            // confrontacoesLabel
             // 
-            esquinaLabel.AutoSize = true;
-            esquinaLabel.Location = new System.Drawing.Point(66, 188);
-            esquinaLabel.Name = "esquinaLabel";
-            esquinaLabel.Size = new System.Drawing.Size(59, 16);
-            esquinaLabel.TabIndex = 38;
-            esquinaLabel.Text = "Esquina:";
+            confrontacoesLabel.AutoSize = true;
+            confrontacoesLabel.Location = new System.Drawing.Point(66, 188);
+            confrontacoesLabel.Name = "confrontacoesLabel";
+            confrontacoesLabel.Size = new System.Drawing.Size(59, 16);
+            confrontacoesLabel.TabIndex = 38;
+            confrontacoesLabel.Text = "Esquina:";
             // 
-            // esquinaTextBox
+            // confrontacoesTextBox
             // 
-            this.esquinaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Esquina", true));
-            this.esquinaTextBox.Location = new System.Drawing.Point(131, 185);
-            this.esquinaTextBox.Name = "esquinaTextBox";
-            this.esquinaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.esquinaTextBox.TabIndex = 39;
+            this.confrontacoesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Esquina", true));
+            this.confrontacoesTextBox.Location = new System.Drawing.Point(131, 185);
+            this.confrontacoesTextBox.Name = "confrontacoesTextBox";
+            this.confrontacoesTextBox.Size = new System.Drawing.Size(100, 22);
+            this.confrontacoesTextBox.TabIndex = 39;
             // 
             // FormCadastroTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 345);
-            this.Controls.Add(esquinaLabel);
-            this.Controls.Add(this.esquinaTextBox);
+            this.Controls.Add(confrontacoesLabel);
+            this.Controls.Add(this.confrontacoesTextBox);
             this.Controls.Add(tamanhoTotalTerrenoLabel);
             this.Controls.Add(this.tamanhoTotalTerrenoTextBox);
             this.Controls.Add(redeEnergiaLabel);
@@ -407,6 +399,6 @@
         private System.Windows.Forms.CheckBox redeAguaCheckBox;
         private System.Windows.Forms.CheckBox redeEnergiaCheckBox;
         private System.Windows.Forms.TextBox tamanhoTotalTerrenoTextBox;
-        private System.Windows.Forms.TextBox esquinaTextBox;
+        private System.Windows.Forms.TextBox confrontacoesTextBox;
     }
 }
