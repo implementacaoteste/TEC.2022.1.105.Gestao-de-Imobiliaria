@@ -66,6 +66,62 @@
             nomeLabel.TabIndex = 1;
             nomeLabel.Text = "Nome:";
             // 
+            // cPFLabel
+            // 
+            cPFLabel.AutoSize = true;
+            cPFLabel.Location = new System.Drawing.Point(298, 98);
+            cPFLabel.Name = "cPFLabel";
+            cPFLabel.Size = new System.Drawing.Size(36, 16);
+            cPFLabel.TabIndex = 3;
+            cPFLabel.Text = "CPF:";
+            // 
+            // cRECILabel
+            // 
+            cRECILabel.AutoSize = true;
+            cRECILabel.Location = new System.Drawing.Point(331, 199);
+            cRECILabel.Name = "cRECILabel";
+            cRECILabel.Size = new System.Drawing.Size(50, 16);
+            cRECILabel.TabIndex = 5;
+            cRECILabel.Text = "CRECI:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(132, 149);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(44, 16);
+            emailLabel.TabIndex = 7;
+            emailLabel.Text = "Email:";
+            // 
+            // enderecoLabel
+            // 
+            enderecoLabel.AutoSize = true;
+            enderecoLabel.Location = new System.Drawing.Point(26, 199);
+            enderecoLabel.Name = "enderecoLabel";
+            enderecoLabel.Size = new System.Drawing.Size(69, 16);
+            enderecoLabel.TabIndex = 9;
+            enderecoLabel.Text = "Endereco:";
+            // 
+            // foneLabel
+            // 
+            foneLabel.AutoSize = true;
+            foneLabel.Location = new System.Drawing.Point(26, 149);
+            foneLabel.Name = "foneLabel";
+            foneLabel.Size = new System.Drawing.Size(41, 16);
+            foneLabel.TabIndex = 11;
+            foneLabel.Text = "Fone:";
+            foneLabel.Click += new System.EventHandler(this.foneLabel_Click);
+            // 
+            // rGLabel
+            // 
+            rGLabel.AutoSize = true;
+            rGLabel.Location = new System.Drawing.Point(404, 98);
+            rGLabel.Name = "rGLabel";
+            rGLabel.Size = new System.Drawing.Size(30, 16);
+            rGLabel.TabIndex = 15;
+            rGLabel.Text = "RG:";
+            rGLabel.Click += new System.EventHandler(this.rGLabel_Click);
+            // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.corretorBindingSource, "Nome", true));
@@ -78,15 +134,6 @@
             // 
             this.corretorBindingSource.DataSource = typeof(Models.Corretor);
             // 
-            // cPFLabel
-            // 
-            cPFLabel.AutoSize = true;
-            cPFLabel.Location = new System.Drawing.Point(298, 98);
-            cPFLabel.Name = "cPFLabel";
-            cPFLabel.Size = new System.Drawing.Size(36, 16);
-            cPFLabel.TabIndex = 3;
-            cPFLabel.Text = "CPF:";
-            // 
             // cPFTextBox
             // 
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.corretorBindingSource, "CPF", true));
@@ -94,15 +141,6 @@
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(100, 22);
             this.cPFTextBox.TabIndex = 4;
-            // 
-            // cRECILabel
-            // 
-            cRECILabel.AutoSize = true;
-            cRECILabel.Location = new System.Drawing.Point(331, 199);
-            cRECILabel.Name = "cRECILabel";
-            cRECILabel.Size = new System.Drawing.Size(50, 16);
-            cRECILabel.TabIndex = 5;
-            cRECILabel.Text = "CRECI:";
             // 
             // cRECITextBox
             // 
@@ -112,15 +150,6 @@
             this.cRECITextBox.Size = new System.Drawing.Size(100, 22);
             this.cRECITextBox.TabIndex = 6;
             // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(132, 149);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(44, 16);
-            emailLabel.TabIndex = 7;
-            emailLabel.Text = "Email:";
-            // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.corretorBindingSource, "Email", true));
@@ -128,15 +157,6 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(372, 22);
             this.emailTextBox.TabIndex = 8;
-            // 
-            // enderecoLabel
-            // 
-            enderecoLabel.AutoSize = true;
-            enderecoLabel.Location = new System.Drawing.Point(26, 199);
-            enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(69, 16);
-            enderecoLabel.TabIndex = 9;
-            enderecoLabel.Text = "Endereco:";
             // 
             // enderecoTextBox
             // 
@@ -146,16 +166,6 @@
             this.enderecoTextBox.Size = new System.Drawing.Size(288, 22);
             this.enderecoTextBox.TabIndex = 10;
             // 
-            // foneLabel
-            // 
-            foneLabel.AutoSize = true;
-            foneLabel.Location = new System.Drawing.Point(26, 149);
-            foneLabel.Name = "foneLabel";
-            foneLabel.Size = new System.Drawing.Size(41, 16);
-            foneLabel.TabIndex = 11;
-            foneLabel.Text = "Fone:";
-            foneLabel.Click += new System.EventHandler(this.foneLabel_Click);
-            // 
             // foneTextBox
             // 
             this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.corretorBindingSource, "Fone", true));
@@ -163,16 +173,6 @@
             this.foneTextBox.Name = "foneTextBox";
             this.foneTextBox.Size = new System.Drawing.Size(100, 22);
             this.foneTextBox.TabIndex = 12;
-            // 
-            // rGLabel
-            // 
-            rGLabel.AutoSize = true;
-            rGLabel.Location = new System.Drawing.Point(404, 98);
-            rGLabel.Name = "rGLabel";
-            rGLabel.Size = new System.Drawing.Size(30, 16);
-            rGLabel.TabIndex = 15;
-            rGLabel.Text = "RG:";
-            rGLabel.Click += new System.EventHandler(this.rGLabel_Click);
             // 
             // rGTextBox
             // 
@@ -206,10 +206,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 34);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(110, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 29);
+            this.label1.Size = new System.Drawing.Size(324, 36);
             this.label1.TabIndex = 19;
             this.label1.Text = "Cadastro de Corretores";
             // 

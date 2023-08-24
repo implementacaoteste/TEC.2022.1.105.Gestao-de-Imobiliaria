@@ -67,7 +67,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(12, 49);
+            nomeLabel.Location = new System.Drawing.Point(12, 79);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(44, 16);
             nomeLabel.TabIndex = 1;
@@ -76,7 +76,7 @@
             // cPFLabel
             // 
             cPFLabel.AutoSize = true;
-            cPFLabel.Location = new System.Drawing.Point(425, 49);
+            cPFLabel.Location = new System.Drawing.Point(425, 79);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(33, 16);
             cPFLabel.TabIndex = 3;
@@ -85,7 +85,7 @@
             // rGLabel
             // 
             rGLabel.AutoSize = true;
-            rGLabel.Location = new System.Drawing.Point(547, 49);
+            rGLabel.Location = new System.Drawing.Point(547, 79);
             rGLabel.Name = "rGLabel";
             rGLabel.Size = new System.Drawing.Size(27, 16);
             rGLabel.TabIndex = 5;
@@ -94,7 +94,7 @@
             // foneLabel
             // 
             foneLabel.AutoSize = true;
-            foneLabel.Location = new System.Drawing.Point(12, 93);
+            foneLabel.Location = new System.Drawing.Point(12, 123);
             foneLabel.Name = "foneLabel";
             foneLabel.Size = new System.Drawing.Size(38, 16);
             foneLabel.TabIndex = 7;
@@ -103,7 +103,7 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(117, 93);
+            emailLabel.Location = new System.Drawing.Point(117, 123);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(45, 16);
             emailLabel.TabIndex = 9;
@@ -112,7 +112,7 @@
             // enderecoLabel
             // 
             enderecoLabel.AutoSize = true;
-            enderecoLabel.Location = new System.Drawing.Point(17, 140);
+            enderecoLabel.Location = new System.Drawing.Point(17, 170);
             enderecoLabel.Name = "enderecoLabel";
             enderecoLabel.Size = new System.Drawing.Size(66, 16);
             enderecoLabel.TabIndex = 13;
@@ -121,7 +121,7 @@
             // rendaLabel
             // 
             rendaLabel.AutoSize = true;
-            rendaLabel.Location = new System.Drawing.Point(429, 94);
+            rendaLabel.Location = new System.Drawing.Point(429, 124);
             rendaLabel.Name = "rendaLabel";
             rendaLabel.Size = new System.Drawing.Size(51, 16);
             rendaLabel.TabIndex = 15;
@@ -130,7 +130,7 @@
             // estadoCivilLabel
             // 
             estadoCivilLabel.AutoSize = true;
-            estadoCivilLabel.Location = new System.Drawing.Point(550, 94);
+            estadoCivilLabel.Location = new System.Drawing.Point(550, 124);
             estadoCivilLabel.Name = "estadoCivilLabel";
             estadoCivilLabel.Size = new System.Drawing.Size(81, 16);
             estadoCivilLabel.TabIndex = 17;
@@ -139,7 +139,7 @@
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(10, 68);
+            this.nomeTextBox.Location = new System.Drawing.Point(10, 98);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(412, 22);
             this.nomeTextBox.TabIndex = 2;
@@ -151,7 +151,7 @@
             // cPFTextBox
             // 
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
-            this.cPFTextBox.Location = new System.Drawing.Point(428, 68);
+            this.cPFTextBox.Location = new System.Drawing.Point(428, 98);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(116, 22);
             this.cPFTextBox.TabIndex = 4;
@@ -159,7 +159,7 @@
             // rGTextBox
             // 
             this.rGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "RG", true));
-            this.rGTextBox.Location = new System.Drawing.Point(550, 68);
+            this.rGTextBox.Location = new System.Drawing.Point(550, 98);
             this.rGTextBox.Name = "rGTextBox";
             this.rGTextBox.Size = new System.Drawing.Size(100, 22);
             this.rGTextBox.TabIndex = 6;
@@ -167,7 +167,7 @@
             // foneTextBox
             // 
             this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Fone", true));
-            this.foneTextBox.Location = new System.Drawing.Point(14, 112);
+            this.foneTextBox.Location = new System.Drawing.Point(14, 142);
             this.foneTextBox.Name = "foneTextBox";
             this.foneTextBox.Size = new System.Drawing.Size(100, 22);
             this.foneTextBox.TabIndex = 8;
@@ -175,7 +175,7 @@
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(120, 112);
+            this.emailTextBox.Location = new System.Drawing.Point(120, 142);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(302, 22);
             this.emailTextBox.TabIndex = 10;
@@ -186,14 +186,15 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(671, 49);
+            this.label1.Size = new System.Drawing.Size(671, 79);
             this.label1.TabIndex = 11;
             this.label1.Text = "Cadastro de cliente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(467, 236);
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.Location = new System.Drawing.Point(467, 251);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(87, 29);
             this.buttonSalvar.TabIndex = 12;
@@ -204,7 +205,8 @@
             // buttonCancelar
             // 
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(560, 236);
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Location = new System.Drawing.Point(560, 251);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(82, 29);
             this.buttonCancelar.TabIndex = 12;
@@ -214,7 +216,7 @@
             // enderecoTextBox
             // 
             this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
-            this.enderecoTextBox.Location = new System.Drawing.Point(16, 159);
+            this.enderecoTextBox.Location = new System.Drawing.Point(16, 189);
             this.enderecoTextBox.Name = "enderecoTextBox";
             this.enderecoTextBox.Size = new System.Drawing.Size(406, 22);
             this.enderecoTextBox.TabIndex = 14;
@@ -222,7 +224,7 @@
             // rendaTextBox
             // 
             this.rendaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Renda", true));
-            this.rendaTextBox.Location = new System.Drawing.Point(432, 113);
+            this.rendaTextBox.Location = new System.Drawing.Point(432, 143);
             this.rendaTextBox.Name = "rendaTextBox";
             this.rendaTextBox.Size = new System.Drawing.Size(112, 22);
             this.rendaTextBox.TabIndex = 16;
@@ -230,7 +232,7 @@
             // cPFConjugeTextBox
             // 
             this.cPFConjugeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPFConjuge", true));
-            this.cPFConjugeTextBox.Location = new System.Drawing.Point(430, 159);
+            this.cPFConjugeTextBox.Location = new System.Drawing.Point(430, 189);
             this.cPFConjugeTextBox.Name = "cPFConjugeTextBox";
             this.cPFConjugeTextBox.Size = new System.Drawing.Size(100, 22);
             this.cPFConjugeTextBox.TabIndex = 20;
@@ -239,7 +241,7 @@
             // rGConjugeTextBox
             // 
             this.rGConjugeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "RGConjuge", true));
-            this.rGConjugeTextBox.Location = new System.Drawing.Point(551, 157);
+            this.rGConjugeTextBox.Location = new System.Drawing.Point(551, 187);
             this.rGConjugeTextBox.Name = "rGConjugeTextBox";
             this.rGConjugeTextBox.Size = new System.Drawing.Size(100, 22);
             this.rGConjugeTextBox.TabIndex = 22;
@@ -255,7 +257,7 @@
             "Separado(a)",
             "Divorciado(a)",
             "Viúvo(a)"});
-            this.estadoCivilComboBox.Location = new System.Drawing.Point(550, 110);
+            this.estadoCivilComboBox.Location = new System.Drawing.Point(550, 140);
             this.estadoCivilComboBox.Name = "estadoCivilComboBox";
             this.estadoCivilComboBox.Size = new System.Drawing.Size(100, 24);
             this.estadoCivilComboBox.TabIndex = 24;
@@ -264,7 +266,7 @@
             // cPFConjugeLabel
             // 
             this.cPFConjugeLabel.AutoSize = true;
-            this.cPFConjugeLabel.Location = new System.Drawing.Point(429, 138);
+            this.cPFConjugeLabel.Location = new System.Drawing.Point(429, 168);
             this.cPFConjugeLabel.Name = "cPFConjugeLabel";
             this.cPFConjugeLabel.Size = new System.Drawing.Size(86, 16);
             this.cPFConjugeLabel.TabIndex = 25;
@@ -274,7 +276,7 @@
             // rGConjugeLabel
             // 
             this.rGConjugeLabel.AutoSize = true;
-            this.rGConjugeLabel.Location = new System.Drawing.Point(550, 138);
+            this.rGConjugeLabel.Location = new System.Drawing.Point(550, 168);
             this.rGConjugeLabel.Name = "rGConjugeLabel";
             this.rGConjugeLabel.Size = new System.Drawing.Size(80, 16);
             this.rGConjugeLabel.TabIndex = 25;
@@ -285,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 285);
+            this.ClientSize = new System.Drawing.Size(671, 292);
             this.Controls.Add(this.rGConjugeLabel);
             this.Controls.Add(this.cPFConjugeLabel);
             this.Controls.Add(this.estadoCivilComboBox);
