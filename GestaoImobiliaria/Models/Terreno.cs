@@ -10,16 +10,16 @@ namespace Models
     {
         public int IdTerreno { get; set; }
         public int IdEmpreendimento { get; set; }
-        public float PrecoAVista { get; set; }
-        public float PrecoParcelado { get; set; }
-        public float MetragemFrente { get; set; }
-        public float MetragemFundo { get; set; }
-        public float TamanhoTotalTerreno { get; set; }
-        public string ConfrontacoesTerreno { get; set; }
+        public double PrecoAVista { get; set; }
+        public double PrecoParcelado { get; set; }
+        public double MetragemFrente { get; set; }
+        public double MetragemFundo { get; set; }
+        public double TamanhoTotalTerreno { get; set; }
+        public string Esquina { get; set; }
         public string Endereco { get; set; }
         public string Matricula { get; set; }
-        public float MetragemEsquerda { get; set; }
-        public float MetragemDireita { get; set; }
+        public string MetragemEsquerda { get; set; }
+        public string MetragemDireita { get; set; }
         public bool RedeAgua { get; set; }
         public bool RedeEnergia { get; set; }
     }
