@@ -52,6 +52,12 @@
     <Compile Include="FormBuscarGrupoUsuario.Designer.cs">
       <DependentUpon>FormBuscarGrupoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBuscarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarReserva.Designer.cs">
+      <DependentUpon>FormBuscarReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="FormCadastroGrupoUsuario.Designer.cs">
       <DependentUpon>FormCadastroGrupoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroReserva.Designer.cs">
+      <DependentUpon>FormCadastroReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCadastroTerreno.cs">
       <SubType>Form</SubType>
@@ -148,6 +160,9 @@
     <EmbeddedResource Include="FormBuscarGrupoUsuario.resx">
       <DependentUpon>FormBuscarGrupoUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarReserva.resx">
+      <DependentUpon>FormBuscarReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarUsuario.resx">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroGrupoUsuario.resx">
       <DependentUpon>FormCadastroGrupoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroReserva.resx">
+      <DependentUpon>FormCadastroReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroTerreno.resx">
       <DependentUpon>FormCadastroTerreno.cs</DependentUpon>

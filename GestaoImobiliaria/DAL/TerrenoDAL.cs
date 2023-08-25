@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -28,7 +25,7 @@ namespace DAL
                 cmd.CommandType = System.Data.CommandType.Text;
                 //OBS: Só consegui inserir um terreno, quando existe um "Empreendimento" cadastrado
                 //tem que inserir um IdTerreno e um IdEmpreendimento
-             
+
                 cmd.Parameters.AddWithValue("@IDEmpreendimento", _terreno.IdEmpreendimento);
                 cmd.Parameters.AddWithValue("@PrecoAVista", _terreno.PrecoAVista);
                 cmd.Parameters.AddWithValue("@PrecoParcelado", _terreno.PrecoParcelado);
@@ -70,7 +67,7 @@ namespace DAL
 						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, ConfrontacoesTerreno,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
 						RedeEnergia FROM Terreno";
-                
+
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -150,7 +147,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar fornecedor por id no banco de dados", ex) { Data = { { "Id", 24 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar Terreno por id no banco de dados", ex) { Data = { { "Id", 24 } } };
             }
             finally
             {
@@ -209,6 +206,117 @@ namespace DAL
                 cn.Close();
             }
         }
+        public Terreno BuscarPorEndereco(string _endereco)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Terreno terreno = new Terreno();
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT IDTerreno, IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina
+                                    FROM Terrenos WHERE Endereco LIKE @Endereco";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Endereco", _endereco);
+
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        terreno.IdTerreno = (int)rd["IdTerreno"];
+                        terreno.PrecoAVista = (float)rd["PrecoAVista"];
+                        terreno.PrecoParcelado = (float)rd["PrecoParcelado"];
+                        terreno.RedeAguaEnergia = (bool)rd["RedeAguaEnergia"];
+                        terreno.MetragemFrente = (float)rd["MetragemFrente"];
+                        terreno.MetragemFundo = (float)rd["MetragemFundo"];-
+                        terreno.MetragemLaterais = (float)rd["MetragemLaterais"];
+                        terreno.TamanhoTotal = (float)rd["TamanhoTotalTerreno"];
+                        terreno.ConfrontacoesTerreno = (float)rd["ConfrontacoesTerreno"];
+                        terreno.Endereco = (string)rd["Endereco"].ToString();
+                        terreno.Matricula = (string)rd["NumeroMatricula"];
+                    }
+                }
+                return terreno;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar por endereço no banco de dados", ex) { Data = { { "Id", 25 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public bool TerrenoPertenceAoGrupo(int _idTerreno, int _idAdTerreno)
+        {
+            try
+            {
+                SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = cn;
+                    cmd.CommandText = @"SELECT 1 FROM UsuarioGrupoUsuario 
+                                    WHERE = @IdUsuario AND IdGrupoUsuario = @IdGrupoUsuario";
+                    cmd.CommandType = System.Data.CommandType.Text;
+
+                    cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idAdTerreno);
+                    cmd.Parameters.AddWithValue("@IdUsuario", _idTerreno);
+
+                    cn.Open();
+
+                    using (SqlDataReader rd = cmd.ExecuteReader())
+                    {
+                        if (rd.Read())
+                            return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar existência de grupo vinculado ao usuário no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public void AdicionarTerreno(int _idTerreno, int _idGrupoUsuario)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO UsuarioGrupoUsuario(IdUsuario, IdGrupoUsuario) 
+                                    VALUES(@IdUsuario, @IdGrupoUsuario)";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@IdUsuario", _idTerreno);
+                cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idGrupoUsuario);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar vincular um grupo a um usuário no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         public void Alterar(Terreno _terreno)
         {
 
@@ -241,7 +349,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 26 } } };
+                throw new Exception("Erro ao tentar alterar Terreno no banco de dados", ex) { Data = { { "Id", 26 } } };
             }
             finally
             {
@@ -267,7 +375,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar excluir fornecdor no banco de dados.", ex) { Data = { { "Id", 27 } } };
+                throw new Exception("Ocorreu um erro ao tentar excluir Terreno no banco de dados.", ex) { Data = { { "Id", 27 } } };
             }
             finally
             {

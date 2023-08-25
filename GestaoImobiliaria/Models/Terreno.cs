@@ -18,9 +18,14 @@ namespace Models
         public string ConfrontacoesTerreno { get; set; }
         public string Endereco { get; set; }
         public string Matricula { get; set; }
+
         public float MetragemEsquerda { get; set; }
         public float MetragemDireita { get; set; }
         public bool RedeAgua { get; set; }
         public bool RedeEnergia { get; set; }
+
+        public List<Vendas> ListVendas { get; set; }
+        public List<Reserva>  ListReservas { get; set; }
+
     }
 }
