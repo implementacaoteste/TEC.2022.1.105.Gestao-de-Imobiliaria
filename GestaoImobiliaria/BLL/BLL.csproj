@@ -50,7 +50,6 @@
     <Compile Include="ReservaBLL.cs" />
     <Compile Include="TerrenoBLL.cs" />
     <Compile Include="UsuarioBLL.cs" />
-    <Compile Include="VendasBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

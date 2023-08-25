@@ -52,7 +52,6 @@
     <Compile Include="Terreno.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Vendas.cs" />
-
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\Cliente.datasource" />
@@ -65,7 +64,6 @@
     <None Include="Properties\DataSources\Terreno.datasource" />
     <None Include="Properties\DataSources\Usuario.datasource" />
     <None Include="Properties\DataSources\Vendas.datasource" />
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

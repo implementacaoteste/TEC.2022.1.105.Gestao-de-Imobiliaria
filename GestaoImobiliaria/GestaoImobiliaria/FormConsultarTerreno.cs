@@ -26,9 +26,10 @@ namespace LocacaoLaboratorio
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0:
-                        if (String.IsNullOrEmpty(comboBoxBuscarPor.Text))
+                        if (String.IsNullOrEmpty(textBoxBuscar.Text))
                             throw new Exception("Informe um Id para fazer a Busca") { Data = { { "Id", 101 } } };
 
+                        //terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
@@ -62,7 +63,7 @@ namespace LocacaoLaboratorio
 
                 int id = ((Terreno)terrenoBindingSource.Current).IdTerreno;
 
-                using (FormCadastroTerreno frm = new FormCadastroTerreno())
+                using (FormCadastroTerreno frm = new FormCadastroTerreno(id))
                 {
                     frm.ShowDialog();
                 }
@@ -87,6 +88,23 @@ namespace LocacaoLaboratorio
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = ((Terreno)terrenoBindingSource.Current).IdTerreno;
+                new TerrenoBLL().Excluir(id);
+                terrenoBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void FormConsultarTerreno_Load(object sender, EventArgs e)
+        {
+            comboBoxBuscarPor.SelectedIndex = 2;
         }
 
 
