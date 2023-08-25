@@ -28,8 +28,7 @@ namespace BLL
         }
         public void AdicionarTerreno(int _idTerreno, int _idAdTerreno)
         {
-            if (!new TerrenoDAL().TerrenoPertenceAoGrupo(_idTerreno, _idAdTerreno))
-                new TerrenoDAL().AdicionarTerreno(_idTerreno, _idAdTerreno);
+            
         }
         public void Alterar(Terreno _terreno)
         {
