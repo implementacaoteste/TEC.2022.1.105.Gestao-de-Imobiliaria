@@ -42,7 +42,6 @@ namespace LocacaoLaboratorio
             this.button5 = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.terrenoDataGridView = new System.Windows.Forms.DataGridView();
-            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Esquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +56,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -194,10 +194,6 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.Size = new System.Drawing.Size(1055, 297);
             this.terrenoDataGridView.TabIndex = 11;
             // 
-            // terrenoBindingSource
-            // 
-            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "IdTerreno";
@@ -323,6 +319,10 @@ namespace LocacaoLaboratorio
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             this.dataGridViewCheckBoxColumn2.ReadOnly = true;
             this.dataGridViewCheckBoxColumn2.Width = 125;
+            // 
+            // terrenoBindingSource
+            // 
+            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
             // FormConsultarTerreno
             // 

@@ -199,7 +199,6 @@ namespace DAL
                     }
                 }
                 return terreno;
-
             }
             catch (Exception ex)
             {

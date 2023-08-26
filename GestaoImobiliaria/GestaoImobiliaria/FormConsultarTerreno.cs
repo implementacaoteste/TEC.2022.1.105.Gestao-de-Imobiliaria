@@ -28,17 +28,12 @@ namespace LocacaoLaboratorio
                     case 0:
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
                             throw new Exception("Informe um Id para fazer a Busca") { Data = { { "Id", 101 } } };
-
-                        //terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
-                        terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
+                          terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
-                        //esperando implementacao do metodo BuscarPorMatricula
                         terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorMatricula(textBoxBuscar.Text);
-                        //terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorMatricula(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 2:
-                        //erro
                         terrenoBindingSource.DataSource = new TerrenoBLL().BuscarTodos();
                         break;
                     default:
@@ -106,7 +101,5 @@ namespace LocacaoLaboratorio
         {
             comboBoxBuscarPor.SelectedIndex = 2;
         }
-
-
     }
 }
