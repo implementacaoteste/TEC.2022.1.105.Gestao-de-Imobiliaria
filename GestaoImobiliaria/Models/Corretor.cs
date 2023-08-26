@@ -16,5 +16,7 @@ namespace Models
         public string Endereco { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
+        //public List<Vendas> ListVendas { get; set; }
+        public List<Reserva> ListReserva { get; set; }
     }
 }

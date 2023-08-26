@@ -48,7 +48,6 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void estadoCivilComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             rGConjugeTextBox.Visible =

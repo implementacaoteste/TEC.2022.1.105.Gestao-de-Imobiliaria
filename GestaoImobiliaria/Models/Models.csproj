@@ -48,8 +48,21 @@
     <Compile Include="GrupoUsuario.cs" />
     <Compile Include="Permissao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reserva.cs" />
     <Compile Include="Terreno.cs" />
     <Compile Include="Usuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Cliente.datasource" />
+    <None Include="Properties\DataSources\Constantes.datasource" />
+    <None Include="Properties\DataSources\Corretor.datasource" />
+    <None Include="Properties\DataSources\Empreendimentos.datasource" />
+    <None Include="Properties\DataSources\GrupoUsuario.datasource" />
+    <None Include="Properties\DataSources\Permissao.datasource" />
+    <None Include="Properties\DataSources\Reserva.datasource" />
+    <None Include="Properties\DataSources\Terreno.datasource" />
+    <None Include="Properties\DataSources\Usuario.datasource" />
+    <None Include="Properties\DataSources\Vendas.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

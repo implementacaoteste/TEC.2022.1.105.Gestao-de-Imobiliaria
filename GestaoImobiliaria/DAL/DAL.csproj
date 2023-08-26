@@ -48,8 +48,21 @@
     <Compile Include="GrupoUsuarioDAL.cs" />
     <Compile Include="PermissaoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaDAL.cs" />
     <Compile Include="TerrenoDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Models.Cliente.datasource" />
+    <None Include="Properties\DataSources\Models.Constantes.datasource" />
+    <None Include="Properties\DataSources\Models.Corretor.datasource" />
+    <None Include="Properties\DataSources\Models.Empreendimentos.datasource" />
+    <None Include="Properties\DataSources\Models.GrupoUsuario.datasource" />
+    <None Include="Properties\DataSources\Models.Permissao.datasource" />
+    <None Include="Properties\DataSources\Models.Reserva.datasource" />
+    <None Include="Properties\DataSources\Models.Terreno.datasource" />
+    <None Include="Properties\DataSources\Models.Usuario.datasource" />
+    <None Include="Properties\DataSources\Models.Vendas.datasource" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

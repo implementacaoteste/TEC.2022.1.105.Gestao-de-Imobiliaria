@@ -114,7 +114,6 @@ namespace LocacaoLaboratorio
         {
 
         }
-
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
 

@@ -26,9 +26,13 @@ namespace BLL
         {
             return new TerrenoDAL().BuscarPorMatricula(_matricula);
         }
-        public void Alterar(Terreno _corretor)
+        public void AdicionarTerreno(int _idTerreno, int _idAdTerreno)
         {
-            new TerrenoDAL().Alterar(_corretor);
+            
+        }
+        public void Alterar(Terreno _terreno)
+        {
+            new TerrenoDAL().Alterar(_terreno);
         }
         public void Excluir(int _id)
         {

@@ -20,5 +20,6 @@ namespace Models
         public string RGConjuge { get; set; }
         public string CPFConjuge { get; set; }
         public string Fone { get; set; }
+        //public List<Vendas> ListVendas { get; set; }
     }
 }
