@@ -69,7 +69,7 @@
             this.empreendimentosDataGridView.Name = "empreendimentosDataGridView";
             this.empreendimentosDataGridView.RowHeadersWidth = 51;
             this.empreendimentosDataGridView.RowTemplate.Height = 24;
-            this.empreendimentosDataGridView.Size = new System.Drawing.Size(1379, 374);
+            this.empreendimentosDataGridView.Size = new System.Drawing.Size(951, 374);
             this.empreendimentosDataGridView.TabIndex = 1;
             this.empreendimentosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empreendimentosDataGridView_CellContentClick);
             // 
@@ -116,6 +116,11 @@
             // comboBoxBuscarPor
             // 
             this.comboBoxBuscarPor.FormattingEnabled = true;
+            this.comboBoxBuscarPor.Items.AddRange(new object[] {
+            "ID",
+            "Nome",
+            "CNPJ",
+            "Todos"});
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 59);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(141, 24);
@@ -163,7 +168,7 @@
             // 
             // buttonSelecionar
             // 
-            this.buttonSelecionar.Location = new System.Drawing.Point(1155, 493);
+            this.buttonSelecionar.Location = new System.Drawing.Point(764, 484);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(85, 23);
             this.buttonSelecionar.TabIndex = 7;
@@ -172,7 +177,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(1257, 493);
+            this.buttonCancelar.Location = new System.Drawing.Point(866, 484);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(85, 23);
             this.buttonCancelar.TabIndex = 8;
@@ -209,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1379, 528);
+            this.ClientSize = new System.Drawing.Size(962, 520);
             this.Controls.Add(this.labelConsultaEmpreendimentos);
             this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.label1);
