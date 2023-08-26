@@ -73,7 +73,7 @@ namespace LocacaoLaboratorio
 
                 int id = ((Empreendimentos)empreendimentosBindingSource.Current).IDEmpreendimento;
 
-                using (FormCadastroCliente frm = new FormCadastroCliente(id))
+                using (FormCadastroEmpreendimento frm = new FormCadastroEmpreendimento(id))
                 {
                     frm.ShowDialog();
                 }
@@ -137,6 +137,9 @@ namespace LocacaoLaboratorio
 
         }
 
-        
+        private void FormConsultaEmpreendimentos_Load(object sender, EventArgs e)
+        {
+            comboBoxBuscarPor.SelectedIndex = 3;
+        }
     }
 }
