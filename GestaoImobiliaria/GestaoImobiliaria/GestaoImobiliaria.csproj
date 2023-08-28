@@ -70,6 +70,12 @@
     <Compile Include="FormCadastroCliente.Designer.cs">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroCorretor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroCorretor.Designer.cs">
+      <DependentUpon>FormCadastroCorretor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroEmpreendimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     <Compile Include="FormConsultaPermissao.Designer.cs">
       <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultarCorretor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultarCorretor.Designer.cs">
+      <DependentUpon>FormConsultarCorretor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultarTerreno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,9 @@
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroCorretor.resx">
+      <DependentUpon>FormCadastroCorretor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroEmpreendimento.resx">
       <DependentUpon>FormCadastroEmpreendimento.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaPermissao.resx">
       <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarCorretor.resx">
+      <DependentUpon>FormConsultarCorretor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultarTerreno.resx">
       <DependentUpon>FormConsultarTerreno.cs</DependentUpon>
