@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label enderecoLabel;
-            System.Windows.Forms.Label idEmpreendimentoLabel;
             System.Windows.Forms.Label matriculaLabel;
             System.Windows.Forms.Label metragemDireitaLabel;
             System.Windows.Forms.Label metragemEsquerdaLabel;
@@ -41,13 +40,13 @@
             System.Windows.Forms.Label redeAguaLabel;
             System.Windows.Forms.Label redeEnergiaLabel;
             System.Windows.Forms.Label tamanhoTotalTerrenoLabel;
+            System.Windows.Forms.Label nomeLabel;
             this.confrontacoesLabel = new System.Windows.Forms.Label();
             this.labelCadastoTerreno = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
-            this.idEmpreendimentoTextBox = new System.Windows.Forms.TextBox();
             this.matriculaTextBox = new System.Windows.Forms.TextBox();
             this.metragemDireitaTextBox = new System.Windows.Forms.TextBox();
             this.metragemEsquerdaTextBox = new System.Windows.Forms.TextBox();
@@ -59,8 +58,9 @@
             this.redeEnergiaCheckBox = new System.Windows.Forms.CheckBox();
             this.tamanhoTotalTerrenoTextBox = new System.Windows.Forms.TextBox();
             this.confrontacoesTextBox = new System.Windows.Forms.TextBox();
+            this.buttonBuscarEmpreendimento = new System.Windows.Forms.Button();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
             enderecoLabel = new System.Windows.Forms.Label();
-            idEmpreendimentoLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
             metragemDireitaLabel = new System.Windows.Forms.Label();
             metragemEsquerdaLabel = new System.Windows.Forms.Label();
@@ -71,6 +71,7 @@
             redeAguaLabel = new System.Windows.Forms.Label();
             redeEnergiaLabel = new System.Windows.Forms.Label();
             tamanhoTotalTerrenoLabel = new System.Windows.Forms.Label();
+            nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,15 +83,6 @@
             enderecoLabel.Size = new System.Drawing.Size(69, 16);
             enderecoLabel.TabIndex = 25;
             enderecoLabel.Text = "Endereco:";
-            // 
-            // idEmpreendimentoLabel
-            // 
-            idEmpreendimentoLabel.AutoSize = true;
-            idEmpreendimentoLabel.Location = new System.Drawing.Point(90, 101);
-            idEmpreendimentoLabel.Name = "idEmpreendimentoLabel";
-            idEmpreendimentoLabel.Size = new System.Drawing.Size(127, 16);
-            idEmpreendimentoLabel.TabIndex = 26;
-            idEmpreendimentoLabel.Text = "Id Empreendimento:";
             // 
             // matriculaLabel
             // 
@@ -236,14 +228,6 @@
             this.enderecoTextBox.Size = new System.Drawing.Size(158, 22);
             this.enderecoTextBox.TabIndex = 26;
             // 
-            // idEmpreendimentoTextBox
-            // 
-            this.idEmpreendimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "IdEmpreendimento", true));
-            this.idEmpreendimentoTextBox.Location = new System.Drawing.Point(223, 98);
-            this.idEmpreendimentoTextBox.Name = "idEmpreendimentoTextBox";
-            this.idEmpreendimentoTextBox.Size = new System.Drawing.Size(100, 22);
-            this.idEmpreendimentoTextBox.TabIndex = 27;
-            // 
             // matriculaTextBox
             // 
             this.matriculaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Matricula", true));
@@ -334,11 +318,41 @@
             this.confrontacoesTextBox.Size = new System.Drawing.Size(168, 22);
             this.confrontacoesTextBox.TabIndex = 39;
             // 
+            // buttonBuscarEmpreendimento
+            // 
+            this.buttonBuscarEmpreendimento.Location = new System.Drawing.Point(315, 95);
+            this.buttonBuscarEmpreendimento.Name = "buttonBuscarEmpreendimento";
+            this.buttonBuscarEmpreendimento.Size = new System.Drawing.Size(27, 23);
+            this.buttonBuscarEmpreendimento.TabIndex = 40;
+            this.buttonBuscarEmpreendimento.Text = "...";
+            this.buttonBuscarEmpreendimento.UseVisualStyleBackColor = true;
+            this.buttonBuscarEmpreendimento.Click += new System.EventHandler(this.buttonBuscarEmpreendimento_Click);
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(90, 104);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(113, 16);
+            nomeLabel.TabIndex = 40;
+            nomeLabel.Text = "Empreendimento:";
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Empreendimento.Nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(209, 98);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(100, 22);
+            this.nomeTextBox.TabIndex = 41;
+            // 
             // FormCadastroTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 345);
+            this.ClientSize = new System.Drawing.Size(1046, 350);
+            this.Controls.Add(nomeLabel);
+            this.Controls.Add(this.nomeTextBox);
+            this.Controls.Add(this.buttonBuscarEmpreendimento);
             this.Controls.Add(this.confrontacoesLabel);
             this.Controls.Add(this.confrontacoesTextBox);
             this.Controls.Add(tamanhoTotalTerrenoLabel);
@@ -361,8 +375,6 @@
             this.Controls.Add(this.metragemDireitaTextBox);
             this.Controls.Add(matriculaLabel);
             this.Controls.Add(this.matriculaTextBox);
-            this.Controls.Add(idEmpreendimentoLabel);
-            this.Controls.Add(this.idEmpreendimentoTextBox);
             this.Controls.Add(enderecoLabel);
             this.Controls.Add(this.enderecoTextBox);
             this.Controls.Add(this.buttonCancelar);
@@ -385,7 +397,6 @@
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.BindingSource terrenoBindingSource;
         private System.Windows.Forms.TextBox enderecoTextBox;
-        private System.Windows.Forms.TextBox idEmpreendimentoTextBox;
         private System.Windows.Forms.TextBox matriculaTextBox;
         private System.Windows.Forms.TextBox metragemDireitaTextBox;
         private System.Windows.Forms.TextBox metragemEsquerdaTextBox;
@@ -398,5 +409,7 @@
         private System.Windows.Forms.TextBox tamanhoTotalTerrenoTextBox;
         private System.Windows.Forms.TextBox confrontacoesTextBox;
         private System.Windows.Forms.Label confrontacoesLabel;
+        private System.Windows.Forms.Button buttonBuscarEmpreendimento;
+        private System.Windows.Forms.TextBox nomeTextBox;
     }
 }
