@@ -14,6 +14,7 @@ namespace LocacaoLaboratorio
 {
     public partial class FormConsultaEmpreendimentos : Form
     {
+        public Empreendimentos Empreendimentos { get; set; }
         public FormConsultaEmpreendimentos()
         {
             InitializeComponent();
@@ -73,7 +74,7 @@ namespace LocacaoLaboratorio
 
                 int id = ((Empreendimentos)empreendimentosBindingSource.Current).IDEmpreendimento;
 
-                using (FormCadastroCliente frm = new FormCadastroCliente(id))
+                using (FormCadastroEmpreendimento frm = new FormCadastroEmpreendimento(id))
                 {
                     frm.ShowDialog();
                 }
@@ -137,6 +138,28 @@ namespace LocacaoLaboratorio
 
         }
 
-        
+        private void FormConsultaEmpreendimentos_Load(object sender, EventArgs e)
+        {
+            comboBoxBuscarPor.SelectedIndex = 3;
+        }
+
+        private void buttonSelecionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (empreendimentosBindingSource.Count > 0)
+                {
+                    this.Empreendimentos = (Empreendimentos)empreendimentosBindingSource.Current;
+                    Close();
+                    return;
+                }
+
+                    throw new Exception("Não existe registro para ser retornado.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

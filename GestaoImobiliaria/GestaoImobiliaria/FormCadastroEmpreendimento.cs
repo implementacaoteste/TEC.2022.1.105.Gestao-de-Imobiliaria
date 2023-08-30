@@ -42,5 +42,18 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormCadastroEmpreendimento_Load(object sender, EventArgs e)
+        {
+            if (id == 0)
+                empreendimentosBindingSource.AddNew();
+            else
+                empreendimentosBindingSource.DataSource = new EmpreendimentoBLL().BuscarPorId(id);
+        }
     }
 }

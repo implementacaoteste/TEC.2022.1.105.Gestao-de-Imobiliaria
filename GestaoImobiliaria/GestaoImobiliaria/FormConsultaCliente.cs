@@ -85,7 +85,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                if (clienteBindingSource.Count == 0)    
+                if (clienteBindingSource.Count == 0)
                 {
                     MessageBox.Show("Não existe cliente para ser alterado.");
                     return;

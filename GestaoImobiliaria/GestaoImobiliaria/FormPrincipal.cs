@@ -103,5 +103,13 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void corretoresToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            using (FormConsultarCorretor frm = new FormConsultarCorretor())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

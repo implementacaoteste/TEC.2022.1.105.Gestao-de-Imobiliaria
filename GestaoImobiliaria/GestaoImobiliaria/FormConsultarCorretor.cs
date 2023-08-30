@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace LocacaoLaboratorio
 {
-    public partial class FormConsultarTerreno : Form
+    public partial class FormConsultarCorretor : Form
     {
-        public FormConsultarTerreno()
+        public FormConsultarCorretor()
         {
             InitializeComponent();
         }
@@ -27,14 +27,18 @@ namespace LocacaoLaboratorio
                 {
                     case 0:
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
-                            throw new Exception("Informe um Id para fazer a Busca") { Data = { { "Id", 101 } } };
-                          terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
+                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 31 } } };
+
+                        corretorBindingSource.DataSource = new CorretorBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
-                        terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorMatricula(textBoxBuscar.Text);
+                        corretorBindingSource.DataSource = new CorretorBLL().BuscarPorNome(textBoxBuscar.Text);
                         break;
                     case 2:
-                        terrenoBindingSource.DataSource = new TerrenoBLL().BuscarTodos();
+                        corretorBindingSource.DataSource = new CorretorBLL().BuscarPorCPF(textBoxBuscar.Text);
+                        break;
+                    case 3:
+                        corretorBindingSource.DataSource = new CorretorBLL().BuscarTodos();
                         break;
                     default:
                         break;
@@ -50,15 +54,15 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                if (terrenoBindingSource.Count == 0)
+                if (corretorBindingSource.Count == 0)
                 {
-                    MessageBox.Show("Não existe terreno para ser alterado!");
+                    MessageBox.Show("Não existe corretor para ser alterado.");
                     return;
                 }
 
-                int id = ((Terreno)terrenoBindingSource.Current).IdTerreno;
+                int id = ((Corretor)corretorBindingSource.Current).IdCorretor;
 
-                using (FormCadastroTerreno frm = new FormCadastroTerreno(id))
+                using (FormCadastroCorretor frm = new FormCadastroCorretor(id))
                 {
                     frm.ShowDialog();
                 }
@@ -74,7 +78,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                using (FormCadastroTerreno frm = new FormCadastroTerreno())
+                using (FormCadastroCorretor frm = new FormCadastroCorretor())
                 {
                     frm.ShowDialog();
                 }
@@ -84,22 +88,28 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
             try
             {
-                int id = ((Terreno)terrenoBindingSource.Current).IdTerreno;
-                new TerrenoBLL().Excluir(id);
-                terrenoBindingSource.RemoveCurrent();
+                if (corretorBindingSource.Count <= 0)
+                {
+                    MessageBox.Show("Não existe registro para ser excluído");
+                    return;
+                }
+
+                if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
+                int id = ((Corretor)corretorBindingSource.Current).IdCorretor;
+                new CorretorBLL().Excluir(id);
+                corretorBindingSource.RemoveCurrent();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-        private void FormConsultarTerreno_Load(object sender, EventArgs e)
-        {
-            comboBoxBuscarPor.SelectedIndex = 2;
         }
     }
 }

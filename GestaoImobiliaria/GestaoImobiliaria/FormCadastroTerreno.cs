@@ -50,13 +50,12 @@ namespace LocacaoLaboratorio
                 if (id == 0)
                 {
                     terrenoBindingSource.AddNew();
-                    metragemDireitaTextBox.Text = 
+                    metragemDireitaTextBox.Text =
                     metragemFrenteTextBox.Text =
-                    idEmpreendimentoTextBox.Text =
                     metragemFundoTextBox.Text =
                     tamanhoTotalTerrenoTextBox.Text =
                     precoAVistaTextBox.Text =
-                    precoParceladoTextBox .Text =
+                    precoParceladoTextBox.Text =
                     metragemEsquerdaTextBox.Text = "";
                 }
                 else
@@ -68,6 +67,14 @@ namespace LocacaoLaboratorio
             }
         }
 
-
+        private void buttonBuscarEmpreendimento_Click(object sender, EventArgs e)
+        {
+            using (FormConsultaEmpreendimentos frm = new FormConsultaEmpreendimentos())
+            {
+                frm.ShowDialog();
+                ((Terreno)terrenoBindingSource.Current).Empreendimento = frm.Empreendimentos;
+                nomeTextBox.DataBindings.Control.Text = ((Terreno)terrenoBindingSource.Current).Empreendimento.Nome;
+            }
+        }
     }
 }

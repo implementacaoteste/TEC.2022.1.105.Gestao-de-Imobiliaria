@@ -63,7 +63,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDEmpreendimeto, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea FROM Empreendimentos WHERE IDEmpreendimeto = @Id";
+                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos WHERE IDEmpreendimento = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -103,7 +103,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Empreendimentos(TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea) VALUES(@TotalTerrenos, @CNPJEmpresaResponsavel, @TamanhoArea)";
+                cmd.CommandText = @"INSERT INTO Empreendimentos(TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome) VALUES(@TotalTerrenos, @CNPJEmpresaResponsavel, @TamanhoArea, @Nome)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
@@ -172,7 +172,7 @@ namespace DAL
                                     CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel,
                                     TamanhoArea = @TamanhoArea,
                                     Nome = @Nome
-                                    WHERE Id = @IDEmpreendimento";
+                                    WHERE IDEmpreendimeto = @IDEmpreendimento";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);

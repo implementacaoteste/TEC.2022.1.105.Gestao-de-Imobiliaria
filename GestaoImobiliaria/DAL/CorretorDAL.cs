@@ -69,7 +69,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         corretor = new Corretor();
-                        corretor.IdCorretor = (int)rd["Id"];
+                        corretor.IdCorretor = (int)rd["IDCorretor"];
                         corretor.Nome = rd["Nome"].ToString();
                         corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
@@ -122,7 +122,7 @@ namespace DAL
                     if (rd.Read())
                     {
                         corretor = new Corretor();
-                        corretor.IdCorretor = (int)rd["Id"];
+                        corretor.IdCorretor = (int)rd["IDCorretor"];
                         corretor.Nome = rd["Nome"].ToString();
                         corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
@@ -169,7 +169,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         corretor = new Corretor();
-                        corretor.IdCorretor = (int)rd["Id"];
+                        corretor.IdCorretor = (int)rd["IDCorretor"];
                         corretor.Nome = rd["Nome"].ToString();
                         corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
@@ -211,7 +211,7 @@ namespace DAL
                                         CRECI = @CRECI,
                                         Fone = @Fone,
                                         Email = @Email
-                                    WHERE Id = @IDCorretor";
+                                    WHERE IDCorretor = @IDCorretor";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@IDCorretor", _corretor.IdCorretor);
@@ -263,7 +263,7 @@ namespace DAL
                     if (rd.Read())
                     {
                         corretor = new Corretor();
-                        corretor.IdCorretor = (int)rd["Id"];
+                        corretor.IdCorretor = (int)rd["IDCorretor"];
                         corretor.Nome = rd["Nome"].ToString();
                         corretor.RG = rd["RG"].ToString();
                         corretor.CPF = rd["CPF"].ToString();
@@ -316,5 +316,5 @@ namespace DAL
             }
         }
     }
-    
+
 }

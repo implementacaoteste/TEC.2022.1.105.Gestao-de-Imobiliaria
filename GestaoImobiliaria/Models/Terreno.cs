@@ -9,7 +9,6 @@ namespace Models
     public class Terreno
     {
         public int IdTerreno { get; set; }
-        public int IdEmpreendimento { get; set; }
         public double PrecoAVista { get; set; }
         public double PrecoParcelado { get; set; }
         public double MetragemFrente { get; set; }
@@ -22,5 +21,7 @@ namespace Models
         public string MetragemDireita { get; set; }
         public bool RedeAgua { get; set; }
         public bool RedeEnergia { get; set; }
+        public string NomeEmpreendimento { get { return this.Empreendimento.Nome; } }
+        public Empreendimentos Empreendimento { get; set; }
     }
 }
