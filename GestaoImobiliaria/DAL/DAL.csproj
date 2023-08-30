@@ -51,6 +51,7 @@
     <Compile Include="ReservaDAL.cs" />
     <Compile Include="TerrenoDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
+    <Compile Include="VendasDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\Models.Cliente.datasource" />

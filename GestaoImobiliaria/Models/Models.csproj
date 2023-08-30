@@ -51,6 +51,7 @@
     <Compile Include="Reserva.cs" />
     <Compile Include="Terreno.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="Vendas.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\Cliente.datasource" />
