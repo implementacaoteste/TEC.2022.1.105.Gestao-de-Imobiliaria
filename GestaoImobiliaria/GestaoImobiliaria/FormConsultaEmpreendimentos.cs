@@ -145,7 +145,7 @@ namespace LocacaoLaboratorio
 
         private void buttonSelecionar_Click(object sender, EventArgs e)
         {
-            try
+             try
             {
                 if (empreendimentosBindingSource.Count > 0)
                 {

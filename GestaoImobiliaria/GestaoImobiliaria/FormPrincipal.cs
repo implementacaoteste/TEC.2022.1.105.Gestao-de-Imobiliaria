@@ -91,16 +91,9 @@ namespace LocacaoLaboratorio
 
         private void reservaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            using (FormBuscarReserva frm = new FormBuscarReserva())
             {
-                using (FormBuscarReserva frm = new FormBuscarReserva())
-                {
-                    frm.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                frm.ShowDialog();
             }
         }
 
@@ -111,5 +104,7 @@ namespace LocacaoLaboratorio
                 frm.ShowDialog();
             }
         }
+
+        
     }
 }

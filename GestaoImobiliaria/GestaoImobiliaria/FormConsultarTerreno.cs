@@ -14,6 +14,7 @@ namespace LocacaoLaboratorio
 {
     public partial class FormConsultarTerreno : Form
     {
+        public Terreno Terreno { get; set; }
         public FormConsultarTerreno()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace LocacaoLaboratorio
                     case 0:
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
                             throw new Exception("Informe um Id para fazer a Busca") { Data = { { "Id", 101 } } };
-                          terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
+                        terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
                         terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorMatricula(textBoxBuscar.Text);
@@ -100,6 +101,24 @@ namespace LocacaoLaboratorio
         private void FormConsultarTerreno_Load(object sender, EventArgs e)
         {
             comboBoxBuscarPor.SelectedIndex = 2;
+        }
+
+        private void buttonSelecionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (terrenoBindingSource.Count > 0)
+                {
+                    this.Terreno = (Models.Terreno)terrenoBindingSource.Current;
+                    Close();
+                    return;
+                }
+                throw new Exception("Não existe registro para ser selecionado");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

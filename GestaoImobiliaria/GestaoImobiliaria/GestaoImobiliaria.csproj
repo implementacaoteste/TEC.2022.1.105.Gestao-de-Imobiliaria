@@ -227,6 +227,7 @@
     <None Include="Properties\DataSources\Models.Empreendimentos.datasource" />
     <None Include="Properties\DataSources\Models.GrupoUsuario.datasource" />
     <None Include="Properties\DataSources\Models.Permissao.datasource" />
+    <None Include="Properties\DataSources\Models.Reserva1.datasource" />
     <None Include="Properties\DataSources\Models.Terreno.datasource" />
     <None Include="Properties\DataSources\Models.Usuario.datasource" />
     <None Include="Properties\Settings.settings">

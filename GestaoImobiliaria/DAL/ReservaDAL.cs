@@ -17,13 +17,12 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Reserva(StatusReserva, Prazo, DataReserva,PrazoDeRenovacao) 
-                                    VALUES (@StatusReserva, @Prazo, @DataReserva,@PrazoDeRenovacao)";
+                cmd.CommandText = @"INSERT INTO Reserva(StatusReserva, Prazo, DataReserva) 
+                                    VALUES (@StatusReserva, @Prazo, @DataReserva)";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@StatusReserva", _reserva.StatusDaReserva);
                 cmd.Parameters.AddWithValue("@Prazo", _reserva.Prazo);
                 cmd.Parameters.AddWithValue("@DataReserva", _reserva.DataReserva);
-                cmd.Parameters.AddWithValue("@PrazoDeRenovacao", _reserva.PrazoDeRenovacao);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -96,7 +95,6 @@ namespace DAL
                         reserva.StatusDaReserva = (string)rd["StatusDaReserva"];
                         reserva.Prazo = (DateTime)rd["Prazo"];
                         reserva.DataReserva = (DateTime)rd["DataReserva"];
-                        reserva.PrazoDeRenovacao = (int)rd["PrazoDeRenovacao"];
                     }
                 }
             return reserva;

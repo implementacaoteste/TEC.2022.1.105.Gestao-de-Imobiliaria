@@ -39,7 +39,6 @@ namespace DAL
                 else
                     cmd.Parameters.AddWithValue("@RGConjuge", DBNull.Value);
 
-
                 if (String.IsNullOrEmpty(_cliente.Endereco))
                     cmd.Parameters.AddWithValue("@Endereco", DBNull.Value);
                 else

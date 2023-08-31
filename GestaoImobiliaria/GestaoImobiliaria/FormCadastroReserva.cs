@@ -48,7 +48,7 @@ namespace LocacaoLaboratorio
                 reservaBindingSource.EndEdit();
 
                 if (id == 0)
-                    new ReservaBLL().Inserir( reserva);
+                    new ReservaBLL().Inserir(reserva);
                 else
                     new ReservaBLL().Alterar(reserva);
 
@@ -74,29 +74,36 @@ namespace LocacaoLaboratorio
             }
         }
 
-        private void ButtonAdicionarTerreno_Click(object sender, EventArgs e)
+        private void buttonBuscarCorretor_Click(object sender, EventArgs e)
         {
-            try
+            using (FormConsultarCorretor frm = new FormConsultarCorretor())
             {
-                //using (FormConsultaTerreno frm = new FormConsultaTerreno())
-                //{
-                //    frm.ShowDialog();
-
-                //    if (frm.Id != 0)
-                //    {
-                //        int idterreno = ((Terreno)terrenoBindingSource.Current).Id;
-                //        new TerrenoBLL().AdicionarTerreno(idterreno, frm.Id);
-                //    }
-                //}
-                //ButtonBuscar_Click(null, null);
+                frm.ShowDialog();
+                if (frm.Corretor != null)
+                {
+                    ((Reserva)reservaBindingSource.Current).Corretor = frm.Corretor;
+                    nomeTextBox.DataBindings.Control.Text = ((Reserva)reservaBindingSource.Current).Corretor.Nome;
+                }    
             }
-            catch (Exception ex)
+        }
+
+        private void buttonBuscarTerreno_Click(object sender, EventArgs e)
+        {
+            using (FormConsultarTerreno frm = new FormConsultarTerreno())
             {
-                MessageBox.Show(ex.Message);
+                frm.ShowDialog();
+                if (frm.Terreno != null)
+                {
+                    ((Reserva)reservaBindingSource.Current).Terreno = frm.Terreno;
+                    enderecoTextBox.DataBindings.Control.Text = ((Reserva)reservaBindingSource.Current).Terreno.Endereco;
+                    matriculaTextBox.DataBindings.Control.Text = ((Reserva)reservaBindingSource.Current).Terreno.Matricula;
+                    nomeEmpreendimentoTextBox.DataBindings.Control.Text = ((Reserva)reservaBindingSource.Current).Terreno.NomeEmpreendimento;
+
+                }
             }
         }
     }
-}        
+}
 
 
 

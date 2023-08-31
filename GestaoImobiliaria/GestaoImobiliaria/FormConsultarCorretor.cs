@@ -14,6 +14,7 @@ namespace LocacaoLaboratorio
 {
     public partial class FormConsultarCorretor : Form
     {
+        public Corretor Corretor { get; set; }
         public FormConsultarCorretor()
         {
             InitializeComponent();
@@ -105,6 +106,24 @@ namespace LocacaoLaboratorio
                 int id = ((Corretor)corretorBindingSource.Current).IdCorretor;
                 new CorretorBLL().Excluir(id);
                 corretorBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonSelecionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (corretorBindingSource.Count > 0)
+                {
+                    this.Corretor = (Models.Corretor)corretorBindingSource.Current;
+                    Close();
+                    return;
+                }
+                throw new Exception("Não existe registro para ser selecionado");
             }
             catch (Exception ex)
             {

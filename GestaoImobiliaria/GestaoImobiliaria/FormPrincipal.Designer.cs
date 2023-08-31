@@ -36,6 +36,7 @@
             this.terrenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empreedimentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corretoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,8 @@
             this.clientesToolStripMenuItem,
             this.terrenosToolStripMenuItem,
             this.empreedimentosToolStripMenuItem,
-            this.corretoresToolStripMenuItem});
+            this.corretoresToolStripMenuItem,
+            this.reservaToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
@@ -110,6 +112,13 @@
             this.corretoresToolStripMenuItem.Text = "Corretores";
             this.corretoresToolStripMenuItem.Click += new System.EventHandler(this.corretoresToolStripMenuItem_Click_1);
             // 
+            // reservaToolStripMenuItem
+            // 
+            this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
+            this.reservaToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.reservaToolStripMenuItem.Text = "Reserva";
+            this.reservaToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,6 +149,7 @@
         private System.Windows.Forms.ToolStripMenuItem terrenosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empreedimentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem corretoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reservaToolStripMenuItem;
     }
 }
 

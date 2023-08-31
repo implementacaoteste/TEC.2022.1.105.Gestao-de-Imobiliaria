@@ -39,10 +39,9 @@ namespace LocacaoLaboratorio
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonInserir = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonSelecionar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.terrenoDataGridView = new System.Windows.Forms.DataGridView();
-            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Esquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +56,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -140,20 +140,21 @@ namespace LocacaoLaboratorio
             this.buttonExcluir.UseVisualStyleBackColor = true;
             this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
-            // button5
+            // buttonSelecionar
             // 
-            this.button5.Location = new System.Drawing.Point(875, 65);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(91, 23);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "&Selecionar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonSelecionar.Location = new System.Drawing.Point(875, 65);
+            this.buttonSelecionar.Name = "buttonSelecionar";
+            this.buttonSelecionar.Size = new System.Drawing.Size(91, 23);
+            this.buttonSelecionar.TabIndex = 10;
+            this.buttonSelecionar.Text = "&Selecionar";
+            this.buttonSelecionar.UseVisualStyleBackColor = true;
+            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(972, 66);
+            this.buttonCancelar.Location = new System.Drawing.Point(972, 40);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(91, 23);
             this.buttonCancelar.TabIndex = 11;
@@ -193,10 +194,6 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.RowTemplate.Height = 24;
             this.terrenoDataGridView.Size = new System.Drawing.Size(1055, 297);
             this.terrenoDataGridView.TabIndex = 11;
-            // 
-            // terrenoBindingSource
-            // 
-            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -324,14 +321,18 @@ namespace LocacaoLaboratorio
             this.dataGridViewCheckBoxColumn2.ReadOnly = true;
             this.dataGridViewCheckBoxColumn2.Width = 125;
             // 
+            // terrenoBindingSource
+            // 
+            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
+            // 
             // FormConsultarTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 457);
+            this.ClientSize = new System.Drawing.Size(1075, 431);
             this.Controls.Add(this.terrenoDataGridView);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonSelecionar);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonInserir);
             this.Controls.Add(this.buttonAlterar);
@@ -361,7 +362,7 @@ namespace LocacaoLaboratorio
         private System.Windows.Forms.Button buttonAlterar;
         private System.Windows.Forms.Button buttonInserir;
         private System.Windows.Forms.Button buttonExcluir;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonSelecionar;
         private System.Windows.Forms.Button buttonCancelar;
         private DataGridView terrenoDataGridView;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
