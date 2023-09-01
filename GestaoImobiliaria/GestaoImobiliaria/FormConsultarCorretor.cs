@@ -19,7 +19,6 @@ namespace LocacaoLaboratorio
         {
             InitializeComponent();
         }
-
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
             try
@@ -50,7 +49,6 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -74,7 +72,6 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void buttonInserir_Click(object sender, EventArgs e)
         {
             try
@@ -89,7 +86,6 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -112,7 +108,6 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void buttonSelecionar_Click(object sender, EventArgs e)
         {
             try
