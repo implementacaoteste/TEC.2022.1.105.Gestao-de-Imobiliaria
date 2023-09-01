@@ -154,7 +154,7 @@ namespace LocacaoLaboratorio
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(972, 40);
+            this.buttonCancelar.Location = new System.Drawing.Point(972, 64);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(91, 23);
             this.buttonCancelar.TabIndex = 11;
