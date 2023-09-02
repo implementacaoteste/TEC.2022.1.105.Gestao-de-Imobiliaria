@@ -19,9 +19,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDEmpreendimeto, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea FROM Empreendimentos WHERE CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel";
+                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos WHERE CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Id", _CNPJEmpresaResponsavel);
+                cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _CNPJEmpresaResponsavel);
 
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
