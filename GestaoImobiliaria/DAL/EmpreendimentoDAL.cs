@@ -140,7 +140,7 @@ namespace DAL
                 cmd.CommandText = @"DELETE FROM Empreendimentos WHERE IDEmpreendimento = @IDEmpreendimento";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _id);
+                cmd.Parameters.AddWithValue("@IDEmpreendimento", _id);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -172,9 +172,10 @@ namespace DAL
                                     CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel,
                                     TamanhoArea = @TamanhoArea,
                                     Nome = @Nome
-                                    WHERE IDEmpreendimeto = @IDEmpreendimento";
+                                    WHERE IDEmpreendimento = @IDEmpreendimento";
                 cmd.CommandType = System.Data.CommandType.Text;
 
+                cmd.Parameters.AddWithValue("@IDEmpreendimento", _empreendimentos.IDEmpreendimento);
                 cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
                 cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _empreendimentos.CNPJEmpresaResponsavel);
                 cmd.Parameters.AddWithValue("@TamanhoArea", _empreendimentos.TamanhoArea);
