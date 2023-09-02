@@ -365,7 +365,6 @@ namespace LocacaoLaboratorio
         private System.Windows.Forms.Button buttonSelecionar;
         private System.Windows.Forms.Button buttonCancelar;
         private DataGridView terrenoDataGridView;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn Esquina;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

@@ -200,6 +200,7 @@ CREATE TABLE [dbo].[Vendas](
 	[IDTerreno] [int] NOT NULL,
 	[IDCliente] [int] NOT NULL,
 	[IDCorretor] [int] NOT NULL,
+	[IDEmpreendimento] [int] NOT NULL,
 	[DataVenda] [date] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
@@ -258,6 +259,11 @@ ALTER TABLE [dbo].[Vendas]  WITH CHECK ADD  CONSTRAINT [FK_Vendas_Terrenos] FORE
 REFERENCES [dbo].[Terrenos] ([IDTerreno])
 GO
 ALTER TABLE [dbo].[Vendas] CHECK CONSTRAINT [FK_Vendas_Terrenos]
+GO
+ALTER TABLE [dbo].[Vendas]  WITH CHECK ADD  CONSTRAINT [FK_Vendas_Empreendimentos] FOREIGN KEY([IDEmpreendimento])
+REFERENCES [dbo].[Empreendimentos] ([IDEmpreendimento])
+GO
+ALTER TABLE [dbo].[Vendas] CHECK CONSTRAINT [FK_Vendas_Empreendimentos]
 GO
 USE [Imobiliaria]
 GO
@@ -341,10 +347,19 @@ Insert into Empreendimentos (Nome, TotalTerrenos, CNPJEmpresaResponsavel, Tamanh
 Values ('Ipiranga', 2 , '2222222', '100')
 Insert into Empreendimentos (Nome, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea )
 Values ('Alegria', 2 , '3333333', '100')
+Insert into Empreendimentos (Nome, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea )
+Values ('Bedrock', 2 , '4444444', '100')
 
 go
 
 Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
 Values (1, 1200, 120, 10, 10, 200, 'Rua Ipiranga', '1111111', '20', '20', 1, 0, '2')
+Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
+Values (2, 1400, 140, 20, 20, 400, 'Rua Caxias', '2222222', '30', '30', 1, 0, '4')
+Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
+Values (3, 1600, 160, 30, 30, 600, 'Rua Tira Dentes', '3333333', '40', '40', 1, 0, '6')
+Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
+Values (4, 1800, 180, 40, 40, 800, 'Rua Principal', '4444444', '50', '50', 1, 0, '8')
 
 go
+
