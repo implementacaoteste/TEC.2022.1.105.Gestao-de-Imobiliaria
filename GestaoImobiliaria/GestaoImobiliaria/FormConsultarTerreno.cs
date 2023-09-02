@@ -128,5 +128,7 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
+
     }
 }
