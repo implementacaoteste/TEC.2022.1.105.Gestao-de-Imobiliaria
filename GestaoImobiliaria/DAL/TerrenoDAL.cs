@@ -16,14 +16,23 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Terrenos (IDTerreno ,IDEmpreendimento,PrecoAVista, PrecoParcelado,
+                cmd.CommandText = @"INSERT INTO Terrenos (IDEmpreendimento,PrecoAVista, PrecoParcelado,
+						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
+						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
+						RedeEnergia) 
+						SELECT @IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
+						@MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno, @Esquina,
+						@Endereco, @NumeroMatricula, @MetragemEsquerda, @MetragemDireita, @RedeAgua,
+						@RedeEnergia FROM Terrenos";
+
+                /*@"INSERT INTO Terrenos (IDTerreno ,IDEmpreendimento,PrecoAVista, PrecoParcelado,
 						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
 						RedeEnergia) 
 						SELECT ISNULL(MAX(IDTerreno), 0) + 1  ,@IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
 						@MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno, @Esquina,
 						@Endereco, @NumeroMatricula, @MetragemEsquerda, @MetragemDireita, @RedeAgua,
-						@RedeEnergia FROM Terrenos";
+						@RedeEnergia FROM Terrenos";*/
 
 
                 cmd.CommandType = System.Data.CommandType.Text;
