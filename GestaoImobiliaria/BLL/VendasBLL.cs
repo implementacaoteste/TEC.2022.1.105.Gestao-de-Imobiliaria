@@ -41,5 +41,23 @@ namespace BLL
         {
             return new VendasDAL().BuscarTodos();
         }
+
+
+
+
+
+        public Vendas BuscarPorCorretor(int _idcorretor)
+        {
+            return new VendasDAL().BuscarPorCorretor(_idcorretor);
+        }
+
+
+
+
+
+        public Vendas BuscarPorCliente(int _idcliente)
+        {
+            return new VendasDAL().BuscarPorCliente(_idcliente);
+        }
     }
 }
