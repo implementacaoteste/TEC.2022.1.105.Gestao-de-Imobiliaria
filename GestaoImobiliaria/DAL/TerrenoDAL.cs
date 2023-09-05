@@ -21,10 +21,10 @@ namespace DAL
 						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
 						RedeEnergia) 
-						SELECT @IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
+						VALUES(@IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
 						@MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno, @Esquina,
 						@Endereco, @NumeroMatricula, @MetragemEsquerda, @MetragemDireita, @RedeAgua,
-						@RedeEnergia FROM Terrenos";
+						@RedeEnergia)";
 
                 /*@"INSERT INTO Terrenos (IDTerreno ,IDEmpreendimento,PrecoAVista, PrecoParcelado,
 						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
