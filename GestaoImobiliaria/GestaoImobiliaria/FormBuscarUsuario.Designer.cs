@@ -40,7 +40,7 @@
             this.grupoUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grupoUsuariosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxBuscarUsuario = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonAdicionarUsuario = new System.Windows.Forms.Button();
@@ -49,6 +49,7 @@
             this.buttonExcluirGrupoUsuario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxUsuario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuariosBindingSource)).BeginInit();
@@ -173,14 +174,14 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
-            // textBox1
+            // textBoxBuscarUsuario
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBoxBuscarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(405, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBoxBuscarUsuario.Location = new System.Drawing.Point(109, 92);
+            this.textBoxBuscarUsuario.Name = "textBoxBuscarUsuario";
+            this.textBoxBuscarUsuario.Size = new System.Drawing.Size(308, 22);
+            this.textBoxBuscarUsuario.TabIndex = 1;
             // 
             // buttonBuscar
             // 
@@ -253,9 +254,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 16);
+            this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "O &que deseja buscar?";
+            this.label1.Text = "Buscar por:";
             // 
             // label2
             // 
@@ -268,11 +269,25 @@
             this.label2.Text = "Gestão de usuários";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // comboBoxUsuario
+            // 
+            this.comboBoxUsuario.FormattingEnabled = true;
+            this.comboBoxUsuario.Items.AddRange(new object[] {
+            "ID",
+            "Nome",
+            "CPF",
+            "Todos"});
+            this.comboBoxUsuario.Location = new System.Drawing.Point(15, 91);
+            this.comboBoxUsuario.Name = "comboBoxUsuario";
+            this.comboBoxUsuario.Size = new System.Drawing.Size(88, 24);
+            this.comboBoxUsuario.TabIndex = 11;
+            // 
             // FormBuscarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 628);
+            this.Controls.Add(this.comboBoxUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonExcluirGrupoUsuario);
@@ -281,7 +296,7 @@
             this.Controls.Add(this.buttonAdicionarUsuario);
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.buttonBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxBuscarUsuario);
             this.Controls.Add(this.grupoUsuariosDataGridView);
             this.Controls.Add(this.usuarioDataGridView);
             this.KeyPreview = true;
@@ -310,7 +325,7 @@
         private System.Windows.Forms.BindingSource grupoUsuariosBindingSource;
         private System.Windows.Forms.DataGridView grupoUsuariosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBuscarUsuario;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Button buttonAlterar;
         private System.Windows.Forms.Button buttonAdicionarUsuario;
@@ -325,5 +340,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxUsuario;
     }
 }
