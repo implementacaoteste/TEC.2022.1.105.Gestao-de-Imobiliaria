@@ -136,6 +136,10 @@ namespace DAL
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
+                
+                if (new TerrenoDAL().ExistePorIdEmpreendimento(_id))
+                    throw new Exception("Não é possível excluir um empreendimento com terrenos vinculados.") { Data = { { "Id", 302 } } };
+
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"DELETE FROM Empreendimentos WHERE IDEmpreendimento = @IDEmpreendimento";
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -149,7 +153,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar excluir Empreendimento no banco de dados", ex) { Data = { { "Id", 302 } } };
+                throw new Exception("Ocorreu um erro ao tentar excluir empreendimento.", ex) { Data = { { "Id", 303 } } };
             }
             finally
             {
@@ -283,7 +287,7 @@ namespace DAL
                 cn.Close();
             }
 
-            
+
         }
     }
 }
