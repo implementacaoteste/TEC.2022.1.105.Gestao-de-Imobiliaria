@@ -105,6 +105,12 @@ namespace LocacaoLaboratorio
             }
         }
 
-        
+        private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormConsultaVendas frm = new FormConsultaVendas())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

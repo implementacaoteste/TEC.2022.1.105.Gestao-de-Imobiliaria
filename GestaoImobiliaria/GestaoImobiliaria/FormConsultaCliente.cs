@@ -123,5 +123,10 @@ namespace LocacaoLaboratorio
         {
 
         }
+
+        private void labelConsultaCliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

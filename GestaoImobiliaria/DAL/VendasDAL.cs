@@ -216,7 +216,7 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT IDVenda, IDTerreno, IDCliente, IDCorretor, Nome FROM Vendas WHERE IDCliente = @IDCliente";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@IDCorretor", _idcliente);
+                cmd.Parameters.AddWithValue("@IDCliente", _idcliente);
 
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -237,6 +237,95 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar venda por corretor no banco de dados", ex) { Data = { { "Id", 2434 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
+
+
+
+
+        public List<Vendas> BuscarPorData()
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Vendas vendas = new Vendas();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+
+                List<Vendas> vendasList = new List<Vendas>();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT IDVenda, IDTerreno, IDCliente, IDCorretor, Nome FROM Vendas WHERE DataVenda = @DataVenda";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        vendas = new Vendas();
+                        vendas.IDVenda = (int)rd["IDVenda"];
+                        vendas.IDTerreno = (int)rd["IDTerreno"];
+                        vendas.IDCliente = (int)rd["IDCliente"];
+                        vendas.IDCorretor = (int)rd["IDCorretor"]; ;
+
+
+                        vendasList.Add(vendas);
+                    }
+                }
+                return vendasList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao buscar as vendas por data no banco de dados", ex) { Data = { { "Id", 2435 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
+
+
+
+        public Vendas BuscarPorId(int _idvenda)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Vendas vendas = new Vendas();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT IDVenda, IDTerreno, IDCliente, IDCorretor, Nome FROM Vendas WHERE IDVenda = @IDVenda";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IDVenda", _idvenda);
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        vendas = new Vendas();
+                        vendas.IDVenda = (int)rd["IDVenda"];
+                        vendas.IDTerreno = (int)rd["IDTerreno"];
+                        vendas.IDCliente = (int)rd["IDCliente"];
+                        vendas.IDCorretor = (int)rd["IDCorretor"]; ;
+
+
+                    }
+                }
+                return vendas;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar venda por id no banco de dados", ex) { Data = { { "Id", 2437 } } };
             }
             finally
             {
