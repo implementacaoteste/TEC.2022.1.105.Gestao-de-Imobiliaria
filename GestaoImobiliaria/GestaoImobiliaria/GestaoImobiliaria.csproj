@@ -106,6 +106,12 @@
     <Compile Include="FormCadastroUsuario.Designer.cs">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroVendas.Designer.cs">
+      <DependentUpon>FormCadastroVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="FormConsultaEmpreendimentos.Designer.cs">
       <DependentUpon>FormConsultaEmpreendimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultaVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaVendas.Designer.cs">
+      <DependentUpon>FormConsultaVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -187,6 +199,9 @@
     <EmbeddedResource Include="FormCadastroUsuario.resx">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroVendas.resx">
+      <DependentUpon>FormCadastroVendas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaCliente.resx">
       <DependentUpon>FormConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaEmpreendimentos.resx">
       <DependentUpon>FormConsultaEmpreendimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaVendas.resx">
+      <DependentUpon>FormConsultaVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -230,6 +248,7 @@
     <None Include="Properties\DataSources\Models.Reserva1.datasource" />
     <None Include="Properties\DataSources\Models.Terreno.datasource" />
     <None Include="Properties\DataSources\Models.Usuario.datasource" />
+    <None Include="Properties\DataSources\Models.Vendas1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

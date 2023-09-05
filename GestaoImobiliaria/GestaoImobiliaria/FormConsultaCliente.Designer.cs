@@ -200,6 +200,7 @@
             this.labelConsultaCliente.TabIndex = 2;
             this.labelConsultaCliente.Text = "Consulta cliente";
             this.labelConsultaCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelConsultaCliente.Click += new System.EventHandler(this.labelConsultaCliente_Click);
             // 
             // label2
             // 

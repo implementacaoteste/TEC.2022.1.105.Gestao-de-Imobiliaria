@@ -59,5 +59,23 @@ namespace BLL
         {
             return new VendasDAL().BuscarPorCliente(_idcliente);
         }
+
+
+
+
+
+        public List<Vendas> BuscarPorData()
+        {
+            return new VendasDAL().BuscarPorData();
+        }
+
+
+
+
+
+        public Vendas BuscarPorId(int _id)
+        {
+            return new VendasDAL().BuscarPorId(_id);
+        }
     }
 }
