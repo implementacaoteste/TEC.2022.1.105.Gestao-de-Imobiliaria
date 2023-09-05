@@ -138,7 +138,7 @@ namespace DAL
             {
                 
                 if (new TerrenoDAL().ExistePorIdEmpreendimento(_id))
-                    throw new Exception("Não é possível excluir um empreendimento com terrenso vinculados.") { Data = { { "Id", 302 } } };
+                    throw new Exception("Não é possível excluir um empreendimento com terrenos vinculados.") { Data = { { "Id", 302 } } };
 
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"DELETE FROM Empreendimentos WHERE IDEmpreendimento = @IDEmpreendimento";
