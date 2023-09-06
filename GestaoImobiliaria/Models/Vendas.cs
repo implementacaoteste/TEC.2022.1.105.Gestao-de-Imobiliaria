@@ -21,5 +21,9 @@ namespace Models
 
 
      public int IDCorretor { get; set; }
+
+
+
+     public int IDEmpreendimento { get; set; }
     }
 }

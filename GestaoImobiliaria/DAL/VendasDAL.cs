@@ -332,5 +332,47 @@ namespace DAL
                 cn.Close();
             }
         }
+
+
+
+
+
+        public Vendas BuscarPorEmpreendimento(int _idempreendimento)
+        {
+            Vendas vendas = new Vendas();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT IDVenda, IDTerreno, IDCliente, IDCorretor, Nome FROM Vendas WHERE IDEmpreendimento = @IDEmpreendimento";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IDEmpreendimento", _idempreendimento);
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        vendas = new Vendas();
+                        vendas.IDVenda = (int)rd["IDVenda"];
+                        vendas.IDTerreno = (int)rd["IDTerreno"];
+                        vendas.IDCliente = (int)rd["IDCliente"];
+                        vendas.IDCorretor = (int)rd["IDCorretor"]; ;
+
+
+                    }
+                }
+                return vendas;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar venda por empreendimento no banco de dados", ex) { Data = { { "Id", 2440 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
