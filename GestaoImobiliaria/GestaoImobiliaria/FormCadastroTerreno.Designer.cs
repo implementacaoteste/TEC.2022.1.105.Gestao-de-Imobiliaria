@@ -41,6 +41,7 @@
             System.Windows.Forms.Label redeEnergiaLabel;
             System.Windows.Forms.Label tamanhoTotalTerrenoLabel;
             System.Windows.Forms.Label nomeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroTerreno));
             this.confrontacoesLabel = new System.Windows.Forms.Label();
             this.labelCadastoTerreno = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             this.confrontacoesTextBox = new System.Windows.Forms.TextBox();
             this.buttonBuscarEmpreendimento = new System.Windows.Forms.Button();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             enderecoLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
             metragemDireitaLabel = new System.Windows.Forms.Label();
@@ -173,6 +175,15 @@
             tamanhoTotalTerrenoLabel.Size = new System.Drawing.Size(153, 16);
             tamanhoTotalTerrenoLabel.TabIndex = 37;
             tamanhoTotalTerrenoLabel.Text = "Tamanho Total Terreno:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(90, 104);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(113, 16);
+            nomeLabel.TabIndex = 40;
+            nomeLabel.Text = "Empreendimento:";
             // 
             // confrontacoesLabel
             // 
@@ -320,22 +331,17 @@
             // 
             // buttonBuscarEmpreendimento
             // 
-            this.buttonBuscarEmpreendimento.Location = new System.Drawing.Point(315, 95);
+            this.buttonBuscarEmpreendimento.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscarEmpreendimento.FlatAppearance.BorderSize = 0;
+            this.buttonBuscarEmpreendimento.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonBuscarEmpreendimento.ImageKey = "pesquisa-de-lupa.png";
+            this.buttonBuscarEmpreendimento.ImageList = this.imageList1;
+            this.buttonBuscarEmpreendimento.Location = new System.Drawing.Point(309, 96);
             this.buttonBuscarEmpreendimento.Name = "buttonBuscarEmpreendimento";
-            this.buttonBuscarEmpreendimento.Size = new System.Drawing.Size(27, 23);
+            this.buttonBuscarEmpreendimento.Size = new System.Drawing.Size(43, 27);
             this.buttonBuscarEmpreendimento.TabIndex = 40;
-            this.buttonBuscarEmpreendimento.Text = "...";
-            this.buttonBuscarEmpreendimento.UseVisualStyleBackColor = true;
+            this.buttonBuscarEmpreendimento.UseVisualStyleBackColor = false;
             this.buttonBuscarEmpreendimento.Click += new System.EventHandler(this.buttonBuscarEmpreendimento_Click);
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(90, 104);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(113, 16);
-            nomeLabel.TabIndex = 40;
-            nomeLabel.Text = "Empreendimento:";
             // 
             // nomeTextBox
             // 
@@ -344,6 +350,12 @@
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(100, 22);
             this.nomeTextBox.TabIndex = 41;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "pesquisa-de-lupa.png");
             // 
             // FormCadastroTerreno
             // 
@@ -411,5 +423,6 @@
         private System.Windows.Forms.Label confrontacoesLabel;
         private System.Windows.Forms.Button buttonBuscarEmpreendimento;
         private System.Windows.Forms.TextBox nomeTextBox;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

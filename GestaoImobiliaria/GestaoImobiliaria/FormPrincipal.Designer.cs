@@ -103,6 +103,7 @@
             // empreedimentosToolStripMenuItem
             // 
             this.empreedimentosToolStripMenuItem.Name = "empreedimentosToolStripMenuItem";
+            this.empreedimentosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.empreedimentosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.empreedimentosToolStripMenuItem.Text = "Empreedimentos";
             this.empreedimentosToolStripMenuItem.Click += new System.EventHandler(this.empreedimentosToolStripMenuItem_Click);
@@ -110,6 +111,7 @@
             // corretoresToolStripMenuItem
             // 
             this.corretoresToolStripMenuItem.Name = "corretoresToolStripMenuItem";
+            this.corretoresToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.corretoresToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.corretoresToolStripMenuItem.Text = "Corretores";
             this.corretoresToolStripMenuItem.Click += new System.EventHandler(this.corretoresToolStripMenuItem_Click_1);
@@ -117,6 +119,7 @@
             // reservaToolStripMenuItem
             // 
             this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
+            this.reservaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.reservaToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.reservaToolStripMenuItem.Text = "Reserva";
             this.reservaToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
@@ -124,6 +127,7 @@
             // vendasToolStripMenuItem
             // 
             this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
+            this.vendasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.vendasToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.vendasToolStripMenuItem.Text = "Vendas";
             this.vendasToolStripMenuItem.Click += new System.EventHandler(this.vendasToolStripMenuItem_Click);
