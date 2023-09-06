@@ -77,5 +77,14 @@ namespace BLL
         {
             return new VendasDAL().BuscarPorId(_id);
         }
+
+
+
+
+
+        public Vendas BuscarPorEmpreendimento(int _idempreendimento)
+        {
+            return new VendasDAL().BuscarPorEmpreendimento(_idempreendimento);
+        }
     }
 }
