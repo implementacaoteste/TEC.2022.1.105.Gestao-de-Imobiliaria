@@ -76,5 +76,15 @@ namespace LocacaoLaboratorio
                 nomeTextBox.DataBindings.Control.Text = ((Terreno)terrenoBindingSource.Current).Empreendimento.Nome;
             }
         }
+
+        private void buttonBuscarEmpreendimento_Click_1(object sender, EventArgs e)
+        {
+            using (FormConsultaEmpreendimentos frm = new FormConsultaEmpreendimentos())
+            {
+                frm.ShowDialog();
+                ((Terreno)terrenoBindingSource.Current).Empreendimento = frm.Empreendimentos;
+                nomeTextBox.DataBindings.Control.Text = ((Terreno)terrenoBindingSource.Current).Empreendimento.Nome;
+            }
+        }
     }
 }

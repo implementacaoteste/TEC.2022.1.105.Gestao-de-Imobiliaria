@@ -46,8 +46,8 @@
             this.labelCadastoTerreno = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
+            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matriculaTextBox = new System.Windows.Forms.TextBox();
             this.metragemDireitaTextBox = new System.Windows.Forms.TextBox();
             this.metragemEsquerdaTextBox = new System.Windows.Forms.TextBox();
@@ -59,9 +59,9 @@
             this.redeEnergiaCheckBox = new System.Windows.Forms.CheckBox();
             this.tamanhoTotalTerrenoTextBox = new System.Windows.Forms.TextBox();
             this.confrontacoesTextBox = new System.Windows.Forms.TextBox();
-            this.buttonBuscarEmpreendimento = new System.Windows.Forms.Button();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.buttonBuscarEmpreendimento = new System.Windows.Forms.Button();
             enderecoLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
             metragemDireitaLabel = new System.Windows.Forms.Label();
@@ -227,10 +227,6 @@
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
-            // terrenoBindingSource
-            // 
-            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
-            // 
             // enderecoTextBox
             // 
             this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Endereco", true));
@@ -238,6 +234,10 @@
             this.enderecoTextBox.Name = "enderecoTextBox";
             this.enderecoTextBox.Size = new System.Drawing.Size(158, 22);
             this.enderecoTextBox.TabIndex = 26;
+            // 
+            // terrenoBindingSource
+            // 
+            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
             // matriculaTextBox
             // 
@@ -329,20 +329,6 @@
             this.confrontacoesTextBox.Size = new System.Drawing.Size(168, 22);
             this.confrontacoesTextBox.TabIndex = 39;
             // 
-            // buttonBuscarEmpreendimento
-            // 
-            this.buttonBuscarEmpreendimento.BackColor = System.Drawing.Color.Transparent;
-            this.buttonBuscarEmpreendimento.FlatAppearance.BorderSize = 0;
-            this.buttonBuscarEmpreendimento.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonBuscarEmpreendimento.ImageKey = "pesquisa-de-lupa.png";
-            this.buttonBuscarEmpreendimento.ImageList = this.imageList1;
-            this.buttonBuscarEmpreendimento.Location = new System.Drawing.Point(309, 96);
-            this.buttonBuscarEmpreendimento.Name = "buttonBuscarEmpreendimento";
-            this.buttonBuscarEmpreendimento.Size = new System.Drawing.Size(43, 27);
-            this.buttonBuscarEmpreendimento.TabIndex = 40;
-            this.buttonBuscarEmpreendimento.UseVisualStyleBackColor = false;
-            this.buttonBuscarEmpreendimento.Click += new System.EventHandler(this.buttonBuscarEmpreendimento_Click);
-            // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.terrenoBindingSource, "Empreendimento.Nome", true));
@@ -357,14 +343,28 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "pesquisa-de-lupa.png");
             // 
+            // buttonBuscarEmpreendimento
+            // 
+            this.buttonBuscarEmpreendimento.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscarEmpreendimento.FlatAppearance.BorderSize = 0;
+            this.buttonBuscarEmpreendimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscarEmpreendimento.ImageKey = "pesquisa-de-lupa.png";
+            this.buttonBuscarEmpreendimento.ImageList = this.imageList1;
+            this.buttonBuscarEmpreendimento.Location = new System.Drawing.Point(315, 93);
+            this.buttonBuscarEmpreendimento.Name = "buttonBuscarEmpreendimento";
+            this.buttonBuscarEmpreendimento.Size = new System.Drawing.Size(36, 33);
+            this.buttonBuscarEmpreendimento.TabIndex = 42;
+            this.buttonBuscarEmpreendimento.UseVisualStyleBackColor = false;
+            this.buttonBuscarEmpreendimento.Click += new System.EventHandler(this.buttonBuscarEmpreendimento_Click_1);
+            // 
             // FormCadastroTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 350);
+            this.Controls.Add(this.buttonBuscarEmpreendimento);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
-            this.Controls.Add(this.buttonBuscarEmpreendimento);
             this.Controls.Add(this.confrontacoesLabel);
             this.Controls.Add(this.confrontacoesTextBox);
             this.Controls.Add(tamanhoTotalTerrenoLabel);
@@ -421,8 +421,8 @@
         private System.Windows.Forms.TextBox tamanhoTotalTerrenoTextBox;
         private System.Windows.Forms.TextBox confrontacoesTextBox;
         private System.Windows.Forms.Label confrontacoesLabel;
-        private System.Windows.Forms.Button buttonBuscarEmpreendimento;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button buttonBuscarEmpreendimento;
     }
 }
