@@ -72,7 +72,7 @@ namespace DAL
                         vendas.IDTerreno = (int)rd["IDTerreno"];
                         vendas.IDCliente = (int)rd["IDCliente"];
                         vendas.IDCorretor = (int)rd["IDCorretor"]; ;
-                        
+                        vendas.Cliente = new ClienteDAL().BuscarPorId((int)rd["IDCliente"]);
 
                         vendasList.Add(vendas);
                     }
@@ -138,7 +138,7 @@ namespace DAL
 
                 cmd.Parameters.AddWithValue("@IDVenda", _vendas.IDVenda);
                 cmd.Parameters.AddWithValue("@IDTerreno", _vendas.IDTerreno);
-                cmd.Parameters.AddWithValue("IDCliente", _vendas.IDCliente);
+                cmd.Parameters.AddWithValue("IDCliente", _vendas.Cliente.Id);
                 cmd.Parameters.AddWithValue("IDCorretor", _vendas.IDCorretor);
 
                 cmd.Connection = cn;

@@ -8,22 +8,25 @@ namespace Models
 {
     public class Vendas
     {
-     public int IDVenda { get; set; }
+        public int IDVenda { get; set; }
 
 
 
-     public int IDTerreno { get; set; }
+        public int IDTerreno { get; set; }
 
 
 
-     public int IDCliente { get; set; }
+        public int IDCliente { get; set; }
 
 
 
-     public int IDCorretor { get; set; }
+        public int IDCorretor { get; set; }
 
 
 
-     public int IDEmpreendimento { get; set; }
+        public int IDEmpreendimento { get; set; }
+
+
+        public Cliente Cliente { get; set; }
     }
 }

@@ -59,8 +59,25 @@ namespace LocacaoLaboratorio
             }
         }
 
+        private void buttonBuscarCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormConsultaCliente frm = new FormConsultaCliente())
+                {
+                    frm.ShowDialog();
 
-
-
+                    if (frm.Cliente != null)
+                    {
+                        ((Vendas)vendasBindingSource.Current).Cliente = frm.Cliente;
+                        nomeTextBox.Text = frm.Cliente.Nome;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

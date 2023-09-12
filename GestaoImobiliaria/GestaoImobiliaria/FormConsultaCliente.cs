@@ -7,6 +7,7 @@ namespace LocacaoLaboratorio
 {
     public partial class FormConsultaCliente : Form
     {
+        public Cliente Cliente { get; set; }
         public FormConsultaCliente()
         {
             InitializeComponent();
@@ -112,7 +113,19 @@ namespace LocacaoLaboratorio
 
         private void buttonSelecionar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (clienteBindingSource.Count == 0)
+                    throw new Exception("Não existe registro para ser selecionado!");
 
+                this.Cliente = (Cliente)clienteBindingSource.Current;
+
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
