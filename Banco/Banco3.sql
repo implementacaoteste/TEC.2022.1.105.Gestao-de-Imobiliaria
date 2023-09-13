@@ -37,7 +37,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Corretores](
-	[IDCorretor] [int] NOT NULL,
+	[IDCorretor] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](100) NOT NULL,
 	[CRECI] [varchar](20) NOT NULL,
 	[Endereco] [varchar](200) NULL,
@@ -57,7 +57,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Empreendimentos](
-	[IDEmpreendimento] [int] NOT NULL,
+	[IDEmpreendimento] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](200) NOT NULL,
 	[TotalTerrenos] [int] NOT NULL,
 	[CNPJEmpresaResponsavel] [varchar](20) NOT NULL,
@@ -117,11 +117,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Reservas](
-	[IDReserva] [int] NOT NULL,
+	[IDReserva] [int] IDENTITY(1,1) NOT NULL,
 	[IDTerreno] [int] NOT NULL,
 	[IDCorretor] [int] NOT NULL,
 	[DataReserva] [date] NOT NULL,
-	[PrazoRenovacao] [int] NOT NULL,
+	[Prazo] [int] NOT NULL,
 	[StatusReserva] [varchar](20) NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
@@ -135,7 +135,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Terrenos](
-	[IDTerreno] [int] NOT NULL,
+	[IDTerreno] [int]  IDENTITY(1,1)NOT NULL,
 	[IDEmpreendimento] [int] NOT NULL,
 	[PrecoAVista] [float] NOT NULL,
 	[PrecoParcelado] [float] NOT NULL,
@@ -196,10 +196,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Vendas](
-	[IDVenda] [int] NOT NULL,
+	[IDVenda] [int] IDENTITY(1,1) NOT NULL,
 	[IDTerreno] [int] NOT NULL,
 	[IDCliente] [int] NOT NULL,
 	[IDCorretor] [int] NOT NULL,
+	[IDEmpreendimento] [int] NOT NULL,
 	[DataVenda] [date] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
@@ -259,6 +260,11 @@ REFERENCES [dbo].[Terrenos] ([IDTerreno])
 GO
 ALTER TABLE [dbo].[Vendas] CHECK CONSTRAINT [FK_Vendas_Terrenos]
 GO
+ALTER TABLE [dbo].[Vendas]  WITH CHECK ADD  CONSTRAINT [FK_Vendas_Empreendimentos] FOREIGN KEY([IDEmpreendimento])
+REFERENCES [dbo].[Empreendimentos] ([IDEmpreendimento])
+GO
+ALTER TABLE [dbo].[Vendas] CHECK CONSTRAINT [FK_Vendas_Empreendimentos]
+GO
 USE [Imobiliaria]
 GO
 ALTER DATABASE [Imobiliaria] SET  READ_WRITE 
@@ -307,3 +313,53 @@ INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(2, 1)
 INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(2, 2)
 INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(2, 3)
 GO
+
+Insert into Cliente (Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge ) 
+Values ('Cristiano', '11111111','2222222','cristiano@gmail.com','40028922', 'Rua 123', 'Solteiro', 12, NULL, NULL);
+Insert into Cliente (Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge ) 
+Values ('Nalberth', '3333333','4444444','nalberth@gmail.com','40028922', 'Rua 321', 'Solteiro', 1200, NULL, NULL);
+Insert into Cliente (Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge )
+Values ('Lucas', '555555','6666666','lucas@gmail.com','40028922', 'Rua 132', 'Solteiro', 1600, NULL, NULL);
+
+go 
+
+Insert into Corretores (Nome, CRECI,  Endereco, RG, CPF, Fone, Email)
+Values('Cristiano','1111111','Rua 123', '2222222','3333333', '40028922', 'cristiano@gmail.com') 
+Insert into Corretores (Nome, CRECI,  Endereco, RG, CPF, Fone, Email)
+Values('Nalberth','3333333','Rua 321', '4444444','5555555', '40028922', 'nalberth@gmail.com') 
+Insert into Corretores (Nome, CRECI,  Endereco, RG, CPF, Fone, Email)
+Values('Lucas','5555555','Rua 132', '6666666', '40028922','9999999', 'lucas@gmail.com') 
+
+go
+
+Insert into Usuario (Nome, NomeUsuario, Email, CPF, Ativo, Senha)
+Values ('Cristiano', 'Júnior', 'cristiano@gmail.com', '1111111', 1, '1234')
+Insert into Usuario (Nome, NomeUsuario, Email, CPF, Ativo, Senha)
+Values ('Nalberth', 'Nalberth123', 'nalberth@gmail.com', '2222222', 1, '1234')
+Insert into Usuario (Nome, NomeUsuario, Email, CPF, Ativo, Senha)
+Values ('Lucas', 'Lucas123', 'lucas@gmail.com', '3333333', 1, '1234')
+
+go
+
+Insert into Empreendimentos (Nome, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea )
+Values ('Járdim américa', 2 , '1111111', '100')
+Insert into Empreendimentos (Nome, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea )
+Values ('Ipiranga', 2 , '2222222', '100')
+Insert into Empreendimentos (Nome, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea )
+Values ('Alegria', 2 , '3333333', '100')
+Insert into Empreendimentos (Nome, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea )
+Values ('Bedrock', 2 , '4444444', '100')
+
+go
+
+Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
+Values (1, 1200, 120, 10, 10, 200, 'Rua Ipiranga', '1111111', '20', '20', 1, 0, '2')
+Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
+Values (2, 1400, 140, 20, 20, 400, 'Rua Caxias', '2222222', '30', '30', 1, 0, '4')
+Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
+Values (3, 1600, 160, 30, 30, 600, 'Rua Tira Dentes', '3333333', '40', '40', 1, 0, '6')
+Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
+Values (4, 1800, 180, 40, 40, 800, 'Rua Principal', '4444444', '50', '50', 1, 0, '8')
+
+go
+

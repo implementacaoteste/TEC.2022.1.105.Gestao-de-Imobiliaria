@@ -89,6 +89,14 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                if (terrenoBindingSource.Count <= 0)
+                {
+                    MessageBox.Show("Não existe registro para ser excluído");
+                    return;
+                }
+                if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
                 int id = ((Terreno)terrenoBindingSource.Current).IdTerreno;
                 new TerrenoBLL().Excluir(id);
                 terrenoBindingSource.RemoveCurrent();
@@ -120,5 +128,7 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
+
     }
 }

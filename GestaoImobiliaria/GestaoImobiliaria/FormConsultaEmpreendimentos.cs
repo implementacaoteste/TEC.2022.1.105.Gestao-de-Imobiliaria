@@ -126,7 +126,10 @@ namespace LocacaoLaboratorio
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (new TratarErro().GetId(ex) == 303)
+                    MessageBox.Show(ex.InnerException.Message);
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 
@@ -145,7 +148,7 @@ namespace LocacaoLaboratorio
 
         private void buttonSelecionar_Click(object sender, EventArgs e)
         {
-             try
+            try
             {
                 if (empreendimentosBindingSource.Count > 0)
                 {
@@ -154,7 +157,7 @@ namespace LocacaoLaboratorio
                     return;
                 }
 
-                    throw new Exception("Não existe registro para ser retornado.");
+                throw new Exception("Não existe registro para ser retornado.");
             }
             catch (Exception ex)
             {

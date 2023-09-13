@@ -25,10 +25,6 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Email", _cliente.Email);
                 cmd.Parameters.AddWithValue("@Fone", _cliente.Fone);
 
-                cmd.Parameters.AddWithValue("@Endereco", _cliente.Endereco);
-                cmd.Parameters.AddWithValue("@EstadoCivil", _cliente.EstadoCivil);
-                cmd.Parameters.AddWithValue("@Renda", _cliente.Renda);
-
                 if (_cliente.CPFConjuge != null)
                     cmd.Parameters.AddWithValue("@CPFConjuge", _cliente.CPFConjuge);
                 else
@@ -53,16 +49,6 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@Renda", DBNull.Value);
                 else
                     cmd.Parameters.AddWithValue("@Renda", _cliente.Renda);
-
-                if (String.IsNullOrEmpty(_cliente.CPFConjuge))
-                    cmd.Parameters.AddWithValue("@CPFConjuge", DBNull.Value);
-                else
-                    cmd.Parameters.AddWithValue("@CPFConjuge", _cliente.CPFConjuge);
-
-                if (String.IsNullOrEmpty(_cliente.RGConjuge))
-                    cmd.Parameters.AddWithValue("@RGConjuge", DBNull.Value);
-                else
-                    cmd.Parameters.AddWithValue("@RGConjuge", _cliente.RGConjuge);
 
 
                 cmd.Connection = cn;

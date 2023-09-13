@@ -12,14 +12,15 @@ using System.Windows.Forms;
 
 namespace LocacaoLaboratorio
 {
-    public partial class FormConsultarCorretor : Form
+    public partial class FormConsultaVendas : Form
     {
-        public Corretor Corretor { get; set; }
-        public FormConsultarCorretor()
+        public Vendas vendas { get; set; }
+        public FormConsultaVendas()
         {
             InitializeComponent();
         }
-        private void buttonBuscar_Click(object sender, EventArgs e)
+
+        private void buttonBuscarVenda_Click(object sender, EventArgs e)
         {
             try
             {
@@ -27,18 +28,21 @@ namespace LocacaoLaboratorio
                 {
                     case 0:
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
-                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 31 } } };
+                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 2438 } } };
 
-                        corretorBindingSource.DataSource = new CorretorBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
-                        corretorBindingSource.DataSource = new CorretorBLL().BuscarPorNome(textBoxBuscar.Text);
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorCorretor(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 2:
-                        corretorBindingSource.DataSource = new CorretorBLL().BuscarPorCPF(textBoxBuscar.Text);
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorCliente(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 3:
-                        corretorBindingSource.DataSource = new CorretorBLL().BuscarTodos();
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarTodos();
+                        break;
+                    case 4:
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorData();
                         break;
                     default:
                         break;
@@ -49,34 +53,45 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-        private void buttonAlterar_Click(object sender, EventArgs e)
+
+
+
+
+
+
+        private void buttonAlterarVenda_Click(object sender, EventArgs e)
         {
             try
             {
-                if (corretorBindingSource.Count == 0)
+                if (vendasBindingSource.Count == 0)
                 {
-                    MessageBox.Show("Não existe corretor para ser alterado.");
+                    MessageBox.Show("Não existe empreendimento para ser alterado.");
                     return;
                 }
 
-                int id = ((Corretor)corretorBindingSource.Current).IdCorretor;
+                int id = ((Vendas)vendasBindingSource.Current).IDVenda;
 
-                using (FormCadastroCorretor frm = new FormCadastroCorretor(id))
+                using (FormCadastroVendas frm = new FormCadastroVendas(id))
                 {
                     frm.ShowDialog();
                 }
-                buttonBuscar_Click(null, null);
+                buttonBuscarVenda_Click(null, null);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-        private void buttonInserir_Click(object sender, EventArgs e)
+
+
+
+
+
+        private void buttonInserirVenda_Click(object sender, EventArgs e)
         {
-            try
+             try
             {
-                using (FormCadastroCorretor frm = new FormCadastroCorretor())
+                using (FormCadastroVendas frm = new FormCadastroVendas())
                 {
                     frm.ShowDialog();
                 }
@@ -86,11 +101,16 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
-        private void buttonExcluir_Click(object sender, EventArgs e)
+
+
+
+
+
+        private void buttonExcluirVenda_Click(object sender, EventArgs e)
         {
             try
             {
-                if (corretorBindingSource.Count <= 0)
+                if (vendasBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não existe registro para ser excluído");
                     return;
@@ -99,26 +119,32 @@ namespace LocacaoLaboratorio
                 if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                     return;
 
-                int id = ((Corretor)corretorBindingSource.Current).IdCorretor;
-                new CorretorBLL().Excluir(id);
-                corretorBindingSource.RemoveCurrent();
+                int id = ((Vendas)vendasBindingSource.Current).IDVenda;
+                new VendasBLL().Excluir(id);
+                vendasBindingSource.RemoveCurrent();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-        private void buttonSelecionar_Click(object sender, EventArgs e)
+
+
+
+
+
+        private void buttonSelecionarVenda_Click(object sender, EventArgs e)
         {
             try
             {
-                if (corretorBindingSource.Count > 0)
+                if (vendasBindingSource.Count > 0)
                 {
-                    this.Corretor = (Models.Corretor)corretorBindingSource.Current;
+                    this.vendas = (Vendas)vendasBindingSource.Current;
                     Close();
                     return;
                 }
-                throw new Exception("Não existe registro para ser selecionado");
+
+                throw new Exception("Não existe registro para ser retornado.");
             }
             catch (Exception ex)
             {

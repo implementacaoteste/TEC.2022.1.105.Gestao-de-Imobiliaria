@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,14 +17,23 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Terrenos (IDTerreno ,IDEmpreendimento,PrecoAVista, PrecoParcelado,
+                cmd.CommandText = @"INSERT INTO Terrenos (IDEmpreendimento,PrecoAVista, PrecoParcelado,
+						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
+						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
+						RedeEnergia) 
+						VALUES(@IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
+						@MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno, @Esquina,
+						@Endereco, @NumeroMatricula, @MetragemEsquerda, @MetragemDireita, @RedeAgua,
+						@RedeEnergia)";
+
+                /*@"INSERT INTO Terrenos (IDTerreno ,IDEmpreendimento,PrecoAVista, PrecoParcelado,
 						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
 						RedeEnergia) 
 						SELECT ISNULL(MAX(IDTerreno), 0) + 1  ,@IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
 						@MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno, @Esquina,
 						@Endereco, @NumeroMatricula, @MetragemEsquerda, @MetragemDireita, @RedeAgua,
-						@RedeEnergia FROM Terrenos";
+						@RedeEnergia FROM Terrenos";*/
 
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -282,6 +292,36 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar excluir fornecdor no banco de dados.", ex) { Data = { { "Id", 27 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public bool ExistePorIdEmpreendimento(int _id)
+        {
+            Terreno terreno = new Terreno();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT top 1 1 AS Resultado FROM Terrenos WHERE IDEmpreendimento = @Id";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id", _id);
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar o Id de um Terreno no banco de dados", ex) { Data = { { "Id", 24 } } };
             }
             finally
             {

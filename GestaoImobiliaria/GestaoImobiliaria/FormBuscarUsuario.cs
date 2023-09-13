@@ -16,7 +16,26 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                usuarioBindingSource.DataSource = new UsuarioBLL().BuscarTodos();
+                switch (comboBoxUsuario.SelectedIndex)
+                {
+                    case 0:
+                        if (String.IsNullOrEmpty(textBoxBuscarUsuario.Text))
+                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 31 } } };
+
+                        usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorId(Convert.ToInt32(textBoxBuscarUsuario.Text));
+                        break;
+                    case 1:
+                        usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorNome(textBoxBuscarUsuario.Text);
+                        break;
+                    case 2:
+                        usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorCPF(textBoxBuscarUsuario.Text);
+                        break;
+                    case 3:
+                        usuarioBindingSource.DataSource = new UsuarioBLL().BuscarTodos();
+                        break;
+                    default:
+                        break;
+                }
             }
             catch (Exception ex)
             {
