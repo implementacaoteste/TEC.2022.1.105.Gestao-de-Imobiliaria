@@ -133,13 +133,13 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Vendas(IDVenda, IDTerreno, IDCliente, IDCorretor) VALUES(@IDVenda, @IDTerreno, @IDCliente, @IDCorretor)";
+                cmd.CommandText = @"INSERT INTO Vendas( IDTerreno, IDCliente, IDCorretor) VALUES( @IDTerreno, @IDCliente, @IDCorretor)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@IDVenda", _vendas.IDVenda);
+               
                 cmd.Parameters.AddWithValue("@IDTerreno", _vendas.IDTerreno);
-                cmd.Parameters.AddWithValue("IDCliente", _vendas.Cliente.Id);
-                cmd.Parameters.AddWithValue("IDCorretor", _vendas.IDCorretor);
+                cmd.Parameters.AddWithValue("@IDCliente", _vendas.Cliente.Id);
+                cmd.Parameters.AddWithValue("@IDCorretor", _vendas.IDCorretor);
 
                 cmd.Connection = cn;
                 cn.Open();

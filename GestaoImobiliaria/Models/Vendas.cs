@@ -27,6 +27,15 @@ namespace Models
         public int IDEmpreendimento { get; set; }
 
 
+
         public Cliente Cliente { get; set; }
+
+
+
+        public Corretor Corretor { get; set; }
+
+
+
+        public Terreno Terreno { get; set; }
     }
 }
