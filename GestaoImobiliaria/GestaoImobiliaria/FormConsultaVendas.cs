@@ -42,9 +42,9 @@ namespace LocacaoLaboratorio
                         vendasBindingSource.DataSource = new VendasBLL().BuscarTodos();
                         break;
                     case 4:
-                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorData();
                         break;
                     default:
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarTodos();
                         break;
                 }
             }
@@ -89,7 +89,7 @@ namespace LocacaoLaboratorio
 
         private void buttonInserirVenda_Click(object sender, EventArgs e)
         {
-             try
+            try
             {
                 using (FormCadastroVendas frm = new FormCadastroVendas())
                 {
@@ -150,6 +150,12 @@ namespace LocacaoLaboratorio
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FormConsultaVendas_Load(object sender, EventArgs e)
+        {
+            comboBoxBuscarPor.SelectedIndex = 5;
+            buttonBuscarVenda_Click(sender, e);
         }
     }
 }

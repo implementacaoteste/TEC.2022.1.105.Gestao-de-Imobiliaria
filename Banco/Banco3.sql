@@ -200,8 +200,6 @@ CREATE TABLE [dbo].[Vendas](
 	[IDTerreno] [int] NOT NULL,
 	[IDCliente] [int] NOT NULL,
 	[IDCorretor] [int] NOT NULL,
-	[IDEmpreendimento] [int] NOT NULL,
-	[DataVenda] [date] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[IDVenda] ASC

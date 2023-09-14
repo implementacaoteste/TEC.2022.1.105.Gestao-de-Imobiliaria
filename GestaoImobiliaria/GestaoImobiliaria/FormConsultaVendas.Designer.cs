@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.vendasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelConsultaVendas = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonBuscarVenda = new System.Windows.Forms.Button();
@@ -45,83 +40,65 @@
             this.buttonSelecionarVenda = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeEmpreendimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeCorretor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.vendasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // vendasDataGridView
             // 
+            this.vendasDataGridView.AllowUserToAddRows = false;
+            this.vendasDataGridView.AllowUserToDeleteRows = false;
+            this.vendasDataGridView.AllowUserToOrderColumns = true;
+            this.vendasDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.vendasDataGridView.AutoGenerateColumns = false;
             this.vendasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vendasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.NomeEmpreendimento,
+            this.Endereco,
+            this.NomeCliente,
+            this.NomeCorretor});
             this.vendasDataGridView.DataSource = this.vendasBindingSource;
             this.vendasDataGridView.Location = new System.Drawing.Point(12, 130);
             this.vendasDataGridView.Name = "vendasDataGridView";
+            this.vendasDataGridView.ReadOnly = true;
             this.vendasDataGridView.RowHeadersWidth = 51;
             this.vendasDataGridView.RowTemplate.Height = 24;
-            this.vendasDataGridView.Size = new System.Drawing.Size(776, 269);
+            this.vendasDataGridView.Size = new System.Drawing.Size(1306, 426);
             this.vendasDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDVenda";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IDVenda";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "IDTerreno";
-            this.dataGridViewTextBoxColumn2.HeaderText = "IDTerreno";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "IDCliente";
-            this.dataGridViewTextBoxColumn3.HeaderText = "IDCliente";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "IDCorretor";
-            this.dataGridViewTextBoxColumn4.HeaderText = "IDCorretor";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // vendasBindingSource
-            // 
-            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
             // 
             // labelConsultaVendas
             // 
-            this.labelConsultaVendas.AutoSize = true;
+            this.labelConsultaVendas.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelConsultaVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConsultaVendas.Location = new System.Drawing.Point(305, 9);
+            this.labelConsultaVendas.Location = new System.Drawing.Point(0, 0);
             this.labelConsultaVendas.Name = "labelConsultaVendas";
-            this.labelConsultaVendas.Size = new System.Drawing.Size(221, 31);
+            this.labelConsultaVendas.Size = new System.Drawing.Size(1330, 31);
             this.labelConsultaVendas.TabIndex = 2;
             this.labelConsultaVendas.Text = "Consulta Vendas";
+            this.labelConsultaVendas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(131, 102);
+            this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxBuscar.Location = new System.Drawing.Point(230, 102);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(305, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(736, 22);
             this.textBoxBuscar.TabIndex = 3;
             // 
             // buttonBuscarVenda
             // 
-            this.buttonBuscarVenda.Location = new System.Drawing.Point(451, 101);
+            this.buttonBuscarVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBuscarVenda.Location = new System.Drawing.Point(981, 101);
             this.buttonBuscarVenda.Name = "buttonBuscarVenda";
             this.buttonBuscarVenda.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscarVenda.TabIndex = 4;
@@ -131,7 +108,8 @@
             // 
             // buttonAlterarVenda
             // 
-            this.buttonAlterarVenda.Location = new System.Drawing.Point(532, 101);
+            this.buttonAlterarVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAlterarVenda.Location = new System.Drawing.Point(1062, 101);
             this.buttonAlterarVenda.Name = "buttonAlterarVenda";
             this.buttonAlterarVenda.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterarVenda.TabIndex = 5;
@@ -141,7 +119,8 @@
             // 
             // buttonInserirVenda
             // 
-            this.buttonInserirVenda.Location = new System.Drawing.Point(613, 102);
+            this.buttonInserirVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInserirVenda.Location = new System.Drawing.Point(1143, 102);
             this.buttonInserirVenda.Name = "buttonInserirVenda";
             this.buttonInserirVenda.Size = new System.Drawing.Size(75, 23);
             this.buttonInserirVenda.TabIndex = 6;
@@ -151,7 +130,8 @@
             // 
             // buttonExcluirVenda
             // 
-            this.buttonExcluirVenda.Location = new System.Drawing.Point(694, 101);
+            this.buttonExcluirVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExcluirVenda.Location = new System.Drawing.Point(1224, 101);
             this.buttonExcluirVenda.Name = "buttonExcluirVenda";
             this.buttonExcluirVenda.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluirVenda.TabIndex = 7;
@@ -161,15 +141,24 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.FormattingEnabled = true;
+            this.comboBoxBuscarPor.Items.AddRange(new object[] {
+            "Nome do cliente",
+            "Nome do corretor",
+            "Nome do empreendimento",
+            "Endereço",
+            "Id",
+            "Todos"});
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 100);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(113, 24);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(212, 24);
             this.comboBoxBuscarPor.TabIndex = 8;
             // 
             // buttonSelecionarVenda
             // 
-            this.buttonSelecionarVenda.Location = new System.Drawing.Point(602, 415);
+            this.buttonSelecionarVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSelecionarVenda.Location = new System.Drawing.Point(1132, 572);
             this.buttonSelecionarVenda.Name = "buttonSelecionarVenda";
             this.buttonSelecionarVenda.Size = new System.Drawing.Size(86, 23);
             this.buttonSelecionarVenda.TabIndex = 9;
@@ -179,8 +168,9 @@
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(702, 415);
+            this.buttonCancelar.Location = new System.Drawing.Point(1232, 572);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(86, 23);
             this.buttonCancelar.TabIndex = 10;
@@ -192,15 +182,64 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 11;
-            this.label1.Text = "BuscarPor";
+            this.label1.Text = "Buscar por";
+            // 
+            // vendasBindingSource
+            // 
+            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDVenda";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // NomeEmpreendimento
+            // 
+            this.NomeEmpreendimento.DataPropertyName = "NomeEmpreendimento";
+            this.NomeEmpreendimento.HeaderText = "Empreendimento";
+            this.NomeEmpreendimento.MinimumWidth = 6;
+            this.NomeEmpreendimento.Name = "NomeEmpreendimento";
+            this.NomeEmpreendimento.ReadOnly = true;
+            this.NomeEmpreendimento.Width = 200;
+            // 
+            // Endereco
+            // 
+            this.Endereco.DataPropertyName = "Endereco";
+            this.Endereco.HeaderText = "Endereço";
+            this.Endereco.MinimumWidth = 6;
+            this.Endereco.Name = "Endereco";
+            this.Endereco.ReadOnly = true;
+            this.Endereco.Width = 200;
+            // 
+            // NomeCliente
+            // 
+            this.NomeCliente.DataPropertyName = "NomeCliente";
+            this.NomeCliente.HeaderText = "Cliente";
+            this.NomeCliente.MinimumWidth = 6;
+            this.NomeCliente.Name = "NomeCliente";
+            this.NomeCliente.ReadOnly = true;
+            this.NomeCliente.Width = 200;
+            // 
+            // NomeCorretor
+            // 
+            this.NomeCorretor.DataPropertyName = "NomeCorretor";
+            this.NomeCorretor.HeaderText = "Corretor";
+            this.NomeCorretor.MinimumWidth = 6;
+            this.NomeCorretor.Name = "NomeCorretor";
+            this.NomeCorretor.ReadOnly = true;
+            this.NomeCorretor.Width = 200;
             // 
             // FormConsultaVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1330, 607);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSelecionarVenda);
@@ -212,8 +251,11 @@
             this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.labelConsultaVendas);
             this.Controls.Add(this.vendasDataGridView);
+            this.MinimizeBox = false;
             this.Name = "FormConsultaVendas";
-            this.Text = "FormConsultaVendas";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormConsultaVendas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vendasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -225,10 +267,6 @@
 
         private System.Windows.Forms.BindingSource vendasBindingSource;
         private System.Windows.Forms.DataGridView vendasDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label labelConsultaVendas;
         private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.Button buttonBuscarVenda;
@@ -239,5 +277,10 @@
         private System.Windows.Forms.Button buttonSelecionarVenda;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeEmpreendimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Endereco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeCorretor;
     }
 }

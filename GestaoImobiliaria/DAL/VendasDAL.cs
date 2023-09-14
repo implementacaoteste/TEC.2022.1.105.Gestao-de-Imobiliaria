@@ -59,7 +59,9 @@ namespace DAL
 
                 List<Vendas> vendasList = new List<Vendas>();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDVenda, IDTerreno, IDCliente, IDCorretor, Nome FROM Vendas";
+                cmd.CommandText = @"SELECT Vendas.IDVenda, Vendas.IDTerreno, Vendas.IDCliente, Vendas.IDCorretor, Terrenos.Endereco FROM Vendas
+                                    INNER JOIN Terrenos ON Vendas.IDTerreno = Terrenos.IDTerreno";
+
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -73,7 +75,7 @@ namespace DAL
                         vendas.IDCliente = (int)rd["IDCliente"];
                         vendas.IDCorretor = (int)rd["IDCorretor"]; ;
                         vendas.Cliente = new ClienteDAL().BuscarPorId((int)rd["IDCliente"]);
-
+                        vendas.Terreno = new TerrenoDAL().BuscarPorId((int)rd["IDTerreno"]);
                         vendasList.Add(vendas);
                     }
                 }
@@ -133,13 +135,13 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Vendas(IDVenda, IDTerreno, IDCliente, IDCorretor) VALUES(@IDVenda, @IDTerreno, @IDCliente, @IDCorretor)";
+                cmd.CommandText = @"INSERT INTO Vendas(IDTerreno, IDCliente, IDCorretor) VALUES(@IDTerreno, @IDCliente, @IDCorretor)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@IDVenda", _vendas.IDVenda);
-                cmd.Parameters.AddWithValue("@IDTerreno", _vendas.IDTerreno);
+                
+                cmd.Parameters.AddWithValue("@IDTerreno", _vendas.Terreno.IdTerreno);
                 cmd.Parameters.AddWithValue("@IDCliente", _vendas.Cliente.Id);
-                cmd.Parameters.AddWithValue("@IDCorretor", _vendas.IDCorretor);
+                cmd.Parameters.AddWithValue("@IDCorretor", _vendas.Corretor.IdCorretor);
 
                 cmd.Connection = cn;
                 cn.Open();

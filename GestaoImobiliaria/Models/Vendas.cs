@@ -26,8 +26,34 @@ namespace Models
 
         public int IDEmpreendimento { get; set; }
 
-
-
+        public string Endereco
+        {
+            get
+            {
+                return Terreno.Endereco;
+            }
+        }
+        public string NomeCliente
+        {
+            get
+            {
+                return Cliente.Nome;
+            }
+        }
+        public string NomeCorretor
+        {
+            get
+            {
+                return Corretor != null ? Corretor.Nome : "";
+            }
+        }
+        public string NomeEmpreendimento
+        {
+            get
+            {
+                return Terreno.Empreendimento.Nome;
+            }
+        }
         public Cliente Cliente { get; set; }
 
 
