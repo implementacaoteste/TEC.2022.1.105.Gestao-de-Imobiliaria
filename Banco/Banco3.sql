@@ -257,11 +257,8 @@ REFERENCES [dbo].[Terrenos] ([IDTerreno])
 GO
 ALTER TABLE [dbo].[Vendas] CHECK CONSTRAINT [FK_Vendas_Terrenos]
 GO
-ALTER TABLE [dbo].[Vendas]  WITH CHECK ADD  CONSTRAINT [FK_Vendas_Empreendimentos] FOREIGN KEY([IDEmpreendimento])
-REFERENCES [dbo].[Empreendimentos] ([IDEmpreendimento])
-GO
-ALTER TABLE [dbo].[Vendas] CHECK CONSTRAINT [FK_Vendas_Empreendimentos]
-GO
+
+
 USE [Imobiliaria]
 GO
 ALTER DATABASE [Imobiliaria] SET  READ_WRITE 
