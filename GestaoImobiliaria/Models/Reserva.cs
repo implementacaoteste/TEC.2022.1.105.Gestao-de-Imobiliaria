@@ -10,5 +10,17 @@ namespace Models
         public DateTime DataReserva { get; set; }
         public Corretor Corretor { get; set; }
         public Terreno Terreno { get; set; }
+        public string NomeCorretor
+        {
+            get { return this.Corretor.Nome; }
+        }
+        public string TerrenoDescricao
+        {
+            get
+            {
+                return $"Endereço: {this.Terreno.Endereco} Matrícula: {this.Terreno.Matricula}";
+            }
+        }
+
     }
 }

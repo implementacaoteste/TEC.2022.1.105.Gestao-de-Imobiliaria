@@ -116,9 +116,11 @@
             // 
             // totalTerrenosTextBox
             // 
+            this.totalTerrenosTextBox.BackColor = System.Drawing.Color.White;
             this.totalTerrenosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empreendimentosBindingSource, "TotalTerrenos", true));
             this.totalTerrenosTextBox.Location = new System.Drawing.Point(448, 193);
             this.totalTerrenosTextBox.Name = "totalTerrenosTextBox";
+            this.totalTerrenosTextBox.ReadOnly = true;
             this.totalTerrenosTextBox.Size = new System.Drawing.Size(138, 22);
             this.totalTerrenosTextBox.TabIndex = 6;
             // 

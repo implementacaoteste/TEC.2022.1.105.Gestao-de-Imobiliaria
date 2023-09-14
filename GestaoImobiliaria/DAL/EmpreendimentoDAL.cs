@@ -19,7 +19,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos WHERE CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel";
+                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.TamanhoArea, Empreendimentos.Nome FROM Empreendimentos
+                                    INNER JOIN
+                                    (SELECT IDEmpreendimento, COUNT(IDEmpreendimento) AS TotalTerrenos FROM Terrenos GROUP BY IDEmpreendimento) AS Terrenos
+                                    ON Empreendimentos.IDEmpreendimento = Terrenos.IDEmpreendimento 
+
+                                    WHERE Empreendimentos.CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _CNPJEmpresaResponsavel);
 
@@ -63,7 +68,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos WHERE IDEmpreendimento = @Id";
+                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.TamanhoArea, Empreendimentos.Nome FROM Empreendimentos
+                                    INNER JOIN
+                                    (SELECT IDEmpreendimento, COUNT(IDEmpreendimento) AS TotalTerrenos FROM Terrenos GROUP BY IDEmpreendimento) AS Terrenos
+                                    ON Empreendimentos.IDEmpreendimento = Terrenos.IDEmpreendimento 
+
+                                    WHERE Empreendimentos.IDEmpreendimento = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -103,10 +113,9 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Empreendimentos(TotalTerrenos, CNPJEmpresaResponsavel, TamanhoArea, Nome) VALUES(@TotalTerrenos, @CNPJEmpresaResponsavel, @TamanhoArea, @Nome)";
+                cmd.CommandText = @"INSERT INTO Empreendimentos(CNPJEmpresaResponsavel, TamanhoArea, Nome) VALUES(@CNPJEmpresaResponsavel, @TamanhoArea, @Nome)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
                 cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _empreendimentos.CNPJEmpresaResponsavel);
                 cmd.Parameters.AddWithValue("@TamanhoArea", _empreendimentos.TamanhoArea);
                 cmd.Parameters.AddWithValue("@Nome", _empreendimentos.Nome);
@@ -172,7 +181,6 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE Empreendimentos SET
-                                    TotalTerrenos = @TotalTerrenos,
                                     CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel,
                                     TamanhoArea = @TamanhoArea,
                                     Nome = @Nome
@@ -180,7 +188,6 @@ namespace DAL
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@IDEmpreendimento", _empreendimentos.IDEmpreendimento);
-                cmd.Parameters.AddWithValue("@TotalTerrenos", _empreendimentos.TotalTerrenos);
                 cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _empreendimentos.CNPJEmpresaResponsavel);
                 cmd.Parameters.AddWithValue("@TamanhoArea", _empreendimentos.TamanhoArea);
                 cmd.Parameters.AddWithValue("@Nome", _empreendimentos.Nome);
@@ -213,7 +220,11 @@ namespace DAL
 
                 List<Empreendimentos> empreendimentosList = new List<Empreendimentos>();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos,CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos";
+                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.TamanhoArea, Empreendimentos.Nome FROM Empreendimentos
+                                    INNER JOIN
+                                    (SELECT IDEmpreendimento, COUNT(IDEmpreendimento) AS TotalTerrenos FROM Terrenos GROUP BY IDEmpreendimento) AS Terrenos
+                                    ON Empreendimentos.IDEmpreendimento = Terrenos.IDEmpreendimento 
+                                    ";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -257,7 +268,13 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT IDEmpreendimento, TotalTerrenos,CNPJEmpresaResponsavel, TamanhoArea, Nome FROM Empreendimentos WHERE Nome LIKE @Nome";
+                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.TamanhoArea, Empreendimentos.Nome FROM Empreendimentos
+                                    INNER JOIN
+                                    (SELECT IDEmpreendimento, COUNT(IDEmpreendimento) AS TotalTerrenos FROM Terrenos GROUP BY IDEmpreendimento) AS Terrenos
+                                    ON Empreendimentos.IDEmpreendimento = Terrenos.IDEmpreendimento 
+
+                                    WHERE Empreendimentos.Nome LIKE @Nome";
+
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
