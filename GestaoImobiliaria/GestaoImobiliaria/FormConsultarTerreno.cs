@@ -129,6 +129,19 @@ namespace LocacaoLaboratorio
             }
         }
 
-
+        private void buttonReserva_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormBuscarReserva frm = new FormBuscarReserva())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
