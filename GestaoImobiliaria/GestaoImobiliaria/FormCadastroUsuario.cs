@@ -70,5 +70,10 @@ namespace LocacaoLaboratorio
             if (e.KeyCode == Keys.Escape)
                 Close();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

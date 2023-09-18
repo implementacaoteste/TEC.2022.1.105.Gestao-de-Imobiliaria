@@ -281,5 +281,14 @@
   <ItemGroup>
     <None Include="Resources\Imagem Tela Inicial 4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto de Fundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto de fundo 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto de fundo 21.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
