@@ -63,6 +63,16 @@ namespace LocacaoLaboratorio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Imagem_Tela_Inicial_4 {
+            get {
+                object obj = ResourceManager.GetObject("Imagem Tela Inicial 4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pesquisa_de_lupa {
             get {
                 object obj = ResourceManager.GetObject("pesquisa-de-lupa", resourceCulture);

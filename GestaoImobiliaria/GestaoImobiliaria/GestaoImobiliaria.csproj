@@ -278,5 +278,8 @@
   <ItemGroup>
     <None Include="Resources\pesquisa-de-lupa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem Tela Inicial 4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
