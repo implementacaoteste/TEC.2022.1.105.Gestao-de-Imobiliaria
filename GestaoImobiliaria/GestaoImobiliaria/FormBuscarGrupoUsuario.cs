@@ -144,5 +144,10 @@ namespace LocacaoLaboratorio
             if (e.KeyCode == Keys.Enter)
                 buttonBuscar_Click(null, null);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
