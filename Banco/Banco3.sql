@@ -357,3 +357,14 @@ Values (4, 1800, 180, 40, 40, 800, 'Rua Principal', '4444444', '50', '50', 1, 0,
 
 go
 
+Alter table Terrenos add Status_Terrenos int;
+
+Create table Status_Terrenos 
+( 
+Id int identity primary key,
+Status_Atual varchar(200)
+);
+
+Alter table Terrenos add constraint [FK_Terrenos_StatusTerrenos] foreign key(Status_Terrenos)
+References Status_Terrenos (Id)
+
