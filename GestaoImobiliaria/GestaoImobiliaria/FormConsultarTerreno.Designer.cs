@@ -42,6 +42,8 @@ namespace LocacaoLaboratorio
             this.buttonSelecionar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.terrenoDataGridView = new System.Windows.Forms.DataGridView();
+            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonReservar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Esquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,8 +58,6 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonReserva = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -143,7 +143,8 @@ namespace LocacaoLaboratorio
             // 
             // buttonSelecionar
             // 
-            this.buttonSelecionar.Location = new System.Drawing.Point(875, 396);
+            this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSelecionar.Location = new System.Drawing.Point(875, 408);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(91, 23);
             this.buttonSelecionar.TabIndex = 10;
@@ -155,7 +156,7 @@ namespace LocacaoLaboratorio
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(972, 396);
+            this.buttonCancelar.Location = new System.Drawing.Point(972, 408);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(91, 23);
             this.buttonCancelar.TabIndex = 11;
@@ -195,6 +196,20 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.RowTemplate.Height = 24;
             this.terrenoDataGridView.Size = new System.Drawing.Size(1055, 297);
             this.terrenoDataGridView.TabIndex = 11;
+            // 
+            // terrenoBindingSource
+            // 
+            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
+            // 
+            // buttonReservar
+            // 
+            this.buttonReservar.Location = new System.Drawing.Point(879, 64);
+            this.buttonReservar.Name = "buttonReservar";
+            this.buttonReservar.Size = new System.Drawing.Size(75, 23);
+            this.buttonReservar.TabIndex = 12;
+            this.buttonReservar.Text = "&Reservar";
+            this.buttonReservar.UseVisualStyleBackColor = true;
+            this.buttonReservar.Click += new System.EventHandler(this.buttonReserva_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -322,26 +337,12 @@ namespace LocacaoLaboratorio
             this.dataGridViewCheckBoxColumn2.ReadOnly = true;
             this.dataGridViewCheckBoxColumn2.Width = 125;
             // 
-            // terrenoBindingSource
-            // 
-            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
-            // 
-            // buttonReserva
-            // 
-            this.buttonReserva.Location = new System.Drawing.Point(879, 64);
-            this.buttonReserva.Name = "buttonReserva";
-            this.buttonReserva.Size = new System.Drawing.Size(75, 23);
-            this.buttonReserva.TabIndex = 12;
-            this.buttonReserva.Text = "&Reserva";
-            this.buttonReserva.UseVisualStyleBackColor = true;
-            this.buttonReserva.Click += new System.EventHandler(this.buttonReserva_Click);
-            // 
             // FormConsultarTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 431);
-            this.Controls.Add(this.buttonReserva);
+            this.ClientSize = new System.Drawing.Size(1075, 443);
+            this.Controls.Add(this.buttonReservar);
             this.Controls.Add(this.terrenoDataGridView);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSelecionar);
@@ -377,6 +378,7 @@ namespace LocacaoLaboratorio
         private System.Windows.Forms.Button buttonSelecionar;
         private System.Windows.Forms.Button buttonCancelar;
         private DataGridView terrenoDataGridView;
+        private Button buttonReservar;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn Esquina;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -391,6 +393,5 @@ namespace LocacaoLaboratorio
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private Button buttonReserva;
     }
 }
