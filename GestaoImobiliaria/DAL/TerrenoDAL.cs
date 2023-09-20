@@ -26,16 +26,6 @@ namespace DAL
 						@Endereco, @NumeroMatricula, @MetragemEsquerda, @MetragemDireita, @RedeAgua,
 						@RedeEnergia)";
 
-                /*@"INSERT INTO Terrenos (IDTerreno ,IDEmpreendimento,PrecoAVista, PrecoParcelado,
-						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
-						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
-						RedeEnergia) 
-						SELECT ISNULL(MAX(IDTerreno), 0) + 1  ,@IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
-						@MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno, @Esquina,
-						@Endereco, @NumeroMatricula, @MetragemEsquerda, @MetragemDireita, @RedeAgua,
-						@RedeEnergia FROM Terrenos";*/
-
-
                 cmd.CommandType = System.Data.CommandType.Text;
                 //OBS: Só consegui inserir um terreno, quando existe um "Empreendimento" cadastrado
                 //tem que inserir um IdTerreno e um IdEmpreendimento
