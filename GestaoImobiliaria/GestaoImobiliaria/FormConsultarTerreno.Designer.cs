@@ -105,7 +105,7 @@ namespace LocacaoLaboratorio
             // 
             this.buttonBuscar.Location = new System.Drawing.Point(555, 64);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(87, 23);
             this.buttonBuscar.TabIndex = 6;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -113,9 +113,9 @@ namespace LocacaoLaboratorio
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(636, 64);
+            this.buttonAlterar.Location = new System.Drawing.Point(648, 64);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAlterar.Size = new System.Drawing.Size(87, 23);
             this.buttonAlterar.TabIndex = 7;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
@@ -123,9 +123,9 @@ namespace LocacaoLaboratorio
             // 
             // buttonInserir
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(717, 64);
+            this.buttonInserir.Location = new System.Drawing.Point(741, 64);
             this.buttonInserir.Name = "buttonInserir";
-            this.buttonInserir.Size = new System.Drawing.Size(75, 23);
+            this.buttonInserir.Size = new System.Drawing.Size(87, 23);
             this.buttonInserir.TabIndex = 8;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
@@ -133,9 +133,9 @@ namespace LocacaoLaboratorio
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(798, 64);
+            this.buttonExcluir.Location = new System.Drawing.Point(834, 64);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
+            this.buttonExcluir.Size = new System.Drawing.Size(87, 23);
             this.buttonExcluir.TabIndex = 9;
             this.buttonExcluir.Text = "&Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
@@ -329,7 +329,7 @@ namespace LocacaoLaboratorio
             // 
             // buttonReservar
             // 
-            this.buttonReservar.Location = new System.Drawing.Point(879, 64);
+            this.buttonReservar.Location = new System.Drawing.Point(927, 64);
             this.buttonReservar.Name = "buttonReservar";
             this.buttonReservar.Size = new System.Drawing.Size(87, 23);
             this.buttonReservar.TabIndex = 12;
