@@ -23,5 +23,6 @@ namespace Models
         public bool RedeEnergia { get; set; }
         public string NomeEmpreendimento { get { return this.Empreendimento.Nome; } }
         public Empreendimentos Empreendimento { get; set; }
+        public int IdStatus_Terreno { get; set; }
     }
 }

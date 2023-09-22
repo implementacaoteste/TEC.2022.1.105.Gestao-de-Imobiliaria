@@ -26,7 +26,10 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@IDTerreno", _reserva.Terreno.IdTerreno);
                 cmd.Connection = cn;
                 cn.Open();
-
+                
+                _reserva.Terreno.IdStatus_Terreno = 2;
+                new TerrenoDAL().Alterar(_reserva.Terreno);
+                
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
