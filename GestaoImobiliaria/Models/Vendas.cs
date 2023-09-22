@@ -30,14 +30,14 @@ namespace Models
         {
             get
             {
-                return Terreno.Endereco;
+                return Terreno != null ? Terreno.Endereco : "";
             }
         }
         public string NomeCliente
         {
             get
             {
-                return Cliente.Nome;
+                return Cliente != null ? Cliente.Nome : "";
             }
         }
         public string NomeCorretor

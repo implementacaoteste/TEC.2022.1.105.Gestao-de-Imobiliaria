@@ -175,6 +175,7 @@
             this.buttonInserirVenda.TabIndex = 6;
             this.buttonInserirVenda.Text = "Inserir";
             this.buttonInserirVenda.UseVisualStyleBackColor = true;
+            this.buttonInserirVenda.Click += new System.EventHandler(this.buttonInserirVenda_Click_1);
             // 
             // buttonExcluirVenda
             // 

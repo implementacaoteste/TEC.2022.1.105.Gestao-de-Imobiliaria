@@ -161,5 +161,20 @@ namespace LocacaoLaboratorio
             comboBoxBuscarPor.SelectedIndex = 5;
             buttonBuscarVenda_Click(sender, e);
         }
+
+        private void buttonInserirVenda_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormCadastroVendas frm = new FormCadastroVendas())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
