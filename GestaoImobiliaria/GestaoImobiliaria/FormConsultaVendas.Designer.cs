@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.vendasDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeEmpreendimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeCorretor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelConsultaVendas = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonBuscarVenda = new System.Windows.Forms.Button();
@@ -40,12 +46,6 @@
             this.buttonSelecionarVenda = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeEmpreendimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeCorretor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.vendasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,55 @@
             this.vendasDataGridView.RowTemplate.Height = 24;
             this.vendasDataGridView.Size = new System.Drawing.Size(1306, 426);
             this.vendasDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDVenda";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // NomeEmpreendimento
+            // 
+            this.NomeEmpreendimento.DataPropertyName = "NomeEmpreendimento";
+            this.NomeEmpreendimento.HeaderText = "Empreendimento";
+            this.NomeEmpreendimento.MinimumWidth = 6;
+            this.NomeEmpreendimento.Name = "NomeEmpreendimento";
+            this.NomeEmpreendimento.ReadOnly = true;
+            this.NomeEmpreendimento.Width = 200;
+            // 
+            // Endereco
+            // 
+            this.Endereco.DataPropertyName = "Endereco";
+            this.Endereco.HeaderText = "Endereço";
+            this.Endereco.MinimumWidth = 6;
+            this.Endereco.Name = "Endereco";
+            this.Endereco.ReadOnly = true;
+            this.Endereco.Width = 200;
+            // 
+            // NomeCliente
+            // 
+            this.NomeCliente.DataPropertyName = "NomeCliente";
+            this.NomeCliente.HeaderText = "Cliente";
+            this.NomeCliente.MinimumWidth = 6;
+            this.NomeCliente.Name = "NomeCliente";
+            this.NomeCliente.ReadOnly = true;
+            this.NomeCliente.Width = 200;
+            // 
+            // NomeCorretor
+            // 
+            this.NomeCorretor.DataPropertyName = "NomeCorretor";
+            this.NomeCorretor.HeaderText = "Corretor";
+            this.NomeCorretor.MinimumWidth = 6;
+            this.NomeCorretor.Name = "NomeCorretor";
+            this.NomeCorretor.ReadOnly = true;
+            this.NomeCorretor.Width = 200;
+            // 
+            // vendasBindingSource
+            // 
+            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
             // 
             // labelConsultaVendas
             // 
@@ -126,7 +175,6 @@
             this.buttonInserirVenda.TabIndex = 6;
             this.buttonInserirVenda.Text = "Inserir";
             this.buttonInserirVenda.UseVisualStyleBackColor = true;
-            this.buttonInserirVenda.Click += new System.EventHandler(this.buttonInserirVenda_Click);
             // 
             // buttonExcluirVenda
             // 
@@ -144,11 +192,11 @@
             this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
-            "Nome do cliente",
-            "Nome do corretor",
-            "Nome do empreendimento",
+            "ID",
+            "Nome Cliente",
+            "Nome Corretor",
+            "Nome Empreendimento",
             "Endereço",
-            "Id",
             "Todos"});
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 100);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
@@ -185,55 +233,6 @@
             this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar por";
-            // 
-            // vendasBindingSource
-            // 
-            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDVenda";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // NomeEmpreendimento
-            // 
-            this.NomeEmpreendimento.DataPropertyName = "NomeEmpreendimento";
-            this.NomeEmpreendimento.HeaderText = "Empreendimento";
-            this.NomeEmpreendimento.MinimumWidth = 6;
-            this.NomeEmpreendimento.Name = "NomeEmpreendimento";
-            this.NomeEmpreendimento.ReadOnly = true;
-            this.NomeEmpreendimento.Width = 200;
-            // 
-            // Endereco
-            // 
-            this.Endereco.DataPropertyName = "Endereco";
-            this.Endereco.HeaderText = "Endereço";
-            this.Endereco.MinimumWidth = 6;
-            this.Endereco.Name = "Endereco";
-            this.Endereco.ReadOnly = true;
-            this.Endereco.Width = 200;
-            // 
-            // NomeCliente
-            // 
-            this.NomeCliente.DataPropertyName = "NomeCliente";
-            this.NomeCliente.HeaderText = "Cliente";
-            this.NomeCliente.MinimumWidth = 6;
-            this.NomeCliente.Name = "NomeCliente";
-            this.NomeCliente.ReadOnly = true;
-            this.NomeCliente.Width = 200;
-            // 
-            // NomeCorretor
-            // 
-            this.NomeCorretor.DataPropertyName = "NomeCorretor";
-            this.NomeCorretor.HeaderText = "Corretor";
-            this.NomeCorretor.MinimumWidth = 6;
-            this.NomeCorretor.Name = "NomeCorretor";
-            this.NomeCorretor.ReadOnly = true;
-            this.NomeCorretor.Width = 200;
             // 
             // FormConsultaVendas
             // 

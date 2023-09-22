@@ -16,16 +16,10 @@ namespace BLL
         }
 
 
-
-
-
         public void Alterar(Vendas _vendas)
         {
             new VendasDAL().Alterar(_vendas);
         }
-
-
-
 
 
         public void Excluir(int _id)
@@ -34,34 +28,10 @@ namespace BLL
         }
 
 
-
-
-
         public List<Vendas> BuscarTodos()
         {
             return new VendasDAL().BuscarTodos();
         }
-
-
-
-
-
-        public Vendas BuscarPorCorretor(int _idcorretor)
-        {
-            return new VendasDAL().BuscarPorCorretor(_idcorretor);
-        }
-
-
-
-
-
-        public Vendas BuscarPorCliente(int _idcliente)
-        {
-            return new VendasDAL().BuscarPorCliente(_idcliente);
-        }
-
-
-
 
 
         public List<Vendas> BuscarPorData()
@@ -70,21 +40,30 @@ namespace BLL
         }
 
 
-
-
-
-        public Vendas BuscarPorId(int _id)
+        public Vendas BuscarPorIdVendas(int _id)
         {
-            return new VendasDAL().BuscarPorId(_id);
+            return new VendasDAL().BuscarPorIdVendas(_id);
         }
 
 
-
-
-
-        public Vendas BuscarPorEmpreendimento(int _idempreendimento)
+        public List<Vendas> BuscarPorNomeCliente(string _nomeCliente)
         {
-            return new VendasDAL().BuscarPorEmpreendimento(_idempreendimento);
+            return new VendasDAL().BuscarPorNomeCliente(_nomeCliente);
+        }
+
+        public object BuscarPorNomeCorretor(string _nomeCorretor)
+        {
+            return new VendasDAL().BuscarPorNomeCorretor(_nomeCorretor);
+        }
+
+        public object BuscarPorNomeEmpreendimento(string _nomeEmpreendimento)
+        {
+            return new VendasDAL().BuscarPorNomeEmpreendimento(_nomeEmpreendimento);
+        }
+
+        public object BuscarPorEnderecoTerreno(string _enderecoTerreno)
+        {
+            return new VendasDAL().BuscarPorEnderecoTerreno(_enderecoTerreno);
         }
     }
 }

@@ -36,12 +36,12 @@
             this.buttonSalvarVenda = new System.Windows.Forms.Button();
             this.buttonCancelarCadVenda = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.buttonBuscarCliente = new System.Windows.Forms.Button();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.buttonBuscarCorretor = new System.Windows.Forms.Button();
             this.buttonBuscarTerreno = new System.Windows.Forms.Button();
-            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             iDCorretorLabel = new System.Windows.Forms.Label();
             Terreno = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
@@ -107,15 +107,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "IDEmpreendimento", true));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "NomeCorretor", true));
             this.textBox1.Location = new System.Drawing.Point(88, 172);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 22);
             this.textBox1.TabIndex = 14;
             // 
+            // vendasBindingSource
+            // 
+            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
+            // 
             // textBox2
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "IDEmpreendimento", true));
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "Endereco", true));
             this.textBox2.Location = new System.Drawing.Point(429, 96);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(166, 22);
@@ -133,7 +137,7 @@
             // 
             // nomeTextBox
             // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "Cliente.Nome", true));
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "NomeCliente", true));
             this.nomeTextBox.Location = new System.Drawing.Point(88, 93);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(166, 22);
@@ -158,10 +162,6 @@
             this.buttonBuscarTerreno.Text = "...";
             this.buttonBuscarTerreno.UseVisualStyleBackColor = true;
             this.buttonBuscarTerreno.Click += new System.EventHandler(this.buttonBuscarTerreno_Click);
-            // 
-            // vendasBindingSource
-            // 
-            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
             // 
             // FormCadastroVendas
             // 

@@ -26,22 +26,26 @@ namespace LocacaoLaboratorio
             {
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
-                    case 0:
+                    case 0: 
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
-                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 2438 } } };
+                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 1238 } } };
 
-                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorIdVendas(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
-                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorCorretor(Convert.ToInt32(textBoxBuscar.Text));
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorNomeCliente(textBoxBuscar.Text);
                         break;
                     case 2:
-                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorCliente(Convert.ToInt32(textBoxBuscar.Text));
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorNomeCorretor(textBoxBuscar.Text);
                         break;
                     case 3:
-                        vendasBindingSource.DataSource = new VendasBLL().BuscarTodos();
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorNomeEmpreendimento(textBoxBuscar.Text);
                         break;
                     case 4:
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarPorEnderecoTerreno(textBoxBuscar.Text);
+                        break;
+                    case 5:
+                        vendasBindingSource.DataSource = new VendasBLL().BuscarTodos();
                         break;
                     default:
                         vendasBindingSource.DataSource = new VendasBLL().BuscarTodos();
@@ -65,7 +69,7 @@ namespace LocacaoLaboratorio
             {
                 if (vendasBindingSource.Count == 0)
                 {
-                    MessageBox.Show("Não existe empreendimento para ser alterado.");
+                    MessageBox.Show("Não existe Vendas para ser alterada.");
                     return;
                 }
 

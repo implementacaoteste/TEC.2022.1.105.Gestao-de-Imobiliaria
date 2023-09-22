@@ -30,7 +30,7 @@ namespace LocacaoLaboratorio
             if (id == 0)
                 vendasBindingSource.AddNew();
             else
-                vendasBindingSource.DataSource = new VendasBLL().BuscarPorId(id);
+                vendasBindingSource.DataSource = new VendasBLL().BuscarPorIdVendas(id);
         }
 
 
@@ -39,24 +39,28 @@ namespace LocacaoLaboratorio
 
         private void buttonSalvarVenda_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Vendas vendas = (Vendas)vendasBindingSource.Current;
+            
+                try
+                {
+                    Vendas vendas = (Vendas)vendasBindingSource.Current;
 
-                vendasBindingSource.EndEdit();
+                    vendasBindingSource.EndEdit();
 
-                if (id == 0)
-                    new VendasBLL().Inserir(vendas);
-                else
-                    new VendasBLL().Alterar(vendas);
+                    if (id == 0)
+                        new VendasBLL().Inserir(vendas);
+                    else
+                        new VendasBLL().Alterar(vendas);
 
-                MessageBox.Show("Registro salvo com sucesso!");
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                    MessageBox.Show("Registro salvo com sucesso!");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            
+            
         }
 
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
