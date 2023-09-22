@@ -20,11 +20,11 @@ namespace DAL
                 cmd.CommandText = @"INSERT INTO Terrenos (IDEmpreendimento,PrecoAVista, PrecoParcelado,
 						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
-						RedeEnergia) 
+						RedeEnergia, IdStatus_Terrenos) 
 						VALUES(@IDEmpreendimento, @PrecoAVista, @PrecoParcelado,
 						@MetragemFrente, @MetragemFundo, @TamanhoTotalTerreno, @Esquina,
 						@Endereco, @NumeroMatricula, @MetragemEsquerda, @MetragemDireita, @RedeAgua,
-						@RedeEnergia)";
+						@RedeEnergia, 1)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 //OBS: Só consegui inserir um terreno, quando existe um "Empreendimento" cadastrado
@@ -43,6 +43,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@MetragemDireita", _terreno.MetragemDireita);
                 cmd.Parameters.AddWithValue("@RedeAgua", _terreno.RedeAgua);
                 cmd.Parameters.AddWithValue("@RedeEnergia", _terreno.RedeEnergia);
+
 
                 cmd.Connection = cn;
                 cn.Open();

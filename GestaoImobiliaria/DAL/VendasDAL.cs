@@ -133,6 +133,8 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@IDCliente", _vendas.Cliente.Id);
                 cmd.Parameters.AddWithValue("@IDCorretor", _vendas.Corretor.IdCorretor);
 
+                _vendas.Terreno.IdStatus_Terreno = 3;
+                new TerrenoDAL().Alterar(_vendas.Terreno);
                 cmd.Connection = cn;
                 cn.Open();
 
