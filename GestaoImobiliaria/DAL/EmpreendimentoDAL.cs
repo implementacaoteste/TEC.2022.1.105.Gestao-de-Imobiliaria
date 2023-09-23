@@ -36,7 +36,6 @@ namespace DAL
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
                         empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
-                        empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
 
 
@@ -85,7 +84,6 @@ namespace DAL
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
                         empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
-                        empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
 
 
@@ -113,11 +111,10 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Empreendimentos(CNPJEmpresaResponsavel, TamanhoArea, Nome) VALUES(@CNPJEmpresaResponsavel, @TamanhoArea, @Nome)";
+                cmd.CommandText = @"INSERT INTO Empreendimentos(CNPJEmpresaResponsavel, Nome) VALUES(@CNPJEmpresaResponsavel, @Nome)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _empreendimentos.CNPJEmpresaResponsavel);
-                cmd.Parameters.AddWithValue("@TamanhoArea", _empreendimentos.TamanhoArea);
                 cmd.Parameters.AddWithValue("@Nome", _empreendimentos.Nome);
 
                 cmd.Connection = cn;
@@ -189,7 +186,6 @@ namespace DAL
 
                 cmd.Parameters.AddWithValue("@IDEmpreendimento", _empreendimentos.IDEmpreendimento);
                 cmd.Parameters.AddWithValue("@CNPJEmpresaResponsavel", _empreendimentos.CNPJEmpresaResponsavel);
-                cmd.Parameters.AddWithValue("@TamanhoArea", _empreendimentos.TamanhoArea);
                 cmd.Parameters.AddWithValue("@Nome", _empreendimentos.Nome);
 
                 cmd.Connection = cn;
@@ -220,8 +216,10 @@ namespace DAL
 
                 List<Empreendimentos> empreendimentosList = new List<Empreendimentos>();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.TamanhoArea, Empreendimentos.Nome FROM Empreendimentos
-                                    INNER JOIN
+                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, ISNULL(Terrenos.TotalTerrenos, 0) AS TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, 
+                                     Empreendimentos.Nome 
+                                    FROM Empreendimentos
+                                    LEFT JOIN
                                     (SELECT IDEmpreendimento, COUNT(IDEmpreendimento) AS TotalTerrenos FROM Terrenos GROUP BY IDEmpreendimento) AS Terrenos
                                     ON Empreendimentos.IDEmpreendimento = Terrenos.IDEmpreendimento 
                                     ";
@@ -236,7 +234,6 @@ namespace DAL
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
                         empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
-                        empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
 
                         empreendimentosList.Add(empreendimentos);
@@ -287,7 +284,6 @@ namespace DAL
                         empreendimentos.IDEmpreendimento = (int)rd["IDEmpreendimento"];
                         empreendimentos.TotalTerrenos = rd["TotalTerrenos"].ToString();
                         empreendimentos.CNPJEmpresaResponsavel = rd["CNPJEmpresaResponsavel"].ToString();
-                        empreendimentos.TamanhoArea = rd["TamanhoArea"].ToString();
                         empreendimentos.Nome = rd["Nome"].ToString();
 
                         empreendimentosList.Add(empreendimentos);

@@ -31,20 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label cNPJEmpresaResponsavelLabel;
-            System.Windows.Forms.Label totalTerrenosLabel;
-            System.Windows.Forms.Label tamanhoAreaLabel;
             this.labelCadastroEmpreendimentos = new System.Windows.Forms.Label();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.empreendimentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cNPJEmpresaResponsavelTextBox = new System.Windows.Forms.TextBox();
-            this.totalTerrenosTextBox = new System.Windows.Forms.TextBox();
-            this.tamanhoAreaTextBox = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             nomeLabel = new System.Windows.Forms.Label();
             cNPJEmpresaResponsavelLabel = new System.Windows.Forms.Label();
-            totalTerrenosLabel = new System.Windows.Forms.Label();
-            tamanhoAreaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,24 +59,6 @@
             cNPJEmpresaResponsavelLabel.Size = new System.Drawing.Size(184, 16);
             cNPJEmpresaResponsavelLabel.TabIndex = 3;
             cNPJEmpresaResponsavelLabel.Text = "CNPJEmpresa Responsavel:";
-            // 
-            // totalTerrenosLabel
-            // 
-            totalTerrenosLabel.AutoSize = true;
-            totalTerrenosLabel.Location = new System.Drawing.Point(445, 165);
-            totalTerrenosLabel.Name = "totalTerrenosLabel";
-            totalTerrenosLabel.Size = new System.Drawing.Size(99, 16);
-            totalTerrenosLabel.TabIndex = 5;
-            totalTerrenosLabel.Text = "Total Terrenos:";
-            // 
-            // tamanhoAreaLabel
-            // 
-            tamanhoAreaLabel.AutoSize = true;
-            tamanhoAreaLabel.Location = new System.Drawing.Point(34, 165);
-            tamanhoAreaLabel.Name = "tamanhoAreaLabel";
-            tamanhoAreaLabel.Size = new System.Drawing.Size(100, 16);
-            tamanhoAreaLabel.TabIndex = 7;
-            tamanhoAreaLabel.Text = "Tamanho Area:";
             // 
             // labelCadastroEmpreendimentos
             // 
@@ -114,24 +90,6 @@
             this.cNPJEmpresaResponsavelTextBox.Size = new System.Drawing.Size(550, 22);
             this.cNPJEmpresaResponsavelTextBox.TabIndex = 4;
             // 
-            // totalTerrenosTextBox
-            // 
-            this.totalTerrenosTextBox.BackColor = System.Drawing.Color.White;
-            this.totalTerrenosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empreendimentosBindingSource, "TotalTerrenos", true));
-            this.totalTerrenosTextBox.Location = new System.Drawing.Point(448, 193);
-            this.totalTerrenosTextBox.Name = "totalTerrenosTextBox";
-            this.totalTerrenosTextBox.ReadOnly = true;
-            this.totalTerrenosTextBox.Size = new System.Drawing.Size(138, 22);
-            this.totalTerrenosTextBox.TabIndex = 6;
-            // 
-            // tamanhoAreaTextBox
-            // 
-            this.tamanhoAreaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empreendimentosBindingSource, "TamanhoArea", true));
-            this.tamanhoAreaTextBox.Location = new System.Drawing.Point(36, 193);
-            this.tamanhoAreaTextBox.Name = "tamanhoAreaTextBox";
-            this.tamanhoAreaTextBox.Size = new System.Drawing.Size(139, 22);
-            this.tamanhoAreaTextBox.TabIndex = 8;
-            // 
             // buttonSalvar
             // 
             this.buttonSalvar.Location = new System.Drawing.Point(375, 250);
@@ -160,10 +118,6 @@
             this.ClientSize = new System.Drawing.Size(632, 307);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
-            this.Controls.Add(tamanhoAreaLabel);
-            this.Controls.Add(this.tamanhoAreaTextBox);
-            this.Controls.Add(totalTerrenosLabel);
-            this.Controls.Add(this.totalTerrenosTextBox);
             this.Controls.Add(cNPJEmpresaResponsavelLabel);
             this.Controls.Add(this.cNPJEmpresaResponsavelTextBox);
             this.Controls.Add(nomeLabel);
@@ -184,8 +138,6 @@
         private System.Windows.Forms.BindingSource empreendimentosBindingSource;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox cNPJEmpresaResponsavelTextBox;
-        private System.Windows.Forms.TextBox totalTerrenosTextBox;
-        private System.Windows.Forms.TextBox tamanhoAreaTextBox;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
     }

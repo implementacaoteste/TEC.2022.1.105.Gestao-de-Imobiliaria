@@ -17,7 +17,6 @@ namespace Models
         public string CNPJEmpresaResponsavel { get; set; }
 
 
-        public string TamanhoArea { get; set; }
 
 
         public string Nome { get; set; }
