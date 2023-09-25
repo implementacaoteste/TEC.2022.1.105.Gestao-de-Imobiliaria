@@ -143,5 +143,26 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void terrenoDataGridView_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            int idStatus_Terrenos = Convert.ToInt32(terrenoDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn14"].Value);
+
+            switch (idStatus_Terrenos)
+            {
+                case 1:
+                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
+                    break;
+                case 2:
+                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                    break;
+                case 3:
+                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+                    break;
+
+                default:
+                    break;
+            }
+        }
     }
 }

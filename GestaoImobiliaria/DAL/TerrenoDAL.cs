@@ -71,7 +71,7 @@ namespace DAL
                 cmd.CommandText = @"SELECT IDTerreno, IDEmpreendimento, PrecoAVista, PrecoParcelado,
 						MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
 						Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
-						RedeEnergia FROM Terrenos";
+						RedeEnergia, IdStatus_Terrenos FROM Terrenos";
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -94,6 +94,8 @@ namespace DAL
                         terreno.MetragemDireita = (string)rd["MetragemDireita"];
                         terreno.RedeAgua = (bool)rd["RedeAgua"];
                         terreno.RedeEnergia = (bool)rd["RedeEnergia"];
+                        terreno.IdStatus_Terreno = (int)rd["IdStatus_Terrenos"];
+                        terreno.Status_Terreno = new Status_TerrenoDAL().BuscarPorId((int)rd["IdStatus_Terrenos"]);
                         terreno.Empreendimento = new EmpreendimentoDAL().BuscarPorId((int)rd["IdEmpreendimento"]);
                         terrenoList.Add(terreno);
                     }

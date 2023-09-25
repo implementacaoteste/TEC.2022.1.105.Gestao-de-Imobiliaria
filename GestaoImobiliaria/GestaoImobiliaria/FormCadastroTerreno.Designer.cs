@@ -62,6 +62,9 @@
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.buttonBuscarEmpreendimento = new System.Windows.Forms.Button();
+            this.buttonDisponivel = new System.Windows.Forms.Button();
+            this.buttonReservado = new System.Windows.Forms.Button();
+            this.buttonVendido = new System.Windows.Forms.Button();
             enderecoLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
             metragemDireitaLabel = new System.Windows.Forms.Label();
@@ -152,7 +155,7 @@
             // redeAguaLabel
             // 
             redeAguaLabel.AutoSize = true;
-            redeAguaLabel.Location = new System.Drawing.Point(781, 188);
+            redeAguaLabel.Location = new System.Drawing.Point(769, 182);
             redeAguaLabel.Name = "redeAguaLabel";
             redeAguaLabel.Size = new System.Drawing.Size(79, 16);
             redeAguaLabel.TabIndex = 35;
@@ -161,7 +164,7 @@
             // redeEnergiaLabel
             // 
             redeEnergiaLabel.AutoSize = true;
-            redeEnergiaLabel.Location = new System.Drawing.Point(766, 146);
+            redeEnergiaLabel.Location = new System.Drawing.Point(754, 140);
             redeEnergiaLabel.Name = "redeEnergiaLabel";
             redeEnergiaLabel.Size = new System.Drawing.Size(94, 16);
             redeEnergiaLabel.TabIndex = 36;
@@ -207,7 +210,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(757, 248);
+            this.buttonSalvar.Location = new System.Drawing.Point(750, 268);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
@@ -219,7 +222,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(838, 248);
+            this.buttonCancelar.Location = new System.Drawing.Point(831, 268);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
@@ -298,7 +301,7 @@
             // redeAguaCheckBox
             // 
             this.redeAguaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource, "RedeAgua", true));
-            this.redeAguaCheckBox.Location = new System.Drawing.Point(866, 183);
+            this.redeAguaCheckBox.Location = new System.Drawing.Point(854, 177);
             this.redeAguaCheckBox.Name = "redeAguaCheckBox";
             this.redeAguaCheckBox.Size = new System.Drawing.Size(96, 24);
             this.redeAguaCheckBox.TabIndex = 36;
@@ -307,7 +310,7 @@
             // redeEnergiaCheckBox
             // 
             this.redeEnergiaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource, "RedeEnergia", true));
-            this.redeEnergiaCheckBox.Location = new System.Drawing.Point(866, 141);
+            this.redeEnergiaCheckBox.Location = new System.Drawing.Point(854, 135);
             this.redeEnergiaCheckBox.Name = "redeEnergiaCheckBox";
             this.redeEnergiaCheckBox.Size = new System.Drawing.Size(20, 24);
             this.redeEnergiaCheckBox.TabIndex = 37;
@@ -357,11 +360,41 @@
             this.buttonBuscarEmpreendimento.UseVisualStyleBackColor = false;
             this.buttonBuscarEmpreendimento.Click += new System.EventHandler(this.buttonBuscarEmpreendimento_Click_1);
             // 
+            // buttonDisponivel
+            // 
+            this.buttonDisponivel.Location = new System.Drawing.Point(678, 221);
+            this.buttonDisponivel.Name = "buttonDisponivel";
+            this.buttonDisponivel.Size = new System.Drawing.Size(102, 23);
+            this.buttonDisponivel.TabIndex = 43;
+            this.buttonDisponivel.Text = "Disponivel";
+            this.buttonDisponivel.UseVisualStyleBackColor = true;
+            // 
+            // buttonReservado
+            // 
+            this.buttonReservado.Location = new System.Drawing.Point(786, 222);
+            this.buttonReservado.Name = "buttonReservado";
+            this.buttonReservado.Size = new System.Drawing.Size(102, 23);
+            this.buttonReservado.TabIndex = 44;
+            this.buttonReservado.Text = "Reservado";
+            this.buttonReservado.UseVisualStyleBackColor = true;
+            // 
+            // buttonVendido
+            // 
+            this.buttonVendido.Location = new System.Drawing.Point(894, 222);
+            this.buttonVendido.Name = "buttonVendido";
+            this.buttonVendido.Size = new System.Drawing.Size(102, 23);
+            this.buttonVendido.TabIndex = 45;
+            this.buttonVendido.Text = "Vendido";
+            this.buttonVendido.UseVisualStyleBackColor = true;
+            // 
             // FormCadastroTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 350);
+            this.Controls.Add(this.buttonVendido);
+            this.Controls.Add(this.buttonReservado);
+            this.Controls.Add(this.buttonDisponivel);
             this.Controls.Add(this.buttonBuscarEmpreendimento);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
@@ -424,5 +457,8 @@
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button buttonBuscarEmpreendimento;
+        private System.Windows.Forms.Button buttonDisponivel;
+        private System.Windows.Forms.Button buttonReservado;
+        private System.Windows.Forms.Button buttonVendido;
     }
 }

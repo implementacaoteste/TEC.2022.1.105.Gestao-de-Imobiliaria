@@ -49,6 +49,7 @@
     <Compile Include="PermissaoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReservaDAL.cs" />
+    <Compile Include="Status_TerrenoDAL.cs" />
     <Compile Include="TerrenoDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
     <Compile Include="VendasDAL.cs" />

@@ -23,6 +23,14 @@ namespace Models
         public bool RedeEnergia { get; set; }
         public string NomeEmpreendimento { get { return this.Empreendimento.Nome; } }
         public Empreendimentos Empreendimento { get; set; }
+        public string Status_Terreno_Descricao
+        {
+            get
+            {
+                return Status_Terreno != null ? Status_Terreno.Status_Atual : "";
+            }
+        }
+        public Status_Terreno Status_Terreno { get; set; }
         public int IdStatus_Terreno { get; set; }
     }
 }
