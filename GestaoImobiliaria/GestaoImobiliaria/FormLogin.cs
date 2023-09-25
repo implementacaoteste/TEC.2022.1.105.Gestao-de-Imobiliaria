@@ -56,7 +56,7 @@ namespace LocacaoLaboratorio
 #if DEBUG
             textBoxUsuario.Text = "Erisvaldo";
             textBoxSenha.Text = "123";
-            buttonEntrar_Click(null, null);
+            //buttonEntrar_Click(null, null);
 #endif
         }
     }
