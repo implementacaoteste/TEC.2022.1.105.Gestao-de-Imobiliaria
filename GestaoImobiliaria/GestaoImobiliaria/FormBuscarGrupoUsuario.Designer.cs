@@ -70,7 +70,7 @@
             this.grupoUsuarioDataGridView.RowHeadersWidth = 51;
             this.grupoUsuarioDataGridView.RowTemplate.Height = 24;
             this.grupoUsuarioDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grupoUsuarioDataGridView.Size = new System.Drawing.Size(559, 378);
+            this.grupoUsuarioDataGridView.Size = new System.Drawing.Size(559, 478);
             this.grupoUsuarioDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn2
@@ -104,7 +104,7 @@
             this.permissoesDataGridView.ReadOnly = true;
             this.permissoesDataGridView.RowHeadersWidth = 51;
             this.permissoesDataGridView.RowTemplate.Height = 24;
-            this.permissoesDataGridView.Size = new System.Drawing.Size(543, 378);
+            this.permissoesDataGridView.Size = new System.Drawing.Size(643, 478);
             this.permissoesDataGridView.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn4
@@ -172,7 +172,7 @@
             // buttonAdicionarPermissao
             // 
             this.buttonAdicionarPermissao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdicionarPermissao.Location = new System.Drawing.Point(964, 88);
+            this.buttonAdicionarPermissao.Location = new System.Drawing.Point(1064, 88);
             this.buttonAdicionarPermissao.Name = "buttonAdicionarPermissao";
             this.buttonAdicionarPermissao.Size = new System.Drawing.Size(75, 25);
             this.buttonAdicionarPermissao.TabIndex = 5;
@@ -183,7 +183,7 @@
             // buttonExcluirPermissao
             // 
             this.buttonExcluirPermissao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExcluirPermissao.Location = new System.Drawing.Point(1045, 88);
+            this.buttonExcluirPermissao.Location = new System.Drawing.Point(1145, 88);
             this.buttonExcluirPermissao.Name = "buttonExcluirPermissao";
             this.buttonExcluirPermissao.Size = new System.Drawing.Size(75, 25);
             this.buttonExcluirPermissao.TabIndex = 6;
@@ -209,7 +209,7 @@
             this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1132, 509);
+            this.pictureBox1.Size = new System.Drawing.Size(1232, 609);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -218,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 509);
+            this.ClientSize = new System.Drawing.Size(1232, 609);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonExcluirPermissao);
             this.Controls.Add(this.buttonExcluirGrupoUsuario);

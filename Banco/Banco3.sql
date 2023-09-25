@@ -327,11 +327,11 @@ Values('Lucas','5555555','Rua 132', '6666666', '40028922','9999999', 'lucas@gmai
 go
 
 Insert into Usuario (Nome, NomeUsuario, Email, CPF, Ativo, Senha)
-Values ('Cristiano', 'Júnior', 'cristiano@gmail.com', '1111111', 1, '1234')
+Values ('Cristiano', 'Cristiano', 'cristiano@gmail.com', '1111111', 1, '1234')
 Insert into Usuario (Nome, NomeUsuario, Email, CPF, Ativo, Senha)
-Values ('Nalberth', 'Nalberth123', 'nalberth@gmail.com', '2222222', 1, '1234')
+Values ('Nalberth', 'Nalberth', 'nalberth@gmail.com', '2222222', 1, '1234')
 Insert into Usuario (Nome, NomeUsuario, Email, CPF, Ativo, Senha)
-Values ('Lucas', 'Lucas123', 'lucas@gmail.com', '3333333', 1, '1234')
+Values ('Lucas', 'Lucas', 'lucas@gmail.com', '3333333', 1, '1234')
 
 go
 
