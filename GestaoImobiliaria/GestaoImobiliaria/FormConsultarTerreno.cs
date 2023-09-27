@@ -154,10 +154,10 @@ namespace LocacaoLaboratorio
                     terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
                     break;
                 case 2:
-                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
                     break;
                 case 3:
-                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
                     break; 
 
                 default:
