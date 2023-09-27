@@ -120,7 +120,7 @@ CREATE TABLE [dbo].[Reservas](
 	[IDTerreno] [int] NOT NULL,
 	[IDCorretor] [int] NOT NULL,
 	[DataReserva] [date] NOT NULL,
-	[Prazo] [int] NOT NULL,
+	[Prazo] [date] NOT NULL,
 	[StatusReserva] [varchar](20) NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
