@@ -376,8 +376,8 @@ Values (4, 1800, 180, 40, 40, 800, 'Rua Principal', '4444444', '50', '50', 1, 0,
 
 go
 insert into Status_Terrenos(Status_Atual)values('Disponível')
-insert into Status_Terrenos(Status_Atual)values('Reservado')
 insert into Status_Terrenos(Status_Atual)values('Vendido')
+insert into Status_Terrenos(Status_Atual)values('Reservado')
 
 
 update Terrenos set idstatus_terrenos=1
