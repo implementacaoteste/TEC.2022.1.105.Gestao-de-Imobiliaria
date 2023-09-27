@@ -22,7 +22,7 @@ CREATE TABLE [dbo].[Cliente](
 	[Fone] [varchar](15) NULL,
 	[Endereco] [varchar](200) NULL,
 	[EstadoCivil] [varchar](100) NULL,
-	[Renda] [Float] NULL,
+	[Renda] [float] NULL,
 	[CPFConjuge] [varchar](100) NULL,
 	[RGConjuge] [varchar](100) NULL,
 PRIMARY KEY CLUSTERED 
@@ -31,7 +31,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Corretores]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[Corretores]    Script Date: 26/09/2023 20:36:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -51,7 +51,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Empreendimentos]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[Empreendimentos]    Script Date: 26/09/2023 20:36:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -67,7 +67,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[GrupoUsuario]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[GrupoUsuario]    Script Date: 26/09/2023 20:36:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -81,7 +81,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Permissao]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[Permissao]    Script Date: 26/09/2023 20:36:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -95,7 +95,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PermissaoGrupoUsuario]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[PermissaoGrupoUsuario]    Script Date: 26/09/2023 20:36:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -110,7 +110,7 @@ CREATE TABLE [dbo].[PermissaoGrupoUsuario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Reservas]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[Reservas]    Script Date: 26/09/2023 20:36:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -128,13 +128,27 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Terrenos]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[Status_Terrenos]    Script Date: 26/09/2023 20:36:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Status_Terrenos](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Status_Atual] [varchar](200) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Terrenos]    Script Date: 26/09/2023 20:36:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Terrenos](
-	[IDTerreno] [int]  IDENTITY(1,1)NOT NULL,
+	[IDTerreno] [int] IDENTITY(1,1) NOT NULL,
 	[IDEmpreendimento] [int] NOT NULL,
 	[PrecoAVista] [float] NOT NULL,
 	[PrecoParcelado] [float] NOT NULL,
@@ -147,14 +161,15 @@ CREATE TABLE [dbo].[Terrenos](
 	[MetragemDireita] [varchar](100) NULL,
 	[RedeAgua] [bit] NULL,
 	[RedeEnergia] [bit] NULL,
-	[Esquina] [varchar](15) NULL
+	[Esquina] [varchar](15) NULL,
+	[IdStatus_Terrenos] [int] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[IDTerreno] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 26/09/2023 20:36:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -174,7 +189,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsuarioGrupoUsuario]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[UsuarioGrupoUsuario]    Script Date: 26/09/2023 20:36:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -189,7 +204,7 @@ CREATE TABLE [dbo].[UsuarioGrupoUsuario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Vendas]    Script Date: 16/08/2023 19:57:19 ******/
+/****** Object:  Table [dbo].[Vendas]    Script Date: 26/09/2023 20:36:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -232,6 +247,11 @@ REFERENCES [dbo].[Empreendimentos] ([IDEmpreendimento])
 GO
 ALTER TABLE [dbo].[Terrenos] CHECK CONSTRAINT [FK_Terrenos_Empreendimentos]
 GO
+ALTER TABLE [dbo].[Terrenos]  WITH CHECK ADD  CONSTRAINT [FK_Terrenos_StatusTerrenos] FOREIGN KEY([IdStatus_Terrenos])
+REFERENCES [dbo].[Status_Terrenos] ([Id])
+GO
+ALTER TABLE [dbo].[Terrenos] CHECK CONSTRAINT [FK_Terrenos_StatusTerrenos]
+GO
 ALTER TABLE [dbo].[UsuarioGrupoUsuario]  WITH CHECK ADD  CONSTRAINT [FK_UsuarioGrupoUsuario_GrupoUsuario] FOREIGN KEY([IdGrupoUsuario])
 REFERENCES [dbo].[GrupoUsuario] ([Id])
 GO
@@ -257,7 +277,6 @@ REFERENCES [dbo].[Terrenos] ([IDTerreno])
 GO
 ALTER TABLE [dbo].[Vendas] CHECK CONSTRAINT [FK_Vendas_Terrenos]
 GO
-
 
 USE [Imobiliaria]
 GO
@@ -356,17 +375,12 @@ Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFre
 Values (4, 1800, 180, 40, 40, 800, 'Rua Principal', '4444444', '50', '50', 1, 0, '8')
 
 go
+insert into Status_Terrenos(Status_Atual)values('Disponível')
+insert into Status_Terrenos(Status_Atual)values('Reservado')
+insert into Status_Terrenos(Status_Atual)values('Vendido')
 
-Alter table Terrenos add Status_Terrenos int;
 
-Create table Status_Terrenos 
-( 
-Id int identity primary key,
-Status_Atual varchar(200)
-);
-
-Alter table Terrenos add constraint [FK_Terrenos_StatusTerrenos] foreign key(Status_Terrenos)
-References Status_Terrenos (Id)
+update Terrenos set idstatus_terrenos=1
 
 
 Insert into Vendas ( IDCliente, IDCorretor, IDTerreno) Values (1,1,1);
