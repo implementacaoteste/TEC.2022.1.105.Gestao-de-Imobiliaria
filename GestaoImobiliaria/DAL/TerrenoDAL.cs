@@ -99,7 +99,7 @@ namespace DAL
                         terreno.Empreendimento = new EmpreendimentoDAL().BuscarPorId((int)rd["IdEmpreendimento"]);
                         terrenoList.Add(terreno);
                     }
-                }
+                }   
                 return terrenoList;
             }
             catch (Exception ex)

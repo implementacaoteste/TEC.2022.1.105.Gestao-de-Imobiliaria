@@ -37,8 +37,6 @@
             System.Windows.Forms.Label metragemFundoLabel;
             System.Windows.Forms.Label precoAVistaLabel;
             System.Windows.Forms.Label precoParceladoLabel;
-            System.Windows.Forms.Label redeAguaLabel;
-            System.Windows.Forms.Label redeEnergiaLabel;
             System.Windows.Forms.Label tamanhoTotalTerrenoLabel;
             System.Windows.Forms.Label nomeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroTerreno));
@@ -73,8 +71,6 @@
             metragemFundoLabel = new System.Windows.Forms.Label();
             precoAVistaLabel = new System.Windows.Forms.Label();
             precoParceladoLabel = new System.Windows.Forms.Label();
-            redeAguaLabel = new System.Windows.Forms.Label();
-            redeEnergiaLabel = new System.Windows.Forms.Label();
             tamanhoTotalTerrenoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
@@ -151,24 +147,6 @@
             precoParceladoLabel.Size = new System.Drawing.Size(112, 16);
             precoParceladoLabel.TabIndex = 34;
             precoParceladoLabel.Text = "Preco Parcelado:";
-            // 
-            // redeAguaLabel
-            // 
-            redeAguaLabel.AutoSize = true;
-            redeAguaLabel.Location = new System.Drawing.Point(769, 182);
-            redeAguaLabel.Name = "redeAguaLabel";
-            redeAguaLabel.Size = new System.Drawing.Size(79, 16);
-            redeAguaLabel.TabIndex = 35;
-            redeAguaLabel.Text = "Rede Agua:";
-            // 
-            // redeEnergiaLabel
-            // 
-            redeEnergiaLabel.AutoSize = true;
-            redeEnergiaLabel.Location = new System.Drawing.Point(754, 140);
-            redeEnergiaLabel.Name = "redeEnergiaLabel";
-            redeEnergiaLabel.Size = new System.Drawing.Size(94, 16);
-            redeEnergiaLabel.TabIndex = 36;
-            redeEnergiaLabel.Text = "Rede Energia:";
             // 
             // tamanhoTotalTerrenoLabel
             // 
@@ -300,20 +278,24 @@
             // 
             // redeAguaCheckBox
             // 
+            this.redeAguaCheckBox.AutoSize = true;
             this.redeAguaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource, "RedeAgua", true));
-            this.redeAguaCheckBox.Location = new System.Drawing.Point(854, 177);
+            this.redeAguaCheckBox.Location = new System.Drawing.Point(823, 171);
             this.redeAguaCheckBox.Name = "redeAguaCheckBox";
-            this.redeAguaCheckBox.Size = new System.Drawing.Size(96, 24);
+            this.redeAguaCheckBox.Size = new System.Drawing.Size(116, 20);
             this.redeAguaCheckBox.TabIndex = 36;
+            this.redeAguaCheckBox.Text = "Rede de água";
             this.redeAguaCheckBox.UseVisualStyleBackColor = true;
             // 
             // redeEnergiaCheckBox
             // 
+            this.redeEnergiaCheckBox.AutoSize = true;
             this.redeEnergiaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource, "RedeEnergia", true));
-            this.redeEnergiaCheckBox.Location = new System.Drawing.Point(854, 135);
+            this.redeEnergiaCheckBox.Location = new System.Drawing.Point(823, 139);
             this.redeEnergiaCheckBox.Name = "redeEnergiaCheckBox";
-            this.redeEnergiaCheckBox.Size = new System.Drawing.Size(20, 24);
+            this.redeEnergiaCheckBox.Size = new System.Drawing.Size(131, 20);
             this.redeEnergiaCheckBox.TabIndex = 37;
+            this.redeEnergiaCheckBox.Text = "Rede de energia";
             this.redeEnergiaCheckBox.UseVisualStyleBackColor = true;
             // 
             // tamanhoTotalTerrenoTextBox
@@ -402,9 +384,7 @@
             this.Controls.Add(this.confrontacoesTextBox);
             this.Controls.Add(tamanhoTotalTerrenoLabel);
             this.Controls.Add(this.tamanhoTotalTerrenoTextBox);
-            this.Controls.Add(redeEnergiaLabel);
             this.Controls.Add(this.redeEnergiaCheckBox);
-            this.Controls.Add(redeAguaLabel);
             this.Controls.Add(this.redeAguaCheckBox);
             this.Controls.Add(precoParceladoLabel);
             this.Controls.Add(this.precoParceladoTextBox);
@@ -427,6 +407,8 @@
             this.Controls.Add(this.labelCadastoTerreno);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCadastroTerreno";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Cadastro de Terreno";
             this.Load += new System.EventHandler(this.FormCadastroTerreno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
