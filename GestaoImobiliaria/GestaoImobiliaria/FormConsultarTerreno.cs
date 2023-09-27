@@ -158,7 +158,7 @@ namespace LocacaoLaboratorio
                     break;
                 case 3:
                     terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
-                    break;
+                    break; 
 
                 default:
                     break;
