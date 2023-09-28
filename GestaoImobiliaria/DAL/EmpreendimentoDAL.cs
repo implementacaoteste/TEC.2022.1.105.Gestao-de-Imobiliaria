@@ -19,7 +19,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.TamanhoArea, Empreendimentos.Nome FROM Empreendimentos
+                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.Nome FROM Empreendimentos
                                     INNER JOIN
                                     (SELECT IDEmpreendimento, COUNT(IDEmpreendimento) AS TotalTerrenos FROM Terrenos GROUP BY IDEmpreendimento) AS Terrenos
                                     ON Empreendimentos.IDEmpreendimento = Terrenos.IDEmpreendimento 
@@ -67,7 +67,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.TamanhoArea, Empreendimentos.Nome FROM Empreendimentos
+                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel,  Empreendimentos.Nome FROM Empreendimentos
                                     INNER JOIN
                                     (SELECT IDEmpreendimento, COUNT(IDEmpreendimento) AS TotalTerrenos FROM Terrenos GROUP BY IDEmpreendimento) AS Terrenos
                                     ON Empreendimentos.IDEmpreendimento = Terrenos.IDEmpreendimento 
@@ -179,7 +179,6 @@ namespace DAL
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE Empreendimentos SET
                                     CNPJEmpresaResponsavel = @CNPJEmpresaResponsavel,
-                                    TamanhoArea = @TamanhoArea,
                                     Nome = @Nome
                                     WHERE IDEmpreendimento = @IDEmpreendimento";
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -265,7 +264,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.TamanhoArea, Empreendimentos.Nome FROM Empreendimentos
+                cmd.CommandText = @"SELECT Empreendimentos.IDEmpreendimento, Terrenos.TotalTerrenos, Empreendimentos.CNPJEmpresaResponsavel, Empreendimentos.Nome FROM Empreendimentos
                                     INNER JOIN
                                     (SELECT IDEmpreendimento, COUNT(IDEmpreendimento) AS TotalTerrenos FROM Terrenos GROUP BY IDEmpreendimento) AS Terrenos
                                     ON Empreendimentos.IDEmpreendimento = Terrenos.IDEmpreendimento 
