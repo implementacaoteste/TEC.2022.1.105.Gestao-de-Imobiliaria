@@ -60,7 +60,7 @@ CREATE TABLE [dbo].[Empreendimentos](
 	[IDEmpreendimento] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](200) NOT NULL,
 	[CNPJEmpresaResponsavel] [varchar](20) NOT NULL,
-	[TamanhoArea] [varchar](100) NOT NULL,
+	
 PRIMARY KEY CLUSTERED 
 (
 	[IDEmpreendimento] ASC
@@ -354,14 +354,14 @@ Values ('Lucas', 'Lucas', 'lucas@gmail.com', '3333333', 1, '1234')
 
 go
 
-Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel, TamanhoArea )
-Values ('Járdim américa', '1111111', '100')
-Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel, TamanhoArea )
-Values ('Ipiranga', '2222222', '100')
-Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel, TamanhoArea )
-Values ('Alegria', '3333333', '100')
-Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel, TamanhoArea )
-Values ('Bedrock', '4444444', '100')
+Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel)
+Values ('Járdim américa', '1111111')
+Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel )
+Values ('Ipiranga', '2222222')
+Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel )
+Values ('Alegria', '3333333')
+Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel )
+Values ('Bedrock', '4444444')
 
 go
 
