@@ -270,8 +270,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.corretorDataGridView);
+            this.MinimizeBox = false;
             this.Name = "FormConsultarCorretor";
-            this.Text = "FormConsultarCorretor";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this.corretorDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).EndInit();
             this.ResumeLayout(false);
