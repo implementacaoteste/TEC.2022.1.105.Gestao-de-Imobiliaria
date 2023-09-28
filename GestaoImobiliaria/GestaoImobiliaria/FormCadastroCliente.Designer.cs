@@ -123,18 +123,18 @@
             rendaLabel.AutoSize = true;
             rendaLabel.Location = new System.Drawing.Point(429, 124);
             rendaLabel.Name = "rendaLabel";
-            rendaLabel.Size = new System.Drawing.Size(51, 16);
+            rendaLabel.Size = new System.Drawing.Size(48, 16);
             rendaLabel.TabIndex = 15;
-            rendaLabel.Text = "Renda:";
+            rendaLabel.Text = "Renda";
             // 
             // estadoCivilLabel
             // 
             estadoCivilLabel.AutoSize = true;
             estadoCivilLabel.Location = new System.Drawing.Point(550, 124);
             estadoCivilLabel.Name = "estadoCivilLabel";
-            estadoCivilLabel.Size = new System.Drawing.Size(81, 16);
+            estadoCivilLabel.Size = new System.Drawing.Size(76, 16);
             estadoCivilLabel.TabIndex = 17;
-            estadoCivilLabel.Text = "Estado Civil:";
+            estadoCivilLabel.Text = "Estado civil";
             // 
             // nomeTextBox
             // 
