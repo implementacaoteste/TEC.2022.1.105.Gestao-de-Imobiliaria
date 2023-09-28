@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.reservaDataGridView = new System.Windows.Forms.DataGridView();
+            this.idReservaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDaReservaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prazoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataReservaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeCorretor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TerrenoDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,12 +45,6 @@
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
-            this.idReservaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDaReservaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prazoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataReservaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeCorretor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TerrenoDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,60 @@
             this.reservaDataGridView.RowTemplate.Height = 24;
             this.reservaDataGridView.Size = new System.Drawing.Size(809, 310);
             this.reservaDataGridView.TabIndex = 1;
+            // 
+            // idReservaDataGridViewTextBoxColumn
+            // 
+            this.idReservaDataGridViewTextBoxColumn.DataPropertyName = "IdReserva";
+            this.idReservaDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idReservaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idReservaDataGridViewTextBoxColumn.Name = "idReservaDataGridViewTextBoxColumn";
+            this.idReservaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idReservaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // statusDaReservaDataGridViewTextBoxColumn
+            // 
+            this.statusDaReservaDataGridViewTextBoxColumn.DataPropertyName = "StatusDaReserva";
+            this.statusDaReservaDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDaReservaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDaReservaDataGridViewTextBoxColumn.Name = "statusDaReservaDataGridViewTextBoxColumn";
+            this.statusDaReservaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusDaReservaDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // prazoDataGridViewTextBoxColumn
+            // 
+            this.prazoDataGridViewTextBoxColumn.DataPropertyName = "Prazo";
+            this.prazoDataGridViewTextBoxColumn.HeaderText = "Prazo";
+            this.prazoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prazoDataGridViewTextBoxColumn.Name = "prazoDataGridViewTextBoxColumn";
+            this.prazoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prazoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataReservaDataGridViewTextBoxColumn
+            // 
+            this.dataReservaDataGridViewTextBoxColumn.DataPropertyName = "DataReserva";
+            this.dataReservaDataGridViewTextBoxColumn.HeaderText = "Data reserva";
+            this.dataReservaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataReservaDataGridViewTextBoxColumn.Name = "dataReservaDataGridViewTextBoxColumn";
+            this.dataReservaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataReservaDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // NomeCorretor
+            // 
+            this.NomeCorretor.DataPropertyName = "NomeCorretor";
+            this.NomeCorretor.HeaderText = "Corretor";
+            this.NomeCorretor.MinimumWidth = 6;
+            this.NomeCorretor.Name = "NomeCorretor";
+            this.NomeCorretor.ReadOnly = true;
+            this.NomeCorretor.Width = 200;
+            // 
+            // TerrenoDescricao
+            // 
+            this.TerrenoDescricao.DataPropertyName = "TerrenoDescricao";
+            this.TerrenoDescricao.HeaderText = "Terreno";
+            this.TerrenoDescricao.MinimumWidth = 6;
+            this.TerrenoDescricao.Name = "TerrenoDescricao";
+            this.TerrenoDescricao.ReadOnly = true;
+            this.TerrenoDescricao.Width = 350;
             // 
             // reservaBindingSource
             // 
@@ -154,6 +208,7 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Id",
@@ -162,58 +217,6 @@
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(118, 24);
             this.comboBoxBuscarPor.TabIndex = 20;
-            // 
-            // idReservaDataGridViewTextBoxColumn
-            // 
-            this.idReservaDataGridViewTextBoxColumn.DataPropertyName = "IdReserva";
-            this.idReservaDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idReservaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idReservaDataGridViewTextBoxColumn.Name = "idReservaDataGridViewTextBoxColumn";
-            this.idReservaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDaReservaDataGridViewTextBoxColumn
-            // 
-            this.statusDaReservaDataGridViewTextBoxColumn.DataPropertyName = "StatusDaReserva";
-            this.statusDaReservaDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDaReservaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusDaReservaDataGridViewTextBoxColumn.Name = "statusDaReservaDataGridViewTextBoxColumn";
-            this.statusDaReservaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDaReservaDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // prazoDataGridViewTextBoxColumn
-            // 
-            this.prazoDataGridViewTextBoxColumn.DataPropertyName = "Prazo";
-            this.prazoDataGridViewTextBoxColumn.HeaderText = "Prazo";
-            this.prazoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prazoDataGridViewTextBoxColumn.Name = "prazoDataGridViewTextBoxColumn";
-            this.prazoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataReservaDataGridViewTextBoxColumn
-            // 
-            this.dataReservaDataGridViewTextBoxColumn.DataPropertyName = "DataReserva";
-            this.dataReservaDataGridViewTextBoxColumn.HeaderText = "Data reserva";
-            this.dataReservaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dataReservaDataGridViewTextBoxColumn.Name = "dataReservaDataGridViewTextBoxColumn";
-            this.dataReservaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataReservaDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // NomeCorretor
-            // 
-            this.NomeCorretor.DataPropertyName = "NomeCorretor";
-            this.NomeCorretor.HeaderText = "Corretor";
-            this.NomeCorretor.MinimumWidth = 6;
-            this.NomeCorretor.Name = "NomeCorretor";
-            this.NomeCorretor.ReadOnly = true;
-            this.NomeCorretor.Width = 200;
-            // 
-            // TerrenoDescricao
-            // 
-            this.TerrenoDescricao.DataPropertyName = "TerrenoDescricao";
-            this.TerrenoDescricao.HeaderText = "Terreno";
-            this.TerrenoDescricao.MinimumWidth = 6;
-            this.TerrenoDescricao.Name = "TerrenoDescricao";
-            this.TerrenoDescricao.ReadOnly = true;
-            this.TerrenoDescricao.Width = 350;
             // 
             // FormBuscarReserva
             // 
