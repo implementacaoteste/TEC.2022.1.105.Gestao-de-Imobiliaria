@@ -73,6 +73,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "&Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button2_MouseMove);
             // 
             // label1
             // 
@@ -122,7 +123,6 @@
             this.Name = "FormLogin";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyDown);

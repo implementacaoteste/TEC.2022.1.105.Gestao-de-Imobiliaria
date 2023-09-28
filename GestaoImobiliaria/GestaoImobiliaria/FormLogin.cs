@@ -56,8 +56,14 @@ namespace LocacaoLaboratorio
 #if DEBUG
             textBoxUsuario.Text = "Erisvaldo";
             textBoxSenha.Text = "123";
+            this.Location = new Point(559, 417);
             //buttonEntrar_Click(null, null);
 #endif
+        }
+
+        private void button2_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.Text = this.Location.X.ToString() + "," + this.Location.Y.ToString() + "|" + this.Location.ToString();
         }
     }
 }

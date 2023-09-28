@@ -20,10 +20,10 @@ namespace DAL
                 cmd.CommandText = @"INSERT INTO Reservas(IDTerreno, IDCorretor, StatusReserva, Prazo, DataReserva) 
                                     VALUES (@IDTerreno, @IDCorretor, @StatusReserva, @Prazo, CONVERT(DATETIME, CONVERT(VARCHAR, GETDATE(),107)))";
                 cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IDTerreno", _reserva.Terreno.IdTerreno);
+                cmd.Parameters.AddWithValue("@IDCorretor", _reserva.Corretor.IdCorretor);
                 cmd.Parameters.AddWithValue("@StatusReserva", _reserva.StatusDaReserva);
                 cmd.Parameters.AddWithValue("@Prazo", _reserva.Prazo);
-                cmd.Parameters.AddWithValue("@IDCorretor", _reserva.Corretor.IdCorretor);
-                cmd.Parameters.AddWithValue("@IDTerreno", _reserva.Terreno.IdTerreno);
                 cmd.Connection = cn;
                 cn.Open();
                 

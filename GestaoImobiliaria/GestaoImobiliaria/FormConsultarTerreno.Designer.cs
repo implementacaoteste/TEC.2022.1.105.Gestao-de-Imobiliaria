@@ -43,7 +43,6 @@ namespace LocacaoLaboratorio
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonReservar = new System.Windows.Forms.Button();
             this.terrenoDataGridView = new System.Windows.Forms.DataGridView();
-            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status_Terreno_Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +60,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -210,10 +210,6 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.Size = new System.Drawing.Size(1024, 274);
             this.terrenoDataGridView.TabIndex = 12;
             this.terrenoDataGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.terrenoDataGridView_RowPrePaint);
-            // 
-            // terrenoBindingSource
-            // 
-            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -369,6 +365,10 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn14.Visible = false;
             this.dataGridViewTextBoxColumn14.Width = 125;
             // 
+            // terrenoBindingSource
+            // 
+            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
+            // 
             // FormConsultarTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -386,7 +386,13 @@ namespace LocacaoLaboratorio
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelConsultarTerreno);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormConsultarTerreno";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Terreno";
             this.Load += new System.EventHandler(this.FormConsultarTerreno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).EndInit();

@@ -230,7 +230,8 @@ namespace DAL
                                         MetragemEsquerda = @MetragemEsquerda,
                                         MetragemDireita = @MetragemDireita,
                                         RedeAgua = @RedeAgua,
-                                        RedeEnergia = @RedeEnergia
+                                        RedeEnergia = @RedeEnergia,
+                                        IdStatus_Terrenos = @IdStatus_Terreno
                                     WHERE IdTerreno = @IdTerreno";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -249,6 +250,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@MetragemDireita", _terreno.MetragemDireita);
                 cmd.Parameters.AddWithValue("@RedeAgua", _terreno.RedeAgua);
                 cmd.Parameters.AddWithValue("@RedeEnergia", _terreno.RedeEnergia);
+                cmd.Parameters.AddWithValue("@IdStatus_Terreno", _terreno.IdStatus_Terreno);
 
                 cmd.Connection = cn;
                 cn.Open();
