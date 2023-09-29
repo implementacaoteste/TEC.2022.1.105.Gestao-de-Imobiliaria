@@ -45,7 +45,6 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
-            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matriculaTextBox = new System.Windows.Forms.TextBox();
             this.metragemDireitaTextBox = new System.Windows.Forms.TextBox();
             this.metragemEsquerdaTextBox = new System.Windows.Forms.TextBox();
@@ -64,6 +63,7 @@
             this.radioButtonDisponivel = new System.Windows.Forms.RadioButton();
             this.radioButtonReservado = new System.Windows.Forms.RadioButton();
             this.radioButtonVendido = new System.Windows.Forms.RadioButton();
+            this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             enderecoLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
             metragemDireitaLabel = new System.Windows.Forms.Label();
@@ -74,8 +74,8 @@
             precoParceladoLabel = new System.Windows.Forms.Label();
             tamanhoTotalTerrenoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // enderecoLabel
@@ -228,10 +228,6 @@
             this.enderecoTextBox.Name = "enderecoTextBox";
             this.enderecoTextBox.Size = new System.Drawing.Size(158, 22);
             this.enderecoTextBox.TabIndex = 26;
-            // 
-            // terrenoBindingSource
-            // 
-            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
             // matriculaTextBox
             // 
@@ -409,6 +405,10 @@
             this.radioButtonVendido.UseVisualStyleBackColor = true;
             this.radioButtonVendido.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
+            // terrenoBindingSource
+            // 
+            this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
+            // 
             // FormCadastroTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -447,13 +447,15 @@
             this.Controls.Add(this.labelCadastoTerreno);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCadastroTerreno";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Cadastro de Terreno";
             this.Load += new System.EventHandler(this.FormCadastroTerreno_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
