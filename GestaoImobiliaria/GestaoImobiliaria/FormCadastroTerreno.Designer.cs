@@ -63,6 +63,7 @@
             this.buttonDisponivel = new System.Windows.Forms.Button();
             this.buttonReservado = new System.Windows.Forms.Button();
             this.buttonVendido = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             enderecoLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
             metragemDireitaLabel = new System.Windows.Forms.Label();
@@ -74,11 +75,13 @@
             tamanhoTotalTerrenoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // enderecoLabel
             // 
             enderecoLabel.AutoSize = true;
+            enderecoLabel.BackColor = System.Drawing.Color.Gold;
             enderecoLabel.Location = new System.Drawing.Point(90, 185);
             enderecoLabel.Name = "enderecoLabel";
             enderecoLabel.Size = new System.Drawing.Size(69, 16);
@@ -88,6 +91,7 @@
             // matriculaLabel
             // 
             matriculaLabel.AutoSize = true;
+            matriculaLabel.BackColor = System.Drawing.Color.Gold;
             matriculaLabel.Location = new System.Drawing.Point(90, 229);
             matriculaLabel.Name = "matriculaLabel";
             matriculaLabel.Size = new System.Drawing.Size(64, 16);
@@ -97,6 +101,7 @@
             // metragemDireitaLabel
             // 
             metragemDireitaLabel.AutoSize = true;
+            metragemDireitaLabel.BackColor = System.Drawing.Color.Gold;
             metragemDireitaLabel.Location = new System.Drawing.Point(90, 143);
             metragemDireitaLabel.Name = "metragemDireitaLabel";
             metragemDireitaLabel.Size = new System.Drawing.Size(113, 16);
@@ -106,6 +111,7 @@
             // metragemEsquerdaLabel
             // 
             metragemEsquerdaLabel.AutoSize = true;
+            metragemEsquerdaLabel.BackColor = System.Drawing.Color.Gold;
             metragemEsquerdaLabel.Location = new System.Drawing.Point(401, 101);
             metragemEsquerdaLabel.Name = "metragemEsquerdaLabel";
             metragemEsquerdaLabel.Size = new System.Drawing.Size(133, 16);
@@ -115,6 +121,7 @@
             // metragemFrenteLabel
             // 
             metragemFrenteLabel.AutoSize = true;
+            metragemFrenteLabel.BackColor = System.Drawing.Color.Gold;
             metragemFrenteLabel.Location = new System.Drawing.Point(401, 143);
             metragemFrenteLabel.Name = "metragemFrenteLabel";
             metragemFrenteLabel.Size = new System.Drawing.Size(112, 16);
@@ -124,6 +131,7 @@
             // metragemFundoLabel
             // 
             metragemFundoLabel.AutoSize = true;
+            metragemFundoLabel.BackColor = System.Drawing.Color.Gold;
             metragemFundoLabel.Location = new System.Drawing.Point(401, 185);
             metragemFundoLabel.Name = "metragemFundoLabel";
             metragemFundoLabel.Size = new System.Drawing.Size(112, 16);
@@ -133,6 +141,7 @@
             // precoAVistaLabel
             // 
             precoAVistaLabel.AutoSize = true;
+            precoAVistaLabel.BackColor = System.Drawing.Color.Gold;
             precoAVistaLabel.Location = new System.Drawing.Point(401, 271);
             precoAVistaLabel.Name = "precoAVistaLabel";
             precoAVistaLabel.Size = new System.Drawing.Size(88, 16);
@@ -142,6 +151,7 @@
             // precoParceladoLabel
             // 
             precoParceladoLabel.AutoSize = true;
+            precoParceladoLabel.BackColor = System.Drawing.Color.Gold;
             precoParceladoLabel.Location = new System.Drawing.Point(401, 226);
             precoParceladoLabel.Name = "precoParceladoLabel";
             precoParceladoLabel.Size = new System.Drawing.Size(112, 16);
@@ -151,6 +161,7 @@
             // tamanhoTotalTerrenoLabel
             // 
             tamanhoTotalTerrenoLabel.AutoSize = true;
+            tamanhoTotalTerrenoLabel.BackColor = System.Drawing.Color.Gold;
             tamanhoTotalTerrenoLabel.Location = new System.Drawing.Point(695, 98);
             tamanhoTotalTerrenoLabel.Name = "tamanhoTotalTerrenoLabel";
             tamanhoTotalTerrenoLabel.Size = new System.Drawing.Size(153, 16);
@@ -160,6 +171,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
+            nomeLabel.BackColor = System.Drawing.Color.Gold;
             nomeLabel.Location = new System.Drawing.Point(90, 104);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(113, 16);
@@ -169,6 +181,7 @@
             // confrontacoesLabel
             // 
             this.confrontacoesLabel.AutoSize = true;
+            this.confrontacoesLabel.BackColor = System.Drawing.Color.Gold;
             this.confrontacoesLabel.Location = new System.Drawing.Point(90, 271);
             this.confrontacoesLabel.Name = "confrontacoesLabel";
             this.confrontacoesLabel.Size = new System.Drawing.Size(59, 16);
@@ -177,11 +190,11 @@
             // 
             // labelCadastoTerreno
             // 
-            this.labelCadastoTerreno.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelCadastoTerreno.BackColor = System.Drawing.Color.Gold;
             this.labelCadastoTerreno.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCadastoTerreno.Location = new System.Drawing.Point(0, 0);
+            this.labelCadastoTerreno.Location = new System.Drawing.Point(286, 9);
             this.labelCadastoTerreno.Name = "labelCadastoTerreno";
-            this.labelCadastoTerreno.Size = new System.Drawing.Size(1046, 71);
+            this.labelCadastoTerreno.Size = new System.Drawing.Size(452, 71);
             this.labelCadastoTerreno.TabIndex = 11;
             this.labelCadastoTerreno.Text = "Cadastro de Terreno";
             this.labelCadastoTerreno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -279,24 +292,26 @@
             // redeAguaCheckBox
             // 
             this.redeAguaCheckBox.AutoSize = true;
+            this.redeAguaCheckBox.BackColor = System.Drawing.Color.Gold;
             this.redeAguaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource, "RedeAgua", true));
-            this.redeAguaCheckBox.Location = new System.Drawing.Point(823, 171);
+            this.redeAguaCheckBox.Location = new System.Drawing.Point(698, 171);
             this.redeAguaCheckBox.Name = "redeAguaCheckBox";
             this.redeAguaCheckBox.Size = new System.Drawing.Size(116, 20);
             this.redeAguaCheckBox.TabIndex = 36;
             this.redeAguaCheckBox.Text = "Rede de água";
-            this.redeAguaCheckBox.UseVisualStyleBackColor = true;
+            this.redeAguaCheckBox.UseVisualStyleBackColor = false;
             // 
             // redeEnergiaCheckBox
             // 
             this.redeEnergiaCheckBox.AutoSize = true;
+            this.redeEnergiaCheckBox.BackColor = System.Drawing.Color.Gold;
             this.redeEnergiaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource, "RedeEnergia", true));
-            this.redeEnergiaCheckBox.Location = new System.Drawing.Point(823, 139);
+            this.redeEnergiaCheckBox.Location = new System.Drawing.Point(698, 139);
             this.redeEnergiaCheckBox.Name = "redeEnergiaCheckBox";
             this.redeEnergiaCheckBox.Size = new System.Drawing.Size(131, 20);
             this.redeEnergiaCheckBox.TabIndex = 37;
             this.redeEnergiaCheckBox.Text = "Rede de energia";
-            this.redeEnergiaCheckBox.UseVisualStyleBackColor = true;
+            this.redeEnergiaCheckBox.UseVisualStyleBackColor = false;
             // 
             // tamanhoTotalTerrenoTextBox
             // 
@@ -369,6 +384,18 @@
             this.buttonVendido.Text = "Vendido";
             this.buttonVendido.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gold;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1046, 350);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormCadastroTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,6 +432,7 @@
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.labelCadastoTerreno);
+            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCadastroTerreno";
             this.ShowIcon = false;
@@ -412,6 +440,7 @@
             this.Text = "Cadastro de Terreno";
             this.Load += new System.EventHandler(this.FormCadastroTerreno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,5 +471,6 @@
         private System.Windows.Forms.Button buttonDisponivel;
         private System.Windows.Forms.Button buttonReservado;
         private System.Windows.Forms.Button buttonVendido;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
