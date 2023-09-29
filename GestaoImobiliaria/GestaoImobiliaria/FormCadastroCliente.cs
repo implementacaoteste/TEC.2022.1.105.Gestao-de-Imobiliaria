@@ -55,5 +55,7 @@ namespace LocacaoLaboratorio
             rGConjugeLabel.Visible =
             cPFConjugeTextBox.Visible = estadoCivilComboBox.Text == "Casado(a)";
         }
+
+
     }
 }

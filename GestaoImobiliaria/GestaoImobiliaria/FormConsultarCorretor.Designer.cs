@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultarCorretor));
             this.corretorDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,8 +50,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSelecionar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.corretorDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // corretorDataGridView
@@ -70,7 +73,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn2});
             this.corretorDataGridView.DataSource = this.corretorBindingSource;
-            this.corretorDataGridView.Location = new System.Drawing.Point(12, 95);
+            this.corretorDataGridView.Location = new System.Drawing.Point(12, 104);
             this.corretorDataGridView.Name = "corretorDataGridView";
             this.corretorDataGridView.ReadOnly = true;
             this.corretorDataGridView.RowHeadersWidth = 51;
@@ -163,7 +166,7 @@
             "Nome",
             "CPF",
             "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 65);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 74);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(121, 24);
             this.comboBoxBuscarPor.TabIndex = 2;
@@ -171,7 +174,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 46);
+            this.label1.BackColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(12, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 3;
@@ -179,14 +183,14 @@
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(139, 67);
+            this.textBoxBuscar.Location = new System.Drawing.Point(139, 76);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(318, 22);
             this.textBoxBuscar.TabIndex = 4;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(470, 67);
+            this.buttonBuscar.Location = new System.Drawing.Point(470, 76);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscar.TabIndex = 5;
@@ -196,7 +200,7 @@
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(551, 67);
+            this.buttonAlterar.Location = new System.Drawing.Point(551, 76);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterar.TabIndex = 6;
@@ -206,7 +210,7 @@
             // 
             // buttonInserir
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(632, 67);
+            this.buttonInserir.Location = new System.Drawing.Point(632, 76);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(75, 23);
             this.buttonInserir.TabIndex = 7;
@@ -216,7 +220,7 @@
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(713, 67);
+            this.buttonExcluir.Location = new System.Drawing.Point(713, 76);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluir.TabIndex = 8;
@@ -227,16 +231,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(238, 9);
+            this.label2.BackColor = System.Drawing.Color.Gold;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(231, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 29);
+            this.label2.Size = new System.Drawing.Size(349, 46);
             this.label2.TabIndex = 9;
             this.label2.Text = "Consultar Corretor";
             // 
             // buttonSelecionar
             // 
-            this.buttonSelecionar.Location = new System.Drawing.Point(602, 404);
+            this.buttonSelecionar.Location = new System.Drawing.Point(632, 415);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(75, 23);
             this.buttonSelecionar.TabIndex = 10;
@@ -247,12 +252,23 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(683, 404);
+            this.button2.Location = new System.Drawing.Point(713, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 11;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 450);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // FormConsultarCorretor
             // 
@@ -270,12 +286,18 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.corretorDataGridView);
+
+            this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+
             this.MinimizeBox = false;
+
             this.Name = "FormConsultarCorretor";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this.corretorDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +325,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

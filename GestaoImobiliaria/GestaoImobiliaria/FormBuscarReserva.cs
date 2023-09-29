@@ -19,10 +19,7 @@ namespace LocacaoLaboratorio
             InitializeComponent();
         }
 
-        private void FormBuscarReserva_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void buttonInserir_Click(object sender, EventArgs e)
         {
