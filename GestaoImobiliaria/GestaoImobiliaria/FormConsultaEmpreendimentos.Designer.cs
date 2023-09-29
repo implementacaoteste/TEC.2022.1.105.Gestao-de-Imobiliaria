@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaEmpreendimentos));
             this.empreendimentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empreendimentosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,8 +46,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.labelConsultaEmpreendimentos = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // empreendimentosBindingSource
@@ -71,7 +74,7 @@
             this.empreendimentosDataGridView.ReadOnly = true;
             this.empreendimentosDataGridView.RowHeadersWidth = 51;
             this.empreendimentosDataGridView.RowTemplate.Height = 24;
-            this.empreendimentosDataGridView.Size = new System.Drawing.Size(939, 319);
+            this.empreendimentosDataGridView.Size = new System.Drawing.Size(750, 319);
             this.empreendimentosDataGridView.TabIndex = 1;
             this.empreendimentosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empreendimentosDataGridView_CellContentClick);
             // 
@@ -121,12 +124,12 @@
             "Todos"});
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 113);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(141, 24);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(117, 24);
             this.comboBoxBuscarPor.TabIndex = 2;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(633, 113);
+            this.buttonBuscar.Location = new System.Drawing.Point(444, 112);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscar.TabIndex = 3;
@@ -136,7 +139,7 @@
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(714, 113);
+            this.buttonAlterar.Location = new System.Drawing.Point(525, 112);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterar.TabIndex = 4;
@@ -146,7 +149,7 @@
             // 
             // buttonInserir
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(795, 113);
+            this.buttonInserir.Location = new System.Drawing.Point(606, 112);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(75, 23);
             this.buttonInserir.TabIndex = 5;
@@ -156,7 +159,7 @@
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(876, 113);
+            this.buttonExcluir.Location = new System.Drawing.Point(687, 112);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluir.TabIndex = 6;
@@ -166,7 +169,7 @@
             // 
             // buttonSelecionar
             // 
-            this.buttonSelecionar.Location = new System.Drawing.Point(764, 484);
+            this.buttonSelecionar.Location = new System.Drawing.Point(571, 485);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(85, 23);
             this.buttonSelecionar.TabIndex = 7;
@@ -177,7 +180,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(866, 484);
+            this.buttonCancelar.Location = new System.Drawing.Point(673, 485);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(85, 23);
             this.buttonCancelar.TabIndex = 8;
@@ -187,6 +190,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Gold;
             this.label1.Location = new System.Drawing.Point(12, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 16);
@@ -195,27 +199,39 @@
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(159, 113);
+            this.textBoxBuscar.Location = new System.Drawing.Point(135, 113);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(468, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(303, 22);
             this.textBoxBuscar.TabIndex = 10;
             // 
             // labelConsultaEmpreendimentos
             // 
             this.labelConsultaEmpreendimentos.AutoSize = true;
+            this.labelConsultaEmpreendimentos.BackColor = System.Drawing.Color.Gold;
             this.labelConsultaEmpreendimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConsultaEmpreendimentos.Location = new System.Drawing.Point(237, 45);
+            this.labelConsultaEmpreendimentos.Location = new System.Drawing.Point(182, 39);
             this.labelConsultaEmpreendimentos.Name = "labelConsultaEmpreendimentos";
-            this.labelConsultaEmpreendimentos.Size = new System.Drawing.Size(497, 33);
+            this.labelConsultaEmpreendimentos.Size = new System.Drawing.Size(367, 33);
             this.labelConsultaEmpreendimentos.TabIndex = 70;
-            this.labelConsultaEmpreendimentos.Text = "CONSULTAR EMPREENDIMENTOS";
+            this.labelConsultaEmpreendimentos.Text = "Consultar empreendimento";
             this.labelConsultaEmpreendimentos.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(782, 520);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
             // 
             // FormConsultaEmpreendimentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 520);
+            this.ClientSize = new System.Drawing.Size(782, 520);
             this.Controls.Add(this.labelConsultaEmpreendimentos);
             this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.label1);
@@ -227,11 +243,14 @@
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.empreendimentosDataGridView);
+            this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormConsultaEmpreendimentos";
             this.Text = "FormConsultaEmpreendimentos";
             this.Load += new System.EventHandler(this.FormConsultaEmpreendimentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +274,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
