@@ -122,7 +122,7 @@ namespace DAL
                 cmd.CommandText = @"SELECT IdTerreno, IdEmpreendimento, PrecoAVista, PrecoParcelado,
                                     MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Esquina,
                                     Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua,
-                                    RedeEnergia FROM Terrenos WHERE IdTerreno = @Id";
+                                    RedeEnergia, IdStatus_Terrenos FROM Terrenos WHERE IdTerreno = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -146,6 +146,7 @@ namespace DAL
                         terreno.Matricula = (string)rd["NumeroMatricula"];
                         terreno.MetragemEsquerda = (string)rd["MetragemEsquerda"];
                         terreno.MetragemDireita = (string)rd["MetragemDireita"];
+                        terreno.IdStatus_Terreno = (int)rd["IdStatus_Terrenos"];
                         terreno.Empreendimento = new EmpreendimentoDAL().BuscarPorId((int)rd["IdEmpreendimento"]);
                     }
                 }
@@ -259,7 +260,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 26 } } };
+                throw new Exception("Erro ao tentar alterar Terreno no banco de dados", ex) { Data = { { "Id", 26 } } };
             }
             finally
             {
