@@ -90,6 +90,7 @@ namespace LocacaoLaboratorio
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Id",
@@ -408,7 +409,6 @@ namespace LocacaoLaboratorio
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consultar Terreno";
             this.Load += new System.EventHandler(this.FormConsultarTerreno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
