@@ -37,6 +37,7 @@
             System.Windows.Forms.Label enderecoLabel;
             System.Windows.Forms.Label rendaLabel;
             System.Windows.Forms.Label estadoCivilLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroCliente));
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cPFTextBox = new System.Windows.Forms.TextBox();
@@ -53,6 +54,7 @@
             this.estadoCivilComboBox = new System.Windows.Forms.ComboBox();
             this.cPFConjugeLabel = new System.Windows.Forms.Label();
             this.rGConjugeLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
             rGLabel = new System.Windows.Forms.Label();
@@ -62,11 +64,13 @@
             rendaLabel = new System.Windows.Forms.Label();
             estadoCivilLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
+            nomeLabel.BackColor = System.Drawing.Color.Gold;
             nomeLabel.Location = new System.Drawing.Point(12, 79);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(44, 16);
@@ -76,6 +80,7 @@
             // cPFLabel
             // 
             cPFLabel.AutoSize = true;
+            cPFLabel.BackColor = System.Drawing.Color.Gold;
             cPFLabel.Location = new System.Drawing.Point(425, 79);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(33, 16);
@@ -85,6 +90,7 @@
             // rGLabel
             // 
             rGLabel.AutoSize = true;
+            rGLabel.BackColor = System.Drawing.Color.Gold;
             rGLabel.Location = new System.Drawing.Point(547, 79);
             rGLabel.Name = "rGLabel";
             rGLabel.Size = new System.Drawing.Size(27, 16);
@@ -94,6 +100,7 @@
             // foneLabel
             // 
             foneLabel.AutoSize = true;
+            foneLabel.BackColor = System.Drawing.Color.Gold;
             foneLabel.Location = new System.Drawing.Point(12, 123);
             foneLabel.Name = "foneLabel";
             foneLabel.Size = new System.Drawing.Size(38, 16);
@@ -103,6 +110,7 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
+            emailLabel.BackColor = System.Drawing.Color.Gold;
             emailLabel.Location = new System.Drawing.Point(117, 123);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(45, 16);
@@ -112,6 +120,7 @@
             // enderecoLabel
             // 
             enderecoLabel.AutoSize = true;
+            enderecoLabel.BackColor = System.Drawing.Color.Gold;
             enderecoLabel.Location = new System.Drawing.Point(17, 170);
             enderecoLabel.Name = "enderecoLabel";
             enderecoLabel.Size = new System.Drawing.Size(66, 16);
@@ -121,6 +130,7 @@
             // rendaLabel
             // 
             rendaLabel.AutoSize = true;
+            rendaLabel.BackColor = System.Drawing.Color.Gold;
             rendaLabel.Location = new System.Drawing.Point(429, 124);
             rendaLabel.Name = "rendaLabel";
             rendaLabel.Size = new System.Drawing.Size(48, 16);
@@ -130,6 +140,7 @@
             // estadoCivilLabel
             // 
             estadoCivilLabel.AutoSize = true;
+            estadoCivilLabel.BackColor = System.Drawing.Color.Gold;
             estadoCivilLabel.Location = new System.Drawing.Point(550, 124);
             estadoCivilLabel.Name = "estadoCivilLabel";
             estadoCivilLabel.Size = new System.Drawing.Size(76, 16);
@@ -182,11 +193,11 @@
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.BackColor = System.Drawing.Color.Gold;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(164, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(671, 79);
+            this.label1.Size = new System.Drawing.Size(366, 79);
             this.label1.TabIndex = 11;
             this.label1.Text = "Cadastro de cliente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -266,22 +277,34 @@
             // cPFConjugeLabel
             // 
             this.cPFConjugeLabel.AutoSize = true;
+            this.cPFConjugeLabel.BackColor = System.Drawing.Color.Gold;
             this.cPFConjugeLabel.Location = new System.Drawing.Point(429, 168);
             this.cPFConjugeLabel.Name = "cPFConjugeLabel";
-            this.cPFConjugeLabel.Size = new System.Drawing.Size(86, 16);
+            this.cPFConjugeLabel.Size = new System.Drawing.Size(84, 16);
             this.cPFConjugeLabel.TabIndex = 25;
-            this.cPFConjugeLabel.Text = "CPF Conjuge";
+            this.cPFConjugeLabel.Text = "CPF conjuge";
             this.cPFConjugeLabel.Visible = false;
             // 
             // rGConjugeLabel
             // 
             this.rGConjugeLabel.AutoSize = true;
+            this.rGConjugeLabel.BackColor = System.Drawing.Color.Gold;
             this.rGConjugeLabel.Location = new System.Drawing.Point(550, 168);
             this.rGConjugeLabel.Name = "rGConjugeLabel";
-            this.rGConjugeLabel.Size = new System.Drawing.Size(80, 16);
+            this.rGConjugeLabel.Size = new System.Drawing.Size(78, 16);
             this.rGConjugeLabel.TabIndex = 25;
-            this.rGConjugeLabel.Text = "RG Conjuge";
+            this.rGConjugeLabel.Text = "RG conjuge";
             this.rGConjugeLabel.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(672, 295);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // FormCadastroCliente
             // 
@@ -311,10 +334,13 @@
             this.Controls.Add(this.cPFTextBox);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
+            this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCadastroCliente";
             this.Text = "FormCadastroCliente";
             this.Load += new System.EventHandler(this.FormCadastroCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +364,6 @@
         private System.Windows.Forms.ComboBox estadoCivilComboBox;
         private System.Windows.Forms.Label cPFConjugeLabel;
         private System.Windows.Forms.Label rGConjugeLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
