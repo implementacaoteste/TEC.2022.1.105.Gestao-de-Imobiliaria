@@ -73,7 +73,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "&Cancelar";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button2_MouseMove);
+            //this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button2_MouseMove);
             // 
             // label1
             // 

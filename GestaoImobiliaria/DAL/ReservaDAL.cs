@@ -27,7 +27,7 @@ namespace DAL
                 cmd.Connection = cn;
                 cn.Open();
                 
-                _reserva.Terreno.IdStatus_Terreno = 2;
+                _reserva.Terreno.IdStatus_Terreno = 3;
                 new TerrenoDAL().Alterar(_reserva.Terreno);
                 
                 cmd.ExecuteNonQuery();

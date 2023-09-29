@@ -15,10 +15,19 @@ namespace LocacaoLaboratorio
     public partial class FormCadastroReserva : Form
     {
         int id;
+        private Terreno terreno;
+
         public FormCadastroReserva(int _id = 0)
         {
             InitializeComponent();
             id = _id;
+        }
+        public FormCadastroReserva(Terreno _terreno)
+        {
+            InitializeComponent();
+            id = 0;
+
+            terreno = _terreno;
         }
 
         private void FormCadastroReserva_Load(object sender, EventArgs e)
@@ -29,6 +38,14 @@ namespace LocacaoLaboratorio
                 {
                     reservaBindingSource.AddNew();
                     prazoDateTimePicker.Value = DateTime.Now.AddDays(3);
+
+                    if (terreno != null)
+                    {
+                        ((Reserva)reservaBindingSource.Current).Terreno = terreno;
+                        enderecoTextBox.DataBindings.Control.Text = ((Reserva)reservaBindingSource.Current).Terreno.Endereco;
+                        matriculaTextBox.DataBindings.Control.Text = ((Reserva)reservaBindingSource.Current).Terreno.Matricula;
+                        nomeEmpreendimentoTextBox.DataBindings.Control.Text = ((Reserva)reservaBindingSource.Current).Terreno.NomeEmpreendimento;
+                    }
                 }
                 else
                     reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(id);

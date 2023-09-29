@@ -61,9 +61,9 @@ namespace LocacaoLaboratorio
 #endif
         }
 
-        private void button2_MouseMove(object sender, MouseEventArgs e)
+        /*private void button2_MouseMove(object sender, MouseEventArgs e)
         {
             this.Text = this.Location.X.ToString() + "," + this.Location.Y.ToString() + "|" + this.Location.ToString();
-        }
+        }*/
     }
 }

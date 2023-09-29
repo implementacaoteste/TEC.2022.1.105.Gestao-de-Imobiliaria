@@ -133,7 +133,10 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                using (FormBuscarReserva frm = new FormBuscarReserva())
+                if (terrenoBindingSource.Count == 0)
+                    throw new Exception("Não existe terreno para ser reservado.");
+
+                using (FormCadastroReserva frm = new FormCadastroReserva((Terreno)terrenoBindingSource.Current))
                 {
                     frm.ShowDialog();
                 }
@@ -154,15 +157,18 @@ namespace LocacaoLaboratorio
                     terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
                     break;
                 case 2:
-                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+                    //terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = System.Drawing.ColorTranslator.FromHtml("#ff8d72");
                     break;
                 case 3:
-                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                    terrenoDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
                     break; 
 
                 default:
                     break;
             }
         }
+
+       
     }
 }

@@ -12,8 +12,16 @@ namespace BLL
     {
         public void Inserir (Reserva _reserva)
         {
+            ValidarDados(_reserva);
             new ReservaDAL().Inserir(_reserva);
         }
+
+        private void ValidarDados(Reserva _reserva)
+        {
+            if (string.IsNullOrEmpty(_reserva.StatusDaReserva))
+                throw new Exception("Informe o status da reserva.") { Data = { { "Id", -1 } } };
+        }
+
         public List<Reserva> BuscarTodos()
         {
             return new ReservaDAL().BuscarTodos();
