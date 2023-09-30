@@ -291,5 +291,20 @@
   <ItemGroup>
     <None Include="Resources\Foto de fundo 21.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
