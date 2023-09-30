@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaEmpreendimentos));
-            this.empreendimentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empreendimentosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empreendimentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
@@ -47,14 +47,10 @@
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.labelConsultaEmpreendimentos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // empreendimentosBindingSource
-            // 
-            this.empreendimentosBindingSource.DataSource = typeof(Models.Empreendimentos);
             // 
             // empreendimentosDataGridView
             // 
@@ -113,6 +109,10 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // empreendimentosBindingSource
+            // 
+            this.empreendimentosBindingSource.DataSource = typeof(Models.Empreendimentos);
             // 
             // comboBoxBuscarPor
             // 
@@ -247,10 +247,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormConsultaEmpreendimentos";
-            this.Text = "FormConsultaEmpreendimentos";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormConsultaEmpreendimentos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

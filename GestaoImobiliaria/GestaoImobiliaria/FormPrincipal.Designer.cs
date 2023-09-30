@@ -158,6 +158,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(850, 500);
             this.Name = "FormPrincipal";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de Vendas Imobiliárias";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

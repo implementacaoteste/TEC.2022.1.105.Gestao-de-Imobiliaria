@@ -143,7 +143,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCadastroEmpreendimento";
-            this.Text = "FormCadastroEmpreendimento";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de empreendimento";
             this.Load += new System.EventHandler(this.FormCadastroEmpreendimento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

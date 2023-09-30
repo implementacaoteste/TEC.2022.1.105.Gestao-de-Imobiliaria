@@ -43,8 +43,9 @@ namespace LocacaoLaboratorio
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonReservar = new System.Windows.Forms.Button();
             this.terrenoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status_Terreno_Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,10 +62,9 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelConsultarTerreno
@@ -215,15 +215,6 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.TabIndex = 12;
             this.terrenoDataGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.terrenoDataGridView_RowPrePaint);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdTerreno";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdTerreno";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
             // Status_Terreno_Descricao
             // 
             this.Status_Terreno_Descricao.DataPropertyName = "Status_Terreno_Descricao";
@@ -232,6 +223,26 @@ namespace LocacaoLaboratorio
             this.Status_Terreno_Descricao.Name = "Status_Terreno_Descricao";
             this.Status_Terreno_Descricao.ReadOnly = true;
             this.Status_Terreno_Descricao.Width = 125;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1087, 458);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdTerreno";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdTerreno";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -373,17 +384,6 @@ namespace LocacaoLaboratorio
             // 
             this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1087, 458);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormConsultarTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -409,10 +409,11 @@ namespace LocacaoLaboratorio
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Consulta de terreno";
             this.Load += new System.EventHandler(this.FormConsultarTerreno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

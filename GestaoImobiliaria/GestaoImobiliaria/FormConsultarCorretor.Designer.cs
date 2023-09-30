@@ -286,15 +286,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.corretorDataGridView);
-
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-
             this.MinimizeBox = false;
-
             this.Name = "FormConsultarCorretor";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Consulta de corretor";
             ((System.ComponentModel.ISupportInitialize)(this.corretorDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

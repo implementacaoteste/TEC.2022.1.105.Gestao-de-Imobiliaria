@@ -30,12 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.vendasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeEmpreendimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeCorretor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelConsultaVendas = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonBuscarVenda = new System.Windows.Forms.Button();
@@ -46,6 +44,8 @@
             this.buttonSelecionarVenda = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.vendasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,15 +74,6 @@
             this.vendasDataGridView.RowTemplate.Height = 24;
             this.vendasDataGridView.Size = new System.Drawing.Size(1306, 426);
             this.vendasDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDVenda";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // NomeEmpreendimento
             // 
@@ -119,10 +110,6 @@
             this.NomeCorretor.Name = "NomeCorretor";
             this.NomeCorretor.ReadOnly = true;
             this.NomeCorretor.Width = 200;
-            // 
-            // vendasBindingSource
-            // 
-            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
             // 
             // labelConsultaVendas
             // 
@@ -235,6 +222,19 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar por";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDVenda";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // vendasBindingSource
+            // 
+            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
+            // 
             // FormConsultaVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,6 +256,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Consulta de vendas";
             this.Load += new System.EventHandler(this.FormConsultaVendas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vendasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
