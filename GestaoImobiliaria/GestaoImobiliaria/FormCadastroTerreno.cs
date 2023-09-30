@@ -28,6 +28,12 @@ namespace LocacaoLaboratorio
                 terrenoBindingSource.EndEdit();
                 Terreno terreno = (Terreno)terrenoBindingSource.Current;
 
+                terreno.IdStatus_Terreno = 1;
+
+                if (radioButtonVendido.Checked)
+                    terreno.IdStatus_Terreno = 2;
+                else if (radioButtonReservado.Checked)
+                    terreno.IdStatus_Terreno = 3;
 
                 if (id == 0)
                     new TerrenoBLL().inserir(terreno);
@@ -57,9 +63,19 @@ namespace LocacaoLaboratorio
                     precoAVistaTextBox.Text =
                     precoParceladoTextBox.Text =
                     metragemEsquerdaTextBox.Text = "";
+                    radioButtonDisponivel.Checked = true;
                 }
                 else
+                {
                     terrenoBindingSource.DataSource = new TerrenoBLL().BuscarPorId(id);
+
+                    radioButtonDisponivel.Checked = true;
+
+                    if (((Terreno)terrenoBindingSource.Current).IdStatus_Terreno == 2)
+                        radioButtonVendido.Checked = true;
+                    else if (((Terreno)terrenoBindingSource.Current).IdStatus_Terreno == 3)
+                        radioButtonReservado.Checked = true;
+                }
             }
             catch (Exception ex)
             {
@@ -85,6 +101,25 @@ namespace LocacaoLaboratorio
                 ((Terreno)terrenoBindingSource.Current).Empreendimento = frm.Empreendimentos;
                 nomeTextBox.DataBindings.Control.Text = ((Terreno)terrenoBindingSource.Current).Empreendimento.Nome;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButtonDisponivel.BackColor =
+                        radioButtonReservado.BackColor =
+                        radioButtonVendido.BackColor = buttonSalvar.BackColor;
+
+            if (radioButtonDisponivel.Checked)
+                radioButtonDisponivel.BackColor = Color.Green;
+            else if (radioButtonReservado.Checked)
+                radioButtonReservado.BackColor = Color.Yellow;
+            else if (radioButtonVendido.Checked)
+                radioButtonVendido.BackColor = System.Drawing.ColorTranslator.FromHtml(Constantes.CorVendido);
         }
     }
 }

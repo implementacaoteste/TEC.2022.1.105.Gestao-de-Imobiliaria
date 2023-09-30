@@ -8,5 +8,6 @@ namespace Models
         public static string StringDeConexao;
         public static string DiretorioStringConexao = "C:\\Configuracao\\";
         public static string NomeArquivoConexao = "imobiliariaConnection.config";
+        public static string CorVendido = "#ff8d72";
     }
 }

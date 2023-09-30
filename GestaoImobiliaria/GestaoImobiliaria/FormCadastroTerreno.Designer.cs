@@ -60,10 +60,10 @@
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.buttonBuscarEmpreendimento = new System.Windows.Forms.Button();
-            this.buttonDisponivel = new System.Windows.Forms.Button();
-            this.buttonReservado = new System.Windows.Forms.Button();
-            this.buttonVendido = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.radioButtonDisponivel = new System.Windows.Forms.RadioButton();
+            this.radioButtonReservado = new System.Windows.Forms.RadioButton();
+            this.radioButtonVendido = new System.Windows.Forms.RadioButton();
             enderecoLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
             metragemDireitaLabel = new System.Windows.Forms.Label();
@@ -294,7 +294,7 @@
             this.redeAguaCheckBox.AutoSize = true;
             this.redeAguaCheckBox.BackColor = System.Drawing.Color.Gold;
             this.redeAguaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.terrenoBindingSource, "RedeAgua", true));
-            this.redeAguaCheckBox.Location = new System.Drawing.Point(698, 171);
+            this.redeAguaCheckBox.Location = new System.Drawing.Point(698, 165);
             this.redeAguaCheckBox.Name = "redeAguaCheckBox";
             this.redeAguaCheckBox.Size = new System.Drawing.Size(116, 20);
             this.redeAguaCheckBox.TabIndex = 36;
@@ -357,33 +357,6 @@
             this.buttonBuscarEmpreendimento.UseVisualStyleBackColor = false;
             this.buttonBuscarEmpreendimento.Click += new System.EventHandler(this.buttonBuscarEmpreendimento_Click_1);
             // 
-            // buttonDisponivel
-            // 
-            this.buttonDisponivel.Location = new System.Drawing.Point(678, 221);
-            this.buttonDisponivel.Name = "buttonDisponivel";
-            this.buttonDisponivel.Size = new System.Drawing.Size(102, 23);
-            this.buttonDisponivel.TabIndex = 43;
-            this.buttonDisponivel.Text = "Disponivel";
-            this.buttonDisponivel.UseVisualStyleBackColor = true;
-            // 
-            // buttonReservado
-            // 
-            this.buttonReservado.Location = new System.Drawing.Point(786, 222);
-            this.buttonReservado.Name = "buttonReservado";
-            this.buttonReservado.Size = new System.Drawing.Size(102, 23);
-            this.buttonReservado.TabIndex = 44;
-            this.buttonReservado.Text = "Reservado";
-            this.buttonReservado.UseVisualStyleBackColor = true;
-            // 
-            // buttonVendido
-            // 
-            this.buttonVendido.Location = new System.Drawing.Point(894, 222);
-            this.buttonVendido.Name = "buttonVendido";
-            this.buttonVendido.Size = new System.Drawing.Size(102, 23);
-            this.buttonVendido.TabIndex = 45;
-            this.buttonVendido.Text = "Vendido";
-            this.buttonVendido.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Gold;
@@ -391,19 +364,59 @@
             this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1046, 350);
+            this.pictureBox1.Size = new System.Drawing.Size(1046, 455);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // radioButtonDisponivel
+            // 
+            this.radioButtonDisponivel.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonDisponivel.AutoSize = true;
+            this.radioButtonDisponivel.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.radioButtonDisponivel.Location = new System.Drawing.Point(698, 210);
+            this.radioButtonDisponivel.Name = "radioButtonDisponivel";
+            this.radioButtonDisponivel.Size = new System.Drawing.Size(81, 26);
+            this.radioButtonDisponivel.TabIndex = 47;
+            this.radioButtonDisponivel.Text = "&Disponível";
+            this.radioButtonDisponivel.UseVisualStyleBackColor = true;
+            this.radioButtonDisponivel.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // radioButtonReservado
+            // 
+            this.radioButtonReservado.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonReservado.AutoSize = true;
+            this.radioButtonReservado.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.radioButtonReservado.Location = new System.Drawing.Point(796, 210);
+            this.radioButtonReservado.Name = "radioButtonReservado";
+            this.radioButtonReservado.Size = new System.Drawing.Size(85, 26);
+            this.radioButtonReservado.TabIndex = 47;
+            this.radioButtonReservado.TabStop = true;
+            this.radioButtonReservado.Text = "&Reservado";
+            this.radioButtonReservado.UseVisualStyleBackColor = true;
+            this.radioButtonReservado.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // radioButtonVendido
+            // 
+            this.radioButtonVendido.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonVendido.AutoSize = true;
+            this.radioButtonVendido.Location = new System.Drawing.Point(898, 210);
+            this.radioButtonVendido.Name = "radioButtonVendido";
+            this.radioButtonVendido.Size = new System.Drawing.Size(68, 26);
+            this.radioButtonVendido.TabIndex = 47;
+            this.radioButtonVendido.Text = "&Vendido";
+            this.radioButtonVendido.UseVisualStyleBackColor = true;
+            this.radioButtonVendido.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // FormCadastroTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 350);
-            this.Controls.Add(this.buttonVendido);
-            this.Controls.Add(this.buttonReservado);
-            this.Controls.Add(this.buttonDisponivel);
+            this.ClientSize = new System.Drawing.Size(1046, 455);
+            this.Controls.Add(this.radioButtonVendido);
+            this.Controls.Add(this.radioButtonReservado);
+            this.Controls.Add(this.radioButtonDisponivel);
             this.Controls.Add(this.buttonBuscarEmpreendimento);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
@@ -469,9 +482,9 @@
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button buttonBuscarEmpreendimento;
-        private System.Windows.Forms.Button buttonDisponivel;
-        private System.Windows.Forms.Button buttonReservado;
-        private System.Windows.Forms.Button buttonVendido;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RadioButton radioButtonDisponivel;
+        private System.Windows.Forms.RadioButton radioButtonReservado;
+        private System.Windows.Forms.RadioButton radioButtonVendido;
     }
 }
