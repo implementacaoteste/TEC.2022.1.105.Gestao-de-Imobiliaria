@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace LocacaoLaboratorio
 {
@@ -112,34 +111,6 @@ namespace LocacaoLaboratorio
             {
                 frm.ShowDialog();
             }
-        }
-
-        private void btEncerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-
-            btnMaximizar.Visible = false;
-            btnRestaurar.Visible = true;
-
-        }
-       
-
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-
-            btnMaximizar.Visible = true;
-            btnRestaurar.Visible = false;
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
