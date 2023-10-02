@@ -69,13 +69,13 @@
             this.NomeCorretor,
             this.TerrenoDescricao});
             this.reservaDataGridView.DataSource = this.reservaBindingSource;
-            this.reservaDataGridView.Location = new System.Drawing.Point(20, 114);
-            this.reservaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reservaDataGridView.Location = new System.Drawing.Point(27, 150);
+            this.reservaDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservaDataGridView.Name = "reservaDataGridView";
             this.reservaDataGridView.ReadOnly = true;
             this.reservaDataGridView.RowHeadersWidth = 51;
             this.reservaDataGridView.RowTemplate.Height = 24;
-            this.reservaDataGridView.Size = new System.Drawing.Size(608, 252);
+            this.reservaDataGridView.Size = new System.Drawing.Size(811, 300);
             this.reservaDataGridView.TabIndex = 1;
             // 
             // idReservaDataGridViewTextBoxColumn
@@ -141,10 +141,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.BackColor = System.Drawing.Color.Gold;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(150, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(206, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 54);
+            this.label1.Size = new System.Drawing.Size(421, 66);
             this.label1.TabIndex = 13;
             this.label1.Text = "Consultar reserva";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,20 +152,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(17, 72);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(23, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(75, 16);
             this.label2.TabIndex = 14;
             this.label2.Text = "Buscar por:";
             // 
             // buttonExcluirUsuario
             // 
             this.buttonExcluirUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExcluirUsuario.Location = new System.Drawing.Point(571, 87);
-            this.buttonExcluirUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluirUsuario.Location = new System.Drawing.Point(761, 120);
+            this.buttonExcluirUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluirUsuario.Name = "buttonExcluirUsuario";
-            this.buttonExcluirUsuario.Size = new System.Drawing.Size(56, 23);
+            this.buttonExcluirUsuario.Size = new System.Drawing.Size(75, 28);
             this.buttonExcluirUsuario.TabIndex = 19;
             this.buttonExcluirUsuario.Text = "&Excluir";
             this.buttonExcluirUsuario.UseVisualStyleBackColor = true;
@@ -175,10 +173,10 @@
             // buttonAdicionarUsuario
             // 
             this.buttonAdicionarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdicionarUsuario.Location = new System.Drawing.Point(510, 87);
-            this.buttonAdicionarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdicionarUsuario.Location = new System.Drawing.Point(680, 120);
+            this.buttonAdicionarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdicionarUsuario.Name = "buttonAdicionarUsuario";
-            this.buttonAdicionarUsuario.Size = new System.Drawing.Size(56, 23);
+            this.buttonAdicionarUsuario.Size = new System.Drawing.Size(75, 28);
             this.buttonAdicionarUsuario.TabIndex = 18;
             this.buttonAdicionarUsuario.Text = "Inserir";
             this.buttonAdicionarUsuario.UseVisualStyleBackColor = true;
@@ -187,10 +185,10 @@
             // buttonAlterar
             // 
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAlterar.Location = new System.Drawing.Point(449, 87);
-            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAlterar.Location = new System.Drawing.Point(599, 120);
+            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(56, 23);
+            this.buttonAlterar.Size = new System.Drawing.Size(75, 28);
             this.buttonAlterar.TabIndex = 17;
             this.buttonAlterar.Text = "Al&terar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
@@ -199,10 +197,10 @@
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscar.Location = new System.Drawing.Point(388, 88);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscar.Location = new System.Drawing.Point(517, 121);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(56, 22);
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 27);
             this.buttonBuscar.TabIndex = 16;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -212,10 +210,10 @@
             // 
             this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(112, 90);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscar.Location = new System.Drawing.Point(149, 124);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(272, 20);
+            this.textBoxBuscar.Size = new System.Drawing.Size(361, 22);
             this.textBoxBuscar.TabIndex = 15;
             // 
             // comboBoxBuscarPor
@@ -225,10 +223,10 @@
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Id",
             "BuscarTodos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(20, 89);
-            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(27, 123);
+            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(90, 21);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(119, 24);
             this.comboBoxBuscarPor.TabIndex = 20;
             // 
             // pictureBox1
@@ -236,18 +234,18 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(653, 384);
+            this.pictureBox1.Size = new System.Drawing.Size(871, 473);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
             // FormBuscarReserva
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 384);
+            this.ClientSize = new System.Drawing.Size(871, 473);
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonExcluirUsuario);
@@ -259,7 +257,7 @@
             this.Controls.Add(this.reservaDataGridView);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimizeBox = false;
             this.Name = "FormBuscarReserva";
             this.ShowIcon = false;
