@@ -43,8 +43,8 @@ namespace LocacaoLaboratorio
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonReservar = new System.Windows.Forms.Button();
             this.terrenoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status_Terreno_Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,11 +69,13 @@ namespace LocacaoLaboratorio
             // 
             // labelConsultarTerreno
             // 
+            this.labelConsultarTerreno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelConsultarTerreno.BackColor = System.Drawing.Color.Gold;
             this.labelConsultarTerreno.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConsultarTerreno.Location = new System.Drawing.Point(358, 9);
+            this.labelConsultarTerreno.Location = new System.Drawing.Point(268, 7);
+            this.labelConsultarTerreno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelConsultarTerreno.Name = "labelConsultarTerreno";
-            this.labelConsultarTerreno.Size = new System.Drawing.Size(399, 46);
+            this.labelConsultarTerreno.Size = new System.Drawing.Size(299, 37);
             this.labelConsultarTerreno.TabIndex = 2;
             this.labelConsultarTerreno.Text = "Consultar terreno";
             this.labelConsultarTerreno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,9 +84,10 @@ namespace LocacaoLaboratorio
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(34, 75);
+            this.label1.Location = new System.Drawing.Point(26, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Buscar Por";
             // 
@@ -96,23 +99,29 @@ namespace LocacaoLaboratorio
             "Id",
             "Matricula",
             "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(30, 94);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(22, 76);
+            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(92, 21);
             this.comboBoxBuscarPor.TabIndex = 4;
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(157, 94);
+            this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxBuscar.Location = new System.Drawing.Point(118, 76);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(427, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(321, 20);
             this.textBoxBuscar.TabIndex = 5;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(590, 93);
+            this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBuscar.Location = new System.Drawing.Point(442, 76);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(87, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(65, 19);
             this.buttonBuscar.TabIndex = 6;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -120,9 +129,11 @@ namespace LocacaoLaboratorio
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(683, 93);
+            this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAlterar.Location = new System.Drawing.Point(512, 76);
+            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(87, 23);
+            this.buttonAlterar.Size = new System.Drawing.Size(65, 19);
             this.buttonAlterar.TabIndex = 7;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
@@ -130,9 +141,11 @@ namespace LocacaoLaboratorio
             // 
             // buttonInserir
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(776, 93);
+            this.buttonInserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInserir.Location = new System.Drawing.Point(582, 76);
+            this.buttonInserir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonInserir.Name = "buttonInserir";
-            this.buttonInserir.Size = new System.Drawing.Size(87, 23);
+            this.buttonInserir.Size = new System.Drawing.Size(65, 19);
             this.buttonInserir.TabIndex = 8;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
@@ -140,9 +153,11 @@ namespace LocacaoLaboratorio
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(869, 93);
+            this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExcluir.Location = new System.Drawing.Point(652, 76);
+            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(87, 23);
+            this.buttonExcluir.Size = new System.Drawing.Size(65, 19);
             this.buttonExcluir.TabIndex = 9;
             this.buttonExcluir.Text = "&Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
@@ -151,9 +166,10 @@ namespace LocacaoLaboratorio
             // buttonSelecionar
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSelecionar.Location = new System.Drawing.Point(860, 406);
+            this.buttonSelecionar.Location = new System.Drawing.Point(645, 330);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(91, 23);
+            this.buttonSelecionar.Size = new System.Drawing.Size(68, 19);
             this.buttonSelecionar.TabIndex = 10;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
@@ -163,18 +179,21 @@ namespace LocacaoLaboratorio
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(957, 406);
+            this.buttonCancelar.Location = new System.Drawing.Point(718, 330);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(91, 23);
+            this.buttonCancelar.Size = new System.Drawing.Size(68, 19);
             this.buttonCancelar.TabIndex = 11;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // buttonReservar
             // 
-            this.buttonReservar.Location = new System.Drawing.Point(962, 93);
+            this.buttonReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonReservar.Location = new System.Drawing.Point(722, 76);
+            this.buttonReservar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonReservar.Name = "buttonReservar";
-            this.buttonReservar.Size = new System.Drawing.Size(87, 23);
+            this.buttonReservar.Size = new System.Drawing.Size(65, 19);
             this.buttonReservar.TabIndex = 12;
             this.buttonReservar.Text = "&Reservar";
             this.buttonReservar.UseVisualStyleBackColor = true;
@@ -185,6 +204,9 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.AllowUserToAddRows = false;
             this.terrenoDataGridView.AllowUserToDeleteRows = false;
             this.terrenoDataGridView.AllowUserToOrderColumns = true;
+            this.terrenoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.terrenoDataGridView.AutoGenerateColumns = false;
             this.terrenoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.terrenoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -206,23 +228,15 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14});
             this.terrenoDataGridView.DataSource = this.terrenoBindingSource;
-            this.terrenoDataGridView.Location = new System.Drawing.Point(28, 122);
+            this.terrenoDataGridView.Location = new System.Drawing.Point(21, 99);
+            this.terrenoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.terrenoDataGridView.Name = "terrenoDataGridView";
             this.terrenoDataGridView.ReadOnly = true;
             this.terrenoDataGridView.RowHeadersWidth = 51;
             this.terrenoDataGridView.RowTemplate.Height = 24;
-            this.terrenoDataGridView.Size = new System.Drawing.Size(1024, 274);
+            this.terrenoDataGridView.Size = new System.Drawing.Size(768, 223);
             this.terrenoDataGridView.TabIndex = 12;
             this.terrenoDataGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.terrenoDataGridView_RowPrePaint);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdTerreno";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdTerreno";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // Status_Terreno_Descricao
             // 
@@ -232,6 +246,15 @@ namespace LocacaoLaboratorio
             this.Status_Terreno_Descricao.Name = "Status_Terreno_Descricao";
             this.Status_Terreno_Descricao.ReadOnly = true;
             this.Status_Terreno_Descricao.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdTerreno";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdTerreno";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -378,17 +401,18 @@ namespace LocacaoLaboratorio
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1087, 458);
+            this.pictureBox1.Size = new System.Drawing.Size(815, 372);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
             // FormConsultarTerreno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 458);
+            this.ClientSize = new System.Drawing.Size(815, 372);
             this.Controls.Add(this.terrenoDataGridView);
             this.Controls.Add(this.buttonReservar);
             this.Controls.Add(this.buttonCancelar);
@@ -402,7 +426,8 @@ namespace LocacaoLaboratorio
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelConsultarTerreno);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConsultarTerreno";

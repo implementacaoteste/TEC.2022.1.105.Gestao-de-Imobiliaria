@@ -138,7 +138,7 @@ namespace LocacaoLaboratorio
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            labelConsultaEmpreendimentos.BackColor = Color.Transparent;
         }
 
         private void FormConsultaEmpreendimentos_Load(object sender, EventArgs e)

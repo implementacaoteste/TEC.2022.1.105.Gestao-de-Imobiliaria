@@ -154,6 +154,12 @@
     <Compile Include="FormConsultaVendas.Designer.cs">
       <DependentUpon>FormConsultaVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInicio.Designer.cs">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     <EmbeddedResource Include="FormConsultaVendas.resx">
       <DependentUpon>FormConsultaVendas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInicio.resx">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +299,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Foto de fundo 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo para a tela principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem Tela Inicial 41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo de inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem Tela Inicial 42.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

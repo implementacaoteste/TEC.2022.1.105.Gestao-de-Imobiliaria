@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Net.NetworkInformation;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+
 
 namespace LocacaoLaboratorio
 {
@@ -111,6 +113,92 @@ namespace LocacaoLaboratorio
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizar.Visible = false;
+            btnRestaurar.Visible = true;
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnMaximizar.Visible = true;
+            btnRestaurar.Visible = false;
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnDeslogar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void AbrirForm(object _form)
+        {
+            if (this.painelContenedor.Controls.Count > 0)
+                this.painelContenedor.Controls.RemoveAt(0);
+            Form fh = _form as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.painelContenedor.Controls.Add(fh);
+            this.painelContenedor.Tag = fh;
+            fh.Show();
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FormBuscarUsuario());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FormInicio());
+        }
+
+        private void btnGrupos_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FormBuscarGrupoUsuario());
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FormConsultaCliente());
+        }
+
+        private void btnCorretores_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FormConsultarCorretor());
+        }
+
+        private void btnEmpreendimentos_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FormConsultaEmpreendimentos());
+        }
+
+        private void btnTerrenos_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FormConsultarTerreno());
+        }
+
+        private void btnReservas_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FormBuscarReserva());
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FormConsultaVendas());
         }
     }
 }
