@@ -271,9 +271,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormConsultaEmpreendimentos";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormConsultaEmpreendimentos";
             this.Load += new System.EventHandler(this.FormConsultaEmpreendimentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).EndInit();

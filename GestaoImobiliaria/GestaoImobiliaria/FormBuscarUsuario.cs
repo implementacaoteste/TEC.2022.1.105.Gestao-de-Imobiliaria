@@ -149,10 +149,5 @@ namespace LocacaoLaboratorio
             if (e.KeyCode == Keys.Escape)
                 Close();
         }
-
-        private void FormBuscarUsuario_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

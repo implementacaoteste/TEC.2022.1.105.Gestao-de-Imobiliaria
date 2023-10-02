@@ -420,8 +420,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(642, 414);
             this.Name = "FormPrincipal";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de Vendas Imobiliárias";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
