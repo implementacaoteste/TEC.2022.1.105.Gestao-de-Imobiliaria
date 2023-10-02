@@ -30,12 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.vendasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeEmpreendimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeCorretor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelConsultaVendas = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonBuscarVenda = new System.Windows.Forms.Button();
@@ -46,7 +44,8 @@
             this.buttonSelecionarVenda = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.vendasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,15 +76,6 @@
             this.vendasDataGridView.RowTemplate.Height = 24;
             this.vendasDataGridView.Size = new System.Drawing.Size(1307, 426);
             this.vendasDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDVenda";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // NomeEmpreendimento
             // 
@@ -122,10 +112,6 @@
             this.NomeCorretor.Name = "NomeCorretor";
             this.NomeCorretor.ReadOnly = true;
             this.NomeCorretor.Width = 200;
-            // 
-            // vendasBindingSource
-            // 
-            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
             // 
             // labelConsultaVendas
             // 
@@ -248,17 +234,18 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar por";
             // 
-            // pictureBox1
+            // dataGridViewTextBoxColumn1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1331, 607);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDVenda";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // vendasBindingSource
+            // 
+            this.vendasBindingSource.DataSource = typeof(Models.Vendas);
             // 
             // FormConsultaVendas
             // 
@@ -284,6 +271,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Consulta de vendas";
             this.Load += new System.EventHandler(this.FormConsultaVendas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vendasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
