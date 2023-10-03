@@ -56,6 +56,14 @@ namespace LocacaoLaboratorio
             cPFConjugeTextBox.Visible = estadoCivilComboBox.Text == "Casado(a)";
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void cPFConjugeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

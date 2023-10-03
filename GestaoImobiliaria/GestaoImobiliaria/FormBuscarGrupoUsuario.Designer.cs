@@ -71,7 +71,7 @@
             this.grupoUsuarioDataGridView.RowHeadersWidth = 51;
             this.grupoUsuarioDataGridView.RowTemplate.Height = 24;
             this.grupoUsuarioDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grupoUsuarioDataGridView.Size = new System.Drawing.Size(559, 450);
+            this.grupoUsuarioDataGridView.Size = new System.Drawing.Size(681, 450);
             this.grupoUsuarioDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn2
@@ -100,13 +100,13 @@
             this.permissoesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4});
             this.permissoesDataGridView.DataSource = this.permissoesBindingSource;
-            this.permissoesDataGridView.Location = new System.Drawing.Point(577, 147);
+            this.permissoesDataGridView.Location = new System.Drawing.Point(699, 147);
             this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.permissoesDataGridView.Name = "permissoesDataGridView";
             this.permissoesDataGridView.ReadOnly = true;
             this.permissoesDataGridView.RowHeadersWidth = 51;
             this.permissoesDataGridView.RowTemplate.Height = 24;
-            this.permissoesDataGridView.Size = new System.Drawing.Size(643, 450);
+            this.permissoesDataGridView.Size = new System.Drawing.Size(521, 450);
             this.permissoesDataGridView.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn4
@@ -125,19 +125,21 @@
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(12, 118);
+            this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscar.Location = new System.Drawing.Point(12, 106);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(235, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(235, 30);
             this.textBoxBuscar.TabIndex = 0;
             this.textBoxBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxBuscar_KeyDown);
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(253, 118);
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Location = new System.Drawing.Point(253, 106);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 25);
+            this.buttonBuscar.Size = new System.Drawing.Size(105, 30);
             this.buttonBuscar.TabIndex = 1;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -145,10 +147,11 @@
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(333, 118);
+            this.buttonAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAlterar.Location = new System.Drawing.Point(364, 106);
             this.buttonAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(75, 25);
+            this.buttonAlterar.Size = new System.Drawing.Size(106, 30);
             this.buttonAlterar.TabIndex = 2;
             this.buttonAlterar.Text = "Al&terar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
@@ -156,10 +159,11 @@
             // 
             // buttonAdicionarGrupoUsuario
             // 
-            this.buttonAdicionarGrupoUsuario.Location = new System.Drawing.Point(415, 118);
+            this.buttonAdicionarGrupoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdicionarGrupoUsuario.Location = new System.Drawing.Point(476, 105);
             this.buttonAdicionarGrupoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdicionarGrupoUsuario.Name = "buttonAdicionarGrupoUsuario";
-            this.buttonAdicionarGrupoUsuario.Size = new System.Drawing.Size(75, 25);
+            this.buttonAdicionarGrupoUsuario.Size = new System.Drawing.Size(105, 31);
             this.buttonAdicionarGrupoUsuario.TabIndex = 3;
             this.buttonAdicionarGrupoUsuario.Text = "&Adicionar";
             this.buttonAdicionarGrupoUsuario.UseVisualStyleBackColor = true;
@@ -167,10 +171,11 @@
             // 
             // buttonExcluirGrupoUsuario
             // 
-            this.buttonExcluirGrupoUsuario.Location = new System.Drawing.Point(496, 118);
+            this.buttonExcluirGrupoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluirGrupoUsuario.Location = new System.Drawing.Point(588, 105);
             this.buttonExcluirGrupoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluirGrupoUsuario.Name = "buttonExcluirGrupoUsuario";
-            this.buttonExcluirGrupoUsuario.Size = new System.Drawing.Size(75, 25);
+            this.buttonExcluirGrupoUsuario.Size = new System.Drawing.Size(105, 31);
             this.buttonExcluirGrupoUsuario.TabIndex = 4;
             this.buttonExcluirGrupoUsuario.Text = "&Excluir";
             this.buttonExcluirGrupoUsuario.UseVisualStyleBackColor = true;
@@ -179,10 +184,11 @@
             // buttonAdicionarPermissao
             // 
             this.buttonAdicionarPermissao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdicionarPermissao.Location = new System.Drawing.Point(1063, 118);
+            this.buttonAdicionarPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdicionarPermissao.Location = new System.Drawing.Point(998, 105);
             this.buttonAdicionarPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdicionarPermissao.Name = "buttonAdicionarPermissao";
-            this.buttonAdicionarPermissao.Size = new System.Drawing.Size(75, 25);
+            this.buttonAdicionarPermissao.Size = new System.Drawing.Size(105, 31);
             this.buttonAdicionarPermissao.TabIndex = 5;
             this.buttonAdicionarPermissao.Text = "A&dicionar";
             this.buttonAdicionarPermissao.UseVisualStyleBackColor = true;
@@ -191,10 +197,11 @@
             // buttonExcluirPermissao
             // 
             this.buttonExcluirPermissao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExcluirPermissao.Location = new System.Drawing.Point(1144, 118);
+            this.buttonExcluirPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluirPermissao.Location = new System.Drawing.Point(1109, 106);
             this.buttonExcluirPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluirPermissao.Name = "buttonExcluirPermissao";
-            this.buttonExcluirPermissao.Size = new System.Drawing.Size(75, 25);
+            this.buttonExcluirPermissao.Size = new System.Drawing.Size(105, 30);
             this.buttonExcluirPermissao.TabIndex = 6;
             this.buttonExcluirPermissao.Text = "E&xcluir";
             this.buttonExcluirPermissao.UseVisualStyleBackColor = true;

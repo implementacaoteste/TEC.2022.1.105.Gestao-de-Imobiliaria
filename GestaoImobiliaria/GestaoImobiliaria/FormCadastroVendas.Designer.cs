@@ -55,10 +55,10 @@
             // 
             iDCorretorLabel.AutoSize = true;
             iDCorretorLabel.BackColor = System.Drawing.Color.Gold;
-            iDCorretorLabel.Location = new System.Drawing.Point(224, 68);
-            iDCorretorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            iDCorretorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iDCorretorLabel.Location = new System.Drawing.Point(299, 84);
             iDCorretorLabel.Name = "iDCorretorLabel";
-            iDCorretorLabel.Size = new System.Drawing.Size(44, 13);
+            iDCorretorLabel.Size = new System.Drawing.Size(71, 20);
             iDCorretorLabel.TabIndex = 7;
             iDCorretorLabel.Text = "Corretor";
             // 
@@ -66,10 +66,10 @@
             // 
             Terreno.AutoSize = true;
             Terreno.BackColor = System.Drawing.Color.Gold;
-            Terreno.Location = new System.Drawing.Point(32, 119);
-            Terreno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            Terreno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Terreno.Location = new System.Drawing.Point(43, 146);
             Terreno.Name = "Terreno";
-            Terreno.Size = new System.Drawing.Size(44, 13);
+            Terreno.Size = new System.Drawing.Size(67, 20);
             Terreno.TabIndex = 8;
             Terreno.Text = "Terreno";
             // 
@@ -77,10 +77,10 @@
             // 
             nomeLabel.AutoSize = true;
             nomeLabel.BackColor = System.Drawing.Color.Gold;
-            nomeLabel.Location = new System.Drawing.Point(35, 68);
-            nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nomeLabel.Location = new System.Drawing.Point(47, 84);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(39, 13);
+            nomeLabel.Size = new System.Drawing.Size(61, 20);
             nomeLabel.TabIndex = 17;
             nomeLabel.Text = "Cliente";
             // 
@@ -89,19 +89,19 @@
             this.labelCadastroVendas.AutoSize = true;
             this.labelCadastroVendas.BackColor = System.Drawing.Color.Gold;
             this.labelCadastroVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCadastroVendas.Location = new System.Drawing.Point(47, 9);
-            this.labelCadastroVendas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCadastroVendas.Location = new System.Drawing.Point(63, 11);
             this.labelCadastroVendas.Name = "labelCadastroVendas";
-            this.labelCadastroVendas.Size = new System.Drawing.Size(303, 37);
+            this.labelCadastroVendas.Size = new System.Drawing.Size(375, 46);
             this.labelCadastroVendas.TabIndex = 10;
             this.labelCadastroVendas.Text = "Cadastro de vendas";
             // 
             // buttonSalvarVenda
             // 
-            this.buttonSalvarVenda.Location = new System.Drawing.Point(263, 176);
-            this.buttonSalvarVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvarVenda.Location = new System.Drawing.Point(251, 228);
+            this.buttonSalvarVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvarVenda.Name = "buttonSalvarVenda";
-            this.buttonSalvarVenda.Size = new System.Drawing.Size(56, 19);
+            this.buttonSalvarVenda.Size = new System.Drawing.Size(123, 31);
             this.buttonSalvarVenda.TabIndex = 11;
             this.buttonSalvarVenda.Text = "Salvar";
             this.buttonSalvarVenda.UseVisualStyleBackColor = true;
@@ -110,10 +110,11 @@
             // buttonCancelarCadVenda
             // 
             this.buttonCancelarCadVenda.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelarCadVenda.Location = new System.Drawing.Point(323, 176);
-            this.buttonCancelarCadVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelarCadVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelarCadVenda.Location = new System.Drawing.Point(395, 228);
+            this.buttonCancelarCadVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelarCadVenda.Name = "buttonCancelarCadVenda";
-            this.buttonCancelarCadVenda.Size = new System.Drawing.Size(65, 19);
+            this.buttonCancelarCadVenda.Size = new System.Drawing.Size(123, 31);
             this.buttonCancelarCadVenda.TabIndex = 12;
             this.buttonCancelarCadVenda.Text = "Cancelar";
             this.buttonCancelarCadVenda.UseVisualStyleBackColor = true;
@@ -121,10 +122,11 @@
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "NomeCorretor", true));
-            this.textBox1.Location = new System.Drawing.Point(226, 84);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(301, 103);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 20);
+            this.textBox1.Size = new System.Drawing.Size(183, 30);
             this.textBox1.TabIndex = 14;
             // 
             // vendasBindingSource
@@ -134,18 +136,20 @@
             // textBox2
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "Endereco", true));
-            this.textBox2.Location = new System.Drawing.Point(34, 134);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(45, 165);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(329, 20);
+            this.textBox2.Size = new System.Drawing.Size(437, 30);
             this.textBox2.TabIndex = 15;
             // 
             // buttonBuscarCliente
             // 
-            this.buttonBuscarCliente.Location = new System.Drawing.Point(188, 83);
-            this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarCliente.Location = new System.Drawing.Point(251, 102);
+            this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarCliente.Name = "buttonBuscarCliente";
-            this.buttonBuscarCliente.Size = new System.Drawing.Size(22, 19);
+            this.buttonBuscarCliente.Size = new System.Drawing.Size(42, 31);
             this.buttonBuscarCliente.TabIndex = 17;
             this.buttonBuscarCliente.Text = "...";
             this.buttonBuscarCliente.UseVisualStyleBackColor = true;
@@ -154,18 +158,20 @@
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "NomeCliente", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(34, 84);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeTextBox.Location = new System.Drawing.Point(45, 103);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(150, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(199, 30);
             this.nomeTextBox.TabIndex = 18;
             // 
             // buttonBuscarCorretor
             // 
-            this.buttonBuscarCorretor.Location = new System.Drawing.Point(367, 84);
-            this.buttonBuscarCorretor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarCorretor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarCorretor.Location = new System.Drawing.Point(489, 103);
+            this.buttonBuscarCorretor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarCorretor.Name = "buttonBuscarCorretor";
-            this.buttonBuscarCorretor.Size = new System.Drawing.Size(22, 19);
+            this.buttonBuscarCorretor.Size = new System.Drawing.Size(38, 30);
             this.buttonBuscarCorretor.TabIndex = 19;
             this.buttonBuscarCorretor.Text = "...";
             this.buttonBuscarCorretor.UseVisualStyleBackColor = true;
@@ -173,10 +179,11 @@
             // 
             // buttonBuscarTerreno
             // 
-            this.buttonBuscarTerreno.Location = new System.Drawing.Point(367, 133);
-            this.buttonBuscarTerreno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarTerreno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarTerreno.Location = new System.Drawing.Point(489, 164);
+            this.buttonBuscarTerreno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarTerreno.Name = "buttonBuscarTerreno";
-            this.buttonBuscarTerreno.Size = new System.Drawing.Size(22, 19);
+            this.buttonBuscarTerreno.Size = new System.Drawing.Size(38, 31);
             this.buttonBuscarTerreno.TabIndex = 20;
             this.buttonBuscarTerreno.Text = "...";
             this.buttonBuscarTerreno.UseVisualStyleBackColor = true;
@@ -187,18 +194,18 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(434, 227);
+            this.pictureBox1.Size = new System.Drawing.Size(554, 279);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
             // FormCadastroVendas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 227);
+            this.ClientSize = new System.Drawing.Size(554, 279);
             this.Controls.Add(this.buttonBuscarTerreno);
             this.Controls.Add(this.buttonBuscarCorretor);
             this.Controls.Add(nomeLabel);
@@ -214,7 +221,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCadastroVendas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCadastroVendas";
