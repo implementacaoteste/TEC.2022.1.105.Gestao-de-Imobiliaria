@@ -82,7 +82,7 @@
             this.corretorDataGridView.ReadOnly = true;
             this.corretorDataGridView.RowHeadersWidth = 51;
             this.corretorDataGridView.RowTemplate.Height = 24;
-            this.corretorDataGridView.Size = new System.Drawing.Size(776, 272);
+            this.corretorDataGridView.Size = new System.Drawing.Size(776, 259);
             this.corretorDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -164,25 +164,27 @@
             // comboBoxBuscarPor
             // 
             this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "ID",
             "Nome",
             "CPF",
             "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 104);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 88);
             this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(105, 33);
             this.comboBoxBuscarPor.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(12, 85);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 16);
+            this.label1.Size = new System.Drawing.Size(92, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Buscar por";
             // 
@@ -190,19 +192,21 @@
             // 
             this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(139, 106);
+            this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscar.Location = new System.Drawing.Point(123, 91);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(319, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(244, 30);
             this.textBoxBuscar.TabIndex = 4;
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscar.Location = new System.Drawing.Point(469, 106);
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Location = new System.Drawing.Point(373, 93);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(99, 30);
             this.buttonBuscar.TabIndex = 5;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -211,10 +215,11 @@
             // buttonAlterar
             // 
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAlterar.Location = new System.Drawing.Point(551, 106);
+            this.buttonAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAlterar.Location = new System.Drawing.Point(478, 93);
             this.buttonAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAlterar.Size = new System.Drawing.Size(99, 30);
             this.buttonAlterar.TabIndex = 6;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
@@ -223,10 +228,11 @@
             // buttonInserir
             // 
             this.buttonInserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonInserir.Location = new System.Drawing.Point(632, 106);
+            this.buttonInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInserir.Location = new System.Drawing.Point(583, 93);
             this.buttonInserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserir.Name = "buttonInserir";
-            this.buttonInserir.Size = new System.Drawing.Size(75, 23);
+            this.buttonInserir.Size = new System.Drawing.Size(99, 30);
             this.buttonInserir.TabIndex = 7;
             this.buttonInserir.Text = "Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
@@ -235,10 +241,11 @@
             // buttonExcluir
             // 
             this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExcluir.Location = new System.Drawing.Point(713, 106);
+            this.buttonExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluir.Location = new System.Drawing.Point(689, 93);
             this.buttonExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
+            this.buttonExcluir.Size = new System.Drawing.Size(99, 30);
             this.buttonExcluir.TabIndex = 8;
             this.buttonExcluir.Text = "Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
@@ -259,10 +266,11 @@
             // buttonSelecionar
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSelecionar.Location = new System.Drawing.Point(585, 415);
+            this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelecionar.Location = new System.Drawing.Point(541, 406);
             this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(97, 23);
+            this.buttonSelecionar.Size = new System.Drawing.Size(119, 32);
             this.buttonSelecionar.TabIndex = 10;
             this.buttonSelecionar.Text = "Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
@@ -272,10 +280,11 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(688, 415);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(666, 406);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.Size = new System.Drawing.Size(119, 32);
             this.button2.TabIndex = 11;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
