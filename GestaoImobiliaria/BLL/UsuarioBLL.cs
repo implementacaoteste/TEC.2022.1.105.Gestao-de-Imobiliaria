@@ -87,5 +87,9 @@ namespace BLL
             else
                 throw new Exception("Usuario ou senha inválido.");
         }
+        public void Logout()
+        {
+            Constantes.IdUsuarioLogado = 0;
+        }
     }
 }

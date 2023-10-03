@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Net.NetworkInformation;
 using System.Security.Cryptography;
 using System.Windows.Forms;
@@ -30,18 +31,37 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                this.Visible = false;
                 using (FormLogin frm = new FormLogin())
                 {
                     frm.ShowDialog();
                     if (!frm.Logou)
                         Application.Exit();
                 }
+
+                this.Visible = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnDeslogar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            new UsuarioBLL().Logout();
+            using (FormLogin frm = new FormLogin())
+            {
+                frm.ShowDialog();
+                if (!frm.Logou)
+                    Application.Exit();
+            }
+
+            this.Visible = true;
+        }
+
+
         private void gruposDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -139,10 +159,7 @@ namespace LocacaoLaboratorio
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnDeslogar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       
         private void AbrirForm(object _form)
         {
             if (this.painelContenedor.Controls.Count > 0)
