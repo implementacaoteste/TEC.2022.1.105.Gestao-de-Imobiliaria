@@ -43,11 +43,10 @@ namespace LocacaoLaboratorio
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonReservar = new System.Windows.Forms.Button();
             this.terrenoDataGridView = new System.Windows.Forms.DataGridView();
-<<<<<<< Updated upstream
-=======
+
             this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
->>>>>>> Stashed changes
+
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status_Terreno_Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,16 +85,13 @@ namespace LocacaoLaboratorio
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Gold;
-<<<<<<< Updated upstream
+
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(26, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 20);
-=======
-            this.label1.Location = new System.Drawing.Point(35, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
->>>>>>> Stashed changes
+
+
             this.label1.TabIndex = 3;
             this.label1.Text = "Buscar Por";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -109,52 +105,40 @@ namespace LocacaoLaboratorio
             "Id",
             "Matricula",
             "Todos"});
-<<<<<<< Updated upstream
+
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(30, 83);
             this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(121, 33);
-=======
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(29, 94);
-            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(121, 24);
->>>>>>> Stashed changes
+
+
             this.comboBoxBuscarPor.TabIndex = 4;
             // 
             // textBoxBuscar
             // 
             this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< Updated upstream
+
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBuscar.Location = new System.Drawing.Point(157, 86);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(346, 30);
-=======
-            this.textBoxBuscar.Location = new System.Drawing.Point(157, 94);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(427, 22);
->>>>>>> Stashed changes
+
+
             this.textBoxBuscar.TabIndex = 5;
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< Updated upstream
+
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.Location = new System.Drawing.Point(509, 87);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(102, 30);
-=======
-            this.buttonBuscar.Location = new System.Drawing.Point(589, 94);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(87, 23);
->>>>>>> Stashed changes
+
+
             this.buttonBuscar.TabIndex = 6;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -163,18 +147,14 @@ namespace LocacaoLaboratorio
             // buttonAlterar
             // 
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< Updated upstream
+
             this.buttonAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAlterar.Location = new System.Drawing.Point(619, 88);
             this.buttonAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(102, 30);
-=======
-            this.buttonAlterar.Location = new System.Drawing.Point(683, 94);
-            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(87, 23);
->>>>>>> Stashed changes
+
+
             this.buttonAlterar.TabIndex = 7;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
@@ -183,18 +163,14 @@ namespace LocacaoLaboratorio
             // buttonInserir
             // 
             this.buttonInserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< Updated upstream
+
             this.buttonInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInserir.Location = new System.Drawing.Point(729, 88);
             this.buttonInserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(102, 31);
-=======
-            this.buttonInserir.Location = new System.Drawing.Point(776, 94);
-            this.buttonInserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonInserir.Name = "buttonInserir";
-            this.buttonInserir.Size = new System.Drawing.Size(87, 23);
->>>>>>> Stashed changes
+
+
             this.buttonInserir.TabIndex = 8;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
@@ -203,18 +179,14 @@ namespace LocacaoLaboratorio
             // buttonExcluir
             // 
             this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< Updated upstream
+
             this.buttonExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluir.Location = new System.Drawing.Point(838, 88);
             this.buttonExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(102, 31);
-=======
-            this.buttonExcluir.Location = new System.Drawing.Point(869, 94);
-            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(87, 23);
->>>>>>> Stashed changes
+
+
             this.buttonExcluir.TabIndex = 9;
             this.buttonExcluir.Text = "&Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
@@ -223,18 +195,14 @@ namespace LocacaoLaboratorio
             // buttonSelecionar
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< Updated upstream
+
             this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionar.Location = new System.Drawing.Point(783, 417);
             this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(127, 30);
-=======
-            this.buttonSelecionar.Location = new System.Drawing.Point(860, 406);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(91, 23);
->>>>>>> Stashed changes
+
+
             this.buttonSelecionar.TabIndex = 10;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
@@ -244,18 +212,14 @@ namespace LocacaoLaboratorio
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-<<<<<<< Updated upstream
+
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Location = new System.Drawing.Point(925, 417);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(127, 30);
-=======
-            this.buttonCancelar.Location = new System.Drawing.Point(957, 406);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(91, 23);
->>>>>>> Stashed changes
+
+
             this.buttonCancelar.TabIndex = 11;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -263,18 +227,14 @@ namespace LocacaoLaboratorio
             // buttonReservar
             // 
             this.buttonReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< Updated upstream
+
             this.buttonReservar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReservar.Location = new System.Drawing.Point(950, 88);
             this.buttonReservar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonReservar.Name = "buttonReservar";
             this.buttonReservar.Size = new System.Drawing.Size(102, 31);
-=======
-            this.buttonReservar.Location = new System.Drawing.Point(963, 94);
-            this.buttonReservar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonReservar.Name = "buttonReservar";
-            this.buttonReservar.Size = new System.Drawing.Size(87, 23);
->>>>>>> Stashed changes
+
+
             this.buttonReservar.TabIndex = 12;
             this.buttonReservar.Text = "&Reservar";
             this.buttonReservar.UseVisualStyleBackColor = true;
@@ -319,12 +279,11 @@ namespace LocacaoLaboratorio
             this.terrenoDataGridView.TabIndex = 12;
             this.terrenoDataGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.terrenoDataGridView_RowPrePaint);
             // 
-<<<<<<< Updated upstream
+
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "IdTerreno";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdTerreno";
-=======
+         
             // terrenoBindingSource
             // 
             this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
@@ -345,7 +304,7 @@ namespace LocacaoLaboratorio
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "IdTerreno";
             this.dataGridViewTextBoxColumn1.HeaderText = "Id Terreno";
->>>>>>> Stashed changes
+
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -496,7 +455,7 @@ namespace LocacaoLaboratorio
             this.dataGridViewTextBoxColumn14.Visible = false;
             this.dataGridViewTextBoxColumn14.Width = 125;
             // 
-<<<<<<< Updated upstream
+
             // terrenoBindingSource
             // 
             this.terrenoBindingSource.DataSource = typeof(Models.Terreno);
@@ -513,8 +472,7 @@ namespace LocacaoLaboratorio
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-=======
->>>>>>> Stashed changes
+
             // FormConsultarTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
