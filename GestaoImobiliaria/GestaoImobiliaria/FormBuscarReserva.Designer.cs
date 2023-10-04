@@ -268,6 +268,7 @@
             this.MinimizeBox = false;
             this.Name = "FormBuscarReserva";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.FormBuscarReserva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

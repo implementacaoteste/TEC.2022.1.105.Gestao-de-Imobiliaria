@@ -325,6 +325,7 @@
             this.Name = "FormConsultarCorretor";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.FormConsultarCorretor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.corretorDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

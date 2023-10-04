@@ -107,5 +107,10 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void FormBuscarReserva_Load(object sender, EventArgs e)
+        {
+            comboBoxBuscarPor.SelectedIndex = 1;
+        }
     }
 }

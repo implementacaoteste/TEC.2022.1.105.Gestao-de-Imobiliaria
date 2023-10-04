@@ -125,5 +125,10 @@ namespace LocacaoLaboratorio
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void FormConsultarCorretor_Load(object sender, EventArgs e)
+        {
+            comboBoxBuscarPor.SelectedIndex = 3;
+        }
     }
 }
