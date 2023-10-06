@@ -293,39 +293,32 @@ IF(NOT EXISTS(SELECT 1 FROM Permissao WHERE Id = 6))INSERT INTO Permissao(Id, De
 IF(NOT EXISTS(SELECT 1 FROM Permissao WHERE Id = 7))INSERT INTO Permissao(Id, Descricao)VALUES(7,'Alterar grupo de usuário')
 IF(NOT EXISTS(SELECT 1 FROM Permissao WHERE Id = 8))INSERT INTO Permissao(Id, Descricao)VALUES(8,'Excluir grupo de usuário')
 IF(NOT EXISTS(SELECT 1 FROM Permissao WHERE Id = 9))INSERT INTO Permissao(Id, Descricao)VALUES(9,'Adicionar permissão a um grupo de usuário')
-IF(NOT EXISTS(SELECT 1 FROM Permissao WHERE Id = 10))INSERT INTO Permissao(Id, Descricao)VALUES(10,'Adicionar grupo de usuário a um usuário')
+IF(NOT EXISTS(SELECT 1 FROM Permissao WHERE Id = 10))INSERT INTO Permissao(Id, Descricao)VALUES(10,'Remover permissão de um grupo de usuário')
 GO
 
-IF(NOT EXISTS(SELECT 1 FROM Usuario WHERE NomeUsuario = 'Erisvaldo'))INSERT INTO Usuario(Nome, NomeUsuario, Senha, Ativo)VALUES('Erisvaldo Carvalho', 'Erisvaldo', '123', 1)
-IF(NOT EXISTS(SELECT 1 FROM Usuario WHERE NomeUsuario = 'Geno'))INSERT INTO Usuario(Nome, NomeUsuario, Senha, Ativo)VALUES('Genoveva', 'Geno', '123', 1)
-IF(NOT EXISTS(SELECT 1 FROM Usuario WHERE NomeUsuario = 'Dag'))INSERT INTO Usuario(Nome, NomeUsuario, Senha, Ativo)VALUES('Dagorlina', 'Dag', '123', 1)
+IF(NOT EXISTS(SELECT 1 FROM Usuario WHERE NomeUsuario = 'Administrador'))INSERT INTO Usuario(Nome, NomeUsuario, Senha, Ativo)VALUES('Administrador ', 'Administrador', '123', 1)
 GO
 
-INSERT INTO GrupoUsuario(NomeGrupo)VALUES('Gerente')
-INSERT INTO GrupoUsuario(NomeGrupo)VALUES('Vendedor')
-INSERT INTO GrupoUsuario(NomeGrupo)VALUES('Fiscal de caixa')
-INSERT INTO GrupoUsuario(NomeGrupo)VALUES('Estoquista')
-INSERT INTO GrupoUsuario(NomeGrupo)VALUES('Operador de caixa')
+INSERT INTO GrupoUsuario(NomeGrupo)VALUES('Administrador')
+
+
 
 GO
-INSERT INTO UsuarioGrupoUsuario VALUES(2,1)
-INSERT INTO UsuarioGrupoUsuario VALUES(1,2)
+INSERT INTO UsuarioGrupoUsuario VALUES(1,1)
 GO
 
-INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(3,1)
-INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(3,2)
-INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(3,5)
-INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(4,2)
-INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(4,1)
-INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(4,5)
-GO
-
-INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)(SELECT 1, Id FROM Permissao)
-GO
-INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(2, 1)
-INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(2, 2)
-INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(2, 3)
-GO
+INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(1,1)
+INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(1,2)
+INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(1,3)
+INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(1,4)
+INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(1,5)
+INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(1,6)
+INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario, IdPermissao) VALUES(1,7)
+INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(1,8)
+INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(1,9)
+INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(1,10)
+ 
+ go
 
 Insert into Cliente (Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge ) 
 Values ('Cristiano', '11111111','2222222','cristiano@gmail.com','40028922', 'Rua 123', 'Solteiro', 12, NULL, NULL);
