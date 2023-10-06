@@ -47,6 +47,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(4);
                 if (usuarioBindingSource.Count == 0)
                     throw new Exception("Não existe usuário listado para ser excluído.");
 
@@ -74,11 +75,21 @@ namespace LocacaoLaboratorio
 
         private void buttonAdicionarUsuario_Click(object sender, EventArgs e)
         {
+            try
+            {
+            new UsuarioBLL().ValidarPermissao(2);
             using (FormCadastroUsuario frm = new FormCadastroUsuario())
             {
                 frm.ShowDialog();
             }
             buttonBuscar_Click(null, null);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonAlterar_Click(object sender, EventArgs e)
@@ -87,7 +98,7 @@ namespace LocacaoLaboratorio
             {
                 if (usuarioBindingSource.Count == 0)
                     throw new Exception("Não existe usuário listado para ser alterado.");
-
+                new UsuarioBLL().ValidarPermissao(3);
                 int id = ((Usuario)usuarioBindingSource.Current).Id;
 
                 using (FormCadastroUsuario frm = new FormCadastroUsuario(id))
@@ -108,6 +119,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(6);
                 using (FormConsultaGrupoUsuario frm = new FormConsultaGrupoUsuario())
                 {
                     frm.ShowDialog();
@@ -130,6 +142,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(8);
                 if (grupoUsuariosBindingSource.Count == 0)
                     throw new Exception("Não existe grupo listado para ser excluído.");
 

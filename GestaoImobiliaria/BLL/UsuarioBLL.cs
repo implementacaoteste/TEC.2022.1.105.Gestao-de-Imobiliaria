@@ -72,11 +72,13 @@ namespace BLL
         }
         public void AdicionarGrupoUsuario(int _idUsuario, int _idGrupoUsuario)
         {
+            ValidarPermissao(6);
             if (!new UsuarioDAL().UsuarioPertenceAoGrupo(_idUsuario, _idGrupoUsuario))
                 new UsuarioDAL().AdicionarGrupoUsuario(_idUsuario, _idGrupoUsuario);
         }
         public void RemoverGrupoUsuario(int _idUsuario, int _idGrupoUsuario)
         {
+            ValidarPermissao(8);
             new UsuarioDAL().RemoverGrupoUsuario(_idUsuario, _idGrupoUsuario);
         }
         public void Altenticar(string _nomeUsuario, string _senha)

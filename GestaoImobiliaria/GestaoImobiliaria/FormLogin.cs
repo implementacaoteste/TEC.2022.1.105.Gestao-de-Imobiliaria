@@ -54,7 +54,7 @@ namespace LocacaoLaboratorio
         private void FormLogin_Load(object sender, EventArgs e)
         {
 #if DEBUG
-            textBoxUsuario.Text = "Erisvaldo";
+            textBoxUsuario.Text = "Administrador";
             textBoxSenha.Text = "123";
             this.Location = new Point(559, 417);
             //buttonEntrar_Click(null, null);

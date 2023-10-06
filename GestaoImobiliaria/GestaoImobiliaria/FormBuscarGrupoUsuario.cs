@@ -16,6 +16,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(5);
                 grupoUsuarioBindingSource.DataSource = new GrupoUsuarioBLL().BuscarPorNomeGrupo(textBoxBuscar.Text);
             }
             catch (Exception ex)
@@ -28,6 +29,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(6);
                 using (FormCadastroGrupoUsuario frm = new FormCadastroGrupoUsuario())
                 {
                     frm.ShowDialog();
@@ -44,7 +46,8 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                if(grupoUsuarioBindingSource.Count == 0)
+                new UsuarioBLL().ValidarPermissao(7);
+                if (grupoUsuarioBindingSource.Count == 0)
                     throw new Exception("Não existe grupo listado para ser alterado.");
 
                 using (FormCadastroGrupoUsuario frm = new FormCadastroGrupoUsuario(((GrupoUsuario)grupoUsuarioBindingSource.Current).Id))
@@ -63,6 +66,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(8);
                 if (grupoUsuarioBindingSource.Count == 0)
                     throw new Exception("Não existe grupo a ser excluído");
                 if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
@@ -81,6 +85,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(9);
                 if (grupoUsuarioBindingSource.Count == 0)
                     throw new Exception("Não existe um grupo selecionado para adicionar uma permissão.");
 
@@ -102,6 +107,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(9);
                 if (permissoesBindingSource.Count == 0)
                     throw new Exception("Não existe permissão a ser excluída.");
 
