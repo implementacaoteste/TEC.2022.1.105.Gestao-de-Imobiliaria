@@ -24,6 +24,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(5);
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0:
@@ -51,6 +52,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(19);
                 if (terrenoBindingSource.Count == 0)
                 {
                     MessageBox.Show("Não existe terreno para ser alterado!");
@@ -75,6 +77,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(12);
                 using (FormCadastroTerreno frm = new FormCadastroTerreno())
                 {
                     frm.ShowDialog();
@@ -89,6 +92,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(26);
                 if (terrenoBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não existe registro para ser excluído");
@@ -133,6 +137,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(14);
                 if (terrenoBindingSource.Count == 0)
                     throw new Exception("Não existe terreno para ser reservado.");
 

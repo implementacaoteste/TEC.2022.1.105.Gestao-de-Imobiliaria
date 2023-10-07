@@ -16,6 +16,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(1);
                 switch (comboBoxUsuario.SelectedIndex)
                 {
                     case 0:
@@ -47,7 +48,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(4);
+                new UsuarioBLL().ValidarPermissao(22);
                 if (usuarioBindingSource.Count == 0)
                     throw new Exception("Não existe usuário listado para ser excluído.");
 
@@ -77,7 +78,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-            new UsuarioBLL().ValidarPermissao(2);
+            new UsuarioBLL().ValidarPermissao(8);
             using (FormCadastroUsuario frm = new FormCadastroUsuario())
             {
                 frm.ShowDialog();
@@ -96,6 +97,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(15);
                 if (usuarioBindingSource.Count == 0)
                     throw new Exception("Não existe usuário listado para ser alterado.");
                 new UsuarioBLL().ValidarPermissao(3);
@@ -119,7 +121,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(6);
+                new UsuarioBLL().ValidarPermissao(30);
                 using (FormConsultaGrupoUsuario frm = new FormConsultaGrupoUsuario())
                 {
                     frm.ShowDialog();
@@ -142,7 +144,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(8);
+                new UsuarioBLL().ValidarPermissao(32);
                 if (grupoUsuariosBindingSource.Count == 0)
                     throw new Exception("Não existe grupo listado para ser excluído.");
 

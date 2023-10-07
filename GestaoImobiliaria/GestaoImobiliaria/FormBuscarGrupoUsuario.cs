@@ -16,7 +16,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(5);
+                new UsuarioBLL().ValidarPermissao(29);
                 grupoUsuarioBindingSource.DataSource = new GrupoUsuarioBLL().BuscarPorNomeGrupo(textBoxBuscar.Text);
             }
             catch (Exception ex)
@@ -29,7 +29,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(6);
+                new UsuarioBLL().ValidarPermissao(30);
                 using (FormCadastroGrupoUsuario frm = new FormCadastroGrupoUsuario())
                 {
                     frm.ShowDialog();
@@ -46,7 +46,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(7);
+                new UsuarioBLL().ValidarPermissao(31);
                 if (grupoUsuarioBindingSource.Count == 0)
                     throw new Exception("Não existe grupo listado para ser alterado.");
 
@@ -66,7 +66,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(8);
+                new UsuarioBLL().ValidarPermissao(32);
                 if (grupoUsuarioBindingSource.Count == 0)
                     throw new Exception("Não existe grupo a ser excluído");
                 if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
@@ -85,7 +85,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(9);
+                new UsuarioBLL().ValidarPermissao(33);
                 if (grupoUsuarioBindingSource.Count == 0)
                     throw new Exception("Não existe um grupo selecionado para adicionar uma permissão.");
 
@@ -107,7 +107,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(9);
+                new UsuarioBLL().ValidarPermissao(34);
                 if (permissoesBindingSource.Count == 0)
                     throw new Exception("Não existe permissão a ser excluída.");
 

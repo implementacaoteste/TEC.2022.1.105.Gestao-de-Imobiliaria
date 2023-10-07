@@ -32,6 +32,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(4);
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0:
@@ -66,6 +67,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(18);
                 if (empreendimentosBindingSource.Count == 0)
                 {
                     MessageBox.Show("Não existe empreendimento para ser alterado.");
@@ -93,6 +95,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(11);
                 using (FormCadastroEmpreendimento frm = new FormCadastroEmpreendimento())
                 {
                     frm.ShowDialog();
@@ -111,6 +114,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(25);
                 if (empreendimentosBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não existe registro para ser excluído");

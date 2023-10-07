@@ -24,6 +24,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(6);
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0: 
@@ -67,6 +68,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(20);
                 if (vendasBindingSource.Count == 0)
                 {
                     MessageBox.Show("Não existe Vendas para ser alterada.");
@@ -114,6 +116,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(27);
                 if (vendasBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não existe registro para ser excluído");
@@ -166,6 +169,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(13);
                 using (FormCadastroVendas frm = new FormCadastroVendas())
                 {
                     frm.ShowDialog();

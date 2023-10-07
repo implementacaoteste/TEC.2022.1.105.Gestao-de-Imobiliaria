@@ -25,6 +25,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(14);
                 using (FormCadastroReserva frm = new FormCadastroReserva())
                 {
                     frm.ShowDialog();
@@ -40,6 +41,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                 new UsuarioBLL().ValidarPermissao(7);
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0:
@@ -65,6 +67,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(21);
                 if (reservaBindingSource.Count == 0)
                 {
                     MessageBox.Show("Não existe cliente para ser alterado.");
@@ -89,6 +92,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(28);
                 if (reservaBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não existe registro para ser excluído");

@@ -23,6 +23,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(3);
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0:
@@ -53,6 +54,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(17);
                 if (corretorBindingSource.Count == 0)
                 {
                     MessageBox.Show("Não existe corretor para ser alterado.");
@@ -76,6 +78,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(10);
                 using (FormCadastroCorretor frm = new FormCadastroCorretor())
                 {
                     frm.ShowDialog();
@@ -90,6 +93,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(24);
                 if (corretorBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não existe registro para ser excluído");

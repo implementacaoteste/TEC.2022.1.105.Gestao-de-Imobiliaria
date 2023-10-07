@@ -15,6 +15,7 @@ namespace LocacaoLaboratorio
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
+            new UsuarioBLL().ValidarPermissao(2);
             try
             {
                 switch (comboBoxBuscarPor.SelectedIndex)
@@ -48,6 +49,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(23);
                 if (clienteBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não existe registro para ser excluído");
@@ -71,6 +73,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(9);
                 using (FormCadastroCliente frm = new FormCadastroCliente())
                 {
                     frm.ShowDialog();
@@ -86,6 +89,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(16);
                 if (clienteBindingSource.Count == 0)
                 {
                     MessageBox.Show("Não existe cliente para ser alterado.");

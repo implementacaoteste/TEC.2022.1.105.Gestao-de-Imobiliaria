@@ -31,6 +31,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
+               
                 grupoUsuarioBindingSource.DataSource = new GrupoUsuarioBLL().BuscarPorNomeGrupo(textBoxBuscar.Text);
             }
             catch (Exception ex)
