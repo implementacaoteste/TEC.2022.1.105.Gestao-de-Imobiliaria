@@ -86,7 +86,7 @@
             enderecoLabel.Location = new System.Drawing.Point(114, 231);
             enderecoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(85, 20);
+            enderecoLabel.Size = new System.Drawing.Size(73, 17);
             enderecoLabel.TabIndex = 25;
             enderecoLabel.Text = "Endereco:";
             // 
@@ -98,7 +98,7 @@
             matriculaLabel.Location = new System.Drawing.Point(114, 286);
             matriculaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             matriculaLabel.Name = "matriculaLabel";
-            matriculaLabel.Size = new System.Drawing.Size(83, 20);
+            matriculaLabel.Size = new System.Drawing.Size(69, 17);
             matriculaLabel.TabIndex = 28;
             matriculaLabel.Text = "Matricula:";
             // 
@@ -110,7 +110,7 @@
             metragemDireitaLabel.Location = new System.Drawing.Point(114, 179);
             metragemDireitaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             metragemDireitaLabel.Name = "metragemDireitaLabel";
-            metragemDireitaLabel.Size = new System.Drawing.Size(144, 20);
+            metragemDireitaLabel.Size = new System.Drawing.Size(120, 17);
             metragemDireitaLabel.TabIndex = 29;
             metragemDireitaLabel.Text = "Metragem Direita:";
             // 
@@ -122,7 +122,7 @@
             metragemEsquerdaLabel.Location = new System.Drawing.Point(501, 126);
             metragemEsquerdaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             metragemEsquerdaLabel.Name = "metragemEsquerdaLabel";
-            metragemEsquerdaLabel.Size = new System.Drawing.Size(165, 20);
+            metragemEsquerdaLabel.Size = new System.Drawing.Size(140, 17);
             metragemEsquerdaLabel.TabIndex = 30;
             metragemEsquerdaLabel.Text = "Metragem Esquerda:";
             // 
@@ -134,7 +134,7 @@
             metragemFrenteLabel.Location = new System.Drawing.Point(501, 179);
             metragemFrenteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             metragemFrenteLabel.Name = "metragemFrenteLabel";
-            metragemFrenteLabel.Size = new System.Drawing.Size(142, 20);
+            metragemFrenteLabel.Size = new System.Drawing.Size(120, 17);
             metragemFrenteLabel.TabIndex = 31;
             metragemFrenteLabel.Text = "Metragem Frente:";
             // 
@@ -146,7 +146,7 @@
             metragemFundoLabel.Location = new System.Drawing.Point(501, 231);
             metragemFundoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             metragemFundoLabel.Name = "metragemFundoLabel";
-            metragemFundoLabel.Size = new System.Drawing.Size(140, 20);
+            metragemFundoLabel.Size = new System.Drawing.Size(119, 17);
             metragemFundoLabel.TabIndex = 32;
             metragemFundoLabel.Text = "Metragem Fundo:";
             // 
@@ -158,7 +158,7 @@
             precoAVistaLabel.Location = new System.Drawing.Point(501, 339);
             precoAVistaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precoAVistaLabel.Name = "precoAVistaLabel";
-            precoAVistaLabel.Size = new System.Drawing.Size(112, 20);
+            precoAVistaLabel.Size = new System.Drawing.Size(93, 17);
             precoAVistaLabel.TabIndex = 33;
             precoAVistaLabel.Text = "Preco AVista:";
             // 
@@ -170,7 +170,7 @@
             precoParceladoLabel.Location = new System.Drawing.Point(501, 282);
             precoParceladoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precoParceladoLabel.Name = "precoParceladoLabel";
-            precoParceladoLabel.Size = new System.Drawing.Size(138, 20);
+            precoParceladoLabel.Size = new System.Drawing.Size(117, 17);
             precoParceladoLabel.TabIndex = 34;
             precoParceladoLabel.Text = "Preco Parcelado:";
             // 
@@ -182,7 +182,7 @@
             tamanhoTotalTerrenoLabel.Location = new System.Drawing.Point(869, 122);
             tamanhoTotalTerrenoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             tamanhoTotalTerrenoLabel.Name = "tamanhoTotalTerrenoLabel";
-            tamanhoTotalTerrenoLabel.Size = new System.Drawing.Size(188, 20);
+            tamanhoTotalTerrenoLabel.Size = new System.Drawing.Size(163, 17);
             tamanhoTotalTerrenoLabel.TabIndex = 37;
             tamanhoTotalTerrenoLabel.Text = "Tamanho Total Terreno:";
             // 
@@ -194,7 +194,7 @@
             nomeLabel.Location = new System.Drawing.Point(114, 129);
             nomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(140, 20);
+            nomeLabel.Size = new System.Drawing.Size(119, 17);
             nomeLabel.TabIndex = 40;
             nomeLabel.Text = "Empreendimento:";
             // 
@@ -206,7 +206,7 @@
             this.confrontacoesLabel.Location = new System.Drawing.Point(114, 339);
             this.confrontacoesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.confrontacoesLabel.Name = "confrontacoesLabel";
-            this.confrontacoesLabel.Size = new System.Drawing.Size(74, 20);
+            this.confrontacoesLabel.Size = new System.Drawing.Size(63, 17);
             this.confrontacoesLabel.TabIndex = 38;
             this.confrontacoesLabel.Text = "Esquina:";
             // 
@@ -253,7 +253,7 @@
             this.enderecoTextBox.Location = new System.Drawing.Point(206, 228);
             this.enderecoTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(198, 30);
+            this.enderecoTextBox.Size = new System.Drawing.Size(198, 26);
             this.enderecoTextBox.TabIndex = 26;
             // 
             // terrenoBindingSource
@@ -267,7 +267,7 @@
             this.matriculaTextBox.Location = new System.Drawing.Point(200, 282);
             this.matriculaTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.matriculaTextBox.Name = "matriculaTextBox";
-            this.matriculaTextBox.Size = new System.Drawing.Size(203, 30);
+            this.matriculaTextBox.Size = new System.Drawing.Size(203, 26);
             this.matriculaTextBox.TabIndex = 29;
             // 
             // metragemDireitaTextBox
@@ -277,7 +277,7 @@
             this.metragemDireitaTextBox.Location = new System.Drawing.Point(261, 175);
             this.metragemDireitaTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.metragemDireitaTextBox.Name = "metragemDireitaTextBox";
-            this.metragemDireitaTextBox.Size = new System.Drawing.Size(140, 30);
+            this.metragemDireitaTextBox.Size = new System.Drawing.Size(140, 26);
             this.metragemDireitaTextBox.TabIndex = 30;
             // 
             // metragemEsquerdaTextBox
@@ -287,7 +287,7 @@
             this.metragemEsquerdaTextBox.Location = new System.Drawing.Point(675, 122);
             this.metragemEsquerdaTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.metragemEsquerdaTextBox.Name = "metragemEsquerdaTextBox";
-            this.metragemEsquerdaTextBox.Size = new System.Drawing.Size(124, 30);
+            this.metragemEsquerdaTextBox.Size = new System.Drawing.Size(124, 26);
             this.metragemEsquerdaTextBox.TabIndex = 31;
             // 
             // metragemFrenteTextBox
@@ -297,7 +297,7 @@
             this.metragemFrenteTextBox.Location = new System.Drawing.Point(649, 175);
             this.metragemFrenteTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.metragemFrenteTextBox.Name = "metragemFrenteTextBox";
-            this.metragemFrenteTextBox.Size = new System.Drawing.Size(150, 30);
+            this.metragemFrenteTextBox.Size = new System.Drawing.Size(150, 26);
             this.metragemFrenteTextBox.TabIndex = 32;
             // 
             // metragemFundoTextBox
@@ -307,7 +307,7 @@
             this.metragemFundoTextBox.Location = new System.Drawing.Point(649, 228);
             this.metragemFundoTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.metragemFundoTextBox.Name = "metragemFundoTextBox";
-            this.metragemFundoTextBox.Size = new System.Drawing.Size(150, 30);
+            this.metragemFundoTextBox.Size = new System.Drawing.Size(150, 26);
             this.metragemFundoTextBox.TabIndex = 33;
             // 
             // precoAVistaTextBox
@@ -317,7 +317,7 @@
             this.precoAVistaTextBox.Location = new System.Drawing.Point(619, 335);
             this.precoAVistaTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.precoAVistaTextBox.Name = "precoAVistaTextBox";
-            this.precoAVistaTextBox.Size = new System.Drawing.Size(180, 30);
+            this.precoAVistaTextBox.Size = new System.Drawing.Size(180, 26);
             this.precoAVistaTextBox.TabIndex = 34;
             // 
             // precoParceladoTextBox
@@ -327,7 +327,7 @@
             this.precoParceladoTextBox.Location = new System.Drawing.Point(649, 279);
             this.precoParceladoTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.precoParceladoTextBox.Name = "precoParceladoTextBox";
-            this.precoParceladoTextBox.Size = new System.Drawing.Size(150, 30);
+            this.precoParceladoTextBox.Size = new System.Drawing.Size(150, 26);
             this.precoParceladoTextBox.TabIndex = 35;
             // 
             // redeAguaCheckBox
@@ -339,7 +339,7 @@
             this.redeAguaCheckBox.Location = new System.Drawing.Point(874, 206);
             this.redeAguaCheckBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.redeAguaCheckBox.Name = "redeAguaCheckBox";
-            this.redeAguaCheckBox.Size = new System.Drawing.Size(134, 24);
+            this.redeAguaCheckBox.Size = new System.Drawing.Size(117, 21);
             this.redeAguaCheckBox.TabIndex = 36;
             this.redeAguaCheckBox.Text = "Rede de água";
             this.redeAguaCheckBox.UseVisualStyleBackColor = false;
@@ -353,7 +353,7 @@
             this.redeEnergiaCheckBox.Location = new System.Drawing.Point(874, 174);
             this.redeEnergiaCheckBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.redeEnergiaCheckBox.Name = "redeEnergiaCheckBox";
-            this.redeEnergiaCheckBox.Size = new System.Drawing.Size(153, 24);
+            this.redeEnergiaCheckBox.Size = new System.Drawing.Size(133, 21);
             this.redeEnergiaCheckBox.TabIndex = 37;
             this.redeEnergiaCheckBox.Text = "Rede de energia";
             this.redeEnergiaCheckBox.UseVisualStyleBackColor = false;
@@ -365,7 +365,7 @@
             this.tamanhoTotalTerrenoTextBox.Location = new System.Drawing.Point(1066, 119);
             this.tamanhoTotalTerrenoTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tamanhoTotalTerrenoTextBox.Name = "tamanhoTotalTerrenoTextBox";
-            this.tamanhoTotalTerrenoTextBox.Size = new System.Drawing.Size(124, 30);
+            this.tamanhoTotalTerrenoTextBox.Size = new System.Drawing.Size(124, 26);
             this.tamanhoTotalTerrenoTextBox.TabIndex = 38;
             // 
             // confrontacoesTextBox
@@ -375,7 +375,7 @@
             this.confrontacoesTextBox.Location = new System.Drawing.Point(194, 335);
             this.confrontacoesTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.confrontacoesTextBox.Name = "confrontacoesTextBox";
-            this.confrontacoesTextBox.Size = new System.Drawing.Size(209, 30);
+            this.confrontacoesTextBox.Size = new System.Drawing.Size(209, 26);
             this.confrontacoesTextBox.TabIndex = 39;
             // 
             // nomeTextBox
@@ -385,7 +385,7 @@
             this.nomeTextBox.Location = new System.Drawing.Point(261, 122);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(124, 30);
+            this.nomeTextBox.Size = new System.Drawing.Size(124, 26);
             this.nomeTextBox.TabIndex = 41;
             // 
             // imageList1
@@ -417,7 +417,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1306, 569);
+            this.pictureBox1.Size = new System.Drawing.Size(1257, 451);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
@@ -432,7 +432,7 @@
             this.radioButtonDisponivel.Location = new System.Drawing.Point(874, 262);
             this.radioButtonDisponivel.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.radioButtonDisponivel.Name = "radioButtonDisponivel";
-            this.radioButtonDisponivel.Size = new System.Drawing.Size(97, 30);
+            this.radioButtonDisponivel.Size = new System.Drawing.Size(83, 27);
             this.radioButtonDisponivel.TabIndex = 47;
             this.radioButtonDisponivel.Text = "&Disponível";
             this.radioButtonDisponivel.UseVisualStyleBackColor = true;
@@ -447,7 +447,7 @@
             this.radioButtonReservado.Location = new System.Drawing.Point(995, 262);
             this.radioButtonReservado.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.radioButtonReservado.Name = "radioButtonReservado";
-            this.radioButtonReservado.Size = new System.Drawing.Size(99, 30);
+            this.radioButtonReservado.Size = new System.Drawing.Size(87, 27);
             this.radioButtonReservado.TabIndex = 47;
             this.radioButtonReservado.TabStop = true;
             this.radioButtonReservado.Text = "&Reservado";
@@ -462,7 +462,7 @@
             this.radioButtonVendido.Location = new System.Drawing.Point(1124, 262);
             this.radioButtonVendido.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.radioButtonVendido.Name = "radioButtonVendido";
-            this.radioButtonVendido.Size = new System.Drawing.Size(79, 30);
+            this.radioButtonVendido.Size = new System.Drawing.Size(70, 27);
             this.radioButtonVendido.TabIndex = 47;
             this.radioButtonVendido.Text = "&Vendido";
             this.radioButtonVendido.UseVisualStyleBackColor = true;
@@ -470,9 +470,9 @@
             // 
             // FormCadastroTerreno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1306, 569);
+            this.ClientSize = new System.Drawing.Size(1257, 451);
             this.Controls.Add(this.radioButtonVendido);
             this.Controls.Add(this.radioButtonReservado);
             this.Controls.Add(this.radioButtonDisponivel);
@@ -506,7 +506,7 @@
             this.Controls.Add(this.labelCadastoTerreno);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

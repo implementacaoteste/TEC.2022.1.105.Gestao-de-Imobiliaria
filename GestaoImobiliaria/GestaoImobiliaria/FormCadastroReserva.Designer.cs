@@ -70,7 +70,7 @@
             dataReservaLabel.Location = new System.Drawing.Point(676, 132);
             dataReservaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dataReservaLabel.Name = "dataReservaLabel";
-            dataReservaLabel.Size = new System.Drawing.Size(117, 20);
+            dataReservaLabel.Size = new System.Drawing.Size(99, 17);
             dataReservaLabel.TabIndex = 3;
             dataReservaLabel.Text = "Data Reserva:";
             // 
@@ -82,7 +82,7 @@
             prazoLabel.Location = new System.Drawing.Point(849, 132);
             prazoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             prazoLabel.Name = "prazoLabel";
-            prazoLabel.Size = new System.Drawing.Size(58, 20);
+            prazoLabel.Size = new System.Drawing.Size(49, 17);
             prazoLabel.TabIndex = 4;
             prazoLabel.Text = "Prazo:";
             // 
@@ -96,7 +96,7 @@
             statusDaReservaLabel.Location = new System.Drawing.Point(39, 132);
             statusDaReservaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             statusDaReservaLabel.Name = "statusDaReservaLabel";
-            statusDaReservaLabel.Size = new System.Drawing.Size(57, 20);
+            statusDaReservaLabel.Size = new System.Drawing.Size(48, 17);
             statusDaReservaLabel.TabIndex = 13;
             statusDaReservaLabel.Text = "Status";
             // 
@@ -108,7 +108,7 @@
             nomeLabel.Location = new System.Drawing.Point(39, 199);
             nomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(71, 20);
+            nomeLabel.Size = new System.Drawing.Size(60, 17);
             nomeLabel.TabIndex = 16;
             nomeLabel.Text = "Corretor";
             // 
@@ -120,7 +120,7 @@
             enderecoLabel.Location = new System.Drawing.Point(39, 289);
             enderecoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(80, 20);
+            enderecoLabel.Size = new System.Drawing.Size(69, 17);
             enderecoLabel.TabIndex = 17;
             enderecoLabel.Text = "Endereço";
             // 
@@ -133,7 +133,7 @@
             matriculaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             matriculaLabel.Name = "matriculaLabel";
             matriculaLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            matriculaLabel.Size = new System.Drawing.Size(78, 20);
+            matriculaLabel.Size = new System.Drawing.Size(65, 17);
             matriculaLabel.TabIndex = 18;
             matriculaLabel.Text = "Matrícula";
             // 
@@ -145,7 +145,7 @@
             nomeEmpreendimentoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nomeEmpreendimentoLabel.Name = "nomeEmpreendimentoLabel";
             nomeEmpreendimentoLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            nomeEmpreendimentoLabel.Size = new System.Drawing.Size(135, 20);
+            nomeEmpreendimentoLabel.Size = new System.Drawing.Size(115, 17);
             nomeEmpreendimentoLabel.TabIndex = 19;
             nomeEmpreendimentoLabel.Text = "Empreendimento";
             // 
@@ -157,7 +157,7 @@
             this.dataReservaDateTimePicker.Location = new System.Drawing.Point(680, 158);
             this.dataReservaDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dataReservaDateTimePicker.Name = "dataReservaDateTimePicker";
-            this.dataReservaDateTimePicker.Size = new System.Drawing.Size(148, 30);
+            this.dataReservaDateTimePicker.Size = new System.Drawing.Size(148, 26);
             this.dataReservaDateTimePicker.TabIndex = 4;
             // 
             // reservaBindingSource
@@ -172,7 +172,7 @@
             this.prazoDateTimePicker.Location = new System.Drawing.Point(851, 158);
             this.prazoDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.prazoDateTimePicker.Name = "prazoDateTimePicker";
-            this.prazoDateTimePicker.Size = new System.Drawing.Size(144, 30);
+            this.prazoDateTimePicker.Size = new System.Drawing.Size(144, 26);
             this.prazoDateTimePicker.TabIndex = 5;
             // 
             // label1
@@ -195,7 +195,7 @@
             this.statusDaReservaTextBox.Location = new System.Drawing.Point(41, 158);
             this.statusDaReservaTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.statusDaReservaTextBox.Name = "statusDaReservaTextBox";
-            this.statusDaReservaTextBox.Size = new System.Drawing.Size(630, 30);
+            this.statusDaReservaTextBox.Size = new System.Drawing.Size(630, 26);
             this.statusDaReservaTextBox.TabIndex = 14;
             // 
             // button1
@@ -229,7 +229,7 @@
             this.nomeTextBox.Location = new System.Drawing.Point(41, 222);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(355, 30);
+            this.nomeTextBox.Size = new System.Drawing.Size(355, 26);
             this.nomeTextBox.TabIndex = 17;
             // 
             // enderecoTextBox
@@ -239,7 +239,7 @@
             this.enderecoTextBox.Location = new System.Drawing.Point(41, 312);
             this.enderecoTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(355, 30);
+            this.enderecoTextBox.Size = new System.Drawing.Size(355, 26);
             this.enderecoTextBox.TabIndex = 18;
             // 
             // matriculaTextBox
@@ -250,7 +250,7 @@
             this.matriculaTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.matriculaTextBox.Name = "matriculaTextBox";
             this.matriculaTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.matriculaTextBox.Size = new System.Drawing.Size(124, 30);
+            this.matriculaTextBox.Size = new System.Drawing.Size(124, 26);
             this.matriculaTextBox.TabIndex = 19;
             // 
             // nomeEmpreendimentoTextBox
@@ -261,7 +261,7 @@
             this.nomeEmpreendimentoTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.nomeEmpreendimentoTextBox.Name = "nomeEmpreendimentoTextBox";
             this.nomeEmpreendimentoTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.nomeEmpreendimentoTextBox.Size = new System.Drawing.Size(308, 30);
+            this.nomeEmpreendimentoTextBox.Size = new System.Drawing.Size(308, 26);
             this.nomeEmpreendimentoTextBox.TabIndex = 20;
             // 
             // buttonBuscarCorretor
@@ -303,7 +303,7 @@
             // 
             // FormCadastroReserva
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 541);
             this.Controls.Add(this.buttonBuscarTerreno);
@@ -327,7 +327,7 @@
             this.Controls.Add(this.dataReservaDateTimePicker);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FormCadastroReserva";

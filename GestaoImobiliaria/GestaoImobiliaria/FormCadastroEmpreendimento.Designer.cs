@@ -50,9 +50,10 @@
             nomeLabel.AutoSize = true;
             nomeLabel.BackColor = System.Drawing.Color.Gold;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(48, 101);
+            nomeLabel.Location = new System.Drawing.Point(36, 82);
+            nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(58, 20);
+            nomeLabel.Size = new System.Drawing.Size(49, 17);
             nomeLabel.TabIndex = 2;
             nomeLabel.Text = "Nome:";
             // 
@@ -61,9 +62,10 @@
             cNPJEmpresaResponsavelLabel.AutoSize = true;
             cNPJEmpresaResponsavelLabel.BackColor = System.Drawing.Color.Gold;
             cNPJEmpresaResponsavelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cNPJEmpresaResponsavelLabel.Location = new System.Drawing.Point(53, 169);
+            cNPJEmpresaResponsavelLabel.Location = new System.Drawing.Point(40, 137);
+            cNPJEmpresaResponsavelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             cNPJEmpresaResponsavelLabel.Name = "cNPJEmpresaResponsavelLabel";
-            cNPJEmpresaResponsavelLabel.Size = new System.Drawing.Size(53, 20);
+            cNPJEmpresaResponsavelLabel.Size = new System.Drawing.Size(43, 17);
             cNPJEmpresaResponsavelLabel.TabIndex = 3;
             cNPJEmpresaResponsavelLabel.Text = "CNPJ";
             // 
@@ -72,9 +74,10 @@
             this.labelCadastroEmpreendimentos.AutoSize = true;
             this.labelCadastroEmpreendimentos.BackColor = System.Drawing.Color.Gold;
             this.labelCadastroEmpreendimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCadastroEmpreendimentos.Location = new System.Drawing.Point(75, 36);
+            this.labelCadastroEmpreendimentos.Location = new System.Drawing.Point(56, 29);
+            this.labelCadastroEmpreendimentos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCadastroEmpreendimentos.Name = "labelCadastroEmpreendimentos";
-            this.labelCadastroEmpreendimentos.Size = new System.Drawing.Size(546, 46);
+            this.labelCadastroEmpreendimentos.Size = new System.Drawing.Size(440, 37);
             this.labelCadastroEmpreendimentos.TabIndex = 0;
             this.labelCadastroEmpreendimentos.Text = "Cadastro de empreendimento";
             // 
@@ -82,10 +85,10 @@
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empreendimentosBindingSource, "Nome", true));
             this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox.Location = new System.Drawing.Point(51, 121);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nomeTextBox.Location = new System.Drawing.Point(38, 98);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(616, 30);
+            this.nomeTextBox.Size = new System.Drawing.Size(463, 26);
             this.nomeTextBox.TabIndex = 3;
             // 
             // empreendimentosBindingSource
@@ -96,19 +99,19 @@
             // 
             this.cNPJEmpresaResponsavelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empreendimentosBindingSource, "CNPJEmpresaResponsavel", true));
             this.cNPJEmpresaResponsavelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cNPJEmpresaResponsavelTextBox.Location = new System.Drawing.Point(51, 191);
-            this.cNPJEmpresaResponsavelTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cNPJEmpresaResponsavelTextBox.Location = new System.Drawing.Point(38, 155);
+            this.cNPJEmpresaResponsavelTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cNPJEmpresaResponsavelTextBox.Name = "cNPJEmpresaResponsavelTextBox";
-            this.cNPJEmpresaResponsavelTextBox.Size = new System.Drawing.Size(616, 30);
+            this.cNPJEmpresaResponsavelTextBox.Size = new System.Drawing.Size(463, 26);
             this.cNPJEmpresaResponsavelTextBox.TabIndex = 4;
             // 
             // buttonSalvar
             // 
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(447, 238);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSalvar.Location = new System.Drawing.Point(335, 193);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(101, 32);
+            this.buttonSalvar.Size = new System.Drawing.Size(76, 26);
             this.buttonSalvar.TabIndex = 9;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
@@ -118,10 +121,10 @@
             // 
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(566, 238);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(424, 193);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(101, 32);
+            this.buttonCancelar.Size = new System.Drawing.Size(76, 26);
             this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -132,18 +135,18 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_Fundo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(700, 281);
+            this.pictureBox1.Size = new System.Drawing.Size(525, 228);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // FormCadastroEmpreendimento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 281);
+            this.ClientSize = new System.Drawing.Size(525, 228);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(cNPJEmpresaResponsavelLabel);
@@ -152,12 +155,12 @@
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(this.labelCadastroEmpreendimentos);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCadastroEmpreendimento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCadastroEmpreendimento";
+            this.Text = "Cadastro de empreendimento";
             this.Load += new System.EventHandler(this.FormCadastroEmpreendimento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
