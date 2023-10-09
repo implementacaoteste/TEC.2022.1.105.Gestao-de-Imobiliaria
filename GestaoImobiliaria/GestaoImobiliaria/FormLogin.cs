@@ -22,6 +22,10 @@ namespace LocacaoLaboratorio
         }
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
+            using (FormLogins frm = new FormLogins())
+            {
+                frm.ShowDialog();
+            }
             try
             {
                 new UsuarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
@@ -59,6 +63,11 @@ namespace LocacaoLaboratorio
             this.Location = new Point(559, 417);
             //buttonEntrar_Click(null, null);
 #endif
+        }
+
+        private void textBoxSenha_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         /*private void button2_MouseMove(object sender, MouseEventArgs e)

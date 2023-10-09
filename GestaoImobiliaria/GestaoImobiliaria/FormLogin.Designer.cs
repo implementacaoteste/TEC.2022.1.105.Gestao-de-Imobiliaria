@@ -40,7 +40,7 @@
             // textBoxUsuario
             // 
             this.textBoxUsuario.Location = new System.Drawing.Point(9, 63);
-            this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(276, 20);
             this.textBoxUsuario.TabIndex = 2;
@@ -49,17 +49,18 @@
             // textBoxSenha
             // 
             this.textBoxSenha.Location = new System.Drawing.Point(9, 112);
-            this.textBoxSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSenha.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.PasswordChar = '*';
             this.textBoxSenha.Size = new System.Drawing.Size(276, 20);
             this.textBoxSenha.TabIndex = 4;
+            this.textBoxSenha.TextChanged += new System.EventHandler(this.textBoxSenha_TextChanged);
             this.textBoxSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSenha_KeyDown);
             // 
             // buttonEntrar
             // 
             this.buttonEntrar.Location = new System.Drawing.Point(77, 148);
-            this.buttonEntrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEntrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEntrar.Name = "buttonEntrar";
             this.buttonEntrar.Size = new System.Drawing.Size(56, 24);
             this.buttonEntrar.TabIndex = 5;
@@ -71,7 +72,7 @@
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(160, 148);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 24);
             this.button2.TabIndex = 6;
@@ -124,7 +125,7 @@
             this.Controls.Add(this.textBoxUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";

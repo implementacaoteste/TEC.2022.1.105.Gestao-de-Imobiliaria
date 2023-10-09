@@ -32,7 +32,7 @@ namespace LocacaoLaboratorio
             try
             {
                 this.Visible = false;
-                using (FormLogin frm = new FormLogin())
+                using (FormLogins frm = new FormLogins())
                 {
                     frm.ShowDialog();
                     if (!frm.Logou)
@@ -51,7 +51,7 @@ namespace LocacaoLaboratorio
         {
             this.Visible = false;
             new UsuarioBLL().Logout();
-            using (FormLogin frm = new FormLogin())
+            using (FormLogins frm = new FormLogins())
             {
                 frm.ShowDialog();
                 if (!frm.Logou)
