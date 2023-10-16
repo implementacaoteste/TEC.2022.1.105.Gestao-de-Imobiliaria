@@ -176,7 +176,7 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM GrupoUsuarios WHERE id = @id", cn))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM GrupoUsuario WHERE id = @id", cn))
                 {
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@Id", _idGrupoUsuario);
