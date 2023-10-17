@@ -27,6 +27,8 @@ namespace LocacaoLaboratorio
             {
                 if (Id == 0)
                     grupoUsuarioBindingSource.AddNew();
+                else
+                    grupoUsuarioBindingSource.DataSource = new GrupoUsuarioBLL().BuscarPorId(Id);
             }
             catch (Exception ex)
             {
