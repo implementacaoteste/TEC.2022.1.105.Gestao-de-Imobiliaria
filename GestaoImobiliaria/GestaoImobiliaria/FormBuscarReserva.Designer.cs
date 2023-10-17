@@ -205,10 +205,10 @@
             this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(138, 96);
+            this.textBoxBuscar.Location = new System.Drawing.Point(141, 96);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(247, 30);
+            this.textBoxBuscar.Size = new System.Drawing.Size(244, 30);
             this.textBoxBuscar.TabIndex = 15;
             // 
             // comboBoxBuscarPor
@@ -217,12 +217,12 @@
             this.comboBoxBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
-            "Id",
-            "BuscarTodos"});
+            "ID",
+            "Todos"});
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(27, 94);
             this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(105, 33);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(108, 33);
             this.comboBoxBuscarPor.TabIndex = 20;
             // 
             // pictureBox1

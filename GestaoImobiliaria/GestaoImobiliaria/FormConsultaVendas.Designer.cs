@@ -144,10 +144,10 @@
             this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(204, 95);
+            this.textBoxBuscar.Location = new System.Drawing.Point(248, 95);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(658, 30);
+            this.textBoxBuscar.Size = new System.Drawing.Size(614, 30);
             this.textBoxBuscar.TabIndex = 3;
             // 
             // buttonBuscarVenda
@@ -217,7 +217,7 @@
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 93);
             this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(186, 33);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(230, 33);
             this.comboBoxBuscarPor.TabIndex = 8;
             // 
             // buttonSelecionarVenda
