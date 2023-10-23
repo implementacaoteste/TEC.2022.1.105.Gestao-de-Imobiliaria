@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarCliente));
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonSelecionar = new System.Windows.Forms.Button();
             this.buttonBuscar = new System.Windows.Forms.Button();
@@ -127,7 +128,7 @@
             this.labelConsultaCliente.Name = "labelConsultaCliente";
             this.labelConsultaCliente.Size = new System.Drawing.Size(346, 67);
             this.labelConsultaCliente.TabIndex = 9;
-            this.labelConsultaCliente.Text = "Consulta cliente";
+            this.labelConsultaCliente.Text = "Clientes";
             this.labelConsultaCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -307,8 +308,9 @@
             this.Controls.Add(this.labelConsultaCliente);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBuscarCliente";
-            this.Text = "FormBuscarCliente";
+            this.Text = "Buscar Cliente";
             this.Load += new System.EventHandler(this.FormBuscarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();

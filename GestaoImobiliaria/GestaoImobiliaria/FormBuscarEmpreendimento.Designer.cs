@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarEmpreendimento));
             this.labelConsultaEmpreendimentos = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -230,9 +231,10 @@
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.empreendimentosDataGridView);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBuscarEmpreendimento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormBuscarEmpreendimento";
+            this.Text = "Buscar Empreendimento";
             this.Load += new System.EventHandler(this.FormBuscarEmpreendimento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).EndInit();

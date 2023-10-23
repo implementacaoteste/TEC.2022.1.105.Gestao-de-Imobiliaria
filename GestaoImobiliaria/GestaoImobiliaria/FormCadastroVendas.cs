@@ -88,7 +88,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                using (FormConsultarCorretor frm = new FormConsultarCorretor())
+                using (FormBuscarCorretor frm = new FormBuscarCorretor())
                 {
                     frm.ShowDialog();
 

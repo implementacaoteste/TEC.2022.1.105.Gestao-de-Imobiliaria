@@ -52,6 +52,12 @@
     <Compile Include="FormBuscarCliente.Designer.cs">
       <DependentUpon>FormBuscarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBuscarCorretor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarCorretor.Designer.cs">
+      <DependentUpon>FormBuscarCorretor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarEmpreendimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     <Compile Include="TratarErro.cs" />
     <EmbeddedResource Include="FormBuscarCliente.resx">
       <DependentUpon>FormBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarCorretor.resx">
+      <DependentUpon>FormBuscarCorretor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarEmpreendimento.resx">
       <DependentUpon>FormBuscarEmpreendimento.cs</DependentUpon>
