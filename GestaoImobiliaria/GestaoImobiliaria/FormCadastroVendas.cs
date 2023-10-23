@@ -67,7 +67,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                using (FormConsultaCliente frm = new FormConsultaCliente())
+                using (FormBuscarCliente frm = new FormBuscarCliente())
                 {
                     frm.ShowDialog();
 

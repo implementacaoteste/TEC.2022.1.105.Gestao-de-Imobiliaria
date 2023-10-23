@@ -18,7 +18,7 @@ namespace LocacaoLaboratorio
             new UsuarioBLL().ValidarPermissao(2);
             try
             {
-                switch (comboBoxBuscarPor.SelectedIndex)
+                switch (comboBox1.SelectedIndex)
                 {
                     case 0:
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
@@ -112,7 +112,7 @@ namespace LocacaoLaboratorio
 
         private void FormConsultaCliente_Load(object sender, EventArgs e)
         {
-            comboBoxBuscarPor.SelectedIndex = 3;
+            comboBox1.SelectedIndex = 3;
         }
 
         private void buttonSelecionar_Click(object sender, EventArgs e)
