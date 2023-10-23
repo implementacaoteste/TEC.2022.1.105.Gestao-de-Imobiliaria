@@ -33,13 +33,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.terrenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.terrenoDataGridView = new System.Windows.Forms.DataGridView();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonSelecionar = new System.Windows.Forms.Button();
-            this.buttonBuscar = new System.Windows.Forms.Button();
-            this.textBoxBuscar = new System.Windows.Forms.TextBox();
-            this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelConsultarTerreno = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status_Terreno_Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +50,13 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empreendimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonSelecionar = new System.Windows.Forms.Button();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.textBoxBuscar = new System.Windows.Forms.TextBox();
+            this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelConsultarTerreno = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoDataGridView)).BeginInit();
@@ -115,96 +115,6 @@
             this.terrenoDataGridView.RowTemplate.Height = 24;
             this.terrenoDataGridView.Size = new System.Drawing.Size(577, 243);
             this.terrenoDataGridView.TabIndex = 24;
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(493, 346);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(95, 24);
-            this.buttonCancelar.TabIndex = 23;
-            this.buttonCancelar.Text = "&Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            // 
-            // buttonSelecionar
-            // 
-            this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionar.Location = new System.Drawing.Point(394, 346);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(95, 24);
-            this.buttonSelecionar.TabIndex = 22;
-            this.buttonSelecionar.Text = "&Selecionar";
-            this.buttonSelecionar.UseVisualStyleBackColor = true;
-            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
-            // 
-            // buttonBuscar
-            // 
-            this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Location = new System.Drawing.Point(512, 67);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(76, 29);
-            this.buttonBuscar.TabIndex = 18;
-            this.buttonBuscar.Text = "&Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = true;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
-            // 
-            // textBoxBuscar
-            // 
-            this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(107, 70);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(401, 26);
-            this.textBoxBuscar.TabIndex = 17;
-            // 
-            // comboBoxBuscarPor
-            // 
-            this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxBuscarPor.FormattingEnabled = true;
-            this.comboBoxBuscarPor.Items.AddRange(new object[] {
-            "ID",
-            "Matricula",
-            "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(11, 68);
-            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(92, 28);
-            this.comboBoxBuscarPor.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Gold;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Buscar Por";
-            // 
-            // labelConsultarTerreno
-            // 
-            this.labelConsultarTerreno.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelConsultarTerreno.BackColor = System.Drawing.Color.Gold;
-            this.labelConsultarTerreno.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConsultarTerreno.Location = new System.Drawing.Point(190, 9);
-            this.labelConsultarTerreno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelConsultarTerreno.Name = "labelConsultarTerreno";
-            this.labelConsultarTerreno.Size = new System.Drawing.Size(299, 37);
-            this.labelConsultarTerreno.TabIndex = 14;
-            this.labelConsultarTerreno.Text = "Terrenos";
-            this.labelConsultarTerreno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -355,6 +265,96 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Location = new System.Drawing.Point(493, 346);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(95, 24);
+            this.buttonCancelar.TabIndex = 23;
+            this.buttonCancelar.Text = "&Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            // 
+            // buttonSelecionar
+            // 
+            this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelecionar.Location = new System.Drawing.Point(394, 346);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSelecionar.Name = "buttonSelecionar";
+            this.buttonSelecionar.Size = new System.Drawing.Size(95, 24);
+            this.buttonSelecionar.TabIndex = 22;
+            this.buttonSelecionar.Text = "&Selecionar";
+            this.buttonSelecionar.UseVisualStyleBackColor = true;
+            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Location = new System.Drawing.Point(512, 67);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(76, 29);
+            this.buttonBuscar.TabIndex = 18;
+            this.buttonBuscar.Text = "&Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
+            // textBoxBuscar
+            // 
+            this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscar.Location = new System.Drawing.Point(107, 70);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(401, 26);
+            this.textBoxBuscar.TabIndex = 17;
+            // 
+            // comboBoxBuscarPor
+            // 
+            this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBuscarPor.FormattingEnabled = true;
+            this.comboBoxBuscarPor.Items.AddRange(new object[] {
+            "ID",
+            "Matricula",
+            "Todos"});
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(11, 68);
+            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(92, 28);
+            this.comboBoxBuscarPor.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Gold;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 17);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Buscar Por";
+            // 
+            // labelConsultarTerreno
+            // 
+            this.labelConsultarTerreno.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelConsultarTerreno.BackColor = System.Drawing.Color.Gold;
+            this.labelConsultarTerreno.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConsultarTerreno.Location = new System.Drawing.Point(190, 9);
+            this.labelConsultarTerreno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelConsultarTerreno.Name = "labelConsultarTerreno";
+            this.labelConsultarTerreno.Size = new System.Drawing.Size(299, 37);
+            this.labelConsultarTerreno.TabIndex = 14;
+            this.labelConsultarTerreno.Text = "Terrenos";
+            this.labelConsultarTerreno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormBuscarTerreno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,7 +372,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBuscarTerreno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Buscar Terreno";
+            this.Text = "Buscar terreno";
             this.Load += new System.EventHandler(this.FormBuscarTerreno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrenoBindingSource)).EndInit();

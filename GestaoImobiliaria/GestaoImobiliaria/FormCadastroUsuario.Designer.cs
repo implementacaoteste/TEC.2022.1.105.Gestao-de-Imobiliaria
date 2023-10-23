@@ -35,6 +35,7 @@
             System.Windows.Forms.Label nomeUsuarioLabel;
             System.Windows.Forms.Label senhaLabel;
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroUsuario));
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.cPFTextBox = new System.Windows.Forms.TextBox();
@@ -278,6 +279,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;

@@ -332,7 +332,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FormCadastroReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCadastroReserva";
+            this.Text = "Cadastro de reserva";
             this.Load += new System.EventHandler(this.FormCadastroReserva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

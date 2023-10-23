@@ -234,7 +234,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBuscarEmpreendimento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Buscar Empreendimento";
+            this.Text = "Buscar empreendimento";
             this.Load += new System.EventHandler(this.FormBuscarEmpreendimento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empreendimentosBindingSource)).EndInit();

@@ -77,7 +77,7 @@
             this.dataGridViewTextBoxColumn2});
             this.corretorDataGridView.DataSource = this.corretorBindingSource;
             this.corretorDataGridView.Location = new System.Drawing.Point(9, 108);
-            this.corretorDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.corretorDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.corretorDataGridView.Name = "corretorDataGridView";
             this.corretorDataGridView.ReadOnly = true;
             this.corretorDataGridView.RowHeadersWidth = 51;
@@ -174,7 +174,7 @@
             "CPF",
             "Todos"});
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(9, 72);
-            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(80, 28);
             this.comboBoxBuscarPor.TabIndex = 2;
@@ -199,7 +199,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBuscar.Location = new System.Drawing.Point(92, 74);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(184, 26);
             this.textBoxBuscar.TabIndex = 4;
@@ -210,7 +210,7 @@
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.Location = new System.Drawing.Point(280, 76);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(74, 24);
             this.buttonBuscar.TabIndex = 5;
@@ -223,7 +223,7 @@
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAlterar.Location = new System.Drawing.Point(358, 76);
-            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(74, 24);
             this.buttonAlterar.TabIndex = 6;
@@ -236,7 +236,7 @@
             this.buttonInserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInserir.Location = new System.Drawing.Point(437, 76);
-            this.buttonInserir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInserir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(74, 24);
             this.buttonInserir.TabIndex = 7;
@@ -249,7 +249,7 @@
             this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluir.Location = new System.Drawing.Point(517, 76);
-            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(74, 24);
             this.buttonExcluir.TabIndex = 8;
@@ -266,9 +266,9 @@
             this.label2.Location = new System.Drawing.Point(166, 7);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(282, 37);
+            this.label2.Size = new System.Drawing.Size(275, 37);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Consultar Corretor";
+            this.label2.Text = "Consultar corretor";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonSelecionar
@@ -276,7 +276,7 @@
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionar.Location = new System.Drawing.Point(406, 330);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(89, 26);
             this.buttonSelecionar.TabIndex = 10;
@@ -290,7 +290,7 @@
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(500, 330);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 26);
             this.button2.TabIndex = 11;
@@ -303,7 +303,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(600, 366);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,7 +330,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "FormConsultarCorretor";
             this.ShowIcon = false;
