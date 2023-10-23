@@ -317,6 +317,7 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBuscarPor.FormattingEnabled = true;

@@ -126,6 +126,7 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBuscarPor.FormattingEnabled = true;
@@ -156,13 +157,13 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.empreendimentosDataGridView.DataSource = this.empreendimentosBindingSource;
-            this.empreendimentosDataGridView.Location = new System.Drawing.Point(11, 125);
+            this.empreendimentosDataGridView.Location = new System.Drawing.Point(11, 122);
             this.empreendimentosDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.empreendimentosDataGridView.Name = "empreendimentosDataGridView";
             this.empreendimentosDataGridView.ReadOnly = true;
             this.empreendimentosDataGridView.RowHeadersWidth = 51;
             this.empreendimentosDataGridView.RowTemplate.Height = 24;
-            this.empreendimentosDataGridView.Size = new System.Drawing.Size(593, 260);
+            this.empreendimentosDataGridView.Size = new System.Drawing.Size(593, 263);
             this.empreendimentosDataGridView.TabIndex = 72;
             // 
             // dataGridViewTextBoxColumn1

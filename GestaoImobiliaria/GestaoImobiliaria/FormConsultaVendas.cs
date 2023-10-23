@@ -162,7 +162,7 @@ namespace LocacaoLaboratorio
         private void FormConsultaVendas_Load(object sender, EventArgs e)
         {
             comboBoxBuscarPor.SelectedIndex = 5;
-            buttonBuscarVenda_Click(sender, e);
+           
         }
 
         private void buttonInserirVenda_Click_1(object sender, EventArgs e)

@@ -121,6 +121,7 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBuscarPor.FormattingEnabled = true;
@@ -246,12 +247,12 @@
             this.labelConsultaEmpreendimentos.AutoSize = true;
             this.labelConsultaEmpreendimentos.BackColor = System.Drawing.Color.Gold;
             this.labelConsultaEmpreendimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConsultaEmpreendimentos.Location = new System.Drawing.Point(57, 9);
+            this.labelConsultaEmpreendimentos.Location = new System.Drawing.Point(126, 9);
             this.labelConsultaEmpreendimentos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelConsultaEmpreendimentos.Name = "labelConsultaEmpreendimentos";
-            this.labelConsultaEmpreendimentos.Size = new System.Drawing.Size(403, 37);
+            this.labelConsultaEmpreendimentos.Size = new System.Drawing.Size(276, 37);
             this.labelConsultaEmpreendimentos.TabIndex = 70;
-            this.labelConsultaEmpreendimentos.Text = "Consultar empreendimento";
+            this.labelConsultaEmpreendimentos.Text = "Empreendimentos";
             this.labelConsultaEmpreendimentos.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1

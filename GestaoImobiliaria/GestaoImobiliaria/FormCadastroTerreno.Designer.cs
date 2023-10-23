@@ -219,7 +219,7 @@
             this.labelCadastoTerreno.Name = "labelCadastoTerreno";
             this.labelCadastoTerreno.Size = new System.Drawing.Size(565, 89);
             this.labelCadastoTerreno.TabIndex = 11;
-            this.labelCadastoTerreno.Text = "Cadastro de Terreno";
+            this.labelCadastoTerreno.Text = "Cadastro de terreno";
             this.labelCadastoTerreno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvar

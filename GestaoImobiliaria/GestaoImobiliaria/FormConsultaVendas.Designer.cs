@@ -69,13 +69,13 @@
             this.NomeCliente,
             this.NomeCorretor});
             this.vendasDataGridView.DataSource = this.vendasBindingSource;
-            this.vendasDataGridView.Location = new System.Drawing.Point(12, 130);
-            this.vendasDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.vendasDataGridView.Location = new System.Drawing.Point(9, 106);
+            this.vendasDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.vendasDataGridView.Name = "vendasDataGridView";
             this.vendasDataGridView.ReadOnly = true;
             this.vendasDataGridView.RowHeadersWidth = 51;
             this.vendasDataGridView.RowTemplate.Height = 24;
-            this.vendasDataGridView.Size = new System.Drawing.Size(1307, 426);
+            this.vendasDataGridView.Size = new System.Drawing.Size(980, 346);
             this.vendasDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -132,9 +132,10 @@
             this.labelConsultaVendas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelConsultaVendas.BackColor = System.Drawing.Color.Gold;
             this.labelConsultaVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConsultaVendas.Location = new System.Drawing.Point(415, 0);
+            this.labelConsultaVendas.Location = new System.Drawing.Point(311, 0);
+            this.labelConsultaVendas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelConsultaVendas.Name = "labelConsultaVendas";
-            this.labelConsultaVendas.Size = new System.Drawing.Size(509, 75);
+            this.labelConsultaVendas.Size = new System.Drawing.Size(382, 61);
             this.labelConsultaVendas.TabIndex = 2;
             this.labelConsultaVendas.Text = "Consulta vendas";
             this.labelConsultaVendas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,20 +145,20 @@
             this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(248, 95);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxBuscar.Location = new System.Drawing.Point(211, 77);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(614, 30);
+            this.textBoxBuscar.Size = new System.Drawing.Size(437, 26);
             this.textBoxBuscar.TabIndex = 3;
             // 
             // buttonBuscarVenda
             // 
             this.buttonBuscarVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarVenda.Location = new System.Drawing.Point(878, 95);
-            this.buttonBuscarVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuscarVenda.Location = new System.Drawing.Point(658, 77);
+            this.buttonBuscarVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscarVenda.Name = "buttonBuscarVenda";
-            this.buttonBuscarVenda.Size = new System.Drawing.Size(106, 31);
+            this.buttonBuscarVenda.Size = new System.Drawing.Size(80, 25);
             this.buttonBuscarVenda.TabIndex = 4;
             this.buttonBuscarVenda.Text = "Buscar";
             this.buttonBuscarVenda.UseVisualStyleBackColor = true;
@@ -167,10 +168,10 @@
             // 
             this.buttonAlterarVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAlterarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAlterarVenda.Location = new System.Drawing.Point(990, 95);
-            this.buttonAlterarVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAlterarVenda.Location = new System.Drawing.Point(742, 77);
+            this.buttonAlterarVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAlterarVenda.Name = "buttonAlterarVenda";
-            this.buttonAlterarVenda.Size = new System.Drawing.Size(106, 31);
+            this.buttonAlterarVenda.Size = new System.Drawing.Size(80, 25);
             this.buttonAlterarVenda.TabIndex = 5;
             this.buttonAlterarVenda.Text = "Alterar";
             this.buttonAlterarVenda.UseVisualStyleBackColor = true;
@@ -180,10 +181,10 @@
             // 
             this.buttonInserirVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInserirVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirVenda.Location = new System.Drawing.Point(1102, 95);
-            this.buttonInserirVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonInserirVenda.Location = new System.Drawing.Point(826, 77);
+            this.buttonInserirVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonInserirVenda.Name = "buttonInserirVenda";
-            this.buttonInserirVenda.Size = new System.Drawing.Size(106, 31);
+            this.buttonInserirVenda.Size = new System.Drawing.Size(80, 25);
             this.buttonInserirVenda.TabIndex = 6;
             this.buttonInserirVenda.Text = "Inserir";
             this.buttonInserirVenda.UseVisualStyleBackColor = true;
@@ -193,10 +194,10 @@
             // 
             this.buttonExcluirVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExcluirVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirVenda.Location = new System.Drawing.Point(1213, 95);
-            this.buttonExcluirVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonExcluirVenda.Location = new System.Drawing.Point(910, 77);
+            this.buttonExcluirVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonExcluirVenda.Name = "buttonExcluirVenda";
-            this.buttonExcluirVenda.Size = new System.Drawing.Size(106, 31);
+            this.buttonExcluirVenda.Size = new System.Drawing.Size(80, 25);
             this.buttonExcluirVenda.TabIndex = 7;
             this.buttonExcluirVenda.Text = "Excluir";
             this.buttonExcluirVenda.UseVisualStyleBackColor = true;
@@ -204,6 +205,7 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBuscarPor.FormattingEnabled = true;
@@ -214,20 +216,20 @@
             "Nome Empreendimento",
             "Endereço",
             "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 93);
-            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(9, 76);
+            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(230, 33);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(198, 28);
             this.comboBoxBuscarPor.TabIndex = 8;
             // 
             // buttonSelecionarVenda
             // 
             this.buttonSelecionarVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionarVenda.Location = new System.Drawing.Point(1058, 568);
-            this.buttonSelecionarVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSelecionarVenda.Location = new System.Drawing.Point(794, 462);
+            this.buttonSelecionarVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionarVenda.Name = "buttonSelecionarVenda";
-            this.buttonSelecionarVenda.Size = new System.Drawing.Size(121, 31);
+            this.buttonSelecionarVenda.Size = new System.Drawing.Size(91, 25);
             this.buttonSelecionarVenda.TabIndex = 9;
             this.buttonSelecionarVenda.Text = "Selecionar";
             this.buttonSelecionarVenda.UseVisualStyleBackColor = true;
@@ -238,10 +240,10 @@
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(1198, 568);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(898, 462);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(121, 31);
+            this.buttonCancelar.Size = new System.Drawing.Size(91, 25);
             this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -251,9 +253,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Gold;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 69);
+            this.label1.Location = new System.Drawing.Point(9, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar por";
             // 
@@ -262,18 +265,17 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1331, 607);
+            this.pictureBox1.Size = new System.Drawing.Size(998, 493);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
             // FormConsultaVendas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1331, 607);
+            this.ClientSize = new System.Drawing.Size(998, 493);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSelecionarVenda);
@@ -287,7 +289,7 @@
             this.Controls.Add(this.vendasDataGridView);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimizeBox = false;
             this.Name = "FormConsultaVendas";
             this.ShowIcon = false;

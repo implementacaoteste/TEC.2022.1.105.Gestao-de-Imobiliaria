@@ -130,6 +130,7 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBuscarPor.FormattingEnabled = true;
@@ -164,13 +165,13 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn2});
             this.corretorDataGridView.DataSource = this.corretorBindingSource;
-            this.corretorDataGridView.Location = new System.Drawing.Point(9, 108);
+            this.corretorDataGridView.Location = new System.Drawing.Point(9, 104);
             this.corretorDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.corretorDataGridView.Name = "corretorDataGridView";
             this.corretorDataGridView.ReadOnly = true;
             this.corretorDataGridView.RowHeadersWidth = 51;
             this.corretorDataGridView.RowTemplate.Height = 24;
-            this.corretorDataGridView.Size = new System.Drawing.Size(621, 269);
+            this.corretorDataGridView.Size = new System.Drawing.Size(621, 273);
             this.corretorDataGridView.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn1
