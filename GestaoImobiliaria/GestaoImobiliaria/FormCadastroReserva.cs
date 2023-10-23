@@ -93,7 +93,7 @@ namespace LocacaoLaboratorio
 
         private void buttonBuscarCorretor_Click(object sender, EventArgs e)
         {
-            using (FormConsultarCorretor frm = new FormConsultarCorretor())
+            using (FormBuscarCorretor frm = new FormBuscarCorretor())
             {
                 frm.ShowDialog();
                 if (frm.Corretor != null)
@@ -106,7 +106,7 @@ namespace LocacaoLaboratorio
 
         private void buttonBuscarTerreno_Click(object sender, EventArgs e)
         {
-            using (FormConsultarTerreno frm = new FormConsultarTerreno())
+            using (FormBuscarTerreno frm = new FormBuscarTerreno())
             {
                 frm.ShowDialog();
                 if (frm.Terreno != null)

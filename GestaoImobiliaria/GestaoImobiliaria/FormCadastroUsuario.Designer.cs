@@ -122,7 +122,7 @@
             label1.AutoSize = true;
             label1.BackColor = System.Drawing.Color.Gold;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(106, 181);
+            label1.Location = new System.Drawing.Point(120, 181);
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(112, 17);
@@ -160,7 +160,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(108, 147);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(324, 26);
+            this.emailTextBox.Size = new System.Drawing.Size(368, 26);
             this.emailTextBox.TabIndex = 6;
             // 
             // nomeUsuarioTextBox
@@ -170,7 +170,7 @@
             this.nomeUsuarioTextBox.Location = new System.Drawing.Point(272, 102);
             this.nomeUsuarioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
-            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(161, 26);
+            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(204, 26);
             this.nomeUsuarioTextBox.TabIndex = 8;
             // 
             // senhaTextBox
@@ -180,7 +180,7 @@
             this.senhaTextBox.Location = new System.Drawing.Point(28, 199);
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.senhaTextBox.Name = "senhaTextBox";
-            this.senhaTextBox.Size = new System.Drawing.Size(76, 26);
+            this.senhaTextBox.Size = new System.Drawing.Size(90, 26);
             this.senhaTextBox.TabIndex = 10;
             // 
             // ativoCheckBox
@@ -189,7 +189,7 @@
             this.ativoCheckBox.BackColor = System.Drawing.Color.Gold;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usuarioBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ativoCheckBox.Location = new System.Drawing.Point(204, 204);
+            this.ativoCheckBox.Location = new System.Drawing.Point(247, 204);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(58, 21);
@@ -200,10 +200,10 @@
             // textBoxConfirmarSenha
             // 
             this.textBoxConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(108, 199);
+            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(122, 199);
             this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
-            this.textBoxConfirmarSenha.Size = new System.Drawing.Size(76, 26);
+            this.textBoxConfirmarSenha.Size = new System.Drawing.Size(110, 26);
             this.textBoxConfirmarSenha.TabIndex = 12;
             // 
             // label2
@@ -222,7 +222,7 @@
             // buttonSalvar
             // 
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(263, 226);
+            this.buttonSalvar.Location = new System.Drawing.Point(299, 226);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(86, 25);
@@ -234,7 +234,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(354, 226);
+            this.buttonCancelar.Location = new System.Drawing.Point(390, 226);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(86, 25);
@@ -250,7 +250,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(469, 274);
+            this.pictureBox1.Size = new System.Drawing.Size(499, 274);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -259,7 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 274);
+            this.ClientSize = new System.Drawing.Size(499, 274);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.textBoxConfirmarSenha);

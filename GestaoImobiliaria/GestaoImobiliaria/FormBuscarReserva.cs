@@ -116,5 +116,10 @@ namespace LocacaoLaboratorio
         {
             comboBoxBuscarPor.SelectedIndex = 1;
         }
+
+        private void reservaDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -76,6 +76,12 @@
     <Compile Include="FormBuscarReserva.Designer.cs">
       <DependentUpon>FormBuscarReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBuscarTerreno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarTerreno.Designer.cs">
+      <DependentUpon>FormBuscarTerreno.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarReserva.resx">
       <DependentUpon>FormBuscarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarTerreno.resx">
+      <DependentUpon>FormBuscarTerreno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarUsuario.resx">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>

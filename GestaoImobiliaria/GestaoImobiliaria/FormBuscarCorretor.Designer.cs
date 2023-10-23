@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
             this.corretorDataGridView = new System.Windows.Forms.DataGridView();
+            this.corretorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,8 +48,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.corretorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.corretorDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,7 +58,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(517, 381);
+            this.button2.Location = new System.Drawing.Point(541, 381);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 26);
@@ -70,7 +70,7 @@
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionar.Location = new System.Drawing.Point(423, 381);
+            this.buttonSelecionar.Location = new System.Drawing.Point(448, 381);
             this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(89, 26);
@@ -96,7 +96,7 @@
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Location = new System.Drawing.Point(532, 70);
+            this.buttonBuscar.Location = new System.Drawing.Point(556, 71);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(74, 30);
@@ -113,7 +113,7 @@
             this.textBoxBuscar.Location = new System.Drawing.Point(92, 74);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(436, 26);
+            this.textBoxBuscar.Size = new System.Drawing.Size(460, 26);
             this.textBoxBuscar.TabIndex = 16;
             // 
             // label1
@@ -170,8 +170,24 @@
             this.corretorDataGridView.ReadOnly = true;
             this.corretorDataGridView.RowHeadersWidth = 51;
             this.corretorDataGridView.RowTemplate.Height = 24;
-            this.corretorDataGridView.Size = new System.Drawing.Size(597, 269);
+            this.corretorDataGridView.Size = new System.Drawing.Size(621, 269);
             this.corretorDataGridView.TabIndex = 13;
+            // 
+            // corretorBindingSource
+            // 
+            this.corretorBindingSource.DataSource = typeof(Models.Corretor);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(641, 418);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -203,7 +219,7 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Fone";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Fone";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Telefone";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -212,7 +228,7 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Endereco";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Endereco";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Endereço";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -244,22 +260,6 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // corretorBindingSource
-            // 
-            this.corretorBindingSource.DataSource = typeof(Models.Corretor);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::LocacaoLaboratorio.Properties.Resources.Foto_de_fundo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(641, 418);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
             // 
             // FormBuscarCorretor
             // 
@@ -298,6 +298,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxBuscarPor;
         private System.Windows.Forms.DataGridView corretorDataGridView;
+        private System.Windows.Forms.BindingSource corretorBindingSource;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -306,7 +308,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.BindingSource corretorBindingSource;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

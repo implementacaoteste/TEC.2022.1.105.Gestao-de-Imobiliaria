@@ -110,9 +110,9 @@
             metragemDireitaLabel.Location = new System.Drawing.Point(114, 179);
             metragemDireitaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             metragemDireitaLabel.Name = "metragemDireitaLabel";
-            metragemDireitaLabel.Size = new System.Drawing.Size(120, 17);
+            metragemDireitaLabel.Size = new System.Drawing.Size(118, 17);
             metragemDireitaLabel.TabIndex = 29;
-            metragemDireitaLabel.Text = "Metragem Direita:";
+            metragemDireitaLabel.Text = "Metragem direita:";
             // 
             // metragemEsquerdaLabel
             // 
@@ -122,9 +122,9 @@
             metragemEsquerdaLabel.Location = new System.Drawing.Point(501, 126);
             metragemEsquerdaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             metragemEsquerdaLabel.Name = "metragemEsquerdaLabel";
-            metragemEsquerdaLabel.Size = new System.Drawing.Size(140, 17);
+            metragemEsquerdaLabel.Size = new System.Drawing.Size(139, 17);
             metragemEsquerdaLabel.TabIndex = 30;
-            metragemEsquerdaLabel.Text = "Metragem Esquerda:";
+            metragemEsquerdaLabel.Text = "Metragem esquerda:";
             // 
             // metragemFrenteLabel
             // 
@@ -134,9 +134,9 @@
             metragemFrenteLabel.Location = new System.Drawing.Point(501, 179);
             metragemFrenteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             metragemFrenteLabel.Name = "metragemFrenteLabel";
-            metragemFrenteLabel.Size = new System.Drawing.Size(120, 17);
+            metragemFrenteLabel.Size = new System.Drawing.Size(116, 17);
             metragemFrenteLabel.TabIndex = 31;
-            metragemFrenteLabel.Text = "Metragem Frente:";
+            metragemFrenteLabel.Text = "Metragem frente:";
             // 
             // metragemFundoLabel
             // 
@@ -146,9 +146,9 @@
             metragemFundoLabel.Location = new System.Drawing.Point(501, 231);
             metragemFundoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             metragemFundoLabel.Name = "metragemFundoLabel";
-            metragemFundoLabel.Size = new System.Drawing.Size(119, 17);
+            metragemFundoLabel.Size = new System.Drawing.Size(115, 17);
             metragemFundoLabel.TabIndex = 32;
-            metragemFundoLabel.Text = "Metragem Fundo:";
+            metragemFundoLabel.Text = "Metragem fundo:";
             // 
             // precoAVistaLabel
             // 
@@ -158,9 +158,9 @@
             precoAVistaLabel.Location = new System.Drawing.Point(501, 339);
             precoAVistaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precoAVistaLabel.Name = "precoAVistaLabel";
-            precoAVistaLabel.Size = new System.Drawing.Size(93, 17);
+            precoAVistaLabel.Size = new System.Drawing.Size(94, 17);
             precoAVistaLabel.TabIndex = 33;
-            precoAVistaLabel.Text = "Preco AVista:";
+            precoAVistaLabel.Text = "Preco à vista:";
             // 
             // precoParceladoLabel
             // 
@@ -170,21 +170,21 @@
             precoParceladoLabel.Location = new System.Drawing.Point(501, 282);
             precoParceladoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precoParceladoLabel.Name = "precoParceladoLabel";
-            precoParceladoLabel.Size = new System.Drawing.Size(117, 17);
+            precoParceladoLabel.Size = new System.Drawing.Size(116, 17);
             precoParceladoLabel.TabIndex = 34;
-            precoParceladoLabel.Text = "Preco Parcelado:";
+            precoParceladoLabel.Text = "Preco parcelado:";
             // 
             // tamanhoTotalTerrenoLabel
             // 
             tamanhoTotalTerrenoLabel.AutoSize = true;
             tamanhoTotalTerrenoLabel.BackColor = System.Drawing.Color.Gold;
             tamanhoTotalTerrenoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tamanhoTotalTerrenoLabel.Location = new System.Drawing.Point(869, 122);
+            tamanhoTotalTerrenoLabel.Location = new System.Drawing.Point(951, 122);
             tamanhoTotalTerrenoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             tamanhoTotalTerrenoLabel.Name = "tamanhoTotalTerrenoLabel";
-            tamanhoTotalTerrenoLabel.Size = new System.Drawing.Size(163, 17);
+            tamanhoTotalTerrenoLabel.Size = new System.Drawing.Size(107, 17);
             tamanhoTotalTerrenoLabel.TabIndex = 37;
-            tamanhoTotalTerrenoLabel.Text = "Tamanho Total Terreno:";
+            tamanhoTotalTerrenoLabel.Text = "Tamanho total: ";
             // 
             // nomeLabel
             // 

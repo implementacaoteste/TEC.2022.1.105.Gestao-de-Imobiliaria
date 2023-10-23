@@ -70,9 +70,9 @@
             dataReservaLabel.Location = new System.Drawing.Point(676, 132);
             dataReservaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dataReservaLabel.Name = "dataReservaLabel";
-            dataReservaLabel.Size = new System.Drawing.Size(99, 17);
+            dataReservaLabel.Size = new System.Drawing.Size(94, 17);
             dataReservaLabel.TabIndex = 3;
-            dataReservaLabel.Text = "Data Reserva:";
+            dataReservaLabel.Text = "Data reserva:";
             // 
             // prazoLabel
             // 

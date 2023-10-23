@@ -111,7 +111,7 @@ namespace LocacaoLaboratorio
         {
             try
             {
-                using (FormConsultarTerreno frm = new FormConsultarTerreno())
+                using (FormBuscarTerreno frm = new FormBuscarTerreno())
                 {
                     frm.ShowDialog();
 

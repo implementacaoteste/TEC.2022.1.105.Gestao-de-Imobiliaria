@@ -67,10 +67,10 @@
             this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(115, 92);
+            this.textBoxBuscar.Location = new System.Drawing.Point(105, 92);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(396, 26);
+            this.textBoxBuscar.Size = new System.Drawing.Size(425, 26);
             this.textBoxBuscar.TabIndex = 81;
             // 
             // label1
@@ -78,7 +78,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Gold;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 76);
+            this.label1.Location = new System.Drawing.Point(9, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 17);
@@ -90,7 +90,7 @@
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(500, 388);
+            this.buttonCancelar.Location = new System.Drawing.Point(519, 389);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(85, 25);
@@ -102,7 +102,7 @@
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionar.Location = new System.Drawing.Point(400, 388);
+            this.buttonSelecionar.Location = new System.Drawing.Point(430, 389);
             this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(85, 25);
@@ -115,7 +115,7 @@
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Location = new System.Drawing.Point(515, 94);
+            this.buttonBuscar.Location = new System.Drawing.Point(534, 94);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(70, 24);
@@ -134,7 +134,7 @@
             "Nome",
             "CNPJ",
             "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(23, 92);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 92);
             this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(89, 28);
@@ -156,13 +156,13 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.empreendimentosDataGridView.DataSource = this.empreendimentosBindingSource;
-            this.empreendimentosDataGridView.Location = new System.Drawing.Point(24, 125);
+            this.empreendimentosDataGridView.Location = new System.Drawing.Point(11, 125);
             this.empreendimentosDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.empreendimentosDataGridView.Name = "empreendimentosDataGridView";
             this.empreendimentosDataGridView.ReadOnly = true;
             this.empreendimentosDataGridView.RowHeadersWidth = 51;
             this.empreendimentosDataGridView.RowTemplate.Height = 24;
-            this.empreendimentosDataGridView.Size = new System.Drawing.Size(562, 259);
+            this.empreendimentosDataGridView.Size = new System.Drawing.Size(593, 260);
             this.empreendimentosDataGridView.TabIndex = 72;
             // 
             // dataGridViewTextBoxColumn1
@@ -212,7 +212,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(615, 460);
+            this.pictureBox1.Size = new System.Drawing.Size(615, 461);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 83;
             this.pictureBox1.TabStop = false;
@@ -221,7 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 460);
+            this.ClientSize = new System.Drawing.Size(615, 461);
             this.Controls.Add(this.labelConsultaEmpreendimentos);
             this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.label1);
