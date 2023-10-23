@@ -369,51 +369,37 @@ INSERT INTO PermissaoGrupoUsuario (IdGrupoUsuario, IdPermissao)VALUES(1,34)
  go
 
 Insert into Cliente (Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge ) 
-Values ('Cristiano', '11111111','2222222','cristiano@gmail.com','40028922', 'Rua 123', 'Solteiro', 12, NULL, NULL);
-Insert into Cliente (Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge ) 
 Values ('Nalberth', '3333333','4444444','nalberth@gmail.com','40028922', 'Rua 321', 'Solteiro', 1200, NULL, NULL);
-Insert into Cliente (Nome, CPF, RG, Email, Fone, Endereco, EstadoCivil, Renda, CPFConjuge, RGConjuge )
-Values ('Lucas', '555555','6666666','lucas@gmail.com','40028922', 'Rua 132', 'Solteiro', 1600, NULL, NULL);
+
 
 go 
 
 Insert into Corretores (Nome, CRECI,  Endereco, RG, CPF, Fone, Email)
-Values('Cristiano','1111111','Rua 123', '2222222','3333333', '40028922', 'cristiano@gmail.com') 
-Insert into Corretores (Nome, CRECI,  Endereco, RG, CPF, Fone, Email)
-Values('Nalberth','3333333','Rua 321', '4444444','5555555', '40028922', 'nalberth@gmail.com') 
-Insert into Corretores (Nome, CRECI,  Endereco, RG, CPF, Fone, Email)
-Values('Lucas','5555555','Rua 132', '6666666', '40028922','9999999', 'lucas@gmail.com') 
+Values('Lucas','5555555','Rua Ipiranga N° 123', '55555555555', '40028922','1111111111', 'lucas@gmail.com') 
 
 go
 
 Insert into Usuario (Nome, NomeUsuario, Email, CPF, Ativo, Senha)
-Values ('Cristiano', 'Cristiano', 'cristiano@gmail.com', '1111111', 1, '1234')
-Insert into Usuario (Nome, NomeUsuario, Email, CPF, Ativo, Senha)
-Values ('Nalberth', 'Nalberth', 'nalberth@gmail.com', '2222222', 1, '1234')
-Insert into Usuario (Nome, NomeUsuario, Email, CPF, Ativo, Senha)
-Values ('Lucas', 'Lucas', 'lucas@gmail.com', '3333333', 1, '1234')
+Values ('Cristiano Ramos Ribeiro Júnior', 'Júnior', 'cristiano@gmail.com', '1111111', 1, '1234')
 
 go
 
 Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel)
 Values ('Járdim américa', '1111111')
 Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel )
-Values ('Ipiranga', '2222222')
-Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel )
-Values ('Alegria', '3333333')
-Insert into Empreendimentos (Nome, CNPJEmpresaResponsavel )
-Values ('Bedrock', '4444444')
+Values ('Gless', '2222222')
+
 
 go
 
 Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
-Values (1, 1200, 120, 10, 10, 200, 'Rua Ipiranga', '1111111', '20', '20', 1, 0, '2')
+Values (1, 28000, 500, 25, 25, 1500, 'Rua Ipiranga', '1111111', '30', '30', 1, 0, '2')
 Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
-Values (2, 1400, 140, 20, 20, 400, 'Rua Caxias', '2222222', '30', '30', 1, 0, '4')
+Values (1, 30000, 500, 20, 20, 1200, 'Rua Caxias', '2222222', '30', '30', 1, 0, '4')
 Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
-Values (3, 1600, 160, 30, 30, 600, 'Rua Tira Dentes', '3333333', '40', '40', 1, 0, '6')
+Values (2, 35000, 500, 30, 30, 2400, 'Rua Tira Dentes', '3333333', '40', '40', 1, 0, '6')
 Insert into Terrenos (IDEmpreendimento, PrecoAVista, PrecoParcelado, MetragemFrente, MetragemFundo, TamanhoTotalTerreno, Endereco, NumeroMatricula, MetragemEsquerda, MetragemDireita, RedeAgua, RedeEnergia, Esquina)
-Values (4, 1800, 180, 40, 40, 800, 'Rua Principal', '4444444', '50', '50', 1, 0, '8')
+Values (2, 36000, 500, 40, 40, 4000, 'Rua Principal', '4444444', '50', '50', 1, 0, '8')
 
 go
 insert into Status_Terrenos(Status_Atual)values('Disponível')
@@ -422,8 +408,14 @@ insert into Status_Terrenos(Status_Atual)values('Reservado')
 
 
 update Terrenos set idstatus_terrenos=1
+update Terrenos set idstatus_terrenos=3 where IDTerreno = 3;
+update Terrenos set idstatus_terrenos=2 where IDTerreno = 4;
 
 
-Insert into Vendas ( IDCliente, IDCorretor, IDTerreno) Values (1,1,1);
-Insert into Vendas (IDCliente, IDCorretor, IDTerreno) Values (2,2,2);
-Insert into Vendas ( IDCliente, IDCorretor, IDTerreno) Values (3,3,3);
+
+
+Insert into Vendas ( IDCliente, IDCorretor, IDTerreno) Values (1,1,4);
+
+
+
+Insert into Reservas(IDCorretor, IDTerreno, StatusReserva, DataReserva, Prazo)Values(1,3,'Reservado','2023-10-24','2023-10-27')
