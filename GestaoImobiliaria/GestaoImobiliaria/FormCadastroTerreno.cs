@@ -95,7 +95,7 @@ namespace LocacaoLaboratorio
 
         private void buttonBuscarEmpreendimento_Click_1(object sender, EventArgs e)
         {
-            using (FormConsultaEmpreendimentos frm = new FormConsultaEmpreendimentos())
+            using (FormBuscarEmpreendimento frm = new FormBuscarEmpreendimento())
             {
                 frm.ShowDialog();
                 ((Terreno)terrenoBindingSource.Current).Empreendimento = frm.Empreendimentos;

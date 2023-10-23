@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBuscarEmpreendimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarEmpreendimento.Designer.cs">
+      <DependentUpon>FormBuscarEmpreendimento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarGrupoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TratarErro.cs" />
+    <EmbeddedResource Include="FormBuscarEmpreendimento.resx">
+      <DependentUpon>FormBuscarEmpreendimento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarGrupoUsuario.resx">
       <DependentUpon>FormBuscarGrupoUsuario.cs</DependentUpon>
     </EmbeddedResource>
